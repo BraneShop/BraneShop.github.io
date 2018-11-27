@@ -1,0 +1,16 @@
+resolver: lts-8.0
+packages:
+    - .
+
+extra-deps:
+    - git: https://github.com/silky/hakyll-diagrams.git
+      commit: 4dd69ad9ce81949b872295ac475453d808399aba
+
+    - git: https://github.com/silky/diagrams-pandoc.git
+      commit: d1b122b
+
+
+flags: {}
+allow-newer: True
+extra-package-dbs: []
+system-ghc: True
