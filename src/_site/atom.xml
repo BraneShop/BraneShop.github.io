@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>BRANESHOP | braneshop.com.au</title>
+    <title>BraneShop | braneshop.com.au</title>
     <link href="https://braneshop.com.au/atom.xml" rel="self" />
     <link href="https://braneshop.com.au" />
     <id>https://braneshop.com.au/atom.xml</id>
     <author>
-        <name>Braneshop Team</name>
+        <name>BraneShop Team</name>
         <email>noonsilk+-braneshop@gmail.com</email>
     </author>
     <updated>2018-12-17T00:00:00Z</updated>
