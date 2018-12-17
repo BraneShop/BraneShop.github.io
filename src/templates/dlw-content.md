@@ -11,9 +11,11 @@ be taken from the mathematical and theoretical foundations, to building models
 and neural networks in TensorFlow. </p>
 
 <p> You will apply as you learn, working on exercises throughout. </p>
+
 <p> The second day will be dedicated to gaining a hands-on understanding
-of TensorFlow, and the third day will be centered around group projects.
-</p>
+of TensorFlow. </p>
+
+<p> The third day will be centered around group projects.  </p>
 
 <h5>Concepts covered</h5>
 <div class="concepts">
@@ -50,9 +52,14 @@ of TensorFlow, and the third day will be centered around group projects.
 <tr>  <td class="item">  Location </td>
       <td class="value"> Melbourne CBD  </td>
 </tr>
-<tr>  <td class="item">  Tickets </td>
+<tr>  <td class="item">  Dates/Tickets </td>
       <td class="value"> 
         $partial("templates/dlw-dates.md")$
+      </td>
+</tr>
+<tr>  <td class="item">  Requirements </td>
+      <td class="value"> 
+      A laptop.
       </td>
 </tr>
 </table>

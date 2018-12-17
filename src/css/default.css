@@ -115,7 +115,7 @@ table.details {
 }
 
 table.details td.item {
-  width:       120px;
+  width:       140px;
   background:  #eaeaea;
   font-style:  italic;
 }
@@ -198,6 +198,10 @@ ul.menu li {
 ul.menu li a {
   padding:   5px;
   font-size: 1.2em;
+}
+
+div.tickets {
+  padding: 5px;
 }
 
 a.buy-now {
