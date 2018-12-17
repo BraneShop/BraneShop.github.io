@@ -2,7 +2,6 @@ body {
   margin:           0px;
   background:       black;
   background-image: url(/images/space.svg);
-  background-size:  cover;
 }
 
 #content {
@@ -10,7 +9,7 @@ body {
   flex-direction:   column;
   align-items:      center;
   padding:          20px;
-  background-image: url(/images/brane-manifold.webp);
+  background-image: url(/images/simple-bg.svg);
   background-size:  cover;
 }
 
@@ -86,6 +85,12 @@ video.profile-video {
   font-family: "PT Mono";
 }
 
+@media print { 
+	#header { display: none; }
+	#footer { display: none; }
+	div.section { padding: 90px !important; } 
+}
+
 div.section {
   display:        flex;
   flex-direction: column;
@@ -132,18 +137,39 @@ td.value ul li a {
   color: black;
 }
 
+p, li {
+	line-height: 1.5em;
+}
+
+pre {
+	font-size: 1.2em;
+  margin-left: 30px;
+}
+
+h4.blog-title {
+	font-size:     2em;
+	border-bottom: solid 2px peachpuff;
+	border-top:    solid 2px peachpuff;
+	background:    white;
+	padding:       4px;
+}
+
 h4 {
   font-family: "Source Serif Pro";
   font-size:   1.5em;
 }
 
-div.concepts, div.breakdown {
+div.concepts {
   display:        flex;
   flex-direction: row;
 }
 
+div.breakdown {
+  display:        flex;
+  flex-direction: column;
+}
+
 div.day {
-  width: 50%;
 }
 
 div.concepts ul li {
@@ -165,8 +191,13 @@ a {
 }
 
 
+ul.menu li {
+  color: white;
+}
+
 ul.menu li a {
-  padding: 5px;
+  padding:   5px;
+  font-size: 1.2em;
 }
 
 a.buy-now {
@@ -174,6 +205,7 @@ a.buy-now {
   color:         black;
   padding:       5px;
   border-radius: 5px;
+  line-height:   1.5em;
 }
 
 h1 a:hover { 
@@ -377,4 +409,9 @@ div.bio img, div.bio video {
   margin-left:   20px;
   margin-right:  20px;
   cursor:        pointer;
+}
+
+div.important {
+  background: #eaeaea;
+  border:     solid 2px peachpuff;
 }

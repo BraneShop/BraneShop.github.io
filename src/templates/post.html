@@ -1,8 +1,20 @@
-<div class="info">
+<div class="section">
+  <div class="info">
     Posted on $date$
     $if(author)$
-        by $author$
+      by $author$
     $endif$
-</div>
+		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
+  </div>
 
-$body$
+
+  <h4 class="blog-title">$title$</h4>
+
+  <div class="info">
+    $if(code)$
+			<center><p> The code used for this blog-post is <a href="$code$">here</a>. </p></center>
+    $endif$
+  </div>
+
+  $body$
+</div>

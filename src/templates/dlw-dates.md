@@ -1,6 +1,4 @@
-<ul> <li> <a href="">25-26 of February, 2019</a> 
-<!--  <small>(Earily-bird tickets available until Jan-11!)</small>  -->
+<ul> <li> <a title="Buy tickets for the Deep Learning Workshop!" href="https://www.trybooking.com/ZYMA">25-27 (Mon-Wed) of February, 2019</a> 
   </li>
-  <li> <a href="">25-26 of March, 2019</a>. </li>
 </ul>
 

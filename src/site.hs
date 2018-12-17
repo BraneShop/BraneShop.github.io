@@ -39,6 +39,10 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "data/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
@@ -46,7 +50,7 @@ main = hakyll $ do
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ 
-                (pandocCompilerDiagrams "images/diagrams" <|> pandocMathCompiler)
+                (pandocMathCompiler)
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/default.html" postCtx
@@ -72,6 +76,19 @@ main = hakyll $ do
             getResourceBody
                 >>= applyAsTemplate defaultContext
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= relativizeUrls
+
+    match (fromList ["blog.html"]) $ do
+        route idRoute
+        compile $ do
+            posts <- (liftM (take 10)) $ recentFirst =<< loadAll "posts/*"
+            let ctx =
+                    listField "posts" postCtx (return posts) `mappend`
+                    defaultContext
+
+            getResourceBody
+                >>= applyAsTemplate ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
     match (fromList ["index.html", "team.html", "contact.html"]) $ do
