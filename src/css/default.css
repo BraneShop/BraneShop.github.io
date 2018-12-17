@@ -259,7 +259,6 @@ ul.normal li a {
 }
 
 p {
-  font-size:     1.2em;
   padding-left:  20px;
   padding-right: 20px;
 }
@@ -267,6 +266,10 @@ p {
 p, li, blockquote, label, input, td {
   font-family: "Lato";
   font-size:   1.2em;
+}
+
+ul.normal li ul.normal li {
+  font-size: 1em;
 }
 
 #values-list, #testimonials-list {
