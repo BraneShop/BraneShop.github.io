@@ -422,3 +422,5 @@ div.important {
   background: #eaeaea;
   border:     solid 2px peachpuff;
 }
+
+small.tiny { font-size: 0.5em; }
