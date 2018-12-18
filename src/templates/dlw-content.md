@@ -10,7 +10,8 @@
 be taken from the mathematical and theoretical foundations, to building models
 and neural networks in TensorFlow. </p>
 
-<p> You will apply as you learn, working on exercises throughout. </p>
+<p> You will apply as you learn, working on exercises throughout in
+a supportive and collaborative environment. </p>
 
 <p> The second day will be dedicated to gaining a hands-on understanding
 of TensorFlow. </p>
