@@ -4,6 +4,6 @@
 
 <ul> <li> Day 1 - Mon, 25th of Feb</li>
   <li> Day 2 - Tues, 26th of Feb</li>
-  <li> Day 3 - Wed, 26th of Feb</li>
+  <li> Day 3 - Wed, 27th of Feb</li>
 </ul>
 
