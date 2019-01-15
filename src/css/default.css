@@ -43,6 +43,21 @@ p span { background: royalblue; color: white; }
   background-size:  cover;
 }
 
+
+#photos-list {
+  display:         flex;
+  flex-wrap:       wrap;
+  align-content:   stretch;
+  justify-content: center;
+  margin:          20px;
+}
+
+#photos-list img {
+  height:         180px;
+  vertical-align: middle;
+  padding:        5px;
+}
+
 #newsletter {
   background-image: url(/images/white-2.svg);
   background-size:  cover;
