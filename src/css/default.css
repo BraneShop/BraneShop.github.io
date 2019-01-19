@@ -63,6 +63,11 @@ p span { background: royalblue; color: white; }
   background-size:  cover;
 }
 
+img.wibble {
+  width:      40px;
+  background: gold;
+}
+
 #header {
   display:          flex;
   align-items:      center;
