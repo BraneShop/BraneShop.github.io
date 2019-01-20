@@ -121,9 +121,9 @@ main = hakyll $ do
 
 feedConf :: FeedConfiguration
 feedConf = FeedConfiguration
-    { feedTitle         = "BraneShop | braneshop.com.au"
-    , feedDescription   = "The blog of the BraneShop team."
-    , feedAuthorName    = "BraneShop Team"
+    { feedTitle         = "Braneshop | braneshop.com.au"
+    , feedDescription   = "The blog of the Braneshop team."
+    , feedAuthorName    = "Braneshop Team"
     , feedAuthorEmail   = "noonsilk+-braneshop@gmail.com"
     , feedRoot          = "https://braneshop.com.au"
     }
