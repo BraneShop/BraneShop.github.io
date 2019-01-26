@@ -95,7 +95,7 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
-    match (fromList ["index.html", "team.html", "contact.html"]) $ do
+    match (fromList ["index.html", "team.html", "contact.html", "community.html"]) $ do
         route idRoute
         compile $ do
             -- posts <- (liftM (take 10)) $ recentFirst =<< loadAll "posts/*"
