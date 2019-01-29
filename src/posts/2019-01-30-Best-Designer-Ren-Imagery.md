@@ -21,7 +21,7 @@ she's a friend of mine. Here are some of the reasons why:
 <ul class="normal">
 <li> **Collaborative**: Ren communicates frequently; asks your opinion, and submits some designs for review and to guide further design.  </li>
 
-<li> **Diverse options**: Unlike other designs I've worked with, each of Ren's submitted designs was actually quite unique and distinctly different from the others. The differences are not just a slight colour changes, or lower case over upper case; each design has it's own strong elements, story, and justifcation.  I think this is a very important skill for design, that I've not seen many people be able to do, and Ren does it amazingly well.
+<li> **Diverse options**: Unlike other designers I've worked with, each of Ren's submitted designs was actually quite unique and distinctly different from the others. The differences are not just a slight colour changes, or lower case over upper case; each design has it's own strong elements, story, and justifcation.  I think this is a very important skill for design, that I've not seen many people be able to do, and Ren does it amazingly well.
 </li>
 
 <li> **Comprehensive**: Once a final design was sleceted, Ren provides the logo
