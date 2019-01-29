@@ -30,7 +30,7 @@ their new design, this is invaluable.
 </li>
 <li> **Consistency**: Ren has done design work for me in the past, and it has
 been consistently excellent. The previous work was for
-[Compose-Conference](http://www.composeconference.org/), and the resulting
+[Compose Conference](http://www.composeconference.org/), and the resulting
 logo was designed collaboratively between Ren, Lyndon and Myself, and I have to say that
 it's now iconic in the functional-programming community as the "Lambda-Tram":
 <center><img src="/images/blog/LambdaTramWeb2017.png" /></center>
