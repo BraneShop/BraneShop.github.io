@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 div.section-list {
   display:        flex;
   flex-direction: column;
