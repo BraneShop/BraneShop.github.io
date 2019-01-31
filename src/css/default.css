@@ -105,12 +105,6 @@ video.profile-video {
   font-family: "PT Mono";
 }
 
-@media print { 
-	#header { display: none; }
-	#footer { display: none; }
-	div.section { padding: 90px !important; } 
-}
-
 div.section {
   display:        flex;
   flex-direction: column;

@@ -95,6 +95,14 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
+    match (fromList ["poster.html"]) $ do
+        route idRoute
+        compile $ do
+            getResourceBody
+                >>= applyAsTemplate defaultContext
+                >>= loadAndApplyTemplate "templates/branded.html" defaultContext
+                >>= relativizeUrls
+
     match (fromList ["index.html", "team.html", "contact.html", "community.html"]) $ do
         route idRoute
         compile $ do
