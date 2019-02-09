@@ -4,7 +4,9 @@ author: Noon van der Silk
 ---
 
 In the following we'll suppose you've trained a model in Python, and are now
-considering how to "productionise" the inference. 
+considering how to "productionise" the inference.  The point of the article
+will be to convince you that it's interesting to try and use
+[TensorFlow.js](https://js.tensorflow.org/).
 
 
 #### You've got a model, how to deploy it?

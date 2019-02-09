@@ -55,7 +55,7 @@
     
   </div>
 
-  <p>In the following we’ll suppose you’ve trained a model in Python, and are now considering how to “productionise” the inference.</p>
+  <p>In the following we’ll suppose you’ve trained a model in Python, and are now considering how to “productionise” the inference. The point of the article will be to convince you that it’s interesting to try and use <a href="https://js.tensorflow.org/">TensorFlow.js</a>.</p>
 <h4 id="youve-got-a-model-how-to-deploy-it">You’ve got a model, how to deploy it?</h4>
 <p>Once we’ve built a deep learning model, the next thing we natually want to do is deploy it to the people that want to use it.</p>
 <p>We can typically make this as hard as we like, by first of all just building say a simple, say in Python, flask API endpoint, <code>/inference</code>, that will take in a json blob, and then push it into our model, and push back an inference:</p>
