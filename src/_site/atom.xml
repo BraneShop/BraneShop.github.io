@@ -31,7 +31,8 @@
     
   </div>
 
-  <h4 id="youve-got-a-model-how-to-deploy-it">You’ve got a model, how to deploy it?</h4>
+  <p>In the following we’ll suppose you’ve trained a model in Python, and are now considering how to “productionise” the inference.</p>
+<h4 id="youve-got-a-model-how-to-deploy-it">You’ve got a model, how to deploy it?</h4>
 <p>Once we’ve built a deep learning model, the next thing we natually want to do is deploy it to the people that want to use it.</p>
 <p>We can typically make this as hard as we like, by first of all just building say a simple, say in Python, flask API endpoint, <code>/inference</code>, that will take in a json blob, and then push it into our model, and push back an inference:</p>
 <center>
@@ -104,7 +105,7 @@ Incredibly portable, as it runs in the browser, it can run on phones, small lapt
 You need to maintain a consistency between your Python models and your JavaScript models.
 </li>
 <li>
-Because the model doesn’t on hardware you control, the speed of inference can vary wildly.
+Because the model doesn’t run on hardware you control, the speed of inference can vary wildly.
 </li>
 <li>
 In order to deal with the speed issue, we typically run a “smaller” or “compressed” model in the browser, which can be less accurate
@@ -112,7 +113,7 @@ In order to deal with the speed issue, we typically run a “smaller” or “co
 </ul>
 <h4 id="final-thoughts">Final thoughts</h4>
 <p>Browser-based deep learning won’t be for everyone, but my feeling is that if you’re out in the world applying deep learning, you can probably find a way to run some kind of model in the browser.</p>
-<p>Furthermore, the kinds of interactions you can get with users by having a “real-time” inference model are wildly different than from a slow web-request model, or an unknown amount of time if queues are involved. Notably, this kind of real-time interaction allowed me, previously, to build an <a href="https://silverpond.github.io/ai-fashion-designer">interactive fashion design booth</a>, where the audience could engage with a GAN, and also an interactive <a href="https://github.com/silky/dance-booth">dance booth</a>, where people go to dance with an AI.</p>
+<p>Furthermore, the kinds of interactions you can get with users by having a “real-time” inference model are wildly different than from a slow web-request model, or an unknown amount of time if queues are involved. Notably, this kind of real-time interaction allowed me, previously, to build an interactive fashion design booth, where the audience could engage with a GAN, and also an interactive <a href="https://github.com/silky/dance-booth">dance booth</a>, where people go to dance with an AI.</p>
 <center>
 <img src="/images/blog/dance-booth-fashion-designer.png" />
 </center>

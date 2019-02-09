@@ -3,6 +3,9 @@ title: TensorFlow.js - How to easily deploy deep learning models
 author: Noon van der Silk
 ---
 
+In the following we'll suppose you've trained a model in Python, and are now
+considering how to "productionise" the inference. 
+
 
 #### You've got a model, how to deploy it?
 
@@ -112,7 +115,7 @@ The downsides are:
 <ul class="normal">
 <li> You need to maintain a consistency between your Python models and your
 JavaScript models. </li>
-<li> Because the model doesn't on hardware you control, the speed
+<li> Because the model doesn't run on hardware you control, the speed
 of inference can vary wildly.
 </li>
 <li> In order to deal with the speed issue, we typically run a
@@ -130,11 +133,10 @@ run some kind of model in the browser.
 Furthermore, the kinds of interactions you can get with users by having a
 "real-time" inference model are wildly different than from a slow web-request
 model, or an unknown amount of time if queues are involved. Notably, this kind
-of real-time interaction allowed me, previously, to build an [interactive
-fashion design booth](https://silverpond.github.io/ai-fashion-designer), where
-the audience could engage with a GAN, and also an interactive [dance
-booth](https://github.com/silky/dance-booth), where people go to dance with an
-AI.
+of real-time interaction allowed me, previously, to build an interactive
+fashion design booth, where the audience could engage with a GAN, and also an
+interactive [dance booth](https://github.com/silky/dance-booth), where people
+go to dance with an AI.
 
 <center>
 ![](/images/blog/dance-booth-fashion-designer.png)
