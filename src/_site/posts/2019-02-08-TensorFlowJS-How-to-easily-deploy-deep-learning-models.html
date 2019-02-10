@@ -12,5 +12,187 @@
   </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Braneshop - TensorFlow.js - How to easily deploy deep learning models</title>
-  <!-- TODO -->
-  <!-- <meta name="description" content="-->
+  <meta name="geo.region" content="AU-VIC" />
+  <meta name="geo.placename" content="Melbourne" />
+  <link rel="stylesheet" type="text/css" href="../css/default.css" />
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono|PT+Mono|Lato|Source+Serif+Pro" rel="stylesheet">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+  <!-- Header -->
+  <div id="header">
+    <h1><a href="../"><img src="../images/braneshop-blue.png" width="400" title="Braneshop" alt="Braneshop" /></a></h1>
+    <small>Expand your knowledge manifold!</small>
+    <ul class="menu">
+      <li><a href="../" title="Home">Home</a>|</li>
+      <li><a href="../team.html" title="Team">Team</a>|</li>
+      <li><a href="../community.html" title="Community">Community</a>|</li>
+      <li><a href="../blog.html" title="Blog">Blog</a>|</li>
+      <li><a href="../contact.html" title="Contact">Contact</a></li>
+    </ul>
+    <ul class="sub-menu">
+      <li><a href="../deep-learning-workshop.html" title="Deep Learning Workshop">Deep Learning Workshop</a></li>
+    </ul>
+    <ul class="buy-now">
+      <li><a href="https://www.trybooking.com/ZYMA" title="Buy tickets for the next workshop!" class="buy-now">Up Next: Deep Learning Workshop - Buy Tickets! (25-27 Feb)</a></li>
+    </ul>
+  </div>
+
+
+  <!-- Content -->
+  <div id="content">
+    <div class="section">
+  <div class="info">
+    Posted on February  8, 2019
+    
+      by Noon van der Silk
+    
+		| <a title="Blog: Recent posts" href="../blog.html">Back to recent posts</a>
+  </div>
+
+
+  <h4 class="blog-title">TensorFlow.js - How to easily deploy deep learning models</h4>
+
+  <div class="info">
+    
+  </div>
+
+  <p>In the following we’ll suppose you’ve trained a model in Python, and are now considering how to “productionise” the inference. The point of the article will be to convince you that it’s interesting to try and use <a href="https://js.tensorflow.org/">TensorFlow.js</a>.</p>
+<h4 id="youve-got-a-model-how-to-deploy-it">You’ve got a model, how to deploy it?</h4>
+<p>Once we’ve built a deep learning model, the next thing we natually want to do is deploy it to the people that want to use it.</p>
+<p>We can typically make this as hard as we like, by first of all just building say a simple, say in Python, flask API endpoint, <code>/inference</code>, that will take in a json blob, and then push it into our model, and push back an inference:</p>
+<center>
+<img src="../images/blog/inference.jpg" />
+</center>
+<p>To something quite elaborate with various Amazon servers, Azure servers, Google servers, or the myriad other services providing deep learning inference and hosted model capability.</p>
+<p>But there are a few problems with this approach:</p>
+<ul class="norml">
+<li>
+You need a significant dev-ops capability to manage just the operating-system and data-management capabilities,
+</li>
+<li>
+You need GPU resources (virtual or otherwise) to allocate for the inference,
+</li>
+<li>
+Even having the GPU capability, you need to manage versioning of your models, how to swap them out,
+</li>
+<li>
+And, you need to know how to ration and allocate the GPU resources between all your inference servers,
+</li>
+</ul>
+<p>The point is, there’s much to do. In my exerience, this is infact a significant barrier/expense in deploying ML in production today.</p>
+<p>Now, it may turn out that in your world you <em>need</em> to do this kind of deployment. But what I would like to think about briefly, is another approach …</p>
+<h4 id="have-you-considered-javascript">Have you considered … JavaScript?</h4>
+<p>So, what if I told you that you don’t need to set up any computers, and that in fact the computers you use will be entirely managed and set up by other people!? Great! What’s the catch? Well, you need to use JavaScript …</p>
+<center>
+<img src="../images/blog/tfjs.png" />
+</center>
+<p>The setup is that you want to do some inference on a “small” amount of user-supplied data. I.e. an image, a passage of text, even a video, or a piece of audio, but perhaps not 5GB of satellite images.</p>
+<p>Then, the plan is like so:</p>
+<ul class="normal">
+<li>
+You train your model as you typically would (in TensorFlow, let’s say),
+</li>
+<li>
+You export the weights,
+</li>
+<li>
+You build the “inference” part of your model in TensorFlow.js
+</li>
+<li>
+The model runs in the browser,
+</li>
+<li>
+That’s it!
+</li>
+</ul>
+<p>The main idea is, just as we can build our entire model in TensorFlow, we can build the so-called “forward” part of our model in TensorFlow.js; that is, just those parts that are needed for inference, and not the parts are necessary for training and to support training. Then, we simply rebuild that part of our model using the TensorFlow.js standard library (such as <code>tanh</code> layers, or whatever our particular network requires).</p>
+<p>Then, if we’ve stayed in the TensorFlow ecosystem it’s quite easy, we can just load in our weights basically immediately, but even if we haven’t, ultimately we can always map our exported weights into our network.</p>
+<p>Once that’s done, you’re basically done. You only need to work out how to get your data into the browser to do inference on. Typically, if you’re working with images or video, this is easy. You can use the webcam, if you want a live stream, and really the world is your oyster in all the typical ways that it is on the web.</p>
+<h4 id="the-upsides-and-downsides">The upsides and downsides</h4>
+<p>The upsides are:</p>
+<ul class="normal">
+<li>
+The model doesn’t run on your hardware ⇒ less resources required to deploy. In order words, if you want to handle 10,000 requests per minute, then you need significant GPU compute if you host the model on the server; but in this approach, you don’t need <em>any</em> additional compute; it all happens in the users computer.
+</li>
+<li>
+Can utilise the exact same deployment and versioning techniques <small>(with large static content; namely the weights)</small> that you use for standard websites, which are tried and tested .
+</li>
+<li>
+If the model is fast enough, can allow for very powerful “live” interaction by users.
+</li>
+<li>
+Incredibly portable, as it runs in the browser, it can run on phones, small laptops, laptops with GPUs (and utilise those GPUs) and can be run entirely offline.
+</li>
+</ul>
+<p>The downsides are:</p>
+<ul class="normal">
+<li>
+You need to maintain a consistency between your Python models and your JavaScript models.
+</li>
+<li>
+Because the model doesn’t run on hardware you control, the speed of inference can vary wildly.
+</li>
+<li>
+In order to deal with the speed issue, we typically run a “smaller” or “compressed” model in the browser, which can be less accurate
+</li>
+</ul>
+<h4 id="final-thoughts">Final thoughts</h4>
+<p>Browser-based deep learning won’t be for everyone, but my feeling is that if you’re out in the world applying deep learning, you can probably find a way to run some kind of model in the browser.</p>
+<p>Furthermore, the kinds of interactions you can get with users by having a “real-time” inference model are wildly different than from a slow web-request model, or an unknown amount of time if queues are involved. Notably, this kind of real-time interaction allowed me, previously, to build an interactive fashion design booth, where the audience could engage with a GAN, and also an interactive <a href="https://github.com/silky/dance-booth">dance booth</a>, where people go to dance with an AI.</p>
+<center>
+<img src="../images/blog/dance-booth-fashion-designer.png" />
+</center>
+<p>We were able to put together both of these projects much faster, and much more portably, because we were using JavaScript-based deep learning inference.</p>
+<p>So I encourage you to take a look at <a href="https://js.tensorflow.org/">TensorFlow.js</a>, and try and build something with it!</p>
+</div>
+
+  </div>
+
+
+  <!-- Footer -->
+  <div id="footer">
+    <div id="newsletter">
+
+<!-- Mailchimp -->
+      <a name="newsletter"></a>
+      <h4>Newsletter!</h4>
+<div id="mc_embed_signup">
+<form action="https://braneshop.us19.list-manage.com/subscribe/post?u=e94e88a100517dd09f1720e55&amp;id=7957d3fc4c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<p>✌ Thanks for visiting! If you're interested, sign up to our newsletter to
+receive monthly updates, and notifications of courses.
+</p>
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address
+</label>
+	<input type="email" value name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+	<label for="mce-NAME">Name </label>
+	<input type="text" value name="NAME" class id="mce-NAME">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e94e88a100517dd09f1720e55_7957d3fc4c" tabindex="-1" value></div>
+    <div class="clear"><input type="submit" value="Subscribe! 🗞" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<!-- /Mailchimp -->
+    </div>
+
+
+    <div id="acknowledgement">
+      <img src="../images/atsi.webp" />
+      <p> Braneshop is located on the traditional lands of the Wurundjeri people
+      of the Kulin nation. We acknowledge that sovereignty was never ceded and
+      pay our respects to elders past, present and emerging.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
