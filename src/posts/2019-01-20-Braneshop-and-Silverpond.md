@@ -64,8 +64,8 @@ href="/images/workshop/ws9.jpg"><img src="/images/workshop/ws9.jpg" /></a>
 <li>Does your organisation need an injection of Deep Learning? [Get in touch](/contact.html)!</li>
 <li>Do you want to upskill --- learn the foundations of Deep Learning, get
 comfortable with TensorFlow, and learn how to train and deploy your models?
-Come to the [workshop](/deep-learning-workshop.html) (25th, 26th and 27th of
-    Feb, 2019!</li>
+Come to the [workshop](/deep-learning-workshop.html) (25th, 26th of
+March, 2019!</li>
 <li>Do you have a specific set of topics or an idea --- in AI and
 it's implementation --- that you think we could teach at your
 organisation? [Get in touch](/contact.html)! (We also have an "AI for

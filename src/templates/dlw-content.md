@@ -1,4 +1,3 @@
-<!-- <small>Hands-on experience building real-world models!</small> -->
 <ul class="summary">
   <li>Python</li>
   <li>~&nbsp;TensorFlow</li>
@@ -13,10 +12,8 @@ and neural networks in TensorFlow. </p>
 <p> You will apply as you learn, working on exercises throughout in
 a supportive and collaborative environment. </p>
 
-<p> The second day will be dedicated to gaining a hands-on understanding
-of TensorFlow. </p>
-
-<p> The third day will be centered around group projects.  </p>
+<p> The second day is group projects centered around implementing
+deep learning models in TensorFlow.  </p>
 
 <h5>Concepts covered</h5>
 <div class="concepts">
@@ -40,12 +37,12 @@ of TensorFlow. </p>
 <h5>Essential details</h5>
 <table class="details" boder="0" cellspacing="0">
 <tr>  <td class="item">  Duration </td>
-      <td class="value"> 3 days
+      <td class="value"> 2 days
       <br /> 9am-5pm sharp, every day. </td>
 </tr>
 <tr>  <td class="item">  Costs    </td>
       <td class="value"> 
-        $$2,625* <small>(Standard)</small>
+        $$1,750* <small>(Standard)</small>
       </td>
 </tr>
 <tr>  <td class="item">  Location </td>
