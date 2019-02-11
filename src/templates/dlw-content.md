@@ -62,7 +62,7 @@ deep learning models in TensorFlow.  </p>
      <td class="value">
      <a href="https://goo.gl/forms/VncQkZLylzh8JWez1">Take our Python Quiz on Google Forms</a>
      <br />
-     If you answer at least 12 of the 15 questions in this quiz correctly,
+     If you answer at least 80% of the questions in this quiz correctly,
      you'll receive a 10% discount code!
      </td>
 </table>
