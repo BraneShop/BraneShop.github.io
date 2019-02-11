@@ -20,8 +20,8 @@ learning.  Everytime we have ran it we asked for feedback, and as such,
 each iteration has been improved, tweaked, and been added to. It has been
 our aim that the workshop stays current, relevant, and useful. The deep
 learning workshop has gone from a four-hour "intensive", to a one day
-training, to a two-day workshop 9to include a project day), and now, it has
-evolved into a three-day learn-practice-apply kind of workshop.
+training) and now to a two-day workshop to learn-practice-apply kind of workshop,
+including a day of working on group projects.
 
 
 #### We have had an impact far and wide

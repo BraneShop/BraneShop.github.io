@@ -5,7 +5,7 @@
   <li>~&nbsp;Google&nbsp;Colaboratory</li>
 </ul>
 
-<p> Venture into AI and deep learning with this three-day workshop. You will
+<p> Venture into AI and deep learning with this two-day workshop. You will
 be taken from the mathematical and theoretical foundations, to building models
 and neural networks in TensorFlow. </p>
 
