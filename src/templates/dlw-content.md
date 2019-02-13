@@ -1,4 +1,3 @@
-<!-- <small>Hands-on experience building real-world models!</small> -->
 <ul class="summary">
   <li>Python</li>
   <li>~&nbsp;TensorFlow</li>
@@ -6,17 +5,15 @@
   <li>~&nbsp;Google&nbsp;Colaboratory</li>
 </ul>
 
-<p> Venture into AI and deep learning with this three-day workshop. You will
+<p> Venture into AI and deep learning with this two-day workshop. You will
 be taken from the mathematical and theoretical foundations, to building models
 and neural networks in TensorFlow. </p>
 
 <p> You will apply as you learn, working on exercises throughout in
 a supportive and collaborative environment. </p>
 
-<p> The second day will be dedicated to gaining a hands-on understanding
-of TensorFlow. </p>
-
-<p> The third day will be centered around group projects.  </p>
+<p> The second day is group projects centered around implementing
+deep learning models in TensorFlow.  </p>
 
 <h5>Concepts covered</h5>
 <div class="concepts">
@@ -40,12 +37,12 @@ of TensorFlow. </p>
 <h5>Essential details</h5>
 <table class="details" boder="0" cellspacing="0">
 <tr>  <td class="item">  Duration </td>
-      <td class="value"> 3 days
+      <td class="value"> 2 days
       <br /> 9am-5pm sharp, every day. </td>
 </tr>
 <tr>  <td class="item">  Costs    </td>
       <td class="value"> 
-        $$2,625* <small>(Standard)</small>
+        $$1,750* <small>(Standard)</small>
       </td>
 </tr>
 <tr>  <td class="item">  Location </td>
@@ -61,6 +58,13 @@ of TensorFlow. </p>
       A laptop.
       </td>
 </tr>
+<tr> <td class="item"> Prerequisites </td>
+     <td class="value">
+     <a href="https://goo.gl/forms/VncQkZLylzh8JWez1">Take our Python Quiz on Google Forms</a>
+     <br />
+     <small> If you answer at least 80% of the questions in this quiz correctly,
+     you'll receive a 10% discount code! </small>
+     </td>
 </table>
 
 <p> <small>

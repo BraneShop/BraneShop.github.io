@@ -20,8 +20,8 @@ learning.  Everytime we have ran it we asked for feedback, and as such,
 each iteration has been improved, tweaked, and been added to. It has been
 our aim that the workshop stays current, relevant, and useful. The deep
 learning workshop has gone from a four-hour "intensive", to a one day
-training, to a two-day workshop 9to include a project day), and now, it has
-evolved into a three-day learn-practice-apply kind of workshop.
+training) and now to a two-day workshop to learn-practice-apply kind of workshop,
+including a day of working on group projects.
 
 
 #### We have had an impact far and wide
@@ -64,8 +64,8 @@ href="/images/workshop/ws9.jpg"><img src="/images/workshop/ws9.jpg" /></a>
 <li>Does your organisation need an injection of Deep Learning? [Get in touch](/contact.html)!</li>
 <li>Do you want to upskill --- learn the foundations of Deep Learning, get
 comfortable with TensorFlow, and learn how to train and deploy your models?
-Come to the [workshop](/deep-learning-workshop.html) (25th, 26th and 27th of
-    Feb, 2019!</li>
+Come to the [workshop](/deep-learning-workshop.html) (25th, 26th of
+March, 2019!</li>
 <li>Do you have a specific set of topics or an idea --- in AI and
 it's implementation --- that you think we could teach at your
 organisation? [Get in touch](/contact.html)! (We also have an "AI for
