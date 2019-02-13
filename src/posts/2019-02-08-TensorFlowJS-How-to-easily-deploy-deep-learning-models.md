@@ -100,7 +100,7 @@ The upsides are:
 
 <ul class="normal">
 <li> The model doesn't run on your hardware ⇒ less resources required to
-deploy. In order words, if you want to handle 10,000 requests per minute, then you
+deploy. In other words, if you want to handle 10,000 requests per minute, then you
 need significant GPU compute if you host the model on the server; but in this
 approach, you don't need _any_ additional compute; it all happens in the users
 computer.</li>
