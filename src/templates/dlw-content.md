@@ -68,11 +68,11 @@ deep learning models in TensorFlow.  </p>
 </table>
 
 <p> <small>
-  *Note: People that identify as women receive a 15% discount (use the code
-  "<tt>FEMINISM</tt>"), and people of Aboriginal or Torres Strait Islander descent
-  can attend <em>for free</em> (use the code "<tt>ATSI</tt>"). These discounts are
-  provided as part of our commitment to diversity, empowerment and
-  rebalancing.
+  *Note: People that identify as women, queer, or gender fluid, receive a 15%
+  discount (use the code "<tt>FEMINISM</tt>"), and people of Aboriginal or
+  Torres Strait Islander descent can attend <em>for free</em> (use the code
+  "<tt>ATSI</tt>"). These discounts are provided as part of our commitment
+  to diversity, empowerment and rebalancing.
   </small>
 </p>
 
