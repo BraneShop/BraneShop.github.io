@@ -8,8 +8,101 @@
         <name>Braneshop Team</name>
         <email>noonsilk+-braneshop@gmail.com</email>
     </author>
-    <updated>2019-02-08T00:00:00Z</updated>
+    <updated>2019-03-01T00:00:00Z</updated>
     <entry>
+    <title>The Canary Set for Machine Learning Applications</title>
+    <link href="https://braneshop.com.au/posts/2019-03-01-The-Canary-Set.html" />
+    <id>https://braneshop.com.au/posts/2019-03-01-The-Canary-Set.html</id>
+    <published>2019-03-01T00:00:00Z</published>
+    <updated>2019-03-01T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="section">
+  <div class="info">
+    Posted on March  1, 2019
+    
+      by Noon van der Silk
+    
+		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
+  </div>
+
+
+  <h4 class="blog-title">The Canary Set for Machine Learning Applications</h4>
+
+  <div class="info">
+    
+  </div>
+
+  <p>Earlier this week I was chatting to some people and we came up with a good idea. It’s what I refer to now as the “Canary Set”.</p>
+<p>We’re probably all familiar with the standard “canary in the cage” idea:</p>
+<center>
+<p>
+The standard canary in a cage.
+</p>
+<img src="/images/blog/canary-cage.png" alt="The standard canary in a cage." />
+</center>
+<p>It’s an item that can be carried with you into your hazardous job, and when it dies, it’s suggestive that the place your working in is unsafe. Poor canary.</p>
+<p>I’d like to propose that this can be a useful idea in machine learning, where instead of a canary, we carry around an “interesting set” of data:</p>
+<center>
+<p>
+A Canary Set of interesting data points.
+</p>
+<img src="/images/blog/canary-cage-data.png" alt="A Canary Set of data" />
+</center>
+<p>This would be called the “Canary Set” of data, and every time a new deployment of your ML model comes out, you run the mdoel across this dataset to see how it performs.</p>
+<center>
+<p>
+Going in …
+</p>
+<br/> <img src="/images/blog/canary-cage-ai.png" alt="The canary set going through the next version of the AI" /> <br /> <br />
+<p>
+Coming out with a report …
+</p>
+<br/> <img src="/images/blog/canary-cage-ai-out.png" alt="The canary set coming out with a report!" />
+</center>
+<p>Let’s go into a few details of why we might want this, how it differs from the “test” or “validation” set during the training/evaluation phase of machine learning algorithms, and what benefits we might get from it.</p>
+<h4 id="the-canary-set-main-justification">The Canary Set: Main Justification</h4>
+<p>The main point of the canary set is to give <strong>users of your machine learning service</strong> control over a set of data that they want to evaluate your new models against. In this way, it differs significantly from the standard “test” set in that it doesn’t need to contain a well-distributed set of samples, it just needs to contain those samples that the <strong>user</strong> is interested in.</p>
+<p>These might be:</p>
+<ul class="normal">
+<li>
+Rare inputs,
+</li>
+<li>
+Inputs for which they are uniquely concerned, as compared to other users,
+</li>
+<li>
+“Extreme” inputs, that check areas they are interested in,
+</li>
+<li>
+A random selection of their past inputs,
+</li>
+<li>
+… many more ideas!
+</li>
+</ul>
+<p>I think there’s a world of options here. The point is: <strong>The user gets some control</strong>. And this is a nice idea, given that we want them to be gaining confidence in the ML system.</p>
+<h4 id="secondary-benefits">Secondary benefits</h4>
+<p>Increasingly we’re going to see that there will be different environments for ML training and inference. We’ve already explored this in our last blog post on <a href="/posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html">TensorFlow.js</a>, but there are also the growing number of so-called “edge devices”, the <a href="https://cloud.google.com/edge-tpu/">Google Edge TPU</a>, the <a href="https://www.movidius.com/">Movidius</a> and the <a href="http://jevois.org/">JeVois</a>, among others.</p>
+<p>The point is, we can’t actually guarantee that when we do testing of our model during training that it will agree exactly with the inference world, because there may be many stages in between.</p>
+<p>This actually came up on a project I was working on at Silverpond last year. We trained a model, and when we deployed it to the cloud, it didn’t work well. We tracked it down to a bug in the GPU code relating to some post-processing of the models output. This error was only found becaues I decided it would be a good idea to test the model on some “real” data, before making it live. In other words, I made up my own canary set and tested the model on that first, before making it live.</p>
+<h4 id="conclusion">Conclusion</h4>
+<p>In summary, the idea is that in any machine learning service, for users, that you build, you could consider adding the facility for the users to be involved in selecting a set of data that is used to evaluate any new versions of the models.</p>
+<p>The benefits are:</p>
+<ul class="normal">
+<li>
+Increasing user engagement and trust,
+</li>
+<li>
+finding new interesting edge-cases where your algorithm fails,
+</li>
+<li>
+and ensuring the quality of inference when you may not be in control of the inference endpoint.
+</li>
+</ul>
+<p>Hope this idea is helpful!</p>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>TensorFlow.js - How to easily deploy deep learning models</title>
     <link href="https://braneshop.com.au/posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html" />
     <id>https://braneshop.com.au/posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html</id>
