@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131177872-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-131177872-1');
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Braneshop - Mindful Neural Networks</title>
+  <meta name="geo.region" content="AU-VIC" />
+  <meta name="geo.placename" content="Melbourne" />
+  <link rel="stylesheet" type="text/css" href="../css/default.css" />
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono|PT+Mono|Lato|Source+Serif+Pro" rel="stylesheet">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+  <!-- Header -->
+  <div id="header">
+    <h1><a href="../"><img src="../images/braneshop-blue.png" width="400" title="Braneshop" alt="Braneshop" /></a></h1>
+    <small>Expand your knowledge manifold!</small>
+    <ul class="menu">
+      <li><a href="../" title="Home">Home</a>|</li>
+      <li><a href="../team.html" title="Team">Team</a>|</li>
+      <li><a href="../community.html" title="Community">Community</a>|</li>
+      <li><a href="../blog.html" title="Blog">Blog</a>|</li>
+      <li><a href="../contact.html" title="Contact">Contact</a></li>
+    </ul>
+    <ul class="sub-menu">
+      <li><a href="../deep-learning-workshop.html" title="Deep Learning Workshop">Deep Learning Workshop</a></li>
+    </ul>
+    <ul class="buy-now">
+      <li><a href="https://www.trybooking.com/ZYMA" title="Buy tickets for the next workshop!" class="buy-now">Up Next: Deep Learning Workshop - Buy Tickets! (25, 26 March)</a></li>
+    </ul>
+  </div>
+
+
+  <!-- Content -->
+  <div id="content">
+    <div class="section">
+  <div class="info">
+    Posted on March  6, 2019
+    
+      by Noon van der Silk
+    
+		| <a title="Blog: Recent posts" href="../blog.html">Back to recent posts</a>
+  </div>
+
+
+  <h4 class="blog-title">Mindful Neural Networks</h4>
+
+  <div class="info">
+    
+  </div>
+
+  <p>Last night at the <a href="https://www.meetup.com/Melbourne-Creative-AI-Meetup/">Creative AI Meetup</a> we had an awesome conversation around the idea of “Mindful” neural networks.</p>
+<center>
+<img width="600" src="../images/blog/thich-nhat-tanh.png" /> <br /> <i>Thich Nhat Tanh</i>
+</center>
+<p>We were hosted by our friends at <a href="https://sheda.ltd">Sheda</a> over the <a href="https://neighbourhood.work">Neighbourhood.work</a> in Fitzroy, and we had a really nice group of people with varied and interesting backgrounds show up:</p>
+<center>
+<a href="../images/blog/creative-ai-march-2019.jpg"><img width="600" src="../images/blog/creative-ai-march-2019.jpg" /></a> <br /> <i>The Mindful Neural Network Group. Photo courtesy of Eike!</i>
+</center>
+<p>We did the usual Creative-AI opening where we review a bunch of recent innovations in the field in the last few weeks. You can find the projects we discussed by looking over the slides here: <a href="https://docs.google.com/presentation/d/167A6XXp9NIOb0tPTls51PveyMgKjGEEpKaeospVr54g/edit">Creative AI Meetup - March 2019</a>.</p>
+<p>Most notable were the variety of “this X does not exist” websites powered by <a href="https://github.com/NVlabs/stylegan">StyleGAN</a>:</p>
+<ul class="normal">
+<li>
+Person: <a href="https://thispersondoesnotexist.com" class="uri">https://thispersondoesnotexist.com</a>
+</li>
+<li>
+Cat: <a href="https://thiscatdoesnotexist.com" class="uri">https://thiscatdoesnotexist.com</a>
+</li>
+<li>
+Airbnb: <a href="https://thisrentaldoesnotexist.com" class="uri">https://thisrentaldoesnotexist.com</a>
+</li>
+</ul>
+<p>and the <a href="https://github.com/openai/gpt-2">GPT-2 model</a>, which produced the following gem, when prompted with a segment of <a href="https://www.goodreads.com/book/show/687278.When_Things_Fall_Apart">when things fall apart</a>:</p>
+<pre><code>Input  &gt;&gt;&gt;
+
+To be fully alive, fully human, and completely awake is to be
+
+
+Output &gt;&gt;&gt;
+
+completely free from judgement and morality, to have freedom in any worldview
+through suffering (with anything that comes from between two extremes can
+often be fine), to be absolutely free from stimuli getting in your way,
+to be completely free from fear and humiliation, to be completely free
+from a series of simple pleasures, to be absolutely free from your own
+emotional and social dependence inherent in anything being different
+from yours. [...]</code></pre>
+<p>We did eventually got around to discussing the mindfulness aspect of neural networks, and what ideas we thought we could transfer over.</p>
+<p>As a group, we covered:</p>
+<ul class="normal">
+<li>
+<strong>Attention</strong>: <a href="https://scirate.com/arxiv/1706.03762">Is attention enough?</a> Should we make our networks “aware” of their own thoughts? Is that te same as “attention” as-it’s implemented presently? We discussed briefly this paper: <a href="https://scirate.com/arxiv/1902.10186">Attention is not Explanation</a>.
+</li>
+<li>
+<strong>Anxiety</strong>: We discussed anxiety as “fear of the future”, and considered that perhaps neural nets have no awareness of the future, as they only make judgements on single instance, or alternatively the interpretation that actually neural networks are incredibly anxious as during training that are entirely focused on the future, and how they can change themselves to do better.
+</li>
+<li>
+<strong>Presence</strong>: We wondered whether neural networks are “present” in “the moment”, or if this even makes sense.
+</li>
+<li>
+<strong>Consciousness</strong>: We didn’t go too in-depth on this, but we happened to have a <a href="https://www.linkedin.com/in/rafik-hadfi/">researcher working in this area in the room</a>, so we discussed it on an off. We did discuss our favourite reading on the topic. On free will, mine is this <a href="https://arxiv.org/abs/1306.0159">The Ghost in the Quantum Turing Machine</a>, and on consciouness and thinking it is <a href="https://www.goodreads.com/book/show/123471.I_Am_a_Strange_Loop">I Am a Strange Loop</a>, <a href="https://www.goodreads.com/book/show/24113.G_del_Escher_Bach">Gödel, Escher, Bach</a>, and <a href="https://www.goodreads.com/book/show/7711871-surfaces-and-essences">Surfaces and Essences</a> (the last of which I covered on <a href="https://silky.github.io/posts/2019-01-03-2018-books.html">my 2018 reading list</a>).
+</li>
+<li>
+<strong>Intent</strong>: We talked a little bit about how it’s important to know <em>why</em> a given dataset was constructed, as this might lead to us understanding it’s bias.
+</li>
+<li>
+<strong><a href="https://en.wikipedia.org/wiki/P%C4%81ramit%C4%81">Paramitas</a>/Loss Functions</strong>: We had a moderate amount of discussion around how “small” most neural networks are in their output objective. They take in significantly rich data, but force it to be absolutely 1 or absolutely 0. Maybe there could be richer loss functions we could consider, that would allow for the network to focus in different ways. A recent bit of research along these lines is this: <a href="https://scirate.com/arxiv/1903.01182">Completment Objective Training</a>, i.e. have it make a good prediction of what it is, but also what it is <em>not</em>.
+</li>
+</ul>
+<p>Overall, I had heaps of fun, and there was some discussion of a second installment, as there is heaps to explore here, so stay tuned to the <a href="https://www.meetup.com/Melbourne-Creative-AI-Meetup/">meetup</a> and join us next time!</p>
+</div>
+
+  </div>
+
+
+  <!-- Footer -->
+  <div id="footer">
+    <div id="newsletter">
+
+<!-- Mailchimp -->
+      <a name="newsletter"></a>
+      <h4>Newsletter!</h4>
+<div id="mc_embed_signup">
+<form action="https://braneshop.us19.list-manage.com/subscribe/post?u=e94e88a100517dd09f1720e55&amp;id=7957d3fc4c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<p>✌ Thanks for visiting! If you're interested, sign up to our newsletter to
+receive monthly updates, and notifications of courses.
+</p>
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address
+</label>
+	<input type="email" value name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+	<label for="mce-NAME">Name </label>
+	<input type="text" value name="NAME" class id="mce-NAME">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e94e88a100517dd09f1720e55_7957d3fc4c" tabindex="-1" value></div>
+    <div class="clear"><input type="submit" value="Subscribe! 🗞" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<!-- /Mailchimp -->
+    </div>
+
+
+    <div id="acknowledgement">
+      <img src="../images/atsi.webp" />
+      <p> Braneshop is located on the traditional lands of the Wurundjeri people
+      of the Kulin nation. We acknowledge that sovereignty was never ceded and
+      pay our respects to elders past, present and emerging.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
