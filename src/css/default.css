@@ -3,6 +3,23 @@ body {
   background-image: url(/images/space.svg);
 }
 
+#header.compressed {
+  height:         200px;
+  display:        flex;
+  flex-direction: row;
+  font-size:      1.8em;
+  transition:     1s;
+}
+
+#header.compressed .logos small {
+}
+
+#header-logo.compressed {
+  transition: 1s;
+  width:      150px;
+}
+
+
 #content {
   display:          flex;
   flex-direction:   column;
