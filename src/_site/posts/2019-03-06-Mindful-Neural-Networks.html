@@ -19,6 +19,10 @@
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 <body>
+  <div id="braneshop-fixed">
+  </div>
+
+
   <!-- Header -->
   <div id="header" class="compressed">
     <div class="logos">
@@ -168,6 +172,23 @@ receive monthly updates, and notifications of courses.
       </p>
     </div>
   </div>
+
+
+<script type="text/javascript">
+window.onload = function() {
+  const prism = document.getElementById("braneshop-fixed")
+  var h = 80;
+
+  function setFrame(frame) {
+    var f = frame % 120;
+    prism.style["background-position"] = "0 " + "-" + (f*h) + "pt";
+  }
+
+  document.addEventListener('scroll', function(x) {
+  	setFrame(Math.floor(window.scrollY/30))
+  }, false)
+}
+</script>
 
 </body>
 </html>

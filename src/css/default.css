@@ -3,6 +3,18 @@ body {
   background-image: url(/images/space.svg);
 }
 
+#braneshop-fixed {
+  position:            fixed;
+  margin:              10px;
+  width:               40pt;
+  height:              40pt;
+  background-size:     40pt;
+  background-position: 0 0;
+  background-image:    url(/images/aa.jpg);
+  border-radius:       10px;
+  border:              solid 2px black;
+}
+
 #header.compressed {
   height:         200px;
   display:        flex;
@@ -18,7 +30,6 @@ body {
   transition: 1s;
   width:      150px;
 }
-
 
 #content {
   display:          flex;
