@@ -10,6 +10,7 @@ body {
   height:              40pt;
   background-size:     40pt;
   background-position: 0 0;
+  background-color:    black;
   background-image:    url(/images/aa.jpg);
   border-radius:       10px;
   border:              solid 2px black;
