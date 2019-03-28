@@ -273,10 +273,6 @@ as possible, and constantly learns as it goes:
 
 <center> <img src="/images/blog/proposed-workflow.png" /> </center>
 
-This kind of scheme is what my friends over at
-[Silverpond](http://silverpond.com.au) are working on with their
-[Highlighter](https://highlighter.ai/) tool. 
-
 Overall, the idea of incorporating data into a model as-it-infers isn't
 new, but to me, again, what is surprising is just how little data you need
 to get started; at least in this specific case!

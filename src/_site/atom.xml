@@ -202,7 +202,7 @@ A random selection of their past inputs,
 <h4 id="secondary-benefits">Secondary benefits</h4>
 <p>Increasingly we’re going to see that there will be different environments for ML training and inference. We’ve already explored this in our last blog post on <a href="/posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html">TensorFlow.js</a>, but there are also the growing number of so-called “edge devices”, the <a href="https://cloud.google.com/edge-tpu/">Google Edge TPU</a>, the <a href="https://www.movidius.com/">Movidius</a> and the <a href="http://jevois.org/">JeVois</a>, among others.</p>
 <p>The point is, we can’t actually guarantee that when we do testing of our model during training that it will agree exactly with the inference world, because there may be many stages in between.</p>
-<p>This actually came up on a project I was working on at Silverpond last year. We trained a model, and when we deployed it to the cloud, it didn’t work well. We tracked it down to a bug in the GPU code relating to some post-processing of the models output. This error was only found becaues I decided it would be a good idea to test the model on some “real” data, before making it live. In other words, I made up my own canary set and tested the model on that first, before making it live.</p>
+<p>This actually came up on a project I was working on last year. We trained a model, and when we deployed it to the cloud, it didn’t work well. We tracked it down to a bug in the GPU code relating to some post-processing of the models output. This error was only found becaues I decided it would be a good idea to test the model on some “real” data, before making it live. In other words, I made up my own canary set and tested the model on that first, before making it live.</p>
 <h4 id="conclusion">Conclusion</h4>
 <p>In summary, the idea is that in any machine learning service, for users, that you build, you could consider adding the facility for the users to be involved in selecting a set of data that is used to evaluate any new versions of the models.</p>
 <p>The benefits are:</p>
@@ -380,61 +380,6 @@ In order to deal with the speed issue, we typically run a “smaller” or “co
 </li>
 </ul>
 <p>So, if you’re looking for any kind of design work, definitely get in contact with her over at <a href="https://www.theloop.com.au/renlemon/portfolio/Graphic-Designer/Melbourne">Ren Imagery</a> or on <a href="https://www.linkedin.com/in/lauren-harris-22409899/">LinkedIn</a>!</p>
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Braneshop, Silverpond, and the Deep Learning Workshop</title>
-    <link href="https://braneshop.com.au/posts/2019-01-20-Braneshop-and-Silverpond.html" />
-    <id>https://braneshop.com.au/posts/2019-01-20-Braneshop-and-Silverpond.html</id>
-    <published>2019-01-20T00:00:00Z</published>
-    <updated>2019-01-20T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<div class="section">
-  <div class="info">
-    Posted on January 20, 2019
-    
-      by Noon van der Silk
-    
-		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
-  </div>
-
-
-  <h4 class="blog-title">Braneshop, Silverpond, and the Deep Learning Workshop</h4>
-
-  <div class="info">
-    
-  </div>
-
-  <p>For the past 2 and a half years, as part of <a href="https://silverpond.com.au">Silverpond</a> I (and others there) have been successfully delivering the deep learning workshop. It all started way back in September 2016, <a href="http://sordina.github.io/">Lyndon</a> and I posted about it on the <a href="https://www.meetup.com/Machine-Learning-AI-Meetup/events/233901076/">ML/AI Meetup</a>. The Braneshop has now partnered with Silverpond to deliver the workshops, and we are so excited!</p>
-<h4 id="the-workshop-has-come-a-long-way">The workshop has come a long way</h4>
-<p>The first time we ran it, we had everyone packed into the meeting room at Silverpond, and for four hours we talked through the fundamentals of deep learning. Everytime we have ran it we asked for feedback, and as such, each iteration has been improved, tweaked, and been added to. It has been our aim that the workshop stays current, relevant, and useful. The deep learning workshop has gone from a four-hour “intensive”, to a one day training) and now to a two-day workshop to learn-practice-apply kind of workshop, including a day of working on group projects.</p>
-<h4 id="we-have-had-an-impact-far-and-wide">We have had an impact far and wide</h4>
-<p>In only two years, we have trained almost 150 people. We’ve seen attendance from a wide variety of backgrounds and careers: management, data science, programmers, government, Big-4 consulting, specialised hardware startups, computer gaming, as well as not-for-profits and artists.</p>
-<p>These workshops have helped people and organisations acquire the knowledge needed to bring AI into their projects. Having started in 2016, they have made their mark in the burgeoning AI community in Melbourne.</p>
-<h4 id="the-future-of-the-workshops-the-braneshop">The future of the workshops: The Braneshop</h4>
-<p>We are excited to continue teaching cutting edge technology in a hands-on and intuitive manner, and so, we’ve moved on to running the workshops as an independent company, where we can focus on delivery, pedagogy, content development, and up-skilling under-represented groups. Silverpond is our <a href="https://silverpond.com.au/2019/01/18/partnering-with-braneshop-for-silverponds-workshops/">partner</a> on this journey, and I’m personally grateful for their support (in particular Jono and Lyndon) and am looking forward to the future!</p>
-<p>#TBT A few of the photos from the workshops over the years below (see more on the <a href="/deep-learning-workshop.html">deep learning workshop page</a>):</p>
-<div id="photos-list">
-<a href="/images/workshop/ws6.jpg"><img
-src="/images/workshop/ws6.jpg" /></a> <a href="/images/workshop/ws2.jpg"><a
-href="/images/workshop/ws9.jpg"><img src="/images/workshop/ws9.jpg" /></a> <a href="/images/workshop/ws2.jpg"><img src="/images/workshop/ws2.jpg"
-/></a>
-</div>
-<h4 id="here-are-a-few-ways-you-can-get-involved">Here are a few ways you can get involved</h4>
-<ul class="normal">
-<li>
-Does your organisation need an injection of Deep Learning? <a href="/contact.html">Get in touch</a>!
-</li>
-<li>
-Do you want to upskill — learn the foundations of Deep Learning, get comfortable with TensorFlow, and learn how to train and deploy your models? Come to the <a href="/deep-learning-workshop.html">workshop</a> (25th, 26th of March, 2019!
-</li>
-<li>
-Do you have a specific set of topics or an idea — in AI and it’s implementation — that you think we could teach at your organisation? <a href="/contact.html">Get in touch</a>! (We also have an “AI for Leadership” workshop in the making; let us know if that’s of interest!)
-</li>
-<li>
-You are just generally interested in what we are doing and you want to know more? Join the newsletter, below!
-</li>
-</ul>
 </div>
 ]]></summary>
 </entry>
@@ -642,7 +587,6 @@ Augmentation always made both curves worse. I wasn’t expecting this, and am no
 <center>
 <img src="/images/blog/proposed-workflow.png" />
 </center>
-<p>This kind of scheme is what my friends over at <a href="http://silverpond.com.au">Silverpond</a> are working on with their <a href="https://highlighter.ai/">Highlighter</a> tool.</p>
 <p>Overall, the idea of incorporating data into a model as-it-infers isn’t new, but to me, again, what is surprising is just how little data you need to get started; at least in this specific case!</p>
 <p>To reiterate differently: If you’re a business wondering how to adopt AI, one plan would be to build this kind of human-in-the-loop system, where any prediction that is, say, better than 50% chance of being right will be useful to humans. Then, have the humans feed this system as they use it, and it will radically improve with just a small number of confirmed answers!</p>
 <p>So, to answer the question from the title, we might say “less than you think!”, if you have the right setup to incorporate new data into your system, as you go.</p>

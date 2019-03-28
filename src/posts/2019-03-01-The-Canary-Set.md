@@ -80,13 +80,13 @@ The point is, we can't actually guarantee that when we do testing of our model
 during training that it will agree exactly with the inference world, because
 there may be many stages in between.
 
-This actually came up on a project I was working on at Silverpond last year.
-We trained a model, and when we deployed it to the cloud, it didn't work well.
-We tracked it down to a bug in the GPU code relating to some post-processing
-of the models output. This error was only found becaues I decided it would be
-a good idea to test the model on some "real" data, before making it live. In
-other words, I made up my own canary set and tested the model on that first,
-before making it live.
+This actually came up on a project I was working on last year.  We trained a
+model, and when we deployed it to the cloud, it didn't work well.  We tracked
+it down to a bug in the GPU code relating to some post-processing of the
+models output. This error was only found becaues I decided it would be a good
+idea to test the model on some "real" data, before making it live. In other
+words, I made up my own canary set and tested the model on that first, before
+making it live.
 
 
 

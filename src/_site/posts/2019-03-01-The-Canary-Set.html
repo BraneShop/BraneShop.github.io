@@ -39,12 +39,6 @@
         <li><a href="../blog.html" title="Blog">Blog</a>|</li>
         <li><a href="../contact.html" title="Contact">Contact</a></li>
       </ul>
-      <ul class="sub-menu">
-        <li><a href="../deep-learning-workshop.html" title="Deep Learning Workshop">Deep Learning Workshop</a></li>
-      </ul>
-      <ul class="buy-now">
-        <li><a href="https://www.eventbrite.com.au/e/braneshop-deep-learning-workshop-20-21-may-2019-tickets-58204512263" title="Buy tickets for the next workshop!" class="buy-now">Up Next: Deep Learning Workshop - Buy Tickets! (20, 21 May)</a></li>
-      </ul>
     </div>
   </div>
 
@@ -119,7 +113,7 @@ A random selection of their past inputs,
 <h4 id="secondary-benefits">Secondary benefits</h4>
 <p>Increasingly we’re going to see that there will be different environments for ML training and inference. We’ve already explored this in our last blog post on <a href="../posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html">TensorFlow.js</a>, but there are also the growing number of so-called “edge devices”, the <a href="https://cloud.google.com/edge-tpu/">Google Edge TPU</a>, the <a href="https://www.movidius.com/">Movidius</a> and the <a href="http://jevois.org/">JeVois</a>, among others.</p>
 <p>The point is, we can’t actually guarantee that when we do testing of our model during training that it will agree exactly with the inference world, because there may be many stages in between.</p>
-<p>This actually came up on a project I was working on at Silverpond last year. We trained a model, and when we deployed it to the cloud, it didn’t work well. We tracked it down to a bug in the GPU code relating to some post-processing of the models output. This error was only found becaues I decided it would be a good idea to test the model on some “real” data, before making it live. In other words, I made up my own canary set and tested the model on that first, before making it live.</p>
+<p>This actually came up on a project I was working on last year. We trained a model, and when we deployed it to the cloud, it didn’t work well. We tracked it down to a bug in the GPU code relating to some post-processing of the models output. This error was only found becaues I decided it would be a good idea to test the model on some “real” data, before making it live. In other words, I made up my own canary set and tested the model on that first, before making it live.</p>
 <h4 id="conclusion">Conclusion</h4>
 <p>In summary, the idea is that in any machine learning service, for users, that you build, you could consider adding the facility for the users to be involved in selecting a set of data that is used to evaluate any new versions of the models.</p>
 <p>The benefits are:</p>
