@@ -5,5 +5,4 @@
   <li>~&nbsp;Google&nbsp;Colaboratory</li>
 </ul>
 
-<p> The deep learning workshop is taking a brief hiatus. Please subscribe to
-the newsletter for updates! </p>
+<p> The deep learning workshop is taking a brief hiatus while it takes on a new form. Please subscribe to the newsletter for updates! </p>
