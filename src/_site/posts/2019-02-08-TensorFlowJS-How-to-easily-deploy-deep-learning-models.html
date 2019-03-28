@@ -5,10 +5,13 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131177872-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-131177872-1');
+    var host = window.location.hostname;
+    if ( host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-131177872-1');
+    }
   </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Braneshop - TensorFlow.js - How to easily deploy deep learning models</title>
@@ -194,9 +197,9 @@ receive monthly updates, and notifications of courses.
 
     <div id="acknowledgement">
       <img src="../images/atsi.webp" />
-      <p> Braneshop is located on the traditional lands of the Wurundjeri people
-      of the Kulin nation. We acknowledge that sovereignty was never ceded and
-      pay our respects to elders past, present and emerging.
+      <p> Braneshop is located on the traditional lands of the people of the
+      Kulin nation. We acknowledge that sovereignty was never ceded and pay
+      our respects to elders past, present and emerging.
       </p>
     </div>
   </div>
