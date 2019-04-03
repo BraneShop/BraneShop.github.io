@@ -2,6 +2,8 @@ body {
   margin:           0px;
   background-color: black;
   background-image: url(/images/space.svg);
+  font-size:        20px;
+  font-family:      "Lato";
 }
 
 #braneshop-fixed {
@@ -172,7 +174,6 @@ td.value ul {
 }
 
 td.value ul li {
-  font-size: 1em;
   padding:   4px;
 }
 
@@ -185,7 +186,7 @@ p, li {
 }
 
 pre {
-	font-size: 1.2em;
+  font-family: "Lato";
   margin-left: 30px;
 }
 
@@ -216,7 +217,6 @@ div.day {
 }
 
 div.concepts ul li {
-  font-size: 1.1em;
   padding:   2px;
 }
 
@@ -240,7 +240,6 @@ ul.menu li {
 
 ul.menu li a {
   padding:   5px;
-  font-size: 1.2em;
 }
 
 div.tickets {
@@ -280,20 +279,18 @@ ul.summary {
 ul.summary li {
   padding-left:  5px;
   padding-right: 5px;
-  font-size:     1.0em;
   font-family:   "PT Mono";
 }
 
 #header ul { 
-  font-size: 0.5em;
 }
 
 #header ul li {
+  font-size:   0.6em;
   font-family: "PT Mono";
 }
 
 ul.normal li {
-  font-size: 1.2em;
   padding:   2px;
 }
 
@@ -306,14 +303,6 @@ p {
   padding-right: 20px;
 }
 
-p, li, blockquote, label, input, td {
-  font-family: "Lato";
-  font-size:   1.2em;
-}
-
-ul.normal li ul.normal li {
-  font-size: 1em;
-}
 
 #values-list, #testimonials-list {
   display:         flex;
@@ -363,6 +352,7 @@ div.value h4 {
 ::selection {
   background: hotpink;
   color:      white;
+
 }
 
 ::-moz-selection {
@@ -385,7 +375,6 @@ span.important {
 }
 
 blockquote {
-  font-size:     1.2em;
   background:    #eaeaea;
   padding:       5px;
   padding-left:  20px;
@@ -446,7 +435,7 @@ div.photo {
 }
 
 div.bio center {
-  font-size:  1.1em;
+  font-size:  0.8em;
   margin-top: 10px;
 }
 
@@ -467,3 +456,4 @@ div.important {
 }
 
 small.tiny { font-size: 0.5em; }
+

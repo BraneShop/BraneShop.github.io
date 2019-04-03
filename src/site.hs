@@ -60,7 +60,7 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
-    match "deep-learning-workshop.html" $ do
+    match (fromList ["deep-learning-workshop.html", "ai-for-leadership.html"]) $ do
         route idRoute
         compile $ do
             getResourceBody
