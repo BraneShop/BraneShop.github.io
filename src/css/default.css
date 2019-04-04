@@ -398,7 +398,8 @@ ul.menu li {
 }
 
 #mc_embed_signup_scroll div {
-  display: flex;
+  display:   flex;
+  font-size: 0.7em;
 }
 
 #newsletter h4 {
