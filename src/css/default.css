@@ -20,7 +20,6 @@ body {
 }
 
 #header.compressed {
-  height:         200px;
   display:        flex;
   flex-direction: row;
   font-size:      1.8em;
@@ -110,12 +109,19 @@ img.wibble {
   padding:          10px;
   background-image: url(/images/header-bg.svg);
   background-size:  cover;
-  height:           600px;
   border-bottom:    solid 10px mediumslateblue;
 }
 
 #header h1 a, #header small, ul li a {
   color: white;
+}
+
+#header ul li a {
+  background: #000000aa;
+}
+
+ul.smaller {
+  font-size: 0.8em;
 }
 
 video.profile-video {
@@ -131,9 +137,10 @@ video.profile-video {
 }
 
 #header small {
-  font-size:   0.8em;
+  font-size:   0.7em;
   font-weight: normal;
   font-family: "PT Mono";
+  text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px  0px 0px #000, 1px  0px 0px #000, -1px  1px 0px #000, 0px  1px 0px #000, 1px  1px 0px #000;
 }
 
 div.section {
