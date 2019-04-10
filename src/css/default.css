@@ -458,3 +458,13 @@ div.important {
 
 small.tiny { font-size: 0.5em; }
 
+
+hr {
+  height:           1px;
+  border:           none;
+  color:            #000;
+  background-color: #000;
+  width:            60%;
+  text-align:       center;
+  margin:           0 auto;
+}

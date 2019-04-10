@@ -8,8 +8,66 @@
         <name>Braneshop Team</name>
         <email>noonsilk+-braneshop@gmail.com</email>
     </author>
-    <updated>2019-03-14T00:00:00Z</updated>
+    <updated>2019-04-10T00:00:00Z</updated>
     <entry>
+    <title>Deep learning in the browser!</title>
+    <link href="https://braneshop.com.au/posts/2019-04-10-Deep-learning-in-the-browser-at-the-web-meetup.html" />
+    <id>https://braneshop.com.au/posts/2019-04-10-Deep-learning-in-the-browser-at-the-web-meetup.html</id>
+    <published>2019-04-10T00:00:00Z</published>
+    <updated>2019-04-10T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="section">
+  <div class="info">
+    Posted on April 10, 2019
+    
+      by Noon van der Silk
+    
+		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
+  </div>
+
+
+  <h4 class="blog-title">Deep learning in the browser!</h4>
+
+  <div class="info">
+    
+			<center><p> The code used for this blog-post is <a href="https://github.com/silky/tfjs-fashion-mnist-classifier">here</a>. </p></center>
+    
+  </div>
+
+  <p>Last night I gave a talk at <a href="https://www.meetup.com/the-web/events/260211393/">The Web Meetup</a> on deep learning in the browser. It was mostly about how to deploy models built TensorFlow to the browser, by way of TensorFlow.js, but we did manage to try a model on the <a href="https://colab.research.google.com/">Google Colaboratory</a>, and deploy it to the browser all in the space of about 5 minutes!</p>
+<p>We also discussed a few of the items that I brought up in my recent post about <a href="/posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html">deploying models via TensorFlow.js</a>.</p>
+<center>
+<img src="/images/blog/wmu-1.jpg" /> <br /> Deep learning in the browser! - Presentation at the April Web Meetup.
+</center>
+<p>Here are the links to the presentation and the code:</p>
+<ul class="normal">
+<li>
+Presentation - <a href="https://docs.google.com/presentation/d/1_px6paltT1ZHZPKKTK_o-8KWKppremKcwe-5GY94kos/edit">Deep learning in the browser!</a>
+</li>
+<li>
+Online Demo - <a href="https://silky.github.io/tfjs-fashion-mnist-classifier/index.html">tfjs fashion mnist classifier</a>
+<li>
+Code - <a href="https://github.com/silky/tfjs-fashion-mnist-classifier" class="uri">https://github.com/silky/tfjs-fashion-mnist-classifier</a>
+</li>
+</ul>
+<p>Some of the discussion points from the audience were:</p>
+<ul class="normal">
+<li>
+Q: What are some real-world use-cases of TensorFlow.js? (A: I haven’t seen many applications yet, but they’re sure to exist!)
+</li>
+<li>
+Q: What do you think the scope is for new applications of AI in the browser? (A: Heaps! We need to play with the tooling to find out what they are)
+</li>
+<li>
+Q: Do the models need to be significantly smaller to run in the browser? (A: Depends if you have a GPU when you run it; but not generally, no. A bit smaller, yes.
+</li>
+</ul>
+<p>We wrapped up with a few thoughts around the future of UX and AI. Ultimately, I think this is going to be a field of significant growth and importance, so now’s the time to get into it, if it’s of interest to you!</p>
+<hr />
+<p>If you’re looking to adopt AI in your organisation, then check out our upcoming <a href="/ai-for-leadership.html">AI For Leadership</a> course!</p>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>Australian Human Rights Commission AI - Submission</title>
     <link href="https://braneshop.com.au/posts/2019-03-14-HRC-AI-Submission.html" />
     <id>https://braneshop.com.au/posts/2019-03-14-HRC-AI-Submission.html</id>

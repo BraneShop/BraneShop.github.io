@@ -14,10 +14,10 @@
     }
   </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Braneshop - Blog</title>
+  <title>Braneshop - Deep learning in the browser!</title>
   <meta name="geo.region" content="AU-VIC" />
   <meta name="geo.placename" content="Melbourne" />
-  <link rel="stylesheet" type="text/css" href="./css/default.css" />
+  <link rel="stylesheet" type="text/css" href="../css/default.css" />
   <link href="https://fonts.googleapis.com/css?family=Fira+Mono|PT+Mono|Lato|Source+Serif+Pro" rel="stylesheet">
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
@@ -28,16 +28,16 @@
   <!-- Header -->
   <div id="header" class="compressed">
     <div class="logos">
-      <h1><a href="./"><img id="header-logo" class="compressed" src="./images/braneshop-blue.png" width="400" title="Braneshop" alt="Braneshop" /></a></h1>
+      <h1><a href="../"><img id="header-logo" class="compressed" src="../images/braneshop-blue.png" width="400" title="Braneshop" alt="Braneshop" /></a></h1>
       <small>Expand your knowledge manifold!</small>
     </div>
     <div class="m">
       <ul class="menu">
-        <li><a href="./" title="Home">Home</a>|</li>
-        <li><a href="./team.html" title="Team">Team</a>|</li>
-        <li><a href="./community.html" title="Community">Community</a>|</li>
-        <li><a href="./blog.html" title="Blog">Blog</a>|</li>
-        <li><a href="./contact.html" title="Contact">Contact</a></li>
+        <li><a href="../" title="Home">Home</a>|</li>
+        <li><a href="../team.html" title="Team">Team</a>|</li>
+        <li><a href="../community.html" title="Community">Community</a>|</li>
+        <li><a href="../blog.html" title="Blog">Blog</a>|</li>
+        <li><a href="../contact.html" title="Contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -46,48 +46,55 @@
   <!-- Content -->
   <div id="content">
     <div class="section">
-  <h3>🌅 Blog: Recent Posts 
-  <small class="tiny">(<a href="http://braneshop.com.au/atom.xml">atom feed</a>)</small>
-  </h3>
-  <p>Below are our thoughts on various topics and news! You can subscribe
-     to the newsletter at the bottom of the page to get these posts emailed
-     montly.
-  </p>
-  <ul class="normal">
+  <div class="info">
+    Posted on April 10, 2019
+    
+      by Noon van der Silk
+    
+		| <a title="Blog: Recent posts" href="../blog.html">Back to recent posts</a>
+  </div>
 
-  
-    <li> <a href="./posts/2019-04-10-Deep-learning-in-the-browser-at-the-web-meetup.html">Deep learning in the browser!</a> - April 10, 2019 </li>
-  
 
-  
-    <li> <a href="./posts/2019-03-14-HRC-AI-Submission.html">Australian Human Rights Commission AI - Submission</a> - March 14, 2019 </li>
-  
+  <h4 class="blog-title">Deep learning in the browser!</h4>
 
-  
-    <li> <a href="./posts/2019-03-06-Mindful-Neural-Networks.html">Mindful Neural Networks</a> - March  6, 2019 </li>
-  
+  <div class="info">
+    
+			<center><p> The code used for this blog-post is <a href="https://github.com/silky/tfjs-fashion-mnist-classifier">here</a>. </p></center>
+    
+  </div>
 
-  
-    <li> <a href="./posts/2019-03-01-The-Canary-Set.html">The Canary Set for Machine Learning Applications</a> - March  1, 2019 </li>
-  
-
-  
-    <li> <a href="./posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html">TensorFlow.js - How to easily deploy deep learning models</a> - February  8, 2019 </li>
-  
-
-  
-    <li> <a href="./posts/2019-01-30-Best-Designer-Ren-Imagery.html">Thanks to Ren Imagery for our new logo!</a> - January 30, 2019 </li>
-  
-
-  
-    <li> <a href="./posts/2018-12-17-How-Much-Data-For-Retraining.html">How much data do you need to retrain a classifier?</a> - December 17, 2018 </li>
-  
-
+  <p>Last night I gave a talk at <a href="https://www.meetup.com/the-web/events/260211393/">The Web Meetup</a> on deep learning in the browser. It was mostly about how to deploy models built TensorFlow to the browser, by way of TensorFlow.js, but we did manage to try a model on the <a href="https://colab.research.google.com/">Google Colaboratory</a>, and deploy it to the browser all in the space of about 5 minutes!</p>
+<p>We also discussed a few of the items that I brought up in my recent post about <a href="../posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html">deploying models via TensorFlow.js</a>.</p>
+<center>
+<img src="../images/blog/wmu-1.jpg" /> <br /> Deep learning in the browser! - Presentation at the April Web Meetup.
+</center>
+<p>Here are the links to the presentation and the code:</p>
+<ul class="normal">
+<li>
+Presentation - <a href="https://docs.google.com/presentation/d/1_px6paltT1ZHZPKKTK_o-8KWKppremKcwe-5GY94kos/edit">Deep learning in the browser!</a>
+</li>
+<li>
+Online Demo - <a href="https://silky.github.io/tfjs-fashion-mnist-classifier/index.html">tfjs fashion mnist classifier</a>
+<li>
+Code - <a href="https://github.com/silky/tfjs-fashion-mnist-classifier" class="uri">https://github.com/silky/tfjs-fashion-mnist-classifier</a>
+</li>
 </ul>
-
-
+<p>Some of the discussion points from the audience were:</p>
+<ul class="normal">
+<li>
+Q: What are some real-world use-cases of TensorFlow.js? (A: I haven’t seen many applications yet, but they’re sure to exist!)
+</li>
+<li>
+Q: What do you think the scope is for new applications of AI in the browser? (A: Heaps! We need to play with the tooling to find out what they are)
+</li>
+<li>
+Q: Do the models need to be significantly smaller to run in the browser? (A: Depends if you have a GPU when you run it; but not generally, no. A bit smaller, yes.
+</li>
+</ul>
+<p>We wrapped up with a few thoughts around the future of UX and AI. Ultimately, I think this is going to be a field of significant growth and importance, so now’s the time to get into it, if it’s of interest to you!</p>
+<hr />
+<p>If you’re looking to adopt AI in your organisation, then check out our upcoming <a href="../ai-for-leadership.html">AI For Leadership</a> course!</p>
 </div>
-
 
   </div>
 
@@ -128,7 +135,7 @@ receive monthly updates, and notifications of courses.
 
 
     <div id="acknowledgement">
-      <img src="./images/atsi.webp" />
+      <img src="../images/atsi.webp" />
       <p> Braneshop is located on the traditional lands of the people of the
       Kulin nation. We acknowledge that sovereignty was never ceded and pay
       our respects to elders past, present and emerging.
