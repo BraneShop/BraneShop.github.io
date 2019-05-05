@@ -1,8 +1,11 @@
 <ul class="summary">
   <li>Python</li>
   <li>~&nbsp;TensorFlow</li>
-  <li>~&nbsp;Jupyter&nbsp;Notebooks</li>
   <li>~&nbsp;Google&nbsp;Colaboratory</li>
+  <li>~&nbsp;Model&nbsp;Building</li>
+  <li>~&nbsp;Projects</li>
 </ul>
 
-<p> The deep learning workshop is taking a brief hiatus while it takes on a new form. Please subscribe to the newsletter for updates! </p>
+<p> A specialised deep learning workshop targetted at the kinds of problems
+your organisation is interested in. <a href="/contact.html">Get in contact</a>
+for details. </p>
