@@ -2,11 +2,11 @@
 scientists wanting to break into the AI industry.</em> </p> </p>
 
 
-<p> Over <b>6 weeks</b>, with 3 contact hours per week,  you will get to grips with using Python,
-TensorFlow and Google Colaboratory.  Our experienced instructors will work
-closely to support you to build your own deep learning models that solve
-problems across typical domains of deep learning.  The workshop series
-focuses on foundations, embeddings, and computer vision.
+<p> Over <b>6 weeks</b>, with <b>3 contact hours per week</b>, you will get to
+grips with using Python, TensorFlow and Google Colaboratory.  Our experienced
+instructors will work closely to support you to build your own deep learning
+models that solve problems across typical domains of deep learning. The
+workshop series focuses on foundations, embeddings, and computer vision.
 </p>
 
 <!--
@@ -28,8 +28,8 @@ and the Google CoLaboratory.</p>
 -->
 
 <p> In order to support learning and development, we provide "<b>office
-hours</b>", twice per week, for a total of 2 hours, to allow for a supportive
-environment to complete assigned homework and gain further understanding. </p>
+hours</b>" to allow for a supportive environment to complete assigned homework
+and gain further understanding. </p>
 
 <!--
 <h5>Essential details</h5>
