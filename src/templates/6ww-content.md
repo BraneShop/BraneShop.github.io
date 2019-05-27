@@ -1,5 +1,5 @@
 
-<p> <center> <span class="important">Starts on the 9th of August!</span>
+<p> <center> <span class="important">Starts on the 8th of August!</span>
 </center> </p>
 
 <p> <em>A six-week hands-on machine learning workshop for programmers and data
