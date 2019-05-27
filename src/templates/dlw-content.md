@@ -2,12 +2,12 @@
 problems and areas your organisation is interested in.</em>
 </p>
 
-<h5>Overview</h5>
+<h5>About</h5>
 
 $partial("templates/dlw-overview.md")$
 
 
-<h5>Agenda</h5>
+<h5>Overview</h5>
 
 <p> Designed in consultation. Typically features some of the content from the
 <a href="/6-week-workshop-on-deep-learning.html">6 week workshop</a>, such as:
