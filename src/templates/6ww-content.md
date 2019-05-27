@@ -115,5 +115,6 @@ supporting up to 10 diversity tickets, which are discounted down to <b>$$594 per
 under-represented groups.
 </p>
 
-<p>Applications to this scholarship for the next workshop will open soon;
-please subscribe to the newsletter for announcements.</p>
+<p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/Tnfm4a">Apply for the Scholarship</a> </center> </p>
+
+<p>Scholarship decisions will be sent out on the 31st of July.</p>
