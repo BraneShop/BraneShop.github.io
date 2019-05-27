@@ -1,1 +1,1 @@
-Mid-July 2019, TBC, please subscribe to the newsletter announcements.
+August 9th-Sept 12th, 2019.

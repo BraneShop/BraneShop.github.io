@@ -11,39 +11,38 @@ $partial("templates/6ww-overview.md")$
 <ul class="agenda">
   <li> Week 1
     <ul class="sub-agenda">
-      <li> Showreel and State of the Art, </li>
-      <li> Learning vs. Programming, </li>
-      <li> Neural Notation. </li>
+      <li> Showreel and State of the Art </li>
+      <li> Learning vs. Programming </li>
+      <li> Neural Notation </li>
     </ul>
   </li>
   <li> Week 2
     <ul class="sub-agenda">
-      <li> TensorFlow: Computations, Graphs, </li>
-      <li> Classification with Fashion MNIST. </li>
+      <li> TensorFlow: Computations, Graphs </li>
+      <li> Classification with Fashion MNIST </li>
     </ul>
   </li>
   <li> Week 3
     <ul class="sub-agenda">
-      <li> Convolutions. </li>
+      <li> Convolutions </li>
     </ul>
   </li>
   <li> Week 4
     <ul class="sub-agenda">
-      <li> TensorBoard: Visualising learning, </li>
-      <li> Catchup. </li>
+      <li> TensorBoard: Visualising learning </li>
     </ul>
   </li>
   <li> Week 5
     <ul class="sub-agenda">
-      <li> Embedding and Autoencoding, </li>
-      <li> Unsupervised models, </li>
-      <li> Generative models. </li>
+      <li> Embedding and Autoencoding </li>
+      <li> Unsupervised models </li>
+      <li> Generative models </li>
     </ul>
   </li>
   <li> Week 6
     <ul class="sub-agenda">
-      <li> Further techniques and the future, </li>
-      <li> Ethics.  </li>
+      <li> Further techniques and the future </li>
+      <li> Ethics </li>
     </ul>
   </li>
 </ul>
@@ -52,7 +51,7 @@ $partial("templates/6ww-overview.md")$
 <table class="details" boder="0" cellspacing="0">
 <tr>  <td class="item">  Duration </td>
       <td class="value"> 6 weeks
-      <br /> Tuesdays: 4pm-7pm sharp. </td>
+      <br /> Thursdays: 4pm-7pm sharp. </td>
 </tr>
 <tr>  <td class="item">  Costs    </td>
       <td class="value"> 
@@ -80,6 +79,11 @@ $partial("templates/6ww-overview.md")$
       correctly. </small>
      </td>
 </table>
+
+<!--
+<p> <center> <a class="btn" href="/contact.html">Get tickets!</a> </center> </p>
+-->
+
 
 <p></p>
 <h5>*Scholarship</h5>
