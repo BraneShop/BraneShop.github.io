@@ -341,7 +341,6 @@ div.value {
   display:        flex;
   background:     lavender;
   border-radius:  10px;
-  max-width:      400px;
   margin:         20px;
   flex-direction: column;
   border-bottom:  solid 4px black;
@@ -370,7 +369,7 @@ div.value h4 {
 .workshop {
   margin-top:    10px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   border-bottom: solid 4px black;
   border-right:  solid 4px black;
   padding:       10px;
@@ -396,14 +395,10 @@ span.important {
 }
 
 blockquote {
-  background:    #eaeaea;
   padding:       5px;
   padding-left:  20px;
   padding-right: 20px;
   font-family:   "Source Serif Pro";
-  line-height:   2em;
-  border-top:    solid 3px white;
-  border-left:   solid 3px white;
 }
 
 ul.menu li {

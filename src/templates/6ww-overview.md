@@ -22,8 +22,3 @@ cementing the knowledge we gain each week, working our way towards
 implementing our own deep learning models, and training them, in TensorFlow
 and the Google CoLaboratory.</p>
 -->
-
-<p> In order to support learning and development, we provide "<b>office
-hours</b>" to allow for a supportive environment to complete assigned homework
-and gain further understanding. </p>
-
