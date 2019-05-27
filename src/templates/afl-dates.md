@@ -1,4 +1,4 @@
-<a class="btn" href="https://noonvandersilk.typeform.com/to/qOzalz">Express Interest</a>.
+
 <!--
 <hr />
 

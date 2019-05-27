@@ -1,37 +1,53 @@
 <p> <em>A six-week hands-on machine learning workshop for programmers and data
-scientists wanting to break into the AI industry.</em> </p> </p>
+scientists wanting to break into the AI industry.</em> </p>
+
+<h5>Overview</h5>
+
+$partial("templates/6ww-overview.md")$
 
 
-<p> Over <b>6 weeks</b>, with <b>3 contact hours per week</b>, you will get to
-grips with using Python, TensorFlow and Google Colaboratory.  Our experienced
-instructors will work closely to support you to build your own deep learning
-models that solve problems across typical domains of deep learning. The
-workshop series focuses on foundations, embeddings, and computer vision.
-</p>
+<h5>Agenda</h5>
 
-<!--
-<p> Over <b>6 weeks</b>, we will work with you to support you building your own
-deep learning models that to solve problems across typical domains for deep
-learning such as computer vision and natural language processing.
-</p>
+<ul class="agenda">
+  <li> Week 1
+    <ul class="sub-agenda">
+      <li> Showreel and State of the Art, </li>
+      <li> Learning vs. Programming, </li>
+      <li> Neural Notation. </li>
+    </ul>
+  </li>
+  <li> Week 2
+    <ul class="sub-agenda">
+      <li> TensorFlow: Computations, Graphs, </li>
+      <li> Classification with Fashion MNIST. </li>
+    </ul>
+  </li>
+  <li> Week 3
+    <ul class="sub-agenda">
+      <li> Convolutions. </li>
+    </ul>
+  </li>
+  <li> Week 4
+    <ul class="sub-agenda">
+      <li> TensorBoard: Visualising learning, </li>
+      <li> Catchup. </li>
+    </ul>
+  </li>
+  <li> Week 5
+    <ul class="sub-agenda">
+      <li> Embedding and Autoencoding, </li>
+      <li> Unsupervised models, </li>
+      <li> Generative models. </li>
+    </ul>
+  </li>
+  <li> Week 6
+    <ul class="sub-agenda">
+      <li> Further techniques and the future, </li>
+      <li> Ethics.  </li>
+    </ul>
+  </li>
+</ul>
 
-<p> We will begin with the fundamentals: Where is deep learning appropriate,
-what is the best ways to think about it intuitively.</p>
-
-<p> Our driving example will be the autoencoder: an idea that unifies
-many important concepts in deep learning.  </p> 
-
-<p> We will progress, through a series of hands-on projects and exercises,
-cementing the knowledge we gain each week, working our way towards
-implementing our own deep learning models, and training them, in TensorFlow
-and the Google CoLaboratory.</p>
--->
-
-<p> In order to support learning and development, we provide "<b>office
-hours</b>" to allow for a supportive environment to complete assigned homework
-and gain further understanding. </p>
-
-<!--
 <h5>Essential details</h5>
 <table class="details" boder="0" cellspacing="0">
 <tr>  <td class="item">  Duration </td>
@@ -44,7 +60,7 @@ and gain further understanding. </p>
       </td>
 </tr>
 <tr>  <td class="item">  Location </td>
-      <td class="value"> Fitzroy </td>
+      <td class="value"> CBD </td>
 </tr>
 <tr>  <td class="item">  Dates/Tickets </td>
       <td class="value"> 
@@ -78,5 +94,3 @@ under-represented groups.
 
 <p>Applications to this scholarship for the next workshop will open soon;
 please subscribe to the newsletter for announcements.</p>
-
--->

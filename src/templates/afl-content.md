@@ -1,12 +1,9 @@
-<p> <em>In-house workshop, tailored to executives, startup founders,
-government groups, and leadership teams.</em> </p>
+<p> <em>Tailored to executives, startup founders, government groups, and
+leadership teams.</em> </p>
 
+<h5>Overview</h5>
 
-<p> In this <b>one-day</b> intensive session, we will cover everything that
-you need to know in order to build AI into your organisation. This course is
-for those looking to: build an internal AI capability, engage a consultancy to
-build an AI product, or for those wanting an understanding of best-practice AI
-adoption.</p>
+$partial("templates/afl-overview.md")$
 
 <p> We'll go over all the State of the Art in machine learning across a
 variety of applications, from text analysis, computer vision, to maps, and
@@ -36,14 +33,6 @@ $partial("templates/afl-agenda.md")$
         $$1,750*
       </td>
 </tr>
-<tr>  <td class="item">  Location </td>
-      <td class="value"> Melbourne CBD  </td>
-</tr>
-<tr>  <td class="item">  Dates/Tickets </td>
-      <td class="value"> 
-        $partial("templates/afl-dates.md")$
-      </td>
-</tr>
 <tr>  <td class="item">  Requirements </td>
       <td class="value"> 
       A laptop.
@@ -54,6 +43,8 @@ $partial("templates/afl-agenda.md")$
      None.
      </td>
 </table>
+
+<p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/qOzalz">Express Interest</a> </center> </p>
 
 <p> <small>
   *Note: People that identify as women, queer, or gender fluid, receive a 15%
