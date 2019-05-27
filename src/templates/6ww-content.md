@@ -1,10 +1,13 @@
 
-<p> <center> <span class="important">Starts on the 8th of August!</span>
+<p> <center> <span class="important">Starts on the 8th of August, 
+<a href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets!</a>
+</span>
 </center> </p>
+
+
 
 <p> <em>A six-week hands-on machine learning workshop for programmers and data
 scientists wanting to break into the AI industry.</em> </p>
-
 <h5>About</h5>
 
 $partial("templates/6ww-overview.md")$
@@ -101,7 +104,7 @@ completed projects to demonstrate their ability. </p>
      </td>
 </table>
 
-<p> <center> <a class="btn" href="/contact.html">Get tickets!</a> </center> </p>
+<p> <center> <a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets!</a> </center> </p>
 
 <h5>*Scholarship</h5>
 
