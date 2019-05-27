@@ -155,6 +155,7 @@ div.section {
   text-align:     justify;
   max-width:      900px;
   background:     lavenderblush;
+  border:         solid 2px mediumslateblue;
 }
 
 div.section h3 {
@@ -366,6 +367,16 @@ div.value h4 {
 
 }
 
+.workshop {
+  margin-top:    10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-bottom: solid 4px black;
+  border-right:  solid 4px black;
+  padding:       10px;
+  background:    lavender;
+}
+
 ::-moz-selection {
   background: hotpink;
   color:      white;
@@ -382,7 +393,6 @@ span.important {
 }
 
 .section center p {
-  font-style: italic;
 }
 
 blockquote {
@@ -506,4 +516,15 @@ div.event {
   border-right:   solid 4px peru;
   background:     peachpuff;
   padding:        10px;
+}
+
+.btn {
+  padding:       10px;
+  border-radius: 5px;
+  background:    mediumslateblue;
+  color:         white;
+}
+
+.btn:hover {
+  background:    dodgerblue;
 }

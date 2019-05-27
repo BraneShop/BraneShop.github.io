@@ -1,11 +1,15 @@
-<ul class="summary">
-  <li>Python</li>
-  <li>~&nbsp;TensorFlow</li>
-  <li>~&nbsp;Google&nbsp;Colaboratory</li>
-  <li>~&nbsp;Model&nbsp;Building</li>
-  <li>~&nbsp;Projects</li>
-</ul>
+<p> <em>A six-week hands-on machine learning workshop for programmers and data
+scientists wanting to break into the AI industry.</em> </p> </p>
 
+
+<p> Over <b>6 weeks</b>, with 3 contact hours per week,  you will get to grips with using Python,
+TensorFlow and Google Colaboratory.  Our experienced instructors will work
+closely to support you to build your own deep learning models that solve
+problems across typical domains of deep learning.  The workshop series
+focuses on foundations, embeddings, and computer vision.
+</p>
+
+<!--
 <p> Over <b>6 weeks</b>, we will work with you to support you building your own
 deep learning models that to solve problems across typical domains for deep
 learning such as computer vision and natural language processing.
@@ -21,11 +25,13 @@ many important concepts in deep learning.  </p>
 cementing the knowledge we gain each week, working our way towards
 implementing our own deep learning models, and training them, in TensorFlow
 and the Google CoLaboratory.</p>
+-->
 
 <p> In order to support learning and development, we provide "<b>office
 hours</b>", twice per week, for a total of 2 hours, to allow for a supportive
 environment to complete assigned homework and gain further understanding. </p>
 
+<!--
 <h5>Essential details</h5>
 <table class="details" boder="0" cellspacing="0">
 <tr>  <td class="item">  Duration </td>
@@ -59,11 +65,8 @@ environment to complete assigned homework and gain further understanding. </p>
      </td>
 </table>
 
-
 <p></p>
 <h5>*Scholarship</h5>
-
-<!-- TODO: Find the link to the "crisis" paper. -->
 
 <p> There is a <a
 href="https://ainowinstitute.org/discriminatingsystems.pdf">crisis of
@@ -75,3 +78,5 @@ under-represented groups.
 
 <p>Applications to this scholarship for the next workshop will open soon;
 please subscribe to the newsletter for announcements.</p>
+
+-->

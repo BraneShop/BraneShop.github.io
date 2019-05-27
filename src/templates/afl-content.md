@@ -1,11 +1,6 @@
-<ul class="summary">
-  <li>Landscape</li>
-  <li>~&nbsp;State of the Art</li>
-  <li>~&nbsp;Adoption</li>
-  <li>~&nbsp;Teams</li>
-  <li>~&nbsp;Risks</li>
-  <li>~&nbsp;Ethics</li>
-</ul>
+<p> <em>In-house workshop, tailed to executives, startup founders, government
+groups, and leadership teams.</em> </p>
+
 
 <p> In this <b>one-day</b> intensive session, we will cover everything that you need
 to know in order to build AI into your business. This course is for those
