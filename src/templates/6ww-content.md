@@ -1,7 +1,11 @@
+
+<p> <center> <span class="important">Starts on the 9th of August!</span>
+</center> </p>
+
 <p> <em>A six-week hands-on machine learning workshop for programmers and data
 scientists wanting to break into the AI industry.</em> </p>
 
-<h5>Overview</h5>
+<h5>About</h5>
 
 $partial("templates/6ww-overview.md")$
 
@@ -15,15 +19,15 @@ final session.
  
 <p> Knowledge is cemented  through each week of teaching enabling participants
 to quickly build their knowledge from the ground up. In order to support
-learning and development, we also provide "office hours" once per week. This
-allows for a supportive environment in which to complete assigned homework and
-solidify understanding.  </p>
+learning and development, we also provide "<b>office hours</b>" once per week:
+a supportive environment in which to complete assigned homework and solidify
+understanding. </p>
  
 <p> At the end of the workshop series participants will have a showreel of
 completed projects to demonstrate their ability. </p>
 
 
-<h5>Agenda</h5>
+<h5>Overview</h5>
 
 <ul class="agenda">
   <li> Week 1
@@ -78,7 +82,7 @@ completed projects to demonstrate their ability. </p>
 <tr>  <td class="item">  Location </td>
       <td class="value"> CBD </td>
 </tr>
-<tr>  <td class="item">  Dates/Tickets </td>
+<tr>  <td class="item">  Dates </td>
       <td class="value"> 
         $partial("templates/6ww-dates.md")$
       </td>
@@ -97,12 +101,8 @@ completed projects to demonstrate their ability. </p>
      </td>
 </table>
 
-<!--
 <p> <center> <a class="btn" href="/contact.html">Get tickets!</a> </center> </p>
--->
 
-
-<p></p>
 <h5>*Scholarship</h5>
 
 <p> There is a <a

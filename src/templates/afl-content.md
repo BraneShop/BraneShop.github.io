@@ -1,7 +1,7 @@
 <p> <em>Tailored to executives, startup founders, government groups, and
 leadership teams.</em> </p>
 
-<h5>Overview</h5>
+<h5>About</h5>
 
 $partial("templates/afl-overview.md")$
 

@@ -43,7 +43,6 @@ pre {
   flex-direction:   column;
   align-items:      center;
   padding:          20px;
-  background-image: url(/images/simple-bg.svg);
   background-size:  cover;
 }
 
@@ -382,13 +381,13 @@ div.value h4 {
 }
 
 span.important {
-  font-size:     0.7em;
+  font-size:     0.8em;
   font-weight:   normal;
   padding:       8px;
   border-radius: 5px;
-  background:    orangered;
+  background:    skyblue;
   font-family:   "PT Mono";
-  color:         white;
+  color:         black;
 }
 
 .section center p {
