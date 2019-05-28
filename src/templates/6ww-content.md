@@ -8,14 +8,14 @@ those wanting to break into the AI industry.</em> </p>
 $partial("templates/6ww-overview.md")$
 
 
-<p> Our experienced instructors will work closely to support you to build your
+<p> Our experienced <a href="/team.html">instructors</a> will work closely to support you to build your
 own deep learning models that solve problems across typical domains of deep
 learning.  The workshop series focuses on computer vision and embeddings, with
 an introduction to word embeddings and natural language processing in the
 final session.
 </p>
  
-<p> Knowledge is cemented  through each week of teaching enabling participants
+<p> Knowledge is consolidated  through each week of teaching enabling participants
 to quickly build their knowledge from the ground up. In order to support
 learning and development, we also provide "<b>office hours</b>" once per week:
 a supportive environment in which to complete assigned homework and solidify
@@ -116,7 +116,7 @@ required, and this is assessed in a prerequisite assessment.
 <p> There is a <a
 href="https://ainowinstitute.org/discriminatingsystems.pdf">crisis of
 diversity within the field of AI</a>. We know that members of marginalised
-groups face barries to entry and success within AI, and related fields. To
+groups face barriers to entry and success within AI, and related fields. To
 improve the representation of marginalised and under-represented groups in our
 workshop, and community, we are supporting up to 10 diversity tickets, which
 are discounted 50% to <b>$$594 per person</b>.
@@ -129,4 +129,5 @@ welcome to apply again in the future.  </p>
 
 <p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/Tnfm4a">Apply for the Scholarship</a> </center> </p>
 
-<p>Scholarship decisions will be sent out on the 31st of July.</p>
+<p>The closing date for the application process is th 28th of July.
+Scholarship decisions will be sent out on the 31st of July.</p>
