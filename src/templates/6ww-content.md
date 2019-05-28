@@ -1,10 +1,5 @@
-
-<p> <center> <span class="important">Starts on the 8th of August, 
-<a href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets!</a>
-</span>
-</center> </p>
-
-
+<p> <center> 
+<a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets!</a> </center> </p>
 
 <p> <em>A six-week hands-on machine learning workshop for programmers and data
 scientists wanting to break into the AI industry.</em> </p>
