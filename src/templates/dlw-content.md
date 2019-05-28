@@ -21,8 +21,6 @@ other deep-learning frameworks, for example: PyTorch. </p>
 to learn more!</p>
 
 <p> <center> 
-  <!--
-    <a class="btn" href="https://noonvandersilk.typeform.com/to/qOzalz">Express interest</a> or
-    -->
+  <a class="btn" href="https://noonvandersilk.typeform.com/to/DYKvWN">Express interest</a> or
   <a class="btn" href="/contact.html">Get in contact</a> </center> </p>
 
