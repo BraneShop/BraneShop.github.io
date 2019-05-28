@@ -45,7 +45,7 @@ required, and this is assessed in a prerequisite assessment.
   <li> Week 2
     <ul class="sub-agenda">
       <li> TensorFlow: Computations, Graphs </li>
-      <li> Classification with Fashion MNIST </li>
+      <li> Image classification with Fashion MNIST </li>
     </ul>
   </li>
   <li> Week 3
