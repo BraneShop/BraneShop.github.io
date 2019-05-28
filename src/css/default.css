@@ -1,7 +1,7 @@
 body {
   margin:           0px;
   background-color: black;
-  background-image: url(/images/space.svg);
+  background-image: url(/images/stars-big.png);
   font-size:        20px;
   font-family:      "Lato";
 }
@@ -72,8 +72,10 @@ p span { background: royalblue; color: white; }
   padding:          20px;
   max-width:        800px;
   background:       white;
-  background-image: url(/images/white.svg);
   background-size:  cover;
+  border-radius:    20px;
+  border-bottom:    solid 2px mediumslateblue;
+  border-right:     solid 2px mediumslateblue;
 }
 
 
@@ -92,8 +94,6 @@ p span { background: royalblue; color: white; }
 }
 
 #newsletter {
-  background-image: url(/images/white-2.svg);
-  background-size:  cover;
 }
 
 img.wibble {
