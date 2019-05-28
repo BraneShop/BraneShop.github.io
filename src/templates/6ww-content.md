@@ -49,18 +49,20 @@ completed projects to demonstrate their ability. </p>
   <li> Week 3
     <ul class="sub-agenda">
       <li> Convolutions </li>
+      <li> TensorBoard: Visualising learning </li>
     </ul>
   </li>
   <li> Week 4
     <ul class="sub-agenda">
-      <li> TensorBoard: Visualising learning </li>
+      <li> Embedding and Autoencoding </li>
+      <li> Unsupervised models </li>
+      <li> Generative models </li>
+      <li> Group projects </li>
     </ul>
   </li>
   <li> Week 5
     <ul class="sub-agenda">
-      <li> Embedding and Autoencoding </li>
-      <li> Unsupervised models </li>
-      <li> Generative models </li>
+      <li> Group projects </li>
     </ul>
   </li>
   <li> Week 6
@@ -75,7 +77,7 @@ completed projects to demonstrate their ability. </p>
 <table class="details" boder="0" cellspacing="0">
 <tr>  <td class="item">  Duration </td>
       <td class="value"> 6 weeks
-      <br /> Thursdays: 4pm-7pm sharp. </td>
+      <br /> Weekly, on Thursdays: 4pm-7pm sharp. </td>
 </tr>
 <tr>  <td class="item">  Costs    </td>
       <td class="value"> 
@@ -110,10 +112,17 @@ completed projects to demonstrate their ability. </p>
 
 <p> There is a <a
 href="https://ainowinstitute.org/discriminatingsystems.pdf">crisis of
-diversity within field of AI</a>. In response to this issue, we are
-supporting up to 10 diversity tickets, which are discounted down to <b>$$594 per person</b>, to improve the representation of marginalised and
-under-represented groups.
+diversity within the field of AI</a>. We know that members of marginalised
+groups face barries to entry and success within AI, and related fields. To
+improve the representation of marginalised and under-represented groups in our
+workshop, and community, we are supporting up to 10 diversity tickets, which
+are discounted 50% to <b>$$594 per person</b>.
 </p>
+
+<p> To apply for a diversity ticket please complete the <a
+href="https://noonvandersilk.typeform.com/to/Tnfm4a">scholarship
+application</a>. If you miss out due to demand, this time around, you are
+welcome to apply again in the future.  </p>
 
 <p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/Tnfm4a">Apply for the Scholarship</a> </center> </p>
 
