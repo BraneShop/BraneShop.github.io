@@ -33,6 +33,11 @@ $partial("templates/afl-agenda.md")$
         $$1,750*
       </td>
 </tr>
+<tr>  <td class="item">  Dates </td>
+      <td class="value"> 
+        TBC.
+      </td>
+</tr>
 <tr>  <td class="item">  Requirements </td>
       <td class="value"> 
       A laptop.
