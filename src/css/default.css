@@ -154,7 +154,9 @@ div.section {
   text-align:     justify;
   max-width:      900px;
   background:     lavenderblush;
-  border:         solid 2px mediumslateblue;
+  border-radius: 20px;
+  border-right:         solid 2px mediumslateblue;
+  border-bottom:         solid 2px mediumslateblue;
 }
 
 div.section h3 {
