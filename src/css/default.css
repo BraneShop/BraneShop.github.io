@@ -17,6 +17,7 @@ body {
   background-image:    url(/images/aa.jpg);
   border-radius:       40px;
   border:              solid 2px black;
+  cursor:              pointer;
 }
 
 #header.compressed {
