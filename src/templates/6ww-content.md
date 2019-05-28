@@ -7,19 +7,11 @@ those wanting to break into the AI industry.</em> </p>
 
 $partial("templates/6ww-overview.md")$
 
-
-<p> Our experienced <a href="/team.html">instructors</a> will work closely to support you to build your
-own deep learning models that solve problems across typical domains of deep
-learning.  The workshop series focuses on computer vision and embeddings, with
-an introduction to word embeddings and natural language processing in the
-final session.
-</p>
- 
-<p> Knowledge is consolidated  through each week of teaching enabling participants
-to quickly build their knowledge from the ground up. In order to support
-learning and development, we also provide "<b>office hours</b>" once per week:
-a supportive environment in which to complete assigned homework and solidify
-understanding. </p>
+<p> Knowledge is consolidated through each week of teaching enabling
+participants to build on work from previous weeks, group discussions, and
+homework. In order to support learning and development, we also provide
+"<b>office hours</b>" once per week: a supportive environment in which to
+complete assigned homework and solidify understanding. </p>
  
 <p> At the end of the workshop series participants will have a showreel of
 completed projects to demonstrate their ability. </p>
