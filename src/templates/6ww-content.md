@@ -1,8 +1,8 @@
 <p> <center> 
 <a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets!</a> </center> </p>
 
-<p> <em>A six-week hands-on machine learning workshop for programmers and data
-scientists wanting to break into the AI industry.</em> </p>
+<p> <em>A six-week hands-on machine learning workshop for
+those wanting to break into the AI industry.</em> </p>
 <h5>About</h5>
 
 $partial("templates/6ww-overview.md")$
