@@ -63,6 +63,7 @@ main = hakyll $ do
     match (fromList ["deep-learning-workshop.html"
                     , "ai-for-leadership.html"
                     , "6-week-workshop-on-deep-learning.html"
+                    , "faq.html"
                     ]) $ do
         route idRoute
         compile $ do
