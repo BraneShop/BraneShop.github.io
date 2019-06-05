@@ -1,3 +1,6 @@
+<p> <center> 
+<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership">Get tickets!</a> </center> </p>
+
 <p> <em>Tailored to executives, startup founders, government groups, and
 leadership teams.</em> </p>
 
@@ -30,12 +33,12 @@ $partial("templates/afl-agenda.md")$
 </tr>
 <tr>  <td class="item">  Costs    </td>
       <td class="value"> 
-        $$1,750
+        $$1,925
       </td>
 </tr>
 <tr>  <td class="item">  Dates </td>
       <td class="value"> 
-        TBC.
+        Monday, 23rd of September, 2019.
       </td>
 </tr>
 <tr>  <td class="item">  Requirements </td>
@@ -49,6 +52,12 @@ $partial("templates/afl-agenda.md")$
      </td>
 </table>
 
+<p> <center> 
+<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership">Get tickets!</a> </center> </p>
+
+
+<!--
 <p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/qOzalz">Express Interest</a> or
   <a class="btn" href="/contact.html">Get in contact</a> </center> </p>
 </center> </p>
+-->

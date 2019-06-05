@@ -8,8 +8,44 @@
         <name>Braneshop Team</name>
         <email>noonsilk+-braneshop@gmail.com</email>
     </author>
-    <updated>2019-04-10T00:00:00Z</updated>
+    <updated>2019-06-03T00:00:00Z</updated>
     <entry>
+    <title>State of the art attention models in PyText</title>
+    <link href="https://braneshop.com.au/posts/2019-06-03-State-of-the-art-attention-models-in-PyText.html" />
+    <id>https://braneshop.com.au/posts/2019-06-03-State-of-the-art-attention-models-in-PyText.html</id>
+    <published>2019-06-03T00:00:00Z</published>
+    <updated>2019-06-03T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="section">
+  <div class="info">
+    Posted on June  3, 2019
+    
+      by Noon van der Silk
+    
+		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
+  </div>
+
+
+  <h4 class="blog-title">State of the art attention models in PyText</h4>
+
+  <div class="info">
+    
+  </div>
+
+  <p>I wanted to take some time to discuss a library that seems to have flown under the radar a little bit. It’s called <a href="https://github.com/facebookresearch/pytext">PyText</a>, and I want to explore how you can use it to run state of the art attention models.</p>
+<p>We’re going to proceed in the following way:</p>
+<ol style="list-style-type: decimal">
+<li>Set a dataset,</li>
+<li>See how we prepare the data for training in PyText,</li>
+<li>Get PyText,</li>
+<li>Train it,</li>
+<li>Visualise it,</li>
+<li>Consider extension,</li>
+</ol>
+<p>Finally, we’ll jump in to a fork of PyText where I’ve added a few features that help out during training.</p>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>Deep learning in the browser!</title>
     <link href="https://braneshop.com.au/posts/2019-04-10-Deep-learning-in-the-browser-at-the-web-meetup.html" />
     <id>https://braneshop.com.au/posts/2019-04-10-Deep-learning-in-the-browser-at-the-web-meetup.html</id>
