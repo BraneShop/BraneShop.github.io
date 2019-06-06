@@ -74,6 +74,16 @@ $partial("templates/afl-agenda.md")$
     <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-november">Get Tickets for November</a></center></p>
 		</div>
 	</div>
+	<div class="event">
+		<h5> AI For Leadership - January Session </h5>
+		<p>Monday, 27-Jan-2020, 9am-5pm, Melbourne CBD.
+        </p>
+		<div>
+    <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-january">Get Tickets for January, 2020</a></center></p>
+		</div>
+	</div>
+
+
 </div>
 
 <!--

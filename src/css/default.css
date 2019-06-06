@@ -517,9 +517,10 @@ hr {
 }
 
 div.events {
-  display:        flex;
-  flex-direction: row;
-  flex-wrap:      wrap;
+  display:         flex;
+  flex-direction:  row;
+  flex-wrap:       wrap;
+  justify-content: center;
 }
 
 div.event h5 {
