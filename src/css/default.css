@@ -522,26 +522,20 @@ div.events {
   flex-wrap:      wrap;
 }
 
-div.event {
-  font-size: 0.75em;
-  max-width: 100px;
-}
-
 div.event h5 {
   text-align:     left;
   padding-bottom: 5px;
 }
 
 div.event {
+  font-size: 0.8em;
   display:        flex;
-  border-radius:  10px;
-  max-width:      400px;
+  border-radius:  20px;
+  max-width:      380px;
   margin:         20px;
   flex-direction: column;
-  border-top:     solid 4px lemonchiffon;
-  border-left:    solid 4px lemonchiffon;
-  border-bottom:  solid 4px peru;
-  border-right:   solid 4px peru;
+  border-bottom:  solid 4px black;
+  border-right:   solid 4px black;
   background:     peachpuff;
   padding:        10px;
 }
@@ -573,3 +567,5 @@ div.event {
   width:      200px;
   background: dodgerblue;
 }
+
+
