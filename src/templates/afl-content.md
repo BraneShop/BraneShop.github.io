@@ -1,5 +1,5 @@
 <p> <center> 
-<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership">Get tickets for 23-Sep!</a> </center> </p>
+<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership">Get tickets for 23-Sep</a> </center> </p>
 
 <p> <em>Tailored to executives, startup founders, government groups, and
 leadership teams.</em> </p>
@@ -82,9 +82,8 @@ $partial("templates/afl-agenda.md")$
     <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-january">Get Tickets for January, 2020</a></center></p>
 		</div>
 	</div>
-
-
 </div>
+
 
 <!--
 <p> <center> 

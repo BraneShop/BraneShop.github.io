@@ -1,5 +1,5 @@
 <p> <center> 
-<a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets!</a> </center> </p>
+<a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets for August intake</a> </center> </p>
 
 <p> <em>A six-week hands-on machine learning workshop for
 those wanting to break into the AI industry.</em> </p>
@@ -82,6 +82,7 @@ required, and this is assessed in a prerequisite assessment.
 <tr>  <td class="item">  Location </td>
       <td class="value"> CBD </td>
 </tr>
+<!--
 <tr>  <td class="item">  Dates </td>
       <td class="value"> 
         $partial("templates/6ww-dates.md")$
@@ -92,6 +93,7 @@ required, and this is assessed in a prerequisite assessment.
       A laptop.
       </td>
 </tr>
+-->
 <tr> <td class="item"> Prerequisites </td>
      <td class="value">
       <a href="https://goo.gl/forms/VncQkZLylzh8JWez1">Take our Python Quiz on Google Forms</a>
@@ -101,8 +103,46 @@ required, and this is assessed in a prerequisite assessment.
      </td>
 </table>
 
-<p> <center> <a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets!</a> </center> </p>
+<p></p>
 
+<h5>Dates and Tickets</h5>
+<div class="events">
+	<div class="event">
+		<h5> AI For Leadership - August Intake </h5>
+    <ul class="dates">
+      <li> Week 1 - August 8th, 2019</li>
+      <li> Week 2 - August 15th, 2019</li>
+      <li> Week 3 - August 22nd, 2019</li>
+      <li> Week 4 - August 29th, 2019</li>
+      <li> Week 5 - September 5th, 2019</li>
+      <li> Week 6 - September 12th, 2019</li>
+      <li> <br /><b>Location:</b> Melbourne CBD. </li>
+    </ul>
+		<div>
+    <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get Tickets for August intake</a></center></p>
+		</div>
+	</div>
+
+
+	<div class="event">
+		<h5> AI For Leadership - February Intake </h5>
+    <ul class="dates">
+      <li> Week 1 - February 6th, 2019</li>
+      <li> Week 2 - February 13th, 2019</li>
+      <li> Week 3 - February 20th, 2019</li>
+      <li> Week 4 - February 27th, 2019</li>
+      <li> Week 5 - March 5th, 2019</li>
+      <li> Week 6 - March 12th, 2019</li>
+      <li> <br /><b>Location:</b> Melbourne CBD. </li>
+    </ul>
+		<div>
+    <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop-feb">Get Tickets for February intake</a></center></p>
+		</div>
+	</div>
+
+</div>
+
+<p></p>
 <h5>*Scholarship</h5>
 
 <p> There is a <a target="_blank"
