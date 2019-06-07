@@ -1,5 +1,5 @@
 <p> <center> 
-<a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets for August intake</a> </center> </p>
+<a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets for August intake!</a> </center> </p>
 
 <p> <em>A six-week hands-on machine learning workshop for
 those wanting to break into the AI industry.</em> </p>
