@@ -8,8 +8,51 @@
         <name>Braneshop Team</name>
         <email>noonsilk+-braneshop@gmail.com</email>
     </author>
-    <updated>2019-06-03T00:00:00Z</updated>
+    <updated>2019-06-09T00:00:00Z</updated>
     <entry>
+    <title>Ruth joins Braneshop, and new workshop launch!</title>
+    <link href="https://braneshop.com.au/posts/2019-06-09-Ruth-joins-Braneshop-and-Workshop-Launch.html" />
+    <id>https://braneshop.com.au/posts/2019-06-09-Ruth-joins-Braneshop-and-Workshop-Launch.html</id>
+    <published>2019-06-09T00:00:00Z</published>
+    <updated>2019-06-09T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="section">
+  <div class="info">
+    Posted on June  9, 2019
+    
+      by Ruth Pearson
+    
+		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
+  </div>
+
+
+  <h4 class="blog-title">Ruth joins Braneshop, and new workshop launch!</h4>
+
+  
+  <center> <p> <img src="/images/ruth-whiteboard.jpg" width="100%" /> 
+    <br /><small>Me (Ruth!) teaching neural networks at the <a href="http://womeninai.com.au">Women in AI</a> leadership course in Brisbane, 2019.</small></p> </center>
+  
+
+  <div class="info">
+    
+  </div>
+
+  <p>Hello friends!</p>
+<p>This is your first Braneshop blog post from me, and I’m very excited to be writing it to tell you about our first <a href="/6-week-workshop-on-deep-learning.html">6 Week Technical Deep Learning Workshop</a> scheduled to start on the 8th of August, which is <a href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">on sale now!</a></p>
+<p>(Not to mention our first <a href="/ai-for-leadership.html">AI for Leadership</a> workshop which is also on sale now, and our <a href="/deep-learning-workshop.html">Intensive Technical Deep Learning Workshop</a> which we can bring to your organisation — <a href="https://noonvandersilk.typeform.com/to/DYKvWN">get in touch!</a>)</p>
+<p>I recently joined my friend Noon at Braneshop as an instructor, here’s why:</p>
+<ol style="list-style-type: decimal">
+<li><p>I love demystifying science into simple concepts to make it fun and accessible to people like you.</p></li>
+<li><p>As a queer woman in the AI industry, I don’t see many people who look like me and I know how intimidating that can be. I’m here to help people from diverse backgrounds and be a part of the platform that elevates their skills and representation.</p></li>
+<li><p>Noon has a lot of experience teaching technical content and we love working, learning and collaborating together.</p></li>
+</ol>
+<p>I come from an academic physics background and I learnt code in order to do my research. This commonly leads to sloppy coding and bad habits. I can’t say I’m completely cured (the physicist will be forever inside me!) but five years of working in tech has got me mostly straightened out in terms of writing nice code. More importantly, from working in data science and AI I have learnt the tools, tips and tricks that make the job easy and fun.</p>
+<p>Academia is just one way into AI, there are actually as many ways as you could care to count. This is fantastic news, since it is so important to bring a diverse and interdisciplinary approach to AI tools which are becoming so prevalent in our world. There are lots of great resources online, and many of you will already be using AI in your lives and work, whether you realise it or not. Whichever path has brought you to this interest in AI, our workshop will give you hands on learning and leave you more confident to continue in the industry. My colleague and friend, Noon, has a very strong tech background, so between the two of us we’ve got all your needs catered for in our workshop.</p>
+<p>In fact, many concepts we will cover in the workshop once felt foreign and scary to me, I picked them up bit by bit. And so can you. They actually aren’t scary at all, you just need someone to explain them to you in a logical way, starting from the basics. That’s what we’re here for.</p>
+<p>It’s surprising how much you realise you know when someone is willing to join the dots for you. We’re ready to be your dot joiners! Come! Bring your dots! Let us join them!</p>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>State of the art attention models in PyText</title>
     <link href="https://braneshop.com.au/posts/2019-06-03-State-of-the-art-attention-models-in-PyText.html" />
     <id>https://braneshop.com.au/posts/2019-06-03-State-of-the-art-attention-models-in-PyText.html</id>
@@ -26,6 +69,8 @@
 
 
   <h4 class="blog-title">State of the art attention models in PyText</h4>
+
+  
 
   <div class="info">
     
@@ -62,6 +107,8 @@
 
 
   <h4 class="blog-title">Deep learning in the browser!</h4>
+
+  
 
   <div class="info">
     
@@ -121,6 +168,8 @@ Q: Do the models need to be significantly smaller to run in the browser? (A: Dep
 
   <h4 class="blog-title">Australian Human Rights Commission AI - Submission</h4>
 
+  
+
   <div class="info">
     
   </div>
@@ -155,6 +204,8 @@ Q: Do the models need to be significantly smaller to run in the browser? (A: Dep
 
 
   <h4 class="blog-title">Mindful Neural Networks</h4>
+
+  
 
   <div class="info">
     
@@ -239,6 +290,8 @@ from yours. [...]</code></pre>
 
 
   <h4 class="blog-title">The Canary Set for Machine Learning Applications</h4>
+
+  
 
   <div class="info">
     
@@ -332,6 +385,8 @@ and ensuring the quality of inference when you may not be in control of the infe
 
 
   <h4 class="blog-title">TensorFlow.js - How to easily deploy deep learning models</h4>
+
+  
 
   <div class="info">
     
@@ -446,6 +501,8 @@ In order to deal with the speed issue, we typically run a “smaller” or “co
 
   <h4 class="blog-title">Thanks to Ren Imagery for our new logo!</h4>
 
+  
+
   <div class="info">
     
   </div>
@@ -494,6 +551,8 @@ In order to deal with the speed issue, we typically run a “smaller” or “co
 
 
   <h4 class="blog-title">How much data do you need to retrain a classifier?</h4>
+
+  
 
   <div class="info">
     

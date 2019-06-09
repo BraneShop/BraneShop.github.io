@@ -10,6 +10,11 @@
 
   <h4 class="blog-title">$title$</h4>
 
+  $if(image)$
+  <center> <p> <img src="$image$" width="100%" /> 
+    <br /><small>$imageDescription$</small></p> </center>
+  $endif$
+
   <div class="info">
     $if(code)$
 			<center><p> The code used for this blog-post is <a href="$code$">here</a>. </p></center>
