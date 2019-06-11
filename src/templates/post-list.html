@@ -1,8 +1,16 @@
-<ul class="normal">
+<ul class="blog-list normal">
 $for(posts)$
   $if(draft)$ 
   $else$
-    <li> <a href="$url$">$title$</a> - $date$ </li>
+  <li> 
+    <div class="blog-card">
+      <h5> <a href="$url$">$title$</a> &mdash; $date$ </h5>
+      <div class="content">
+        <a href="$url$"><img src="$image$" width="200" /></a>
+        <p> $preview$
+        </p>
+      </div>
+    </li>
   $endif$
 $endfor$
 </ul>

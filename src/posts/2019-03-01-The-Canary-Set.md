@@ -1,6 +1,8 @@
 ---
 title: The Canary Set for Machine Learning Applications
 author: Noon van der Silk
+image: /images/blog/canary-cage-data.png
+preview: We introduce a new idea for applied ML applications &mdash; A dataset that the user curates and uses to build confidence in the ML system, the "Canary Set".
 ---
 
 Earlier this week I was chatting to some people and we came up with a good

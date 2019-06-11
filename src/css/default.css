@@ -372,7 +372,11 @@ div.value h4 {
 ::selection {
   background: hotpink;
   color:      white;
+}
 
+::-moz-selection {
+  background: hotpink;
+  color:      white;
 }
 
 .workshop {
@@ -385,10 +389,6 @@ div.value h4 {
   background:    lavender;
 }
 
-::-moz-selection {
-  background: hotpink;
-  color:      white;
-}
 
 span.important {
   font-size:     0.4em;
@@ -538,6 +538,45 @@ div.event {
   border-right:   solid 4px black;
   background:     peachpuff;
   padding:        10px;
+}
+
+ul.blog-list li {
+  list-style:      none;
+}
+
+.blog-card {
+  display:        flex;
+  flex-direction: column;
+  background:     white;
+  border-radius:  20px;
+  padding:        20px;
+  margin-top:     5px;
+  margin-bottom:  5px;
+  border-bottom:  solid 2px peachpuff;
+  border-right:   solid 2px peachpuff;
+}
+
+.blog-card img {
+  border-radius: 20px;
+}
+
+.blog-card .content a:hover { 
+  border-radius: 20px !important;
+}
+
+.blog-card img {
+  border-radius: 20px;
+}
+
+.blog-card .content {
+  display: flex;
+  flex-direction: row;
+}
+
+.blog-card h5 {
+  font-weight:   normal;
+  font-size:     1.1em;
+  margin-bottom: 10px;
 }
 
 #header ul.menu a.btn {

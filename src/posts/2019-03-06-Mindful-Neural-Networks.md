@@ -1,6 +1,8 @@
 ---
 title: Mindful Neural Networks
 author: Noon van der Silk
+image: /images/blog/thich-nhat-tanh.png
+preview: Through the <a href="https://www.meetup.com/Melbourne-Creative-AI-Meetup/">Creative AI Meetup</a> we explored ideas at the intersection of mindfulness and neural networks.
 ---
 
 Last night at the [Creative AI

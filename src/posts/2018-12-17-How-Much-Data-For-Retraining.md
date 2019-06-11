@@ -2,6 +2,8 @@
 title: How much data do you need to retrain a classifier?
 author: Noon van der Silk
 code: https://github.com/BraneShop/how-much-data-experiments
+image: /images/blog/s-curve.png
+preview: An in-depth discussion, with code, about some surprisingly things we learned when playing around with transfer learning!
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/vega@4.3.0"></script>
