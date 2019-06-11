@@ -24,11 +24,10 @@
 		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
   </div>
 
-
   <h4 class="blog-title">Ruth joins Braneshop, and new workshop launch!</h4>
 
   
-  <center> <p> <img src="/images/ruth-whiteboard.jpg" width="100%" /> 
+    <center> <p> <img src="/images/ruth-whiteboard.jpg" width="100%" /> 
     <br /><small>Me (Ruth!) teaching neural networks at the <a href="http://womeninai.com.au">Women in AI</a> leadership course in Brisbane, 2019.</small></p> </center>
   
 
@@ -67,7 +66,6 @@
 		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
   </div>
 
-
   <h4 class="blog-title">State of the art attention models in PyText</h4>
 
   
@@ -104,7 +102,6 @@
     
 		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
   </div>
-
 
   <h4 class="blog-title">Deep learning in the browser!</h4>
 
@@ -165,7 +162,6 @@ Q: Do the models need to be significantly smaller to run in the browser? (A: Dep
 		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
   </div>
 
-
   <h4 class="blog-title">Australian Human Rights Commission AI - Submission</h4>
 
   
@@ -201,7 +197,6 @@ Q: Do the models need to be significantly smaller to run in the browser? (A: Dep
     
 		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
   </div>
-
 
   <h4 class="blog-title">Mindful Neural Networks</h4>
 
@@ -287,7 +282,6 @@ from yours. [...]</code></pre>
     
 		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
   </div>
-
 
   <h4 class="blog-title">The Canary Set for Machine Learning Applications</h4>
 
@@ -382,7 +376,6 @@ and ensuring the quality of inference when you may not be in control of the infe
     
 		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
   </div>
-
 
   <h4 class="blog-title">TensorFlow.js - How to easily deploy deep learning models</h4>
 
@@ -498,7 +491,6 @@ In order to deal with the speed issue, we typically run a “smaller” or “co
 		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
   </div>
 
-
   <h4 class="blog-title">Thanks to Ren Imagery for our new logo!</h4>
 
   
@@ -548,7 +540,6 @@ In order to deal with the speed issue, we typically run a “smaller” or “co
     
 		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
   </div>
-
 
   <h4 class="blog-title">How much data do you need to retrain a classifier?</h4>
 

@@ -7,11 +7,10 @@
 		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
   </div>
 
-
   <h4 class="blog-title">$title$</h4>
 
-  $if(image)$
-  <center> <p> <img src="$image$" width="100%" /> 
+  $if(imageDescription)$
+    <center> <p> <img src="$image$" width="100%" /> 
     <br /><small>$imageDescription$</small></p> </center>
   $endif$
 

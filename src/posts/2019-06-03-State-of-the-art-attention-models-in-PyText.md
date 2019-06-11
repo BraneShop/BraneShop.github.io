@@ -2,6 +2,8 @@
 title: State of the art attention models in PyText
 author: Noon van der Silk
 draft: True
+image: ""
+preview: ""
 ---
 
 I wanted to take some time to discuss a library that seems to have flown under
