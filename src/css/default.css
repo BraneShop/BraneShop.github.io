@@ -28,11 +28,14 @@ body {
 }
 
 #header.compressed .logos small {
+  font-size:     0.6em;
+  width:         200px;
+  background:    #000000aa;
 }
 
 #header-logo.compressed {
   transition: 1s;
-  width:      150px;
+  width:      230px;
 }
 
 pre {
