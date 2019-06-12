@@ -610,4 +610,38 @@ ul.blog-list li {
   background: dodgerblue;
 }
 
+#small-links {
+  border-top: solid 1px peachpuff;
+  padding:    20px;
+  margin-top: 20px;
+}
 
+#small-links a {
+  color:      peachpuff;
+  background: black;
+  padding:    3px;
+}
+
+#policy {
+  display: flex;
+  flex-direction: column;
+}
+
+.policy-section {
+  display:        flex;
+  flex-direction: row;
+}
+
+.policy-section .section-content {
+  width:      600px;
+  text-align: justify;
+}
+
+.policy-section .section-summary {
+  width:          300px;
+  text-align:     center;
+  font-family:    "Source Serif Pro";
+  font-family:    "Fira Mono";
+  letter-spacing: -1px;
+  color:          royalblue;
+}

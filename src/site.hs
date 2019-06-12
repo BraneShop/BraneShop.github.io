@@ -94,7 +94,11 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/branded.html" defaultContext
                 >>= relativizeUrls
 
-    match (fromList ["index.html", "team.html", "contact.html", "community.html"]) $ do
+    match (fromList [ "index.html"
+                    , "team.html"
+                    , "contact.html"
+                    , "privacy.html"
+                    , "community.html"]) $ do
         route idRoute
         compile $ do
             -- TODO: Filter drafts out of here; that's why we're having to
