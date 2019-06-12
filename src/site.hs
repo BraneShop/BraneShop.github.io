@@ -75,7 +75,8 @@ main = hakyll $ do
     match (fromList ["blog.html"]) $ do
         route idRoute
         compile $ do
-            posts <- (liftM (take 10)) $ recentFirst =<< loadAll "posts/*"
+            -- No limit; show all the posts.
+            posts <- recentFirst =<< loadAll "posts/*"
             let ctx =
                     listField "posts" postCtx (return posts) `mappend`
                     defaultContext
@@ -96,13 +97,16 @@ main = hakyll $ do
     match (fromList ["index.html", "team.html", "contact.html", "community.html"]) $ do
         route idRoute
         compile $ do
-            -- posts <- (liftM (take 10)) $ recentFirst =<< loadAll "posts/*"
-            -- let indexCtx =
-            --         listField "posts" postCtx (return posts) `mappend`
-            --         defaultContext
+            -- TODO: Filter drafts out of here; that's why we're having to
+            -- take n+1 at present.
+            posts <- (liftM (take 4)) $ recentFirst =<< loadAll "posts/*"
+
+            let ctx =
+                    listField "posts" postCtx (return posts) `mappend`
+                    defaultContext
 
             getResourceBody
-                >>= applyAsTemplate defaultContext
+                >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
