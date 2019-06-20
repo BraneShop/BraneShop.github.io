@@ -15,7 +15,7 @@
     }
   </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Braneshop - Contact</title>
+  <title>Braneshop - Quick start</title>
   <meta name="geo.region" content="AU-VIC" />
   <meta name="geo.placename" content="Melbourne" />
   <link rel="stylesheet" type="text/css" href="./css/default.css" />
@@ -71,17 +71,26 @@
 
   <!-- Content -->
   <div id="content">
-    <div class="section">
-  <h3>🚀 Contact</h3>
-
-  <p> If you have any questions, comments, feedback, or any thoughts at all,
-  then feel free to get in contact with us! </p>
-
-  <p> <center> 
-  <a class="btn" href="mailto:hello@braneshop.com.au">hello@braneshop.com.au</a>
-  <a class="btn" href="https://twitter.com/braneshop">@braneshop</a> </center> </p>
+    <script src="./js/quickstart-app.js"></script>
+<div class="section" id="faq">
+  <a name="faq"></a>
+  <h3> <span>🤸 Quick start </span> </h3>
+  <div id="quick-start">
+    <p>Following in the style of some notable quick start guides, we've got
+       a little form to help you get started deep learning. We've set the
+       default option to be our favourite online coding environment: 
+       <a href="https://colab.research.google.com/" rel="noopener">Google Colaboratory</a>.
+    </p>
+    <h5>Get started with deep learning!</h5>
+    <p></p>
+    <div id="widget"></div>
+  </div>
 </div>
 
+<script language="javascript">
+  var node = document.getElementById("widget");
+  var app  = Elm.Main.init( { node: node } );
+</script>
 
   </div>
 

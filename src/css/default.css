@@ -646,3 +646,63 @@ ul.blog-list li {
   color:          royalblue;
 }
 
+
+#small-links { 
+  color: peachpuff;
+}
+
+/**
+ * Quickstart Styling
+ * */
+
+#widget div.question {
+  display: flex;
+}
+
+section.questions {
+  margin-left: 20px;
+}
+
+#widget div.question label {
+  width:     50%;
+  min-width: 300px;
+}
+
+#widget div.options {
+  display:         flex;
+  width:           100%;
+  justify-content: center;
+
+}
+
+#widget div.options button {
+  margin: 3px;
+}
+
+#widget button:disabled {
+  background: white !important;
+}
+
+#widget button {
+  cursor:        pointer;
+  font-size:     0.9em;
+  border-radius: 5px;
+  border-top:    solid 1px white;
+  border-left:   solid 1px white;
+  border-right:  solid 1px mediumslateblue;
+  border-bottom: solid 1px mediumslateblue;
+  padding:       6px;
+}
+
+#widget pre {
+  font-family:      "Fira Code";
+  background:       black;
+  background-image: url(/images/stars-big.png);
+  padding:          10px;
+  color:            white;
+  border-radius:    10px;
+}
+
+#widget button.active {
+  background: peachpuff;
+}

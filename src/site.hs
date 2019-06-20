@@ -98,6 +98,7 @@ main = hakyll $ do
                     , "team.html"
                     , "contact.html"
                     , "privacy.html"
+                    , "quickstart.html"
                     , "community.html"]) $ do
         route idRoute
         compile $ do

@@ -77,14 +77,14 @@ function A9(fun, a, b, c, d, e, f, g, h, i) {
   return fun.a === 9 ? fun.f(a, b, c, d, e, f, g, h, i) : fun(a)(b)(c)(d)(e)(f)(g)(h)(i);
 }
 
+console.warn('Compiled in DEV mode. Follow the advice at https://elm-lang.org/0.19.0/optimize for better performance and smaller assets.');
 
 
+var _List_Nil_UNUSED = { $: 0 };
+var _List_Nil = { $: '[]' };
 
-var _List_Nil = { $: 0 };
-var _List_Nil_UNUSED = { $: '[]' };
-
-function _List_Cons(hd, tl) { return { $: 1, a: hd, b: tl }; }
-function _List_Cons_UNUSED(hd, tl) { return { $: '::', a: hd, b: tl }; }
+function _List_Cons_UNUSED(hd, tl) { return { $: 1, a: hd, b: tl }; }
+function _List_Cons(hd, tl) { return { $: '::', a: hd, b: tl }; }
 
 
 var _List_cons = F2(_List_Cons);
@@ -194,7 +194,7 @@ function _Utils_eqHelp(x, y, depth, stack)
 		return false;
 	}
 
-	/**_UNUSED/
+	/**/
 	if (x.$ === 'Set_elm_builtin')
 	{
 		x = elm$core$Set$toList(x);
@@ -207,7 +207,7 @@ function _Utils_eqHelp(x, y, depth, stack)
 	}
 	//*/
 
-	/**/
+	/**_UNUSED/
 	if (x.$ < 0)
 	{
 		x = elm$core$Dict$toList(x);
@@ -242,7 +242,7 @@ function _Utils_cmp(x, y, ord)
 		return x === y ? /*EQ*/ 0 : x < y ? /*LT*/ -1 : /*GT*/ 1;
 	}
 
-	/**_UNUSED/
+	/**/
 	if (x instanceof String)
 	{
 		var a = x.valueOf();
@@ -251,10 +251,10 @@ function _Utils_cmp(x, y, ord)
 	}
 	//*/
 
-	/**/
+	/**_UNUSED/
 	if (typeof x.$ === 'undefined')
 	//*/
-	/**_UNUSED/
+	/**/
 	if (x.$[0] === '#')
 	//*/
 	{
@@ -284,17 +284,17 @@ var _Utils_compare = F2(function(x, y)
 
 // COMMON VALUES
 
-var _Utils_Tuple0 = 0;
-var _Utils_Tuple0_UNUSED = { $: '#0' };
+var _Utils_Tuple0_UNUSED = 0;
+var _Utils_Tuple0 = { $: '#0' };
 
-function _Utils_Tuple2(a, b) { return { a: a, b: b }; }
-function _Utils_Tuple2_UNUSED(a, b) { return { $: '#2', a: a, b: b }; }
+function _Utils_Tuple2_UNUSED(a, b) { return { a: a, b: b }; }
+function _Utils_Tuple2(a, b) { return { $: '#2', a: a, b: b }; }
 
-function _Utils_Tuple3(a, b, c) { return { a: a, b: b, c: c }; }
-function _Utils_Tuple3_UNUSED(a, b, c) { return { $: '#3', a: a, b: b, c: c }; }
+function _Utils_Tuple3_UNUSED(a, b, c) { return { a: a, b: b, c: c }; }
+function _Utils_Tuple3(a, b, c) { return { $: '#3', a: a, b: b, c: c }; }
 
-function _Utils_chr(c) { return c; }
-function _Utils_chr_UNUSED(c) { return new String(c); }
+function _Utils_chr_UNUSED(c) { return c; }
+function _Utils_chr(c) { return new String(c); }
 
 
 // RECORDS
@@ -499,12 +499,12 @@ var _JsArray_appendN = F3(function(n, dest, source)
 
 // LOG
 
-var _Debug_log = F2(function(tag, value)
+var _Debug_log_UNUSED = F2(function(tag, value)
 {
 	return value;
 });
 
-var _Debug_log_UNUSED = F2(function(tag, value)
+var _Debug_log = F2(function(tag, value)
 {
 	console.log(tag + ': ' + _Debug_toString(value));
 	return value;
@@ -530,12 +530,12 @@ function _Debug_todoCase(moduleName, region, value)
 
 // TO STRING
 
-function _Debug_toString(value)
+function _Debug_toString_UNUSED(value)
 {
 	return '<internals>';
 }
 
-function _Debug_toString_UNUSED(value)
+function _Debug_toString(value)
 {
 	return _Debug_toAnsiString(false, value);
 }
@@ -720,13 +720,13 @@ function _Debug_toHexDigit(n)
 // CRASH
 
 
-function _Debug_crash(identifier)
+function _Debug_crash_UNUSED(identifier)
 {
 	throw new Error('https://github.com/elm/core/blob/1.0.0/hints/' + identifier + '.md');
 }
 
 
-function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
+function _Debug_crash(identifier, fact1, fact2, fact3, fact4)
 {
 	switch(identifier)
 	{
@@ -784,11 +784,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.R.F === region.W.F)
+	if (region.start.line === region.end.line)
 	{
-		return 'on line ' + region.R.F;
+		return 'on line ' + region.start.line;
 	}
-	return 'on lines ' + region.R.F + ' through ' + region.W.F;
+	return 'on lines ' + region.start.line + ' through ' + region.end.line;
 }
 
 
@@ -1212,7 +1212,7 @@ function _String_fromList(chars)
 
 
 
-/**_UNUSED/
+/**/
 function _Json_errorToString(error)
 {
 	return elm$json$Json$Decode$errorToString(error);
@@ -1616,11 +1616,11 @@ var _Json_encode = F2(function(indentLevel, value)
 	return JSON.stringify(_Json_unwrap(value), null, indentLevel) + '';
 });
 
-function _Json_wrap_UNUSED(value) { return { $: 0, a: value }; }
-function _Json_unwrap_UNUSED(value) { return value.a; }
+function _Json_wrap(value) { return { $: 0, a: value }; }
+function _Json_unwrap(value) { return value.a; }
 
-function _Json_wrap(value) { return value; }
-function _Json_unwrap(value) { return value; }
+function _Json_wrap_UNUSED(value) { return value; }
+function _Json_unwrap_UNUSED(value) { return value; }
 
 function _Json_emptyArray() { return []; }
 function _Json_emptyObject() { return {}; }
@@ -1857,9 +1857,9 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.ay,
-		impl.aG,
-		impl.aE,
+		impl.init,
+		impl.update,
+		impl.subscriptions,
 		function() { return function() {} }
 	);
 });
@@ -1872,7 +1872,7 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 function _Platform_initialize(flagDecoder, args, init, update, subscriptions, stepperBuilder)
 {
 	var result = A2(_Json_run, flagDecoder, _Json_wrap(args ? args['flags'] : undefined));
-	elm$core$Result$isOk(result) || _Debug_crash(2 /**_UNUSED/, _Json_errorToString(result.a) /**/);
+	elm$core$Result$isOk(result) || _Debug_crash(2 /**/, _Json_errorToString(result.a) /**/);
 	var managers = {};
 	result = init(result.a);
 	var model = result.a;
@@ -2271,7 +2271,7 @@ function _Platform_setupIncomingPort(name, sendToApp)
 //
 
 
-function _Platform_export(exports)
+function _Platform_export_UNUSED(exports)
 {
 	scope['Elm']
 		? _Platform_mergeExportsProd(scope['Elm'], exports)
@@ -2292,7 +2292,7 @@ function _Platform_mergeExportsProd(obj, exports)
 }
 
 
-function _Platform_export_UNUSED(exports)
+function _Platform_export(exports)
 {
 	scope['Elm']
 		? _Platform_mergeExportsDebug('Elm', scope['Elm'], exports)
@@ -2332,10 +2332,10 @@ var _VirtualDom_init = F4(function(virtualNode, flagDecoder, debugMetadata, args
 {
 	// NOTE: this function needs _Platform_export available to work
 
-	/**/
+	/**_UNUSED/
 	var node = args['node'];
 	//*/
-	/**_UNUSED/
+	/**/
 	var node = args && args['node'] ? args['node'] : _Debug_crash(0);
 	//*/
 
@@ -2590,24 +2590,24 @@ function _VirtualDom_noInnerHtmlOrFormAction(key)
 	return key == 'innerHTML' || key == 'formAction' ? 'data-' + key : key;
 }
 
-function _VirtualDom_noJavaScriptUri(value)
+function _VirtualDom_noJavaScriptUri_UNUSED(value)
 {
 	return /^javascript:/i.test(value.replace(/\s/g,'')) ? '' : value;
 }
 
-function _VirtualDom_noJavaScriptUri_UNUSED(value)
+function _VirtualDom_noJavaScriptUri(value)
 {
 	return /^javascript:/i.test(value.replace(/\s/g,''))
 		? 'javascript:alert("This is an XSS vector. Please use ports or web components instead.")'
 		: value;
 }
 
-function _VirtualDom_noJavaScriptOrHtmlUri(value)
+function _VirtualDom_noJavaScriptOrHtmlUri_UNUSED(value)
 {
 	return /^\s*(javascript:|data:text\/html)/i.test(value) ? '' : value;
 }
 
-function _VirtualDom_noJavaScriptOrHtmlUri_UNUSED(value)
+function _VirtualDom_noJavaScriptOrHtmlUri(value)
 {
 	return /^\s*(javascript:|data:text\/html)/i.test(value)
 		? 'javascript:alert("This is an XSS vector. Please use ports or web components instead.")'
@@ -2659,9 +2659,9 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		o: func(record.o),
-		S: record.S,
-		Q: record.Q
+		message: func(record.message),
+		stopPropagation: record.stopPropagation,
+		preventDefault: record.preventDefault
 	}
 });
 
@@ -2929,11 +2929,11 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.o;
-		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.S;
+		var message = !tag ? value : tag < 3 ? value.a : value.message;
+		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.stopPropagation;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
-			(tag == 2 ? value.b : tag == 3 && value.Q) && event.preventDefault(),
+			(tag == 2 ? value.b : tag == 3 && value.preventDefault) && event.preventDefault(),
 			eventNode
 		);
 		var tagger;
@@ -3883,15 +3883,15 @@ var _Browser_element = _Debugger_element || F4(function(impl, flagDecoder, debug
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.ay,
-		impl.aG,
-		impl.aE,
+		impl.init,
+		impl.update,
+		impl.subscriptions,
 		function(sendToApp, initialModel) {
-			var view = impl.aI;
-			/**/
+			var view = impl.view;
+			/**_UNUSED/
 			var domNode = args['node'];
 			//*/
-			/**_UNUSED/
+			/**/
 			var domNode = args && args['node'] ? args['node'] : _Debug_crash(0);
 			//*/
 			var currNode = _VirtualDom_virtualize(domNode);
@@ -3919,12 +3919,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.ay,
-		impl.aG,
-		impl.aE,
+		impl.init,
+		impl.update,
+		impl.subscriptions,
 		function(sendToApp, initialModel) {
-			var divertHrefToApp = impl.G && impl.G(sendToApp)
-			var view = impl.aI;
+			var divertHrefToApp = impl.setup && impl.setup(sendToApp)
+			var view = impl.view;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
 			var currNode = _VirtualDom_virtualize(bodyNode);
@@ -3932,12 +3932,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 			{
 				_VirtualDom_divertHrefToApp = divertHrefToApp;
 				var doc = view(model);
-				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.ar);
+				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.body);
 				var patches = _VirtualDom_diff(currNode, nextNode);
 				bodyNode = _VirtualDom_applyPatches(bodyNode, currNode, patches, sendToApp);
 				currNode = nextNode;
 				_VirtualDom_divertHrefToApp = 0;
-				(title !== doc.aF) && (_VirtualDom_doc.title = title = doc.aF);
+				(title !== doc.title) && (_VirtualDom_doc.title = title = doc.title);
 			});
 		}
 	);
@@ -3993,12 +3993,12 @@ function _Browser_makeAnimator(model, draw)
 
 function _Browser_application(impl)
 {
-	var onUrlChange = impl.aA;
-	var onUrlRequest = impl.aB;
+	var onUrlChange = impl.onUrlChange;
+	var onUrlRequest = impl.onUrlRequest;
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
-		G: function(sendToApp)
+		setup: function(sendToApp)
 		{
 			key.a = sendToApp;
 			_Browser_window.addEventListener('popstate', key);
@@ -4014,9 +4014,9 @@ function _Browser_application(impl)
 					var next = elm$url$Url$fromString(href).a;
 					sendToApp(onUrlRequest(
 						(next
-							&& curr.ah === next.ah
-							&& curr.Z === next.Z
-							&& curr.ae.a === next.ae.a
+							&& curr.protocol === next.protocol
+							&& curr.host === next.host
+							&& curr.port_.a === next.port_.a
 						)
 							? elm$browser$Browser$Internal(next)
 							: elm$browser$Browser$External(href)
@@ -4024,13 +4024,13 @@ function _Browser_application(impl)
 				}
 			});
 		},
-		ay: function(flags)
+		init: function(flags)
 		{
-			return A3(impl.ay, flags, _Browser_getUrl(), key);
+			return A3(impl.init, flags, _Browser_getUrl(), key);
 		},
-		aI: impl.aI,
-		aG: impl.aG,
-		aE: impl.aE
+		view: impl.view,
+		update: impl.update,
+		subscriptions: impl.subscriptions
 	});
 }
 
@@ -4096,17 +4096,17 @@ var _Browser_decodeEvent = F2(function(decoder, event)
 function _Browser_visibilityInfo()
 {
 	return (typeof _VirtualDom_doc.hidden !== 'undefined')
-		? { aw: 'hidden', as: 'visibilitychange' }
+		? { hidden: 'hidden', change: 'visibilitychange' }
 		:
 	(typeof _VirtualDom_doc.mozHidden !== 'undefined')
-		? { aw: 'mozHidden', as: 'mozvisibilitychange' }
+		? { hidden: 'mozHidden', change: 'mozvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.msHidden !== 'undefined')
-		? { aw: 'msHidden', as: 'msvisibilitychange' }
+		? { hidden: 'msHidden', change: 'msvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.webkitHidden !== 'undefined')
-		? { aw: 'webkitHidden', as: 'webkitvisibilitychange' }
-		: { aw: 'hidden', as: 'visibilitychange' };
+		? { hidden: 'webkitHidden', change: 'webkitvisibilitychange' }
+		: { hidden: 'hidden', change: 'visibilitychange' };
 }
 
 
@@ -4187,12 +4187,12 @@ var _Browser_call = F2(function(functionName, id)
 function _Browser_getViewport()
 {
 	return {
-		al: _Browser_getScene(),
-		ao: {
-			M: _Browser_window.pageXOffset,
-			N: _Browser_window.pageYOffset,
-			D: _Browser_doc.documentElement.clientWidth,
-			y: _Browser_doc.documentElement.clientHeight
+		scene: _Browser_getScene(),
+		viewport: {
+			x: _Browser_window.pageXOffset,
+			y: _Browser_window.pageYOffset,
+			width: _Browser_doc.documentElement.clientWidth,
+			height: _Browser_doc.documentElement.clientHeight
 		}
 	};
 }
@@ -4202,8 +4202,8 @@ function _Browser_getScene()
 	var body = _Browser_doc.body;
 	var elem = _Browser_doc.documentElement;
 	return {
-		D: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
-		y: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
+		width: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
+		height: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
 	};
 }
 
@@ -4226,15 +4226,15 @@ function _Browser_getViewportOf(id)
 	return _Browser_withNode(id, function(node)
 	{
 		return {
-			al: {
-				D: node.scrollWidth,
-				y: node.scrollHeight
+			scene: {
+				width: node.scrollWidth,
+				height: node.scrollHeight
 			},
-			ao: {
-				M: node.scrollLeft,
-				N: node.scrollTop,
-				D: node.clientWidth,
-				y: node.clientHeight
+			viewport: {
+				x: node.scrollLeft,
+				y: node.scrollTop,
+				width: node.clientWidth,
+				height: node.clientHeight
 			}
 		};
 	});
@@ -4264,18 +4264,18 @@ function _Browser_getElement(id)
 		var x = _Browser_window.pageXOffset;
 		var y = _Browser_window.pageYOffset;
 		return {
-			al: _Browser_getScene(),
-			ao: {
-				M: x,
-				N: y,
-				D: _Browser_doc.documentElement.clientWidth,
-				y: _Browser_doc.documentElement.clientHeight
+			scene: _Browser_getScene(),
+			viewport: {
+				x: x,
+				y: y,
+				width: _Browser_doc.documentElement.clientWidth,
+				height: _Browser_doc.documentElement.clientHeight
 			},
-			at: {
-				M: x + rect.left,
-				N: y + rect.top,
-				D: rect.width,
-				y: rect.height
+			element: {
+				x: x + rect.left,
+				y: y + rect.top,
+				width: rect.width,
+				height: rect.height
 			}
 		};
 	});
@@ -4310,31 +4310,32 @@ function _Browser_load(url)
 		}
 	}));
 }
-var author$project$Main$Conda = 0;
-var author$project$Main$HostedNotebook = 1;
-var author$project$Main$Linux = 0;
-var author$project$Main$NoGPU = 0;
-var author$project$Main$Python36Plus = 2;
-var author$project$Main$Stable = 0;
-var author$project$Main$TensorFlow = 0;
-var author$project$Main$defaultModel = {e: 1, f: 0, t: 0, j: 2, i: 0, L: 0, r: 0};
-var elm$core$Basics$False = 1;
-var elm$core$Basics$True = 0;
+var author$project$Main$css = '\ndiv.question {\n  display:       flex;\n  width:         100%;\n  margin-top:    5px;\n  margin-bottom: 5px;\n}\n\ndiv.question label {\n  width: 250px;\n}\n\nbutton.active {\n  background: peachpuff;\n}\n\nbutton:disabled{\n  background: none !important;\n}\n\n.answer {\n  margin-top: 20px;\n  padding:    10px;\n  background: #eaeaea;\n}\n';
+var elm$core$Basics$identity = function (x) {
+	return x;
+};
+var elm$core$Basics$False = {$: 'False'};
+var elm$core$Basics$True = {$: 'True'};
 var elm$core$Result$isOk = function (result) {
-	if (!result.$) {
+	if (result.$ === 'Ok') {
 		return true;
 	} else {
 		return false;
 	}
 };
-var elm$core$Basics$EQ = 1;
-var elm$core$Basics$GT = 2;
-var elm$core$Basics$LT = 0;
+var elm$core$Array$branchFactor = 32;
+var elm$core$Array$Array_elm_builtin = F4(
+	function (a, b, c, d) {
+		return {$: 'Array_elm_builtin', a: a, b: b, c: c, d: d};
+	});
+var elm$core$Basics$EQ = {$: 'EQ'};
+var elm$core$Basics$GT = {$: 'GT'};
+var elm$core$Basics$LT = {$: 'LT'};
 var elm$core$Dict$foldr = F3(
 	function (func, acc, t) {
 		foldr:
 		while (true) {
-			if (t.$ === -2) {
+			if (t.$ === 'RBEmpty_elm_builtin') {
 				return acc;
 			} else {
 				var key = t.b;
@@ -4380,7 +4381,7 @@ var elm$core$Dict$keys = function (dict) {
 		dict);
 };
 var elm$core$Set$toList = function (_n0) {
-	var dict = _n0;
+	var dict = _n0.a;
 	return elm$core$Dict$keys(dict);
 };
 var elm$core$Elm$JsArray$foldr = _JsArray_foldr;
@@ -4390,7 +4391,7 @@ var elm$core$Array$foldr = F3(
 		var tail = _n0.d;
 		var helper = F2(
 			function (node, acc) {
-				if (!node.$) {
+				if (node.$ === 'SubTree') {
 					var subTree = node.a;
 					return A3(elm$core$Elm$JsArray$foldr, helper, acc, subTree);
 				} else {
@@ -4407,11 +4408,6 @@ var elm$core$Array$foldr = F3(
 var elm$core$Array$toList = function (array) {
 	return A3(elm$core$Array$foldr, elm$core$List$cons, _List_Nil, array);
 };
-var elm$core$Array$branchFactor = 32;
-var elm$core$Array$Array_elm_builtin = F4(
-	function (a, b, c, d) {
-		return {$: 0, a: a, b: b, c: c, d: d};
-	});
 var elm$core$Basics$ceiling = _Basics_ceiling;
 var elm$core$Basics$fdiv = _Basics_fdiv;
 var elm$core$Basics$logBase = F2(
@@ -4424,10 +4420,10 @@ var elm$core$Array$shiftStep = elm$core$Basics$ceiling(
 var elm$core$Elm$JsArray$empty = _JsArray_empty;
 var elm$core$Array$empty = A4(elm$core$Array$Array_elm_builtin, 0, elm$core$Array$shiftStep, elm$core$Elm$JsArray$empty, elm$core$Elm$JsArray$empty);
 var elm$core$Array$Leaf = function (a) {
-	return {$: 1, a: a};
+	return {$: 'Leaf', a: a};
 };
 var elm$core$Array$SubTree = function (a) {
-	return {$: 0, a: a};
+	return {$: 'SubTree', a: a};
 };
 var elm$core$Elm$JsArray$initializeFromList = _JsArray_initializeFromList;
 var elm$core$List$foldl = F3(
@@ -4515,25 +4511,25 @@ var elm$core$Basics$sub = _Basics_sub;
 var elm$core$Elm$JsArray$length = _JsArray_length;
 var elm$core$Array$builderToArray = F2(
 	function (reverseNodeList, builder) {
-		if (!builder.a) {
+		if (!builder.nodeListSize) {
 			return A4(
 				elm$core$Array$Array_elm_builtin,
-				elm$core$Elm$JsArray$length(builder.c),
+				elm$core$Elm$JsArray$length(builder.tail),
 				elm$core$Array$shiftStep,
 				elm$core$Elm$JsArray$empty,
-				builder.c);
+				builder.tail);
 		} else {
-			var treeLen = builder.a * elm$core$Array$branchFactor;
+			var treeLen = builder.nodeListSize * elm$core$Array$branchFactor;
 			var depth = elm$core$Basics$floor(
 				A2(elm$core$Basics$logBase, elm$core$Array$branchFactor, treeLen - 1));
-			var correctNodeList = reverseNodeList ? elm$core$List$reverse(builder.d) : builder.d;
-			var tree = A2(elm$core$Array$treeFromBuilder, correctNodeList, builder.a);
+			var correctNodeList = reverseNodeList ? elm$core$List$reverse(builder.nodeList) : builder.nodeList;
+			var tree = A2(elm$core$Array$treeFromBuilder, correctNodeList, builder.nodeListSize);
 			return A4(
 				elm$core$Array$Array_elm_builtin,
-				elm$core$Elm$JsArray$length(builder.c) + treeLen,
+				elm$core$Elm$JsArray$length(builder.tail) + treeLen,
 				A2(elm$core$Basics$max, 5, depth * elm$core$Array$shiftStep),
 				tree,
-				builder.c);
+				builder.tail);
 		}
 	});
 var elm$core$Basics$idiv = _Basics_idiv;
@@ -4547,7 +4543,7 @@ var elm$core$Array$initializeHelp = F5(
 				return A2(
 					elm$core$Array$builderToArray,
 					false,
-					{d: nodeList, a: (len / elm$core$Array$branchFactor) | 0, c: tail});
+					{nodeList: nodeList, nodeListSize: (len / elm$core$Array$branchFactor) | 0, tail: tail});
 			} else {
 				var leaf = elm$core$Array$Leaf(
 					A3(elm$core$Elm$JsArray$initialize, elm$core$Array$branchFactor, fromIndex, fn));
@@ -4579,29 +4575,29 @@ var elm$core$Array$initialize = F2(
 		}
 	});
 var elm$core$Maybe$Just = function (a) {
-	return {$: 0, a: a};
+	return {$: 'Just', a: a};
 };
-var elm$core$Maybe$Nothing = {$: 1};
+var elm$core$Maybe$Nothing = {$: 'Nothing'};
 var elm$core$Result$Err = function (a) {
-	return {$: 1, a: a};
+	return {$: 'Err', a: a};
 };
 var elm$core$Result$Ok = function (a) {
-	return {$: 0, a: a};
+	return {$: 'Ok', a: a};
 };
 var elm$json$Json$Decode$Failure = F2(
 	function (a, b) {
-		return {$: 3, a: a, b: b};
+		return {$: 'Failure', a: a, b: b};
 	});
 var elm$json$Json$Decode$Field = F2(
 	function (a, b) {
-		return {$: 0, a: a, b: b};
+		return {$: 'Field', a: a, b: b};
 	});
 var elm$json$Json$Decode$Index = F2(
 	function (a, b) {
-		return {$: 1, a: a, b: b};
+		return {$: 'Index', a: a, b: b};
 	});
 var elm$json$Json$Decode$OneOf = function (a) {
-	return {$: 2, a: a};
+	return {$: 'OneOf', a: a};
 };
 var elm$core$Basics$and = _Basics_and;
 var elm$core$Basics$append = _Utils_append;
@@ -4703,12 +4699,12 @@ var elm$json$Json$Decode$errorToStringHelp = F2(
 		errorToStringHelp:
 		while (true) {
 			switch (error.$) {
-				case 0:
+				case 'Field':
 					var f = error.a;
 					var err = error.b;
 					var isSimple = function () {
 						var _n1 = elm$core$String$uncons(f);
-						if (_n1.$ === 1) {
+						if (_n1.$ === 'Nothing') {
 							return false;
 						} else {
 							var _n2 = _n1.a;
@@ -4723,7 +4719,7 @@ var elm$json$Json$Decode$errorToStringHelp = F2(
 					error = $temp$error;
 					context = $temp$context;
 					continue errorToStringHelp;
-				case 1:
+				case 'Index':
 					var i = error.a;
 					var err = error.b;
 					var indexName = '[' + (elm$core$String$fromInt(i) + ']');
@@ -4732,7 +4728,7 @@ var elm$json$Json$Decode$errorToStringHelp = F2(
 					error = $temp$error;
 					context = $temp$context;
 					continue errorToStringHelp;
-				case 2:
+				case 'OneOf':
 					var errors = error.a;
 					if (!errors.b) {
 						return 'Ran into a Json.Decode.oneOf with no possibilities' + function () {
@@ -4793,153 +4789,58 @@ var elm$json$Json$Decode$errorToStringHelp = F2(
 			}
 		}
 	});
-var elm$core$Platform$Cmd$batch = _Platform_batch;
-var elm$core$Platform$Cmd$none = elm$core$Platform$Cmd$batch(_List_Nil);
-var author$project$Main$init = _Utils_Tuple2(author$project$Main$defaultModel, elm$core$Platform$Cmd$none);
-var author$project$Main$update = F2(
-	function (msg, model) {
-		switch (msg.$) {
-			case 0:
-				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
-			case 1:
-				var e = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{e: e}),
-					elm$core$Platform$Cmd$none);
-			case 2:
-				var l = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{j: l}),
-					elm$core$Platform$Cmd$none);
-			case 3:
-				var f = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{f: f}),
-					elm$core$Platform$Cmd$none);
-			case 4:
-				var v = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{r: v}),
-					elm$core$Platform$Cmd$none);
-			case 5:
-				var o = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{i: o}),
-					elm$core$Platform$Cmd$none);
-			case 6:
-				var g = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{t: g}),
-					elm$core$Platform$Cmd$none);
-			default:
-				var p = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{L: p}),
-					elm$core$Platform$Cmd$none);
-		}
-	});
-var author$project$Main$MyComputer = 0;
-var elm$core$String$lines = _String_lines;
-var elm$core$Basics$identity = function (x) {
-	return x;
-};
 var elm$json$Json$Decode$map = _Json_map1;
 var elm$json$Json$Decode$map2 = _Json_map2;
 var elm$json$Json$Decode$succeed = _Json_succeed;
 var elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 	switch (handler.$) {
-		case 0:
+		case 'Normal':
 			return 0;
-		case 1:
+		case 'MayStopPropagation':
 			return 1;
-		case 2:
+		case 'MayPreventDefault':
 			return 2;
 		default:
 			return 3;
 	}
 };
-var elm$html$Html$pre = _VirtualDom_node('pre');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var elm$html$Html$text = elm$virtual_dom$VirtualDom$text;
-var author$project$Main$exampleProgram = F4(
-	function (e, f, l, v) {
-		var lines = function () {
-			var _n0 = _Utils_Tuple3(f, l, v);
-			if (!_n0.a) {
-				if (!_n0.c) {
-					var _n1 = _n0.a;
-					var _n2 = _n0.c;
-					return elm$core$String$lines('# For TensorFlow version < 1.14\nimport tensorflow as tf\nprint("TensorFlow version: " + tf.__version__)\n\ny = tf.constant(5)\nx = tf.add(y, 2) ** 2\n\nwith tf.Session() as s:\n  print( x.eval() )\n');
-				} else {
-					var _n3 = _n0.a;
-					var _n4 = _n0.c;
-					var bangInstall = _List_fromArray(
-						['# First, you\'ll need to install the latest TensorFlow', '! pip install -q tensorflow-gpu==2.0.0-beta1', '']);
-					var prefix = (!e) ? _List_Nil : bangInstall;
-					return _Utils_ap(
-						prefix,
-						elm$core$String$lines('# For TensorFlow version > 2\nimport tensorflow as tf\nprint("TensorFlow version: " + tf.__version__)\n\n@tf.function\ndef f(y=5):\n  x = (y + 2) ** 2\n  return x\n\nprint(f().numpy())\n'));
-				}
-			} else {
-				var _n5 = _n0.a;
-				return elm$core$String$lines('import torch\n\ny = torch.tensor(5)\nx = torch.add(y, 2) ** 2\nprint(x.numpy())\n');
+var author$project$Main$answer = function (m) {
+	var _n0 = _Utils_Tuple2(
+		m.environment,
+		_Utils_Tuple2(
+			m.language,
+			_Utils_Tuple2(
+				m.packageManager,
+				_Utils_Tuple2(
+					m.framework,
+					_Utils_Tuple2(m.os, m.gpu)))));
+	_n0$2:
+	while (true) {
+		if (_n0.a.$ === 'Just') {
+			switch (_n0.a.a.$) {
+				case 'HostedNotebook':
+					var _n1 = _n0.a.a;
+					return elm$html$Html$text('Google CoLab!');
+				case 'PersonalComputer':
+					var _n2 = _n0.a.a;
+					return elm$html$Html$text('Okay, let\'s install it on your comp.');
+				default:
+					break _n0$2;
 			}
-		}();
-		return A2(
-			elm$html$Html$pre,
-			_List_Nil,
-			_List_fromArray(
-				[
-					elm$html$Html$text(
-					A2(elm$core$String$join, '\r\n', lines))
-				]));
-	});
-var elm$html$Html$h5 = _VirtualDom_node('h5');
-var elm$html$Html$p = _VirtualDom_node('p');
-var author$project$Main$exampleCode = function (m) {
-	return _List_fromArray(
-		[
-			A2(
-			elm$html$Html$h5,
-			_List_Nil,
-			_List_fromArray(
-				[
-					elm$html$Html$text('Example Program')
-				])),
-			A2(
-			elm$html$Html$p,
-			_List_Nil,
-			_List_fromArray(
-				[
-					elm$html$Html$text('This code snippet demonstrates a simple mathematical computation in this framework.')
-				])),
-			A4(author$project$Main$exampleProgram, m.e, m.f, m.j, m.r)
-		]);
-};
-var author$project$Main$ln = function (m) {
-	var _n0 = m.j;
-	if (!_n0) {
-		return 'Python 2';
-	} else {
-		return 'Python 3';
+		} else {
+			break _n0$2;
+		}
 	}
+	return elm$html$Html$text('-');
 };
-var elm$html$Html$a = _VirtualDom_node('a');
-var elm$html$Html$div = _VirtualDom_node('div');
+var author$project$Main$Cloud = {$: 'Cloud'};
+var author$project$Main$HostedNotebook = {$: 'HostedNotebook'};
+var author$project$Main$PersonalComputer = {$: 'PersonalComputer'};
+var author$project$Main$SetEnvironment = function (a) {
+	return {$: 'SetEnvironment', a: a};
+};
 var elm$json$Json$Encode$string = _Json_wrap;
 var elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -4948,309 +4849,14 @@ var elm$html$Html$Attributes$stringProperty = F2(
 			key,
 			elm$json$Json$Encode$string(string));
 	});
-var elm$html$Html$Attributes$href = function (url) {
-	return A2(
-		elm$html$Html$Attributes$stringProperty,
-		'href',
-		_VirtualDom_noJavaScriptUri(url));
-};
-var author$project$Main$colab = function (m) {
-	var link = function () {
-		var _n0 = _Utils_Tuple2(m.f, m.r);
-		if (!_n0.a) {
-			if (!_n0.b) {
-				var _n1 = _n0.a;
-				var _n2 = _n0.b;
-				return 'https://colab.research.google.com/drive/1nl1fV14qsbVYJJdJ-7VwCMiQMr48fKuY';
-			} else {
-				var _n3 = _n0.a;
-				var _n4 = _n0.b;
-				return 'https://colab.research.google.com/drive/1wWh1s-wwxUB5RkmJAz5WY6Nc4d-kYuw9';
-			}
-		} else {
-			var _n5 = _n0.a;
-			return 'https://colab.research.google.com/drive/1S8MulJ_mVoqbVmtflHDBIgw7O0P68R57';
-		}
-	}();
-	return A2(
-		elm$html$Html$div,
-		_List_Nil,
-		_Utils_ap(
-			_List_fromArray(
-				[
-					A2(
-					elm$html$Html$h5,
-					_List_Nil,
-					_List_fromArray(
-						[
-							elm$html$Html$text('Installation')
-						])),
-					A2(
-					elm$html$Html$p,
-					_List_Nil,
-					_List_fromArray(
-						[
-							elm$html$Html$text('We recommend '),
-							A2(
-							elm$html$Html$a,
-							_List_fromArray(
-								[
-									elm$html$Html$Attributes$href('https://colab.research.google.com/')
-								]),
-							_List_fromArray(
-								[
-									elm$html$Html$text('Google Colab!')
-								]))
-						])),
-					A2(
-					elm$html$Html$p,
-					_List_Nil,
-					_List_fromArray(
-						[
-							elm$html$Html$text(
-							'From the menu, pick `Runtime` -> ' + ('`Change Runtime Type` and pick `' + (author$project$Main$ln(m) + '` from the dropdown.')))
-						]))
-				]),
-			_Utils_ap(
-				author$project$Main$exampleCode(m),
-				_Utils_ap(
-					_List_fromArray(
-						[
-							A2(
-							elm$html$Html$p,
-							_List_Nil,
-							_List_fromArray(
-								[
-									A2(
-									elm$html$Html$a,
-									_List_fromArray(
-										[
-											elm$html$Html$Attributes$href(link)
-										]),
-									_List_fromArray(
-										[
-											elm$html$Html$text('Click here')
-										])),
-									elm$html$Html$text(' to view this program in Colab now (you\'ll need to sign in to a Google account to run it.)')
-								]))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							elm$html$Html$h5,
-							_List_Nil,
-							_List_fromArray(
-								[
-									elm$html$Html$text('Read more')
-								])),
-							A2(
-							elm$html$Html$p,
-							_List_Nil,
-							_List_fromArray(
-								[
-									elm$html$Html$text('You can find more details about Google Colaboratory here: '),
-									A2(
-									elm$html$Html$a,
-									_List_fromArray(
-										[
-											elm$html$Html$Attributes$href('https://colab.research.google.com/')
-										]),
-									_List_fromArray(
-										[
-											elm$html$Html$text('Google Colab')
-										])),
-									elm$html$Html$text('.')
-								]))
-						])))));
-};
-var author$project$Main$conda = function (m) {
-	var pyVersion = function () {
-		var _n21 = m.j;
-		switch (_n21) {
-			case 0:
-				return 'python=2.7';
-			case 1:
-				return 'python=3.5';
-			default:
-				return '\"python>=3.6\"';
-		}
-	}();
-	var _package = function () {
-		var _n1 = _Utils_Tuple3(
-			m.f,
-			m.t,
-			_Utils_Tuple2(m.r, m.i));
-		if (!_n1.a) {
-			if (!_n1.c.a) {
-				if (!_n1.b) {
-					var _n2 = _n1.a;
-					var _n3 = _n1.b;
-					var _n4 = _n1.c;
-					var _n5 = _n4.a;
-					return 'tensorflow';
-				} else {
-					var _n6 = _n1.a;
-					var _n7 = _n1.c;
-					var _n8 = _n7.a;
-					return 'tensorflow-gpu';
-				}
-			} else {
-				if (!_n1.b) {
-					var _n9 = _n1.a;
-					var _n10 = _n1.b;
-					var _n11 = _n1.c;
-					var _n12 = _n11.a;
-					return 'tensorflow==2.0.0-beta1';
-				} else {
-					var _n13 = _n1.a;
-					var _n14 = _n1.c;
-					var _n15 = _n14.a;
-					return 'tensorflow-gpu==2.0.0-beta1';
-				}
-			}
-		} else {
-			if (_n1.c.b === 2) {
-				var _n16 = _n1.a;
-				var _n17 = _n1.c;
-				var _n18 = _n17.b;
-				return 'pytorch torchvision -c pytorch';
-			} else {
-				var _n19 = _n1.a;
-				var _n20 = _n1.c;
-				return 'pytorch-cpu torchvision-cpu -c pytorch';
-			}
-		}
-	}();
-	var more = function () {
-		var _n0 = m.f;
-		if (!_n0) {
-			return 'https://www.tensorflow.org/install';
-		} else {
-			return 'https://pytorch.org/get-started/locally/';
-		}
-	}();
-	var install = 'conda install ' + _package;
-	var envName = (!m.f) ? 'tf' : 'torch';
-	var create = 'conda create -n ' + (envName + (' ' + pyVersion));
-	var activate = 'source activate ' + envName;
-	var lines = _List_fromArray(
-		[create, activate, install]);
-	return A2(
-		elm$html$Html$div,
-		_List_Nil,
-		_Utils_ap(
-			_List_fromArray(
-				[
-					A2(
-					elm$html$Html$h5,
-					_List_Nil,
-					_List_fromArray(
-						[
-							elm$html$Html$text('Installation')
-						])),
-					A2(
-					elm$html$Html$p,
-					_List_Nil,
-					_List_fromArray(
-						[
-							elm$html$Html$text('At a terminal, use the following to make a new conda ' + 'environment, activate it and install the right libraries.')
-						])),
-					A2(
-					elm$html$Html$pre,
-					_List_Nil,
-					_List_fromArray(
-						[
-							elm$html$Html$text(
-							A2(elm$core$String$join, '\r\n', lines))
-						]))
-				]),
-			_Utils_ap(
-				author$project$Main$exampleCode(m),
-				_List_fromArray(
-					[
-						A2(
-						elm$html$Html$h5,
-						_List_Nil,
-						_List_fromArray(
-							[
-								elm$html$Html$text('Read more')
-							])),
-						A2(
-						elm$html$Html$p,
-						_List_Nil,
-						_List_fromArray(
-							[
-								elm$html$Html$text('Check out the documentation for this library: <'),
-								A2(
-								elm$html$Html$a,
-								_List_fromArray(
-									[
-										elm$html$Html$Attributes$href(more)
-									]),
-								_List_fromArray(
-									[
-										elm$html$Html$text(more)
-									])),
-								elm$html$Html$text('>.')
-							]))
-					]))));
-};
 var elm$html$Html$Attributes$class = elm$html$Html$Attributes$stringProperty('className');
-var author$project$Main$unsupported = A2(
-	elm$html$Html$div,
-	_List_fromArray(
-		[
-			elm$html$Html$Attributes$class('unsupported')
-		]),
-	_List_fromArray(
-		[
-			A2(
-			elm$html$Html$h5,
-			_List_Nil,
-			_List_fromArray(
-				[
-					elm$html$Html$text('Unsupported')
-				])),
-			A2(
-			elm$html$Html$p,
-			_List_Nil,
-			_List_fromArray(
-				[
-					elm$html$Html$text('Unfortunately, this configuration is unsupported!')
-				]))
-		]));
-var author$project$Main$answer = function (m) {
-	var _n0 = _Utils_Tuple3(
-		m.e,
-		m.i,
-		_Utils_Tuple2(m.j, m.f));
-	if (_n0.a === 1) {
-		var _n1 = _n0.a;
-		return author$project$Main$colab(m);
-	} else {
-		if (((_n0.b === 1) && (!_n0.c.a)) && (_n0.c.b === 1)) {
-			var _n2 = _n0.a;
-			var _n3 = _n0.b;
-			var _n4 = _n0.c;
-			var _n5 = _n4.a;
-			var _n6 = _n4.b;
-			return author$project$Main$unsupported;
-		} else {
-			var _n7 = _n0.a;
-			return author$project$Main$conda(m);
-		}
-	}
-};
-var author$project$Main$SetEnvironment = function (a) {
-	return {$: 1, a: a};
-};
 var author$project$Main$ma = function (cond) {
 	return elm$html$Html$Attributes$class(
 		cond ? 'active' : '');
 };
 var elm$html$Html$button = _VirtualDom_node('button');
 var elm$virtual_dom$VirtualDom$Normal = function (a) {
-	return {$: 0, a: a};
+	return {$: 'Normal', a: a};
 };
 var elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
 var elm$html$Html$Events$on = F2(
@@ -5273,9 +4879,13 @@ var author$project$Main$environmentOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(!m.e),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$PersonalComputer))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetEnvironment(0))
+					author$project$Main$SetEnvironment(
+						elm$core$Maybe$Just(author$project$Main$PersonalComputer)))
 				]),
 			_List_fromArray(
 				[
@@ -5285,20 +4895,41 @@ var author$project$Main$environmentOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.e === 1),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$HostedNotebook))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetEnvironment(1))
+					author$project$Main$SetEnvironment(
+						elm$core$Maybe$Just(author$project$Main$HostedNotebook)))
 				]),
 			_List_fromArray(
 				[
 					elm$html$Html$text('A hosted notebook')
+				])),
+			A2(
+			elm$html$Html$button,
+			_List_fromArray(
+				[
+					author$project$Main$ma(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$Cloud))),
+					elm$html$Html$Events$onClick(
+					author$project$Main$SetEnvironment(
+						elm$core$Maybe$Just(author$project$Main$Cloud)))
+				]),
+			_List_fromArray(
+				[
+					elm$html$Html$text('The cloud')
 				]))
 		]);
 };
-var author$project$Main$PyTorch = 1;
+var author$project$Main$PyTorch = {$: 'PyTorch'};
 var author$project$Main$SetFramework = function (a) {
-	return {$: 3, a: a};
+	return {$: 'SetFramework', a: a};
 };
+var author$project$Main$TensorFlow = {$: 'TensorFlow'};
 var author$project$Main$frameworkOptions = function (m) {
 	return _List_fromArray(
 		[
@@ -5306,9 +4937,13 @@ var author$project$Main$frameworkOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(!m.f),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.framework,
+						elm$core$Maybe$Just(author$project$Main$TensorFlow))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetFramework(0))
+					author$project$Main$SetFramework(
+						elm$core$Maybe$Just(author$project$Main$TensorFlow)))
 				]),
 			_List_fromArray(
 				[
@@ -5318,9 +4953,13 @@ var author$project$Main$frameworkOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.f === 1),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.framework,
+						elm$core$Maybe$Just(author$project$Main$PyTorch))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetFramework(1))
+					author$project$Main$SetFramework(
+						elm$core$Maybe$Just(author$project$Main$PyTorch)))
 				]),
 			_List_fromArray(
 				[
@@ -5328,11 +4967,11 @@ var author$project$Main$frameworkOptions = function (m) {
 				]))
 		]);
 };
-var author$project$Main$Cuda10 = 2;
-var author$project$Main$Cuda9 = 1;
-var author$project$Main$Mac = 2;
+var author$project$Main$Cuda10 = {$: 'Cuda10'};
+var author$project$Main$Cuda9 = {$: 'Cuda9'};
+var author$project$Main$NoGPU = {$: 'NoGPU'};
 var author$project$Main$SetGPU = function (a) {
-	return {$: 6, a: a};
+	return {$: 'SetGPU', a: a};
 };
 var elm$json$Json$Encode$bool = _Json_wrap;
 var elm$html$Html$Attributes$boolProperty = F2(
@@ -5350,10 +4989,17 @@ var author$project$Main$gpuOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(!m.t),
-					elm$html$Html$Attributes$disabled((m.e === 1) || (m.i === 2)),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.gpu,
+						elm$core$Maybe$Just(author$project$Main$NoGPU))),
+					elm$html$Html$Attributes$disabled(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$HostedNotebook))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetGPU(0))
+					author$project$Main$SetGPU(
+						elm$core$Maybe$Just(author$project$Main$NoGPU)))
 				]),
 			_List_fromArray(
 				[
@@ -5363,34 +5009,49 @@ var author$project$Main$gpuOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.t === 1),
-					elm$html$Html$Attributes$disabled((m.e === 1) || (m.i === 2)),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.gpu,
+						elm$core$Maybe$Just(author$project$Main$Cuda9))),
+					elm$html$Html$Attributes$disabled(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$HostedNotebook))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetGPU(1))
+					author$project$Main$SetGPU(
+						elm$core$Maybe$Just(author$project$Main$Cuda9)))
 				]),
 			_List_fromArray(
 				[
-					elm$html$Html$text('A GPU and Cuda v9')
+					elm$html$Html$text('Cuda v9')
 				])),
 			A2(
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.t === 2),
-					elm$html$Html$Attributes$disabled((m.e === 1) || (m.i === 2)),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.gpu,
+						elm$core$Maybe$Just(author$project$Main$Cuda10))),
+					elm$html$Html$Attributes$disabled(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$HostedNotebook))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetGPU(2))
+					author$project$Main$SetGPU(
+						elm$core$Maybe$Just(author$project$Main$Cuda10)))
 				]),
 			_List_fromArray(
 				[
-					elm$html$Html$text('A Gpu and Cuda v10')
+					elm$html$Html$text('Cuda v10')
 				]))
 		]);
 };
-var author$project$Main$Python27 = 0;
-var author$project$Main$Python35 = 1;
+var author$project$Main$Python27 = {$: 'Python27'};
+var author$project$Main$Python35 = {$: 'Python35'};
+var author$project$Main$Python36Plus = {$: 'Python36Plus'};
 var author$project$Main$SetLanguage = function (a) {
-	return {$: 2, a: a};
+	return {$: 'SetLanguage', a: a};
 };
 var author$project$Main$languageOptions = function (m) {
 	return _List_fromArray(
@@ -5399,9 +5060,13 @@ var author$project$Main$languageOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(!m.j),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.language,
+						elm$core$Maybe$Just(author$project$Main$Python27))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetLanguage(0))
+					author$project$Main$SetLanguage(
+						elm$core$Maybe$Just(author$project$Main$Python27)))
 				]),
 			_List_fromArray(
 				[
@@ -5411,9 +5076,13 @@ var author$project$Main$languageOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.j === 1),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.language,
+						elm$core$Maybe$Just(author$project$Main$Python35))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetLanguage(1))
+					author$project$Main$SetLanguage(
+						elm$core$Maybe$Just(author$project$Main$Python35)))
 				]),
 			_List_fromArray(
 				[
@@ -5423,9 +5092,13 @@ var author$project$Main$languageOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.j === 2),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.language,
+						elm$core$Maybe$Just(author$project$Main$Python36Plus))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetLanguage(2))
+					author$project$Main$SetLanguage(
+						elm$core$Maybe$Just(author$project$Main$Python36Plus)))
 				]),
 			_List_fromArray(
 				[
@@ -5433,10 +5106,12 @@ var author$project$Main$languageOptions = function (m) {
 				]))
 		]);
 };
+var author$project$Main$Linux = {$: 'Linux'};
+var author$project$Main$Mac = {$: 'Mac'};
 var author$project$Main$SetOS = function (a) {
-	return {$: 5, a: a};
+	return {$: 'SetOS', a: a};
 };
-var author$project$Main$Windows = 1;
+var author$project$Main$Windows = {$: 'Windows'};
 var author$project$Main$osOptions = function (m) {
 	return _List_fromArray(
 		[
@@ -5444,10 +5119,17 @@ var author$project$Main$osOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(!m.i),
-					elm$html$Html$Attributes$disabled(m.e === 1),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.os,
+						elm$core$Maybe$Just(author$project$Main$Linux))),
+					elm$html$Html$Attributes$disabled(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$HostedNotebook))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetOS(0))
+					author$project$Main$SetOS(
+						elm$core$Maybe$Just(author$project$Main$Linux)))
 				]),
 			_List_fromArray(
 				[
@@ -5457,10 +5139,17 @@ var author$project$Main$osOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.i === 1),
-					elm$html$Html$Attributes$disabled(m.e === 1),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.os,
+						elm$core$Maybe$Just(author$project$Main$Windows))),
+					elm$html$Html$Attributes$disabled(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$HostedNotebook))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetOS(1))
+					author$project$Main$SetOS(
+						elm$core$Maybe$Just(author$project$Main$Windows)))
 				]),
 			_List_fromArray(
 				[
@@ -5470,10 +5159,17 @@ var author$project$Main$osOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.i === 2),
-					elm$html$Html$Attributes$disabled(m.e === 1),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.os,
+						elm$core$Maybe$Just(author$project$Main$Mac))),
+					elm$html$Html$Attributes$disabled(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$HostedNotebook))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetOS(2))
+					author$project$Main$SetOS(
+						elm$core$Maybe$Just(author$project$Main$Mac)))
 				]),
 			_List_fromArray(
 				[
@@ -5481,9 +5177,11 @@ var author$project$Main$osOptions = function (m) {
 				]))
 		]);
 };
+var author$project$Main$Conda = {$: 'Conda'};
 var author$project$Main$SetPackageManager = function (a) {
-	return {$: 7, a: a};
+	return {$: 'SetPackageManager', a: a};
 };
+var author$project$Main$SystemWide = {$: 'SystemWide'};
 var author$project$Main$packageManagerOptions = function (m) {
 	return _List_fromArray(
 		[
@@ -5491,10 +5189,37 @@ var author$project$Main$packageManagerOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(!m.L),
-					elm$html$Html$Attributes$disabled(m.e === 1),
+					author$project$Main$ma(
+					_Utils_eq(
+						m.packageManager,
+						elm$core$Maybe$Just(author$project$Main$SystemWide))),
+					elm$html$Html$Attributes$disabled(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$HostedNotebook))),
 					elm$html$Html$Events$onClick(
-					author$project$Main$SetPackageManager(0))
+					author$project$Main$SetPackageManager(
+						elm$core$Maybe$Just(author$project$Main$SystemWide)))
+				]),
+			_List_fromArray(
+				[
+					elm$html$Html$text('System-wide')
+				])),
+			A2(
+			elm$html$Html$button,
+			_List_fromArray(
+				[
+					author$project$Main$ma(
+					_Utils_eq(
+						m.packageManager,
+						elm$core$Maybe$Just(author$project$Main$Conda))),
+					elm$html$Html$Attributes$disabled(
+					_Utils_eq(
+						m.environment,
+						elm$core$Maybe$Just(author$project$Main$HostedNotebook))),
+					elm$html$Html$Events$onClick(
+					author$project$Main$SetPackageManager(
+						elm$core$Maybe$Just(author$project$Main$Conda)))
 				]),
 			_List_fromArray(
 				[
@@ -5502,6 +5227,7 @@ var author$project$Main$packageManagerOptions = function (m) {
 				]))
 		]);
 };
+var elm$html$Html$div = _VirtualDom_node('div');
 var elm$html$Html$label = _VirtualDom_node('label');
 var author$project$Main$q = F3(
 	function (model, question, opts) {
@@ -5529,49 +5255,13 @@ var author$project$Main$q = F3(
 					opts(model))
 				]));
 	});
-var author$project$Main$Newest = 1;
-var author$project$Main$SetVersion = function (a) {
-	return {$: 4, a: a};
-};
-var author$project$Main$versionOptions = function (m) {
-	return _List_fromArray(
-		[
-			A2(
-			elm$html$Html$button,
-			_List_fromArray(
-				[
-					author$project$Main$ma(!m.r),
-					elm$html$Html$Attributes$disabled(m.f === 1),
-					elm$html$Html$Events$onClick(
-					author$project$Main$SetVersion(0))
-				]),
-			_List_fromArray(
-				[
-					elm$html$Html$text('Stable')
-				])),
-			A2(
-			elm$html$Html$button,
-			_List_fromArray(
-				[
-					author$project$Main$ma(m.r === 1),
-					elm$html$Html$Attributes$disabled(m.f === 1),
-					elm$html$Html$Events$onClick(
-					author$project$Main$SetVersion(1))
-				]),
-			_List_fromArray(
-				[
-					elm$html$Html$text('Newest')
-				]))
-		]);
-};
 var elm$html$Html$section = _VirtualDom_node('section');
-var elm$html$Html$Attributes$id = elm$html$Html$Attributes$stringProperty('id');
 var author$project$Main$view = function (model) {
 	return A2(
 		elm$html$Html$div,
 		_List_fromArray(
 			[
-				elm$html$Html$Attributes$id('widget')
+				elm$html$Html$Attributes$class('')
 			]),
 		_List_fromArray(
 			[
@@ -5587,9 +5277,8 @@ var author$project$Main$view = function (model) {
 						A3(author$project$Main$q, model, 'I\'ll be using ...', author$project$Main$languageOptions),
 						A3(author$project$Main$q, model, 'and installing the libraries ...', author$project$Main$packageManagerOptions),
 						A3(author$project$Main$q, model, 'For framework I\'d like to use ...', author$project$Main$frameworkOptions),
-						A3(author$project$Main$q, model, 'With version ...', author$project$Main$versionOptions),
 						A3(author$project$Main$q, model, 'And I\'m using ... ', author$project$Main$osOptions),
-						A3(author$project$Main$q, model, 'With ...', author$project$Main$gpuOptions)
+						A3(author$project$Main$q, model, 'With GPU and ...', author$project$Main$gpuOptions)
 					])),
 				A2(
 				elm$html$Html$section,
@@ -5603,25 +5292,111 @@ var author$project$Main$view = function (model) {
 					]))
 			]));
 };
+var elm$virtual_dom$VirtualDom$node = function (tag) {
+	return _VirtualDom_node(
+		_VirtualDom_noScript(tag));
+};
+var elm$html$Html$node = elm$virtual_dom$VirtualDom$node;
+var author$project$Main$cssView = function (m) {
+	return A2(
+		elm$html$Html$div,
+		_List_Nil,
+		_List_fromArray(
+			[
+				A3(
+				elm$html$Html$node,
+				'style',
+				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$text(author$project$Main$css)
+					])),
+				author$project$Main$view(m)
+			]));
+};
+var author$project$Main$defaultModel = {
+	environment: elm$core$Maybe$Just(author$project$Main$HostedNotebook),
+	framework: elm$core$Maybe$Just(author$project$Main$TensorFlow),
+	gpu: elm$core$Maybe$Nothing,
+	language: elm$core$Maybe$Just(author$project$Main$Python36Plus),
+	os: elm$core$Maybe$Nothing,
+	packageManager: elm$core$Maybe$Nothing
+};
+var elm$core$Platform$Cmd$batch = _Platform_batch;
+var elm$core$Platform$Cmd$none = elm$core$Platform$Cmd$batch(_List_Nil);
+var author$project$Main$init = _Utils_Tuple2(author$project$Main$defaultModel, elm$core$Platform$Cmd$none);
+var author$project$Main$update = F2(
+	function (msg, model) {
+		switch (msg.$) {
+			case 'NoOp':
+				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
+			case 'SetEnvironment':
+				var e = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{environment: e}),
+					elm$core$Platform$Cmd$none);
+			case 'SetLanguage':
+				var l = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{language: l}),
+					elm$core$Platform$Cmd$none);
+			case 'SetFramework':
+				var f = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{framework: f}),
+					elm$core$Platform$Cmd$none);
+			case 'SetOS':
+				var o = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{os: o}),
+					elm$core$Platform$Cmd$none);
+			case 'SetGPU':
+				var g = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{gpu: g}),
+					elm$core$Platform$Cmd$none);
+			default:
+				var p = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{packageManager: p}),
+					elm$core$Platform$Cmd$none);
+		}
+	});
 var elm$browser$Browser$External = function (a) {
-	return {$: 1, a: a};
+	return {$: 'External', a: a};
 };
 var elm$browser$Browser$Internal = function (a) {
-	return {$: 0, a: a};
+	return {$: 'Internal', a: a};
 };
-var elm$browser$Browser$Dom$NotFound = elm$core$Basics$identity;
+var elm$browser$Browser$Dom$NotFound = function (a) {
+	return {$: 'NotFound', a: a};
+};
 var elm$core$Basics$never = function (_n0) {
 	never:
 	while (true) {
-		var nvr = _n0;
+		var nvr = _n0.a;
 		var $temp$_n0 = nvr;
 		_n0 = $temp$_n0;
 		continue never;
 	}
 };
-var elm$core$Task$Perform = elm$core$Basics$identity;
+var elm$core$Task$Perform = function (a) {
+	return {$: 'Perform', a: a};
+};
 var elm$core$Task$succeed = _Scheduler_succeed;
-var elm$core$Task$init = elm$core$Task$succeed(0);
+var elm$core$Task$init = elm$core$Task$succeed(_Utils_Tuple0);
 var elm$core$List$foldrHelper = F4(
 	function (fn, acc, ctr, ls) {
 		if (!ls.b) {
@@ -5727,7 +5502,7 @@ var elm$core$Task$sequence = function (tasks) {
 var elm$core$Platform$sendToApp = _Platform_sendToApp;
 var elm$core$Task$spawnCmd = F2(
 	function (router, _n0) {
-		var task = _n0;
+		var task = _n0.a;
 		return _Scheduler_spawn(
 			A2(
 				elm$core$Task$andThen,
@@ -5739,7 +5514,7 @@ var elm$core$Task$onEffects = F3(
 		return A2(
 			elm$core$Task$map,
 			function (_n0) {
-				return 0;
+				return _Utils_Tuple0;
 			},
 			elm$core$Task$sequence(
 				A2(
@@ -5749,19 +5524,21 @@ var elm$core$Task$onEffects = F3(
 	});
 var elm$core$Task$onSelfMsg = F3(
 	function (_n0, _n1, _n2) {
-		return elm$core$Task$succeed(0);
+		return elm$core$Task$succeed(_Utils_Tuple0);
 	});
 var elm$core$Task$cmdMap = F2(
 	function (tagger, _n0) {
-		var task = _n0;
-		return A2(elm$core$Task$map, tagger, task);
+		var task = _n0.a;
+		return elm$core$Task$Perform(
+			A2(elm$core$Task$map, tagger, task));
 	});
 _Platform_effectManagers['Task'] = _Platform_createManager(elm$core$Task$init, elm$core$Task$onEffects, elm$core$Task$onSelfMsg, elm$core$Task$cmdMap);
 var elm$core$Task$command = _Platform_leaf('Task');
 var elm$core$Task$perform = F2(
 	function (toMessage, task) {
 		return elm$core$Task$command(
-			A2(elm$core$Task$map, toMessage, task));
+			elm$core$Task$Perform(
+				A2(elm$core$Task$map, toMessage, task)));
 	});
 var elm$core$String$length = _String_length;
 var elm$core$String$slice = _String_slice;
@@ -5774,8 +5551,8 @@ var elm$core$String$dropLeft = F2(
 			string);
 	});
 var elm$core$String$startsWith = _String_startsWith;
-var elm$url$Url$Http = 0;
-var elm$url$Url$Https = 1;
+var elm$url$Url$Http = {$: 'Http'};
+var elm$url$Url$Https = {$: 'Https'};
 var elm$core$String$indexes = _String_indexes;
 var elm$core$String$isEmpty = function (string) {
 	return string === '';
@@ -5788,7 +5565,7 @@ var elm$core$String$contains = _String_contains;
 var elm$core$String$toInt = _String_toInt;
 var elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {Y: fragment, Z: host, ac: path, ae: port_, ah: protocol, ai: query};
+		return {fragment: fragment, host: host, path: path, port_: port_, protocol: protocol, query: query};
 	});
 var elm$url$Url$chompBeforePath = F5(
 	function (protocol, path, params, frag, str) {
@@ -5804,7 +5581,7 @@ var elm$url$Url$chompBeforePath = F5(
 					var i = _n0.a;
 					var _n1 = elm$core$String$toInt(
 						A2(elm$core$String$dropLeft, i + 1, str));
-					if (_n1.$ === 1) {
+					if (_n1.$ === 'Nothing') {
 						return elm$core$Maybe$Nothing;
 					} else {
 						var port_ = _n1;
@@ -5886,10 +5663,10 @@ var elm$url$Url$chompAfterProtocol = F2(
 var elm$url$Url$fromString = function (str) {
 	return A2(elm$core$String$startsWith, 'http://', str) ? A2(
 		elm$url$Url$chompAfterProtocol,
-		0,
+		elm$url$Url$Http,
 		A2(elm$core$String$dropLeft, 7, str)) : (A2(elm$core$String$startsWith, 'https://', str) ? A2(
 		elm$url$Url$chompAfterProtocol,
-		1,
+		elm$url$Url$Https,
 		A2(elm$core$String$dropLeft, 8, str)) : elm$core$Maybe$Nothing);
 };
 var elm$browser$Browser$element = _Browser_element;
@@ -5897,14 +5674,14 @@ var elm$core$Platform$Sub$batch = _Platform_batch;
 var elm$core$Platform$Sub$none = elm$core$Platform$Sub$batch(_List_Nil);
 var author$project$Main$main = elm$browser$Browser$element(
 	{
-		ay: function (_n0) {
+		init: function (_n0) {
 			return author$project$Main$init;
 		},
-		aE: function (_n1) {
+		subscriptions: function (_n1) {
 			return elm$core$Platform$Sub$none;
 		},
-		aG: author$project$Main$update,
-		aI: author$project$Main$view
+		update: author$project$Main$update,
+		view: author$project$Main$cssView
 	});
 _Platform_export({'Main':{'init':author$project$Main$main(
-	elm$json$Json$Decode$succeed(0))(0)}});}(this));
+	elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)}});}(this));
