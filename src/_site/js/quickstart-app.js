@@ -5063,6 +5063,7 @@ var author$project$Main$colab = function (m) {
 								]))
 						])))));
 };
+var author$project$Main$Windows = 1;
 var author$project$Main$conda = function (m) {
 	var pyVersion = function () {
 		var _n21 = m.j;
@@ -5132,7 +5133,8 @@ var author$project$Main$conda = function (m) {
 	var install = 'conda install ' + _package;
 	var envName = (!m.f) ? 'tf' : 'torch';
 	var create = 'conda create -n ' + (envName + (' ' + pyVersion));
-	var activate = 'source activate ' + envName;
+	var activatePrefix = (m.i === 1) ? '' : 'source ';
+	var activate = activatePrefix + ('activate ' + envName);
 	var lines = _List_fromArray(
 		[create, activate, install]);
 	return A2(
@@ -5436,7 +5438,6 @@ var author$project$Main$languageOptions = function (m) {
 var author$project$Main$SetOS = function (a) {
 	return {$: 5, a: a};
 };
-var author$project$Main$Windows = 1;
 var author$project$Main$osOptions = function (m) {
 	return _List_fromArray(
 		[

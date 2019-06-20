@@ -218,8 +218,9 @@ conda m =
                     Python36Plus -> "\"python>=3.6\""
 
       create   = "conda create -n " ++ envName ++ " " ++ pyVersion
-      activate = "source activate " ++ envName
-      install  = "conda install "   ++ package
+      activatePrefix = if m.os == Windows then "" else "source "
+      activate       = activatePrefix ++ "activate " ++ envName
+      install        = "conda install "   ++ package
 
       -- TODO: Is TensorFlow Python Version Specific?!?!
       package = case (m.framework, m.gpu, (m.version, m.os)) of
