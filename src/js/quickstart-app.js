@@ -2659,7 +2659,7 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		o: func(record.o),
+		p: func(record.p),
 		S: record.S,
 		Q: record.Q
 	}
@@ -2929,7 +2929,7 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.o;
+		var message = !tag ? value : tag < 3 ? value.a : value.p;
 		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.S;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
@@ -4317,7 +4317,7 @@ var author$project$Main$NoGPU = 0;
 var author$project$Main$Python36Plus = 2;
 var author$project$Main$Stable = 0;
 var author$project$Main$TensorFlow = 0;
-var author$project$Main$defaultModel = {e: 1, f: 0, t: 0, j: 2, i: 0, L: 0, r: 0};
+var author$project$Main$defaultModel = {e: 1, f: 0, l: 0, j: 2, i: 0, L: 0, s: 0};
 var elm$core$Basics$False = 1;
 var elm$core$Basics$True = 0;
 var elm$core$Result$isOk = function (result) {
@@ -4796,6 +4796,7 @@ var elm$json$Json$Decode$errorToStringHelp = F2(
 var elm$core$Platform$Cmd$batch = _Platform_batch;
 var elm$core$Platform$Cmd$none = elm$core$Platform$Cmd$batch(_List_Nil);
 var author$project$Main$init = _Utils_Tuple2(author$project$Main$defaultModel, elm$core$Platform$Cmd$none);
+var author$project$Main$Mac = 2;
 var author$project$Main$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
@@ -4827,21 +4828,22 @@ var author$project$Main$update = F2(
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{r: v}),
+						{s: v}),
 					elm$core$Platform$Cmd$none);
 			case 5:
 				var o = msg.a;
+				var gpu = (o === 2) ? 0 : model.l;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{i: o}),
+						{l: gpu, i: o}),
 					elm$core$Platform$Cmd$none);
 			case 6:
 				var g = msg.a;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{t: g}),
+						{l: g}),
 					elm$core$Platform$Cmd$none);
 			default:
 				var p = msg.a;
@@ -4927,7 +4929,7 @@ var author$project$Main$exampleCode = function (m) {
 				[
 					elm$html$Html$text('This code snippet demonstrates a simple mathematical computation in this framework.')
 				])),
-			A4(author$project$Main$exampleProgram, m.e, m.f, m.j, m.r)
+			A4(author$project$Main$exampleProgram, m.e, m.f, m.j, m.s)
 		]);
 };
 var author$project$Main$ln = function (m) {
@@ -4956,7 +4958,7 @@ var elm$html$Html$Attributes$href = function (url) {
 };
 var author$project$Main$colab = function (m) {
 	var link = function () {
-		var _n0 = _Utils_Tuple2(m.f, m.r);
+		var _n0 = _Utils_Tuple2(m.f, m.s);
 		if (!_n0.a) {
 			if (!_n0.b) {
 				var _n1 = _n0.a;
@@ -5079,8 +5081,8 @@ var author$project$Main$conda = function (m) {
 	var _package = function () {
 		var _n1 = _Utils_Tuple3(
 			m.f,
-			m.t,
-			_Utils_Tuple2(m.r, m.i));
+			m.l,
+			_Utils_Tuple2(m.s, m.i));
 		if (!_n1.a) {
 			if (!_n1.c.a) {
 				if (!_n1.b) {
@@ -5332,7 +5334,6 @@ var author$project$Main$frameworkOptions = function (m) {
 };
 var author$project$Main$Cuda10 = 2;
 var author$project$Main$Cuda9 = 1;
-var author$project$Main$Mac = 2;
 var author$project$Main$SetGPU = function (a) {
 	return {$: 6, a: a};
 };
@@ -5352,7 +5353,7 @@ var author$project$Main$gpuOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(!m.t),
+					author$project$Main$ma(!m.l),
 					elm$html$Html$Attributes$disabled((m.e === 1) || (m.i === 2)),
 					elm$html$Html$Events$onClick(
 					author$project$Main$SetGPU(0))
@@ -5365,7 +5366,7 @@ var author$project$Main$gpuOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.t === 1),
+					author$project$Main$ma(m.l === 1),
 					elm$html$Html$Attributes$disabled((m.e === 1) || (m.i === 2)),
 					elm$html$Html$Events$onClick(
 					author$project$Main$SetGPU(1))
@@ -5378,7 +5379,7 @@ var author$project$Main$gpuOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.t === 2),
+					author$project$Main$ma(m.l === 2),
 					elm$html$Html$Attributes$disabled((m.e === 1) || (m.i === 2)),
 					elm$html$Html$Events$onClick(
 					author$project$Main$SetGPU(2))
@@ -5541,7 +5542,7 @@ var author$project$Main$versionOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(!m.r),
+					author$project$Main$ma(!m.s),
 					elm$html$Html$Attributes$disabled(m.f === 1),
 					elm$html$Html$Events$onClick(
 					author$project$Main$SetVersion(0))
@@ -5554,7 +5555,7 @@ var author$project$Main$versionOptions = function (m) {
 			elm$html$Html$button,
 			_List_fromArray(
 				[
-					author$project$Main$ma(m.r === 1),
+					author$project$Main$ma(m.s === 1),
 					elm$html$Html$Attributes$disabled(m.f === 1),
 					elm$html$Html$Events$onClick(
 					author$project$Main$SetVersion(1))

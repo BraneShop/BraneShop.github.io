@@ -148,7 +148,8 @@ update msg model =
             ( { model | version = v }, Cmd.none )
 
         SetOS o ->
-            ( { model | os = o }, Cmd.none )
+            let gpu = if o == Mac then NoGPU else model.gpu
+            in ( { model | os = o, gpu = gpu }, Cmd.none )
 
         SetGPU g ->
             ( { model | gpu = g }, Cmd.none )
