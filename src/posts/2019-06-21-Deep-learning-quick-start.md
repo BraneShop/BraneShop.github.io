@@ -6,8 +6,6 @@ preview: A little web-page we put together to help you start using a deep learni
 code: https://github.com/Braneshop/quickstart-elm-app
 ---
 
-
-
 It's been in vogue for some time now to have a little "quick-start" install on
 your website. Notable examples are:
 
@@ -35,3 +33,7 @@ it was fun to play around with.
 Let me know if it's missing any paths you think are interesting! Over time
 I'll hopefully add more to it, but for now I hope it helps some one, even if
 it just inspires you to try something in Elm!
+
+Note that this isn't intended as a comprehensive quickstart guide, more just a
+simple little widget to select the right installation commands for whatever
+deep learning environment you want to use.
