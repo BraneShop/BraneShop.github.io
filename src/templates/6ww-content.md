@@ -108,7 +108,7 @@ required, and this is assessed in a prerequisite assessment.
 <h5>Dates and Tickets</h5>
 <div class="events">
 	<div class="event">
-		<h5> AI For Leadership - August Intake </h5>
+		<h5> 6 Week Workshop - August Intake </h5>
     <ul class="dates">
       <li> Week 1 - August 8th, 2019</li>
       <li> Week 2 - August 15th, 2019</li>
@@ -125,7 +125,7 @@ required, and this is assessed in a prerequisite assessment.
 
 
 	<div class="event">
-		<h5> AI For Leadership - February Intake </h5>
+		<h5> 6 Week Workshop - February Intake </h5>
     <ul class="dates">
       <li> Week 1 - February 6th, 2019</li>
       <li> Week 2 - February 13th, 2019</li>
