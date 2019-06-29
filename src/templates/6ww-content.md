@@ -109,14 +109,19 @@ required, and this is assessed in a prerequisite assessment.
 <div class="events">
 	<div class="event">
 		<h5> 6 Week Workshop - August Intake </h5>
-    <ul class="dates">
+    <ul class="normal dates">
       <li> Week 1 - August 8th, 2019</li>
       <li> Week 2 - August 15th, 2019</li>
       <li> Week 3 - August 22nd, 2019</li>
       <li> Week 4 - August 29th, 2019</li>
       <li> Week 5 - September 5th, 2019</li>
       <li> Week 6 - September 12th, 2019</li>
-      <li> <br /><b>Location:</b> Melbourne CBD. </li>
+      <li> <br /><b>Location:</b> 
+      <a href="https://thebluerock.com.au/" rel="noopener">BlueRock</a>
+      (Melbourne CBD),
+      <a
+      href="https://www.google.com.au/maps/place/BlueRock/@-37.811281,144.9549693,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad65d4b1f638f5d:0x4a6c97cd2eb48059!8m2!3d-37.811281!4d144.957158">Map</a>.
+      </li>
     </ul>
 		<div>
     <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get Tickets for August intake</a></center></p>
@@ -126,7 +131,7 @@ required, and this is assessed in a prerequisite assessment.
 
 	<div class="event">
 		<h5> 6 Week Workshop - February Intake </h5>
-    <ul class="dates">
+    <ul class="normal dates">
       <li> Week 1 - February 6th, 2019</li>
       <li> Week 2 - February 13th, 2019</li>
       <li> Week 3 - February 20th, 2019</li>
