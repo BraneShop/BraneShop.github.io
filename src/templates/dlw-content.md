@@ -1,4 +1,4 @@
-<p> <em>A specialised deep learning intensive session, tailored towards the kinds of
+<p> <em class="tag">A specialised deep learning intensive session, tailored towards the kinds of
 problems and areas your organisation is interested in.</em>
 </p>
 

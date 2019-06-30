@@ -6,6 +6,28 @@ body {
   font-family:      "Lato";
 }
 
+
+em {
+  font-weight: bold;
+  font-style:  normal;
+}
+
+em.tag {
+  font-weight: normal;
+  font-style:  italic;
+}
+
+div.workshops {
+  display:        flex;
+  flex-wrap:      wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+div.workshop {
+  width: 45%;
+}
+
 #braneshop-fixed {
   position:            fixed;
   margin:              10px;
@@ -22,9 +44,14 @@ body {
 
 #header.compressed {
   display:        flex;
-  flex-direction: row;
+  flex-direction: column;
   font-size:      1.8em;
   transition:     1s;
+}
+
+div.top {
+  display: flex;
+  flex-direction: row;
 }
 
 #header.compressed .logos small {
@@ -114,7 +141,7 @@ img.wibble {
   font-family:      "Fira Mono";
   text-align:       center;
   padding:          10px;
-  background-image: url(/images/header-bg.svg);
+  background-image: url(/images/header-bg-simple.svg);
   background-size:  cover;
   border-bottom:    solid 10px mediumslateblue;
 }
@@ -158,9 +185,9 @@ div.section {
   text-align:     justify;
   max-width:      900px;
   background:     lavenderblush;
-  border-radius: 20px;
-  border-right:         solid 2px mediumslateblue;
-  border-bottom:         solid 2px mediumslateblue;
+  border-radius:  20px;
+  border-right:   solid 2px mediumslateblue;
+  border-bottom:  solid 2px mediumslateblue;
 }
 
 div.section h3 {
@@ -169,6 +196,7 @@ div.section h3 {
   font-weight: normal;
   font-size:   2em;
   font-family: "PT Mono";
+  font-family: "DM Serif Text";
 }
 
 table.details {
@@ -383,13 +411,38 @@ div.value h4 {
 }
 
 .workshop {
-  margin-top:    10px;
-  margin-bottom: 10px;
   border-radius: 10px;
   border-bottom: solid 4px black;
   border-right:  solid 4px black;
   padding:       10px;
   background:    lavender;
+  margin-top:    10px;
+  margin-bottom: 10px;
+  min-width:     400px;
+  transition:    0.3s;
+}
+
+.workshop:hover {
+  transition: 0.3s;
+  cursor:     pointer;
+  border-bottom: solid 4px dodgerblue;
+  border-right:  solid 4px dodgerblue;
+  background: white;
+}
+
+.workshop div.buttons {
+  display:         flex;
+  justify-content: space-evenly;
+}
+
+.workshop h4 {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.workshop span.important {
+  font-size:  0.7em;
+  text-align: center;
 }
 
 
@@ -582,23 +635,17 @@ ul.blog-list li {
   margin-bottom: 10px;
 }
 
-#header ul.menu a.btn {
-  border-radius: 5px;
-  background:    mediumslateblue;
-  color:         white;
-  font-size:     0.8em;
-  font-family:   "Lato";
-}
-
 .btn {
   padding:       10px;
   border-radius: 5px;
   background:    mediumslateblue;
   color:         white;
+  transition:    0.3s;
 }
 
 .btn:hover {
-  background:    dodgerblue;
+  background: dodgerblue;
+  transition: 0.3s;
 }
 
 #dates {

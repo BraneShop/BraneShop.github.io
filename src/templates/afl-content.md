@@ -1,8 +1,9 @@
 <p> <center> 
 <a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership">Get tickets for 23-Sep!</a> </center> </p>
 
-<p> <em>Tailored to executives, startup founders, government groups, and
-leadership teams.</em> </p>
+
+<p> <em class="tag"> Tailored to executives, startup founders, government, and
+leadership teams, looking to understand and adopt AI. </em> </p>
 
 <h5>About</h5>
 
@@ -36,13 +37,6 @@ $partial("templates/afl-agenda.md")$
         $$1,925
       </td>
 </tr>
-<!--
-<tr>  <td class="item">  Dates </td>
-      <td class="value"> 
-        Monday, 23rd of September, 2019.
-      </td>
-</tr>
--->
 <tr>  <td class="item">  Requirements </td>
       <td class="value"> 
       A laptop.
@@ -60,7 +54,7 @@ $partial("templates/afl-agenda.md")$
 <div class="events">
 	<div class="event">
 		<h5> AI For Leadership - September Session </h5>
-		<p>Monday, 23-Sep-2019, 9am-5pm, Melbourne CBD.
+		<p>Monday, 23-Sep-2019, 9am-5pm, North Melbourne.
         </p>
 		<div>
     <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership">Get Tickets for September</a></center></p>
@@ -83,13 +77,3 @@ $partial("templates/afl-agenda.md")$
 		</div>
 	</div>
 </div>
-
-
-<!--
-<p> <center> 
-<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership">Get tickets!</a> </center> </p>
-
-<p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/qOzalz">Express Interest</a> or
-  <a class="btn" href="/contact.html">Get in contact</a> </center> </p>
-</center> </p>
--->
