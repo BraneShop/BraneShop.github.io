@@ -243,7 +243,8 @@ h4.blog-title {
 
 
 h4 {
-  font-family: "Source Serif Pro";
+  font-family: 'DM Serif Text', serif;
+  font-weight: normal;
   font-size:   1.5em;
 }
 
@@ -265,7 +266,8 @@ div.concepts ul li {
 }
 
 h5 {
-  font-family: "Source Serif Pro";
+  font-family: 'DM Serif Text', serif;
+  font-weight: normal;
   font-size:   1.3em;
   margin:      0;
   padding:     0;
@@ -465,7 +467,6 @@ blockquote {
   padding:       5px;
   padding-left:  20px;
   padding-right: 20px;
-  font-family:   "Source Serif Pro";
 }
 
 ul.menu li {
@@ -738,7 +739,13 @@ section.questions {
   padding:       6px;
 }
 
-#widget pre {
+pre.sourceCode {
+  border-radius: 10px;
+  background:    blanchedalmond;
+  padding:       10px;
+}
+
+#widget pre, pre.terminal {
   font-family:      "PT Mono";
   background:       black;
   background-image: url(/images/stars-big.png);
@@ -749,4 +756,8 @@ section.questions {
 
 #widget button.active {
   background: peachpuff;
+}
+
+blockquote.callout {
+  border-left: solid 2px black;
 }

@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta name="google-site-verification" content="cKie6SUiby1JmI2F8RMscJRBTa28kTM6XNHS5l1GXxc" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131177872-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if ( host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-131177872-1');
+    }
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Braneshop - State of the art attention models in PyText - Part 1</title>
+  <meta name="geo.region" content="AU-VIC" />
+  <meta name="geo.placename" content="Melbourne" />
+  <link rel="stylesheet" type="text/css" href="../css/default.css" />
+  <link rel="stylesheet" type="text/css" href="../css/syntax.css" />
+  <link href="https://fonts.googleapis.com/css?family=PT+Mono|Lato|DM+Serif+Text" rel="stylesheet">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '382844492347906');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=382844492347906&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+<body>
+  <div id="braneshop-fixed" onclick="document.location = '/';"></div>
+
+
+  <!-- Header -->
+  <div id="header" class="compressed">
+    <div class="top">
+      <div class="logos">
+        <h1><a href="../"><img id="header-logo" class="compressed" src="../images/braneshop-blue.png" title="Braneshop" alt="Braneshop" /></a></h1>
+      </div>
+
+      
+        <div class="m">
+          <ul class="menu">
+            <li><a href="../" title="Home">Home</a>|</li>
+            <li><a href="../team.html" title="Team">Team</a>|</li>
+            <li><a href="../community.html" title="Community">Community</a>|</li>
+            <li><a href="../blog.html" title="Blog">Blog</a>|</li>
+            <li><a href="../faq.html" title="FAQs">FAQs</a>|</li>
+            <li><a href="../contact.html" title="Contact">Contact</a></li>
+          </ul>
+          <ul class="menu smaller">
+            <li><a href="../6-week-workshop-on-deep-learning.html" title="6 Week Workshop">6 Week Workshop</a>
+              <span class="important">(Starts 8-Aug)</span> |
+              </li>
+            <li><a href="../ai-for-leadership.html" title="AI For Leadership">AI For Leadership</a>
+              <span class="important">(On 23-Sep)</span> |
+              </li>
+            <li><a href="../deep-learning-workshop.html" title="Intensive Technical Deep Learning Workshop">Intensive Workshop</a></li>
+          </ul>
+        </div>
+      
+    </div>
+    <small>Expand your knowledge manifold!</small>
+  </div>
+
+
+  <!-- Content -->
+  <div id="content">
+    <div class="section">
+  <div class="info">
+    Posted on July  3, 2019
+    
+      by Noon van der Silk
+    
+		| <a title="Blog: Recent posts" href="../blog.html">Back to recent posts</a>
+  </div>
+
+  <h4 class="blog-title">State of the art attention models in PyText - Part 1</h4>
+
+  
+    <center> <p> <img src="../images/blog/at_1.jpg" width="100%" /> 
+    <br /><small>Attention being computed across a custom-dataset and being dsiplayed in TensorBoard!</small></p> </center>
+  
+
+  <div class="info">
+    
+			<center><p> The code used for this blog-post is <a href="https://github.com/Braneshop/pytext">here</a>. </p></center>
+    
+  </div>
+
+  <p>I wanted to take some time to discuss a library that seems to have flown under the radar a little bit. It’s called <a href="https://github.com/facebookresearch/pytext">PyText</a>, and we’re going to explore how you can use it to run state of the art attention models!</p>
+<p>Here’s our plan:</p>
+<ol style="list-style-type: decimal">
+<li>Set a dataset,</li>
+<li>See how we prepare the data for training in PyText,</li>
+<li>Get PyText,</li>
+<li>Train it,</li>
+<li>Visualise it,</li>
+<li>Consider extensions,</li>
+</ol>
+<p>Finally, we’ll jump in to a fork of PyText where I’ve added a few features that help out during training.</p>
+<p>If you want to follow along, all the code for this post is available <a href="%22%22">here</a>.</p>
+<h4 id="the-dataset">The Dataset</h4>
+<p>I’m going to play around with my favourite dataset; <a href="https://scirate.com/noonsilk/scites">my “scites”</a> on <a href="https://scirate.com">SciRate</a> — i.e. those research papers that I’m interested in.</p>
+<p>We’re going to frame this data as a recommendation problem:</p>
+<blockquote class="callout">
+Given some new research paper, will I be interested in it? And if so, why?
+</blockquote>
+<p>This will be labelled data. Specifically, we will need two fields: <code>title_and_abstract</code> (a blob of text which is the title of the paper and the abstract concatenated together) and <code>scited</code> (a number, <code>1</code> if I “scited” it, <code>0</code> if I didn’t).</p>
+<p>Here’s an example, in Python:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">title_and_abstract <span class="op">=</span> <span class="st">&quot;&quot;&quot;Generalized criteria of symmetry breaking. A strategy</span>
+<span class="st">for quantum time crystals. The aim of this paper is to propose a criterion</span>
+<span class="st">of spontaneous symmetry breaking that makes reference to the properties of</span>
+<span class="st">pure phases defined by a translationally invariant state. By avoiding</span>
+<span class="st">any reference to the ground state, at the basis of the standard</span>
+<span class="st">approach, this criterion applies to a wider class of models. An</span>
+<span class="st">interesting application is the breaking of time translations. Indeed, we</span>
+<span class="st">discuss explicit theoretical models which exhibit the prototypical</span>
+<span class="st">features of quantum time crystals, without the need of a time-dependent</span>
+<span class="st">Hamiltonian.&quot;&quot;&quot;</span>
+scited <span class="op">=</span> <span class="dv">0</span>
+arxiv_id <span class="op">=</span> <span class="st">&quot;1906.12293&quot;</span></code></pre></div>
+<p>(Note: For reference, we’ll also keep the arXiv id around, so we can cross-check more information, as we need it, by <a href="https://scirate.com/arxiv/1906.12293">visiting the link</a>)</p>
+<h5 id="the-dataset---building-it">The Dataset - Building it</h5>
+<p>Now, given that I manage the SciRate website, I have direct access to the database. Here’s the kind of dataset I’d like to build:</p>
+<ul>
+<li>12,000 datapoints of papers that I’ve “scited”,</li>
+<li>12,000 datapoints of papers that I’ve opted <em>not</em> to scite,</li>
+</ul>
+<p>Then, from that set, I’m going to set aside 1.5k for “validation”, and a further 500 that, I promise you now, I will only use at the end of this article, for the purposes of estimating how well the model is doing. In pictures:</p>
+<p><img src="../images/blog/pytext-data-split.png" width="800" alt="Data split for
+the recommendation problem." title="Data split for the recommendation
+problem." /></p>
+<p>Okay, so let’s now make three csv’s, <code>train.csv</code>, <code>validation.csv</code> and <code>test.csv</code>. For right now we’ll not look into how PyText wants the data formatted; let’s just assume that if we have these CSVs we can munge it into the right format later.</p>
+<p>Here’s what I did:</p>
+<pre class="terminal">conda create -n pytext-scirate-recommendation python=3
+source activate pytext-scirate-recommendation
+pip install jupyter psycopg2
+</pre>
+<p>Then, in the Jupyter notebook:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">
+
+<span class="im">import</span> psycopg2
+
+my_user_id <span class="op">=</span> <span class="dv">857</span>
+max_items  <span class="op">=</span> 12_000
+
+scited_query <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span>
+<span class="ss">select</span>
+<span class="ss">    abstract,</span>
+<span class="ss">    title,</span>
+<span class="ss">    uid,</span>
+<span class="ss">    1 as scited</span>
+<span class="ss">from</span>
+<span class="ss">    papers</span>
+<span class="ss">inner join</span>
+<span class="ss">    scites on</span>
+<span class="ss">    scites.paper_uid = papers.uid</span>
+<span class="ss">    and scites.user_id = </span><span class="sc">{</span>my_user_id<span class="sc">}</span>
+<span class="ss">where</span>
+<span class="ss">    papers.submit_date &gt; '01-Jan-2016'</span>
+<span class="ss">order</span>
+<span class="ss">    by random()</span>
+<span class="ss">limit</span>
+<span class="ss">    </span><span class="sc">{</span>max_items<span class="sc">}</span>
+<span class="ss">&quot;&quot;&quot;</span>
+
+not_scited_query <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span>
+<span class="ss">select</span>
+<span class="ss">    abstract,</span>
+<span class="ss">    title,</span>
+<span class="ss">    uid,</span>
+<span class="ss">    0 as scited</span>
+<span class="ss">from</span>
+<span class="ss">    papers</span>
+<span class="ss">left outer join</span>
+<span class="ss">    scites on</span>
+<span class="ss">    scites.paper_uid = papers.uid</span>
+<span class="ss">    and scites.user_id = </span><span class="sc">{</span>my_user_id<span class="sc">}</span>
+<span class="ss">where</span>
+<span class="ss">    scites.id is null</span>
+<span class="ss">    and</span>
+<span class="ss">    papers.submit_date &gt; '01-Jan-2016'</span>
+<span class="ss">order</span>
+<span class="ss">    by random()</span>
+<span class="ss">limit</span>
+<span class="ss">    </span><span class="sc">{</span>max_items<span class="sc">}</span>
+<span class="ss">&quot;&quot;&quot;</span>
+
+<span class="cf">with</span> psycopg2.<span class="ex">connect</span>(<span class="st">&quot;dbname=scirate&quot;</span>) <span class="im">as</span> connection:
+    cursor <span class="op">=</span> connection.cursor()
+    
+    cursor.execute(scited_query)
+    scited <span class="op">=</span> cursor.fetchall()
+
+    cursor.execute(not_scited_query)
+    not_scited <span class="op">=</span> cursor.fetchall()
+
+<span class="cf">assert</span> <span class="bu">len</span>(scited) <span class="op">==</span> <span class="bu">len</span>(not_scited) <span class="op">==</span> max_items
+
+train <span class="op">=</span> scited[:10_000]       <span class="op">+</span> not_scited[:10_000]
+val   <span class="op">=</span> scited[10_000:11_500] <span class="op">+</span> not_scited[10_000:11_500]
+test  <span class="op">=</span> scited[11_500:]       <span class="op">+</span> not_scited[11_500:]
+
+<span class="cf">assert</span> <span class="bu">len</span>(train) <span class="op">==</span> 20_000
+<span class="cf">assert</span> <span class="bu">len</span>(val)   <span class="op">==</span>  3_000
+<span class="cf">assert</span> <span class="bu">len</span>(test)  <span class="op">==</span>  1_000
+
+<span class="im">import</span> pandas <span class="im">as</span> pd
+
+<span class="kw">def</span> write_csv (rows, name):
+    df <span class="op">=</span> pd.DataFrame(rows, columns<span class="op">=</span>[<span class="st">&quot;abstract&quot;</span>, <span class="st">&quot;title&quot;</span>, <span class="st">&quot;arxiv_id&quot;</span>, <span class="st">&quot;scited&quot;</span>])
+    df[<span class="st">&quot;abstract_and_title&quot;</span>] <span class="op">=</span> (df[<span class="st">&quot;title&quot;</span>] <span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> df[<span class="st">&quot;abstract&quot;</span>])<span class="op">\</span>
+                                .replace(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>)<span class="op">\</span>
+                                .replace(<span class="st">&quot;</span><span class="ch">\r</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>)<span class="op">\</span>
+                                .replace(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>)
+    df <span class="op">=</span> df.drop(columns<span class="op">=</span>[<span class="st">&quot;abstract&quot;</span>, <span class="st">&quot;title&quot;</span>])
+    
+    df.to_csv(name <span class="op">+</span> <span class="st">&quot;.csv&quot;</span>, index<span class="op">=</span><span class="va">False</span>, header<span class="op">=</span><span class="va">False</span>, sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)
+
+
+write_csv(train, <span class="st">&quot;../data/train&quot;</span>)
+write_csv(val,   <span class="st">&quot;../data/val&quot;</span>)
+write_csv(test,  <span class="st">&quot;../data/test&quot;</span>)</code></pre></div>
+<p>This is just a little hacked-together bit of code that grabs out papers that I’ve definitely scited, and those for which I haven’t scited. Note that it limits it to those papers from the last 5 years, and also randomly orders them. If we wanted to be a bit more precise, we could do the random ordering according to a seed, but we’re just in a blog post here, so we can be a bit related :)</p>
+<p>Note that this code requires the SciRate database, so you can’t run it, but here’s the output: <a href="https://drive.google.com/file/d/16HIXwe_8MP2fXm_aqrHCdkLZzpjBFwMr/view?usp=sharing">noons scites - download</a> if you want to follow along with this exact dataset.</p>
+<p>Great! Now I have my data in the <code>data</code> folder:</p>
+<pre class="terminal">
+04:41 PM noon ∈ pytext-scirate-recommendation ls -alh data 
+total 26M
+drwxrwxr-x 4 noon noon 4.0K Jul  3 17:09 .
+drwxrwxr-x 7 noon noon 4.0K Jul  2 08:26 ..
+-rw-rw-r-- 1 noon noon 1.1M Jul  3 14:47 test.csv
+-rw-rw-r-- 1 noon noon  22M Jul  3 14:47 train.csv
+-rw-rw-r-- 1 noon noon 3.2M Jul  3 14:47 val.csv
+</pre>
+<p>The sizes look good (i.e. val is smaller than train, and test is smaller still, etc, so my script works!) Let’s continue on.</p>
+<h4 id="preparing-the-data-for-pytext">Preparing the data for PyText</h4>
+<p>Okay, now that we have <em>some</em> data, let’s see what format PyText wants. Let’s head over to the <a href="https://pytext.readthedocs.io/en/master/">PyText Documentation</a>.</p>
+<h5 id="turns-out-we-have-to-first-pick-a-model">… turns out we have to first pick a model</h5>
+<p>Glancing at the <a href="https://pytext.readthedocs.io/en/master/train_your_first_model.html">Train your first model</a> we can see that we need to build some kind of configuration object; and that in particular we need to decide on a “task” and a “model”. Specifically, we need to build a JSON file like so:</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+  <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span>
+  <span class="dt">&quot;task&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+    <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+        <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+          <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+            <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;slots&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span>
+            <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;pytext/tests/data/train_data_tiny.tsv&quot;</span><span class="fu">,</span>
+            <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;pytext/tests/data/test_data_tiny.tsv&quot;</span><span class="fu">,</span>
+            <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;pytext/tests/data/test_data_tiny.tsv&quot;</span>
+          <span class="fu">}</span>
+        <span class="fu">}</span>
+      <span class="fu">},</span>
+      <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+        <span class="dt">&quot;DocModel&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+          <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+            <span class="dt">&quot;DocNNRepresentation&quot;</span><span class="fu">:</span> <span class="fu">{}</span>
+          <span class="fu">}</span>
+        <span class="fu">}</span>
+      <span class="fu">}</span>
+    <span class="fu">}</span>
+  <span class="fu">}</span>
+<span class="fu">}</span></code></pre></div>
+<p>So, let’s think out our problem here as a “classification” problem. We have two independent classes, “scited” and “not scited”.</p>
+<p>Now, glancing at the <a href="https://github.com/facebookresearch/pytext#overview">PyText classifiers</a> that they have set up by default, the one I want to use is this one: <a href="https://arxiv.org/abs/1703.03130">Lin et al. (2017): A Structured Self-attentive Sentence Embedding</a>. I’m picking this one because, firstly, it’s got this notion of <em>attention</em>. Scrolling through the paper, this is the kind of output we can expect to get from this paper:</p>
+<center>
+<img src="../images/blog/attention.jpg" width="900" title="Attention in the sentence embedding paper" alt="Attention in the sentence-embedding paper." />
+</center>
+<p>Looks cool! It’s certainly the idea we’re going for — a kind of “explanation” — the relevant words are highlighted (with a strength!) indicating why the decision (here, a 1-star review) was made.</p>
+<p>Now, glancing at the documentation for the config file, our <code>&quot;model&quot;</code> section will need to be like this:</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+  <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+    <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;BiLSTMDocAttention&quot;</span><span class="fu">:</span> <span class="fu">{}</span>
+    <span class="fu">}</span>
+  <span class="fu">}</span>
+<span class="fu">}</span></code></pre></div>
+<p>Going back to the above config, we note that we don’t have a “TSV” (Tab-seperated values) we have a CSV, so we might need something like this:</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+  <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+    <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+        <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+          <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span>    <span class="ot">[</span><span class="st">&quot;arxiv_id&quot;</span><span class="ot">,</span> <span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span>
+          <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;./data/train.csv&quot;</span><span class="fu">,</span>
+          <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/test.csv&quot;</span><span class="fu">,</span>
+          <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/val.csv&quot;</span>
+        <span class="fu">}</span>
+      <span class="fu">}</span>
+    <span class="fu">}</span>
+  <span class="fu">}</span>
+<span class="fu">}</span></code></pre></div>
+<p>(Note: the <code>field_names</code> needs to match the order in the CSV, and furthermore, hte fields “label” and “text” are used because they correspond to the names <em>in pytext code</em>, not because they are the names of the columns in our document. Further note: <a href="https://github.com/facebookresearch/pytext/issues/747">there’s a bug</a> where the TCV-parser doesn’t respect quoted strings with the seperator in them.)</p>
+<p>Okay. Ambitiously, let’s just try putting everything together, and running it! I’m going to call it <code>02-Jul-2019-Run-1.json</code> and it will have:</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+  <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span>
+  <span class="dt">&quot;task&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+    <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+        <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+          <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+            <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span>    <span class="ot">[</span><span class="st">&quot;arxiv_id&quot;</span><span class="ot">,</span> <span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span>
+            <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;./data/train.csv&quot;</span><span class="fu">,</span>
+            <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/test.csv&quot;</span><span class="fu">,</span>
+            <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/val.csv&quot;</span>
+          <span class="fu">}</span>
+        <span class="fu">}</span>
+      <span class="fu">},</span>
+      <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+        <span class="dt">&quot;DocModel&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+          <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+            <span class="dt">&quot;BiLSTMDocAttention&quot;</span><span class="fu">:</span> <span class="fu">{}</span>
+          <span class="fu">}</span>
+        <span class="fu">}</span>
+      <span class="fu">}</span>
+    <span class="fu">}</span>
+  <span class="fu">}</span>
+<span class="fu">}</span></code></pre></div>
+<p>(Note: It took me a few goes to get this config right; in the first instance I even forgot to include the labels (“0” or “1”) in the original CSV data! But through the magic of blogging, it looks like I got it right the first time!)</p>
+<p>Firstly, I’ll just install <code>pytext</code>!</p>
+<pre class="terminal">
+pip install pytext-nlp
+</pre>
+<p>Then, I’ll just run it according to the docs!</p>
+<pre class="terminal">
+pytext train < config/02-Jul-2019-Run-1.json
+</pre>
+<p>Now, I’m only running this on my laptop; no GPU, and after 3 epochs (~20 minutes) this is what pops out of the terminal:</p>
+<pre class="terminal">
+Stage.EVAL
+loss: 0.443127
+Accuracy: 81.00
+
+Macro P/R/F1 Scores:
++----------------------+-----------+--------+------+---------+
+| Label                | Precision | Recall | F1   | Support |
++----------------------+-----------+--------+------+---------+
+| 0                    |      0.77 |   0.87 | 0.82 |    1500 |
+| 1                    |      0.86 |   0.75 | 0.80 |    1500 |
++----------------------+-----------+--------+------+---------+
+| Overall macro scores | 0.82      | 0.81   | 0.81 |         |
++----------------------+-----------+--------+------+---------+
+
+Soft Metrics:
++-------+-------------------+---------+
+| Label | Average precision | ROC AUC |
++-------+-------------------+---------+
+|     0 |             0.884 |   0.893 |
+|     1 |             0.894 |   0.893 |
++-------+-------------------+---------+
+
+Recall at Precision
++-------+---------+---------+---------+---------+---------+
+| Label | R@P 0.2 | R@P 0.4 | R@P 0.6 | R@P 0.8 | R@P 0.9 |
++-------+---------+---------+---------+---------+---------+
+| 0     |   1.000 |   1.000 |   0.987 |   0.843 |   0.551 |
+| 1     |   1.000 |   1.000 |   0.978 |   0.833 |   0.624 |
++-------+---------+---------+---------+---------+---------+
+
+Matthews correlation coefficient: 0.625
+
+ROC AUC: 0.893
+</pre>
+<p>This says that this model got ~80% of the classifications right, and then has a few more details. In any case, this is pretty great!</p>
+<p>So, there’s a few directions we can head in, now. Certainly it would be useful to see the training runs in TensorBoard. It would also be great to be able to run inference on a single title and abstract. We could also go into the weeds and try and tweak the model, run it on a GPU, and other such things, to see how far we can push the accuracy up.</p>
+<p>Let’s go for the TensorBoard/visualisation option, as it’ll be a useful thing to have, no matter which further steps we want to take.</p>
+<h4 id="visualising-the-training">Visualising the training</h4>
+<p>It’s no coincidence that I’m choosing TensorBoard here, as this is something that <a href="https://pytext.readthedocs.io/en/master/visualize_your_model.html">PyText supports out of the box</a>. So let’s follow along. First, we install it:</p>
+<pre class="terminal">
+pip install tensorboard
+</pre>
+<p>Observe that there is a <code>runs</code> folder with some data in it:</p>
+<pre class="terminal">
+(pytext-scirate-recommendation) 11:04 AM noon ∈ pytext-scirate-recommendation ls runs
+Jul02_08-26-12_gpac  Jul02_08-31-57_gpac  Jul02_10-18-55_gpac  Jul02_10-33-37_gpac
+</pre>
+<p>Then, we just run TensorBoard!</p>
+<pre class="terminal">
+tensorboard --logdir runs
+</pre>
+<p>(Note: I got a warning that I hadn’t installed <code>tensorflow</code>, but it didn’t cause me any problems.)</p>
+<p>Here’s what I see:</p>
+<center>
+<img src="../images/blog/tensorboard-pytext.png" width="900" title="TensorBoard graphs for our previous training run." alt="TensorBoard graphs for our previous training run." />
+</center>
+<p>Of course, we didn’t run for many epochs, so we don’t see much improvement. (Perhaps it’s also worth noting that after just 1 epoch we were already at 70% accuracy).</p>
+<p>Now, this is all well-and-good, but we want something a bit more interesting. At the top of this article, we were promised <em>attention</em>; i.e. that we could see what words were contributing to the predictions. Wouldn’t it be cool if we could <em>see</em> this in TensorBoard?! Yes, is the answer!</p>
+<h4 id="building-attention-visualisation-into-tensorboard">Building attention visualisation into TensorBoard</h4>
+<p>In order to do this, we’re going to have to get funky with the pytext source code (unfortunately, this isn’t a feature that’s supported out-of-the-box.)</p>
+<p>This is our process:</p>
+<ol style="list-style-type: decimal">
+<li>Work out how to get attention out of the model,</li>
+<li>Pick a few fixed samples that we run through the network during evaluation,</li>
+<li>Somehow coax TensorBoard to display those samples with attention.</li>
+</ol>
+<p>So, if you’re happy to follow along, first, get yourself a copy of the pytext codebase:</p>
+<pre class="terminal">
+git clone https://github.com/facebookresearch/pytext.git
+</pre>
+<p>Now, because we’re going to hack on this local version, instead of the version we’ve installed, you’ll want to uninstall the pytext we installed before, (from within your conda environment), and then jump into your copy of the pytext repo, and install <em>that</em> in “develop” mode, so we can make code changes and have them reflected:</p>
+<pre class="terminal">
+pip uninstall pytext-nlp
+
+# Jump to the folder where you cloned pytext
+python setup.py develop
+</pre>
+<p>Then, let’s dive in.</p>
+<h4 id="getting-attention-out-of-the-model">1. Getting attention out of the model</h4>
+<p>We recall we’re using the <code>BiLSTMDocAttention</code> “representation” (remember, this is what we specified in our JSON configuration file). Here, “representation” is the same as an “embedding”, namely, a way of encoding a document as a vector. So, we know that the code related to this thing, should match the description of the model in the <a href="https://arxiv.org/pdf/1703.03130.pdf">paper</a>.</p>
+<p>Now, please note — I’ve looked into this before, way back when I was playing with this repo around 8 months ago (in a previous job); <a href="https://github.com/facebookresearch/pytext/issues/143">I opened an issue at the time</a>, and it’s still open. So, we’ll use this blog post as an opportunity to try and make a PR that fixes this problem.</p>
+<p>As a result, I know that the first thing to look for is if the relevant parts of the code do two things: 1) expose the appropriate attention tensor, so that it can be used by us to evaluate the attention across the input and 2) <a href="https://github.com/facebookresearch/pytext/issues/173">correctly implement the “hops” functionality from the paper</a>, so that we get the full power of the attention that the paper (supposedly!) provides.</p>
+<p>We’ll address the first item first, as it should be independent of the second. We’ll leave the second item for</p>
+<h5 id="so-how-do-we-get-the-attention-out-and-display-it">So, how do we get the attention out, and display it?</h5>
+<p>Unfortunately, it turned out to be an involved process. I ended up spending the better part of a day hacking around to make this work. It’s all captured in a branch which you can view here: <a href="https://github.com/BraneShop/pytext/compare/master...BraneShop:attention-hacking">attention-hacking branch</a>.</p>
+<p>Here’s the final config file I ended up using:</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+  <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span>
+  <span class="dt">&quot;task&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+    <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;trainer&quot;</span><span class="fu">:</span>  <span class="fu">{</span> <span class="dt">&quot;epochs&quot;</span><span class="fu">:</span> <span class="dv">20</span> <span class="fu">},</span>
+      <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+        <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+          <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+            <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span>    <span class="ot">[</span><span class="st">&quot;arxiv_id&quot;</span><span class="ot">,</span> <span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span>
+            <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;./data/train.csv&quot;</span><span class="fu">,</span>
+            <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/test.csv&quot;</span><span class="fu">,</span>
+            <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/val.csv&quot;</span>
+          <span class="fu">}</span>
+        <span class="fu">}</span>
+      <span class="fu">},</span>
+      <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+        <span class="dt">&quot;DocModel&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+          <span class="dt">&quot;decoder&quot;</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">&quot;has_attention&quot;</span><span class="fu">:</span> <span class="kw">true</span> <span class="fu">},</span>
+          <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+            <span class="dt">&quot;BiLSTMDocAttention&quot;</span><span class="fu">:</span> <span class="fu">{}</span>
+          <span class="fu">}</span>
+        <span class="fu">}</span>
+      <span class="fu">}</span>
+    <span class="fu">}</span>
+  <span class="fu">}</span>
+<span class="fu">}</span></code></pre></div>
+<p>(The main thing is that I added a new config option, <code>has_attention</code>, that lets me introduce this extra functionality without (hopefully!) breaking anything.)</p>
+<p>I won’t bore you with all the details (you can glance at the diff above to see what I actually changed; it’s not a lot), but the main highlights were:</p>
+<ul class="normal">
+<li>
+Try not to break everything,
+</li>
+<li>
+Pass the attention around so that it can be logged to TensorBoard,
+</li>
+<li>
+Hack TensorBoard a bit and log an <em>image</em> instead of text, so that highlighting can be displayed (See <a href="https://github.com/tensorflow/tensorboard/issues/1740#issuecomment-507766667">this issue</a> for why I had to do this.)
+</li>
+</ul>
+<p>The final thing looks like so, in TensorBoard:</p>
+<center>
+<img src="../images/blog/at_1.jpg" width="900" /> <br /> <img src="../images/blog/at_2.jpg" width="900" />
+</center>
+<p>This has the important idea. Namely, the “important” words coloured in. There’s also the tokens (<code>__UNKNOWN__</code> and <code>__PAD__</code>) that PyText adds, automatically, to deal with low-frequency words and the fact that we need to feed in fixed-length sequences to get the benefits of fast computation on the GPU.</p>
+<p>In the next post (this took me so long I had to make it two parts!) we’ll look at the remaining items: Fixing the implementation to match the paper; working out if the attention information it’s providing is even sensible, consider some extensions, and building a little “production-ready” interface!</p>
+<hr />
+<p>As always, if you have any feedback/corrections/comments then get in <a href="../contact.html">touch</a>!</p>
+</div>
+
+  </div>
+
+
+  <!-- Footer -->
+  <div id="footer">
+    <div id="newsletter">
+
+<!-- Mailchimp -->
+      <a name="newsletter"></a>
+      <h4>Newsletter!</h4>
+<div id="mc_embed_signup">
+<form action="https://braneshop.us19.list-manage.com/subscribe/post?u=e94e88a100517dd09f1720e55&amp;id=7957d3fc4c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<p>✌ Thanks for visiting! If you're interested, sign up to our newsletter to
+receive monthly updates, and notifications of courses.
+</p>
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address
+</label>
+	<input type="email" value name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+	<label for="mce-NAME">Name </label>
+	<input type="text" value name="NAME" class id="mce-NAME">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e94e88a100517dd09f1720e55_7957d3fc4c" tabindex="-1" value></div>
+    <div class="clear"><input type="submit" value="Subscribe! 🗞" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<!-- /Mailchimp -->
+    </div>
+
+
+    <div id="acknowledgement">
+      <img src="../images/atsi.webp" />
+      <p> Braneshop is located on the traditional lands of the people of the
+      Kulin nation. We acknowledge that sovereignty was never ceded and pay
+      our respects to elders past, present and emerging.
+      </p>
+    </div>
+
+    <div id="small-links">
+      <a href="../">Home</a> &mdash;
+      <a href="../contact.html">Contact</a> &mdash;
+      <a href="../team.html">Team</a> &mdash;
+      <a href="../faq.html">FAQs</a> &mdash;
+      <a href="../blog.html">Blog</a> &mdash;
+      <a href="../privacy.html">Privacy Policy</a> &mdash;
+      <a href="../quickstart.html">Deep Learning Quick-Start</a>
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+window.onload = function() {
+  const prism = document.getElementById("braneshop-fixed")
+  var h = 80;
+
+  function setFrame(frame) {
+    var f = frame % 120;
+    prism.style["background-position"] = "0 " + "-" + (f*h) + "pt";
+  }
+
+  document.addEventListener('scroll', function(x) {
+  	setFrame(Math.floor(window.scrollY/30))
+  }, false)
+}
+</script>
+
+</body>
+</html>
