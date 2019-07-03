@@ -424,7 +424,7 @@ python setup.py develop
 <p>As a result, I know that the first thing to look for is if the relevant parts of the code do two things: 1) expose the appropriate attention tensor, so that it can be used by us to evaluate the attention across the input and 2) <a href="https://github.com/facebookresearch/pytext/issues/173">correctly implement the “hops” functionality from the paper</a>, so that we get the full power of the attention that the paper (supposedly!) provides.</p>
 <p>We’ll address the first item first, as it should be independent of the second. We’ll leave the second item for</p>
 <h5 id="so-how-do-we-get-the-attention-out-and-display-it">So, how do we get the attention out, and display it?</h5>
-<p>Unfortunately, it turned out to be an involved process. I ended up spending the better part of a day hacking around to make this work. It’s all captured in a branch which you can view here: <a href="https://github.com/BraneShop/pytext/compare/master...BraneShop:attention-hacking">attention-hacking branch</a>.</p>
+<p>Unfortunately, it turned out to be an involved process. I ended up spending the better part of a day hacking around to make this work. It’s all captured in a branch which you can view here: <a href="https://github.com/BraneShop/pytext/compare/master...BraneShop:attention-hacking">attention-hacking branch</a>. It’s not super elegant, but it’s enough to keep us going.</p>
 <p>Here’s the final config file I ended up using:</p>
 <div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
   <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span>

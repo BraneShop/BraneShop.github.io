@@ -518,7 +518,7 @@ We'll leave the second item for
 Unfortunately, it turned out to be an involved process. I ended up spending
 the better part of a day hacking around to make this work. It's all captured
 in a branch which you can view here: [attention-hacking
-branch](https://github.com/BraneShop/pytext/compare/master...BraneShop:attention-hacking).
+branch](https://github.com/BraneShop/pytext/compare/master...BraneShop:attention-hacking). It's not super elegant, but it's enough to keep us going.
 
 Here's the final config file I ended up using:
 
