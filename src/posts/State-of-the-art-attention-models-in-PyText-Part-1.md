@@ -494,13 +494,14 @@ this is what we specified in our JSON configuration file). Here,
 "representation" is the same as an "embedding", namely, a way of
 encoding a document as a vector. So, we know that the code
 related to this thing, should match the description of the model in the
-[paper](https://arxiv.org/pdf/1703.03130.pdf).
+[paper](https://arxiv.org/pdf/1703.03130.pdf). This will help us working
+out which tensor is the attention, in the code.
 
 Now, please note &mdash; I've looked into this before, way back when I was
 playing with this repo around 8 months ago (in a previous job); [I opened an
 issue at the time](https://github.com/facebookresearch/pytext/issues/143), and
-it's still open. So, we'll use this blog post as an opportunity to try and make
-a PR that fixes this problem.
+it's still open. So, we'll attempt to use this blog post as an opportunity to
+try and make a PR that fixes this problem.
 
 As a result, I know that the first thing to look for is if the relevant parts
 of the code do two things: 1) expose the appropriate attention tensor, so that
