@@ -372,6 +372,10 @@ p.by {
   justify-content: flex-end;
 }
 
+div.testimonial img {
+  width: 300px;
+}
+
 div.testimonial {
   display:        flex;
   background:     lavender;
