@@ -97,6 +97,7 @@ main = hakyll $ do
     match (fromList [ "index.html"
                     , "team.html"
                     , "contact.html"
+                    , "thesetestimonialsdontexist.html"
                     -- , "splash.html"
                     , "privacy.html"
                     , "quickstart.html"

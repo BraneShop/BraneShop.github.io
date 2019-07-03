@@ -77,7 +77,7 @@ pre {
   background-size:  cover;
 }
 
-p span { background: royalblue; color: white; }
+/* p span { background: royalblue; color: white; } */
 
 #footer {
   border-top:       solid 10px royalblue;
@@ -92,6 +92,10 @@ p span { background: royalblue; color: white; }
 
 #acknowledgement p, #newsletter h4, #newsletter p {
   background: white;
+}
+
+span.input {
+  background: #eaeaea;
 }
 
 #acknowledgement, #newsletter {
@@ -372,9 +376,8 @@ div.testimonial {
   display:        flex;
   background:     lavender;
   border-radius:  10px;
-  max-width:      400px;
   margin:         20px;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 div.value {
@@ -660,6 +663,10 @@ ul.blog-list li {
   border-top: solid 1px peachpuff;
   padding:    20px;
   margin-top: 20px;
+  display:    flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
 }
 
 #small-links a {
