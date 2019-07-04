@@ -34,7 +34,7 @@ $partial("templates/afl-agenda.md")$
 </tr>
 <tr>  <td class="item">  Costs    </td>
       <td class="value"> 
-        $$1,925
+        $$1,925* per person.
       </td>
 </tr>
 <tr>  <td class="item">  Requirements </td>
@@ -77,3 +77,25 @@ $partial("templates/afl-agenda.md")$
 		</div>
 	</div>
 </div>
+
+<p></p>
+<h5>*Scholarship</h5>
+
+<p> There is a <a target="_blank"
+href="https://ainowinstitute.org/discriminatingsystems.pdf">crisis of
+diversity within the field of AI</a>. We know that members of marginalised
+groups face barriers to entry and success within AI, and related fields. To
+improve the representation of marginalised and under-represented groups in our
+workshop, and community, we are supporting up to 5 diversity tickets, which
+are discounted 50% to <b>$$962.50 per person</b>.
+</p>
+
+<p> To apply for a diversity ticket please complete the scholarship
+application below. If you miss out due to demand, this time around, you are
+welcome to apply again in the future.  </p>
+
+<p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/qMCtvX">Apply for the Scholarship</a> </center> </p>
+
+<p>The closing date for the application process is th 28th of July.
+Scholarship decisions will be sent out on the 31st of July.</p>
+
