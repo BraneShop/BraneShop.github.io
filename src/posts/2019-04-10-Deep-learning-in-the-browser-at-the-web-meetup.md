@@ -4,6 +4,7 @@ author: Noon van der Silk
 code: https://github.com/silky/tfjs-fashion-mnist-classifier
 preview: Re-cap of Noons talk at <a href="https://www.meetup.com/the-web/events/260211393/">The Web Meetup</a> about how we can deploy deep learning models to the Browser via TensorFlow.js.
 image: /images/blog/wmu-1.jpg
+tags: talk, tensorflowjs
 ---
 
 Last night I gave a talk at [The Web

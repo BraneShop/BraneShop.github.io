@@ -3,6 +3,7 @@ title: Thanks to Ren Imagery for our new logo!
 author: Noon van der Silk
 image: /images/braneshop-blue.png
 preview: We're excited about our new logo designed by Ren over at <a href="https://www.theloop.com.au/renlemon/portfolio/Graphic-Designer/Melbourne">Ren Imagery</a>!
+tags: announcement
 ---
 
 We have a new logo! You can see it loud and proud at the top of every page;

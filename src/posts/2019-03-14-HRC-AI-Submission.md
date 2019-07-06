@@ -3,6 +3,7 @@ title:  Australian Human Rights Commission AI - Submission
 author: Noon van der Silk
 image: /images/blog/hrc.jpg
 preview: Along with <a href="https://www.northraine.com/">Northraine</a>, we submitted a proposal to the AHRC regarding the regulation of the AI industry.
+tags: announcement, ethics
 ---
 
 At Braneshop we're keen to see AI develop positively in our community. The

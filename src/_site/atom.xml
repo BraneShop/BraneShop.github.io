@@ -27,6 +27,10 @@
   <h4 class="blog-title">State of the art attention models in PyText - Part 1</h4>
 
   
+    <span class="tags">Tags: <a href="/tags/deep-dive.html">deep-dive</a>, <a href="/tags/pytext.html">pytext</a></span>
+  
+
+  
     <center> <p> <img src="/images/blog/at_1.jpg" width="100%" /> 
     <br /><small>Attention being computed across a custom-dataset and being dsiplayed in TensorBoard!</small></p> </center>
   
@@ -432,6 +436,10 @@ Hack TensorBoard a bit and log an <em>image</em> instead of text, so that highli
   <h4 class="blog-title">Venue for the first workshop - BlueRock!</h4>
 
   
+    <span class="tags">Tags: <a href="/tags/announcement.html">announcement</a></span>
+  
+
+  
     <center> <p> <img src="/images/blog/BlueRock.jpg" width="100%" /> 
     <br /><small>The <a href="https://thebluerock.com.au/" rel="noopener">BlueRock</a> offices.</small></p> </center>
   
@@ -466,6 +474,10 @@ rel="noopener">flag staff station</a>, so it’s a very convenient location for 
   </div>
 
   <h4 class="blog-title">Deep learning quick start</h4>
+
+  
+    <span class="tags">Tags: <a href="/tags/tools.html">tools</a></span>
+  
 
   
 
@@ -511,6 +523,10 @@ rel="noopener">here</a>. It’s not the most elegant thing you’ll ever see, bu
   <h4 class="blog-title">Ruth joins Braneshop, and new workshop launch!</h4>
 
   
+    <span class="tags">Tags: <a href="/tags/announcement.html">announcement</a></span>
+  
+
+  
     <center> <p> <img src="/images/ruth-whiteboard.jpg" width="100%" /> 
     <br /><small>Me (Ruth!) teaching neural networks at the <a href="http://womeninai.com.au">Women in AI</a> leadership course in Brisbane, 2019.</small></p> </center>
   
@@ -551,6 +567,10 @@ rel="noopener">here</a>. It’s not the most elegant thing you’ll ever see, bu
   </div>
 
   <h4 class="blog-title">Deep learning in the browser!</h4>
+
+  
+    <span class="tags">Tags: <a href="/tags/talk.html">talk</a>, <a href="/tags/tensorflowjs.html">tensorflowjs</a></span>
+  
 
   
 
@@ -612,6 +632,10 @@ Q: Do the models need to be significantly smaller to run in the browser? (A: Dep
   <h4 class="blog-title">Australian Human Rights Commission AI - Submission</h4>
 
   
+    <span class="tags">Tags: <a href="/tags/announcement.html">announcement</a>, <a href="/tags/ethics.html">ethics</a></span>
+  
+
+  
 
   <div class="info">
     
@@ -646,6 +670,10 @@ Q: Do the models need to be significantly smaller to run in the browser? (A: Dep
   </div>
 
   <h4 class="blog-title">Mindful Neural Networks</h4>
+
+  
+    <span class="tags">Tags: <a href="/tags/announcement.html">announcement</a>, <a href="/tags/creative-ai.html">creative-ai</a></span>
+  
 
   
 
@@ -731,6 +759,10 @@ from yours. [...]</code></pre>
   </div>
 
   <h4 class="blog-title">The Canary Set for Machine Learning Applications</h4>
+
+  
+    <span class="tags">Tags: <a href="/tags/tools.html">tools</a></span>
+  
 
   
 
@@ -825,6 +857,10 @@ and ensuring the quality of inference when you may not be in control of the infe
   </div>
 
   <h4 class="blog-title">TensorFlow.js - How to easily deploy deep learning models</h4>
+
+  
+    <span class="tags">Tags: <a href="/tags/tensorflowjs.html">tensorflowjs</a></span>
+  
 
   
 
@@ -939,6 +975,10 @@ In order to deal with the speed issue, we typically run a “smaller” or “co
   </div>
 
   <h4 class="blog-title">Thanks to Ren Imagery for our new logo!</h4>
+
+  
+    <span class="tags">Tags: <a href="/tags/announcement.html">announcement</a></span>
+  
 
   
 

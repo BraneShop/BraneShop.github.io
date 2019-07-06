@@ -4,6 +4,7 @@ author: Noon van der Silk
 image: /images/blog/BlueRock.jpg
 preview: The first 6 week workshop will be held at Blue Rock!
 imageDescription: The <a href="https://thebluerock.com.au/" rel="noopener">BlueRock</a> offices.
+tags: announcement
 ---
 
 We're very grateful to the very nice people at <a

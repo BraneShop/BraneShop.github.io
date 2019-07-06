@@ -4,6 +4,7 @@ author: Ruth Pearson
 image: /images/ruth-whiteboard.jpg
 imageDescription: Me (Ruth!) teaching neural networks at the <a href="http://womeninai.com.au">Women in AI</a> leadership course in Brisbane, 2019.
 preview: Ruth joins the Braneshop team, introduces our new workshops!
+tags: announcement
 ---
 
 Hello friends!

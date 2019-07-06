@@ -6,6 +6,7 @@ imageDescription: Attention being computed across a custom-dataset and being dsi
 code: https://github.com/Braneshop/pytext
 date: 2019-07-03
 preview: PyText is a relatively recent library from Facebook Research that allows people to try out a variety of text models. Let's use it to compute some state-of-the-art attention models!
+tags: deep-dive, pytext
 ---
 
 I wanted to take some time to discuss a library that seems to have flown under

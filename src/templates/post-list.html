@@ -5,6 +5,11 @@ $for(posts)$
   <li> 
     <div class="blog-card">
       <h5> <a href="$url$">$title$</a> &mdash; $date$ </h5>
+
+      $if(tags)$
+        <span class="tags">Tags: $tags$</span>
+      $endif$
+
       <div class="content">
         <a href="$url$"><img src="$image$" width="200" /></a>
         <p> $preview$

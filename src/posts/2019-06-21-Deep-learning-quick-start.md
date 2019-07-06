@@ -4,6 +4,7 @@ author: Noon van der Silk
 image: /images/quickstart.jpg
 preview: A little web-page we put together to help you start using a deep learning framework immediately.
 code: https://github.com/Braneshop/quickstart-elm-app
+tags: tools
 ---
 
 It's been in vogue for some time now to have a little "quick-start" install on

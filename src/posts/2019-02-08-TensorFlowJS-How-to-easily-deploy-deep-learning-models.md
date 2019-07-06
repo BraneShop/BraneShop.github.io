@@ -3,6 +3,7 @@ title: TensorFlow.js - How to easily deploy deep learning models
 author: Noon van der Silk
 image: /images/blog/inference.jpg
 preview: We discus how to deploy models via TensorFlow.js, and why you should strongly consider this as a great way to make your deep learning models available.
+tags: tensorflowjs
 ---
 
 In the following we'll suppose you've trained a model in Python, and are now

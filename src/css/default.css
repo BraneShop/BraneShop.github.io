@@ -673,6 +673,11 @@ ul.blog-list li {
   max-width: 800px;
 }
 
+span.tags {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
 #small-links a {
   color:      peachpuff;
   background: black;

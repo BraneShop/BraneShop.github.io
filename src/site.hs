@@ -52,12 +52,30 @@ main = hakyll $ do
         compile compressCssCompiler
 
     match "posts/*" $ do
+        tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+
+        tagsRules tags $ \tag pattern -> do
+            let title = "Posts tagged \"" ++ tag ++ "\""
+            route idRoute
+            compile $ do
+                posts <- recentFirst =<< loadAll pattern
+                let ctx = constField "title" title
+                          `mappend` listField "posts" postCtx (return posts)
+                          `mappend` constField "class" "compressed"
+                          `mappend` defaultContext
+
+                makeItem ""
+                    >>= loadAndApplyTemplate "templates/tag.html" ctx
+                    >>= loadAndApplyTemplate "templates/default.html" ctx
+                    >>= relativizeUrls
+
+
         route $ setExtension "html"
         compile $ 
                 (pandocMathCompiler)
-            >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
             >>= saveSnapshot "content"
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)
             >>= relativizeUrls
 
     match (fromList ["deep-learning-workshop.html"
@@ -76,9 +94,10 @@ main = hakyll $ do
         route idRoute
         compile $ do
             -- No limit; show all the posts.
+            tags <- buildTags "posts/*" (fromCapture "tags/*.html")
             posts <- recentFirst =<< loadAll "posts/*"
             let ctx =
-                    listField "posts" postCtx (return posts) `mappend`
+                    listField "posts" (postCtxWithTags tags) (return posts) `mappend`
                     defaultContext
 
             getResourceBody
@@ -98,7 +117,6 @@ main = hakyll $ do
                     , "team.html"
                     , "contact.html"
                     , "thesetestimonialsdontexist.html"
-                    -- , "splash.html"
                     , "privacy.html"
                     , "quickstart.html"
                     , "community.html"]) $ do
@@ -107,9 +125,10 @@ main = hakyll $ do
             -- TODO: Filter drafts out of here; that's why we're having to
             -- take n+1 at present.
             posts <- (liftM (take 4)) $ recentFirst =<< loadAll "posts/*"
+            tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
             let ctx =
-                    listField "posts" postCtx (return posts) `mappend`
+                    listField "posts" (postCtxWithTags tags) (return posts) `mappend`
                     defaultContext
 
             getResourceBody
@@ -144,3 +163,6 @@ postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     constField "class" "compressed" `mappend`
     defaultContext
+
+postCtxWithTags :: Tags -> Context String
+postCtxWithTags tags = tagsField "tags" tags `mappend` postCtx
