@@ -777,3 +777,16 @@ pre.sourceCode {
 blockquote.callout {
   border-left: solid 2px black;
 }
+
+div.tagCloud {
+  display:         flex;
+  justify-content: center;
+  flex-wrap:       wrap;
+  align-items:     center;
+  margin-left:     30px;
+  margin-right:    30px;
+}
+
+div.tagCloud a { 
+  margin: 5px;
+}

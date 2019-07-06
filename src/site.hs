@@ -59,10 +59,12 @@ main = hakyll $ do
             route idRoute
             compile $ do
                 posts <- recentFirst =<< loadAll pattern
+                tagCloud <- renderTagCloud 90 180 tags
                 let ctx = constField "title" title
                           `mappend` listField "posts" postCtx (return posts)
                           `mappend` constField "class" "compressed"
                           `mappend` defaultContext
+                          `mappend` constField "tagCloud" tagCloud
 
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx
