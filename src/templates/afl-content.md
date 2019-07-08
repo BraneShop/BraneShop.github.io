@@ -96,6 +96,6 @@ welcome to apply again in the future.  </p>
 
 <p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/qMCtvX">Apply for the Scholarship</a> </center> </p>
 
-<p>The closing date for the application process is th 28th of July.
+<p>The closing date for the application process is the 28th of July.
 Scholarship decisions will be sent out on the 31st of July.</p>
 
