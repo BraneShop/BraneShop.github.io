@@ -8,7 +8,7 @@ preview: Using a combination of deep-learning techniques to figure out what peop
 ---
 
 A pretty standard, but useful, technique that uses a kind of multi-stage
-network to: 1) compute the pose, 2) then from the a series of these poses,
+process to: 1) compute the pose, 2) then from the a series of these poses,
 ver time, work out what "action" people are performing. Specifically here they
 focus on people going past train ticket machines in various ways, but the
 application is general.
