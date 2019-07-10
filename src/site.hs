@@ -51,6 +51,38 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
+    match "showreel/*" $ do
+        tags <- buildTags "showreel/*" (fromCapture "showreel-tags/*.html")
+
+        let ctx = postCtxWithTags tags
+
+        tagsRules tags $ \tag pattern -> do
+            let title = "Items tagged \"" ++ tag ++ "\""
+            route idRoute
+            compile $ do
+                posts <- recentFirst =<< loadAll pattern
+                tagCloud <- renderTagCloud 90 180 tags
+                let ctx' = constField "title" title
+                          `mappend` listField "posts" postCtx (return posts)
+                          `mappend` constField "class" "compressed"
+                          `mappend` defaultContext
+                          `mappend` constField "tagCloud" tagCloud
+
+                makeItem ""
+                    >>= loadAndApplyTemplate "templates/tag.html" ctx'
+                    >>= loadAndApplyTemplate "templates/default.html" ctx'
+                    >>= relativizeUrls
+
+        route $ setExtension "html"
+        compile $ 
+                (pandocMathCompiler)
+            >>= applyAsTemplate ctx
+            >>= loadAndApplyTemplate "templates/showreel-item.html" ctx
+            >>= saveSnapshot "content"
+            >>= loadAndApplyTemplate "templates/default.html" ctx
+            >>= relativizeUrls
+
+
     match "posts/*" $ do
         tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
@@ -80,10 +112,17 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)
             >>= relativizeUrls
 
+
     match (fromList ["deep-learning-workshop.html"
                     , "ai-for-leadership.html"
                     , "6-week-workshop-on-deep-learning.html"
+                    , "team.html"
+                    , "contact.html"
+                    , "thesetestimonialsdontexist.html"
+                    , "privacy.html"
+                    , "quickstart.html"
                     , "faq.html"
+                    , "community.html"
                     ]) $ do
         route idRoute
         compile $ do
@@ -92,11 +131,30 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
+
+    match (fromList ["showreel.html"]) $ do
+        route idRoute
+        compile $ do
+            tags  <- buildTags "showreel/*" (fromCapture "showreel-tags/*.html")
+            posts <- recentFirst =<< -- loadAll "showreel/*"
+                      loadAllSnapshots "showreel/*" "content"
+
+            let ctx =
+                    listField "posts" (postCtxWithTags tags) (return posts)
+                    `mappend` postCtx
+                    `mappend` bodyField "content"
+
+            getResourceBody
+                >>= applyAsTemplate ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
+
+
     match (fromList ["blog.html"]) $ do
         route idRoute
         compile $ do
             -- No limit; show all the posts.
-            tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+            tags  <- buildTags "posts/*" (fromCapture "tags/*.html")
             posts <- recentFirst =<< loadAll "posts/*"
             let ctx =
                     listField "posts" (postCtxWithTags tags) (return posts) `mappend`
@@ -107,6 +165,7 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
+
     match (fromList ["poster.html"]) $ do
         route idRoute
         compile $ do
@@ -115,18 +174,12 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/branded.html" defaultContext
                 >>= relativizeUrls
 
+
     match (fromList [ "index.html"
-                    , "team.html"
-                    , "contact.html"
-                    , "thesetestimonialsdontexist.html"
-                    , "privacy.html"
-                    , "quickstart.html"
-                    , "community.html"]) $ do
+                    ]) $ do
         route idRoute
         compile $ do
-            -- TODO: Filter drafts out of here; that's why we're having to
-            -- take n+1 at present.
-            posts <- (liftM (take 4)) $ recentFirst =<< loadAll "posts/*"
+            posts <- fmap (take 4) . recentFirst =<< loadAll "posts/*"
             tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
             let ctx =
@@ -138,7 +191,9 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
+
     match "templates/*" $ compile templateCompiler
+
 
     create ["atom.xml"] $ do
         route idRoute
@@ -165,6 +220,7 @@ postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     constField "class" "compressed" `mappend`
     defaultContext
+
 
 postCtxWithTags :: Tags -> Context String
 postCtxWithTags tags = tagsField "tags" tags `mappend` postCtx

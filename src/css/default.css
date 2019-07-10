@@ -606,6 +606,23 @@ ul.blog-list li {
   list-style:      none;
 }
 
+
+.showreel-card {
+  display:        flex;
+  flex-direction: column;
+  background:     white;
+  border-radius:  20px;
+  padding:        20px;
+  margin-top:     5px;
+  margin-bottom:  5px;
+  border-bottom:  solid 2px peachpuff;
+  border-right:   solid 2px peachpuff;
+}
+
+.showreel-card img {
+  max-width: 800px;
+}
+
 .blog-card {
   display:        flex;
   flex-direction: column;

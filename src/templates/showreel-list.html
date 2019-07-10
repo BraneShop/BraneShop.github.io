@@ -1,0 +1,30 @@
+<ul class="blog-list normal">
+  $for(posts)$
+    $if(draft)$
+    $else$
+    <li> 
+        $if(width)$
+          <div class="showreel-card" style="width: $width$;">
+        $else$
+          <div class="showreel-card">
+        $endif$
+        <h5> <a href="$link$" rel="noopener">$title$</a> &mdash; $date$ </h5>
+
+        $if(tags)$
+          <span class="tags">Tags: $tags$</span>
+        $endif$
+
+        <div class="content">
+          $if(imageWidth)$
+            <center><img src="$image$" width="$imageWidth$" /></center>
+          $else$
+            <center><img src="$image$" /></center>
+          $endif$
+
+          $body$
+        </div>
+      </li>
+      $endif$
+  $endfor$
+</ul>
+
