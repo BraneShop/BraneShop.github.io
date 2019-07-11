@@ -67,6 +67,7 @@ main = hakyll $ do
                           `mappend` constField "class" "compressed"
                           `mappend` defaultContext
                           `mappend` constField "tagCloud" tagCloud
+                          `mappend` constField "showreel" "showreel"
 
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx'

@@ -807,3 +807,5 @@ div.tagCloud {
 div.tagCloud a { 
   margin: 5px;
 }
+
+span.hidden { color: white; }

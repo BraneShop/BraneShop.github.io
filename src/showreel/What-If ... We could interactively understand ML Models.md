@@ -4,6 +4,7 @@ title: What-If ... We could interactively understand ML Models
 image: "/images/showreel/What-If ... We could interactively understand ML Models.jpg"
 date: 2019-07-09
 tags: visualisation
+imageWidth: 800
 preview: Cool tool to help us interactively view a models predictions.
 ---
 
