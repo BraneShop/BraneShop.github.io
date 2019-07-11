@@ -4,7 +4,7 @@ author: Noon van der Silk
 image: "/images/showreel/Understanding and Predicting Visual Humour.jpg"
 imageDescription: <a href="https://arxiv.org/pdf/1512.04407.pdf">My favourite paper of 2015</a>, and maybe of all time. See the <a href="/showreel.html">showreel</a> page for more!
 date: 2019-07-11
-preview: We've made our showreel of cool deep learning projects available online!
+preview: Now you can be completely across the latest important and exciting developments in AI and deep learning, because we've made our "deep learning showreel" available online!
 tags: announcement
 ---
 
