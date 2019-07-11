@@ -72,7 +72,7 @@ required, and this is assessed in a prerequisite assessment.
 <table class="details" boder="0" cellspacing="0">
 <tr>  <td class="item">  Duration </td>
       <td class="value"> 6 weeks
-      <br /> Weekly, on Thursdays: 4pm-7pm sharp. </td>
+      <br /> Weekly, on Thursdays: 4pm-7pm. </td>
 </tr>
 <tr>  <td class="item">  Costs    </td>
       <td class="value"> 

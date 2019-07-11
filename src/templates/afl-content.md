@@ -30,7 +30,7 @@ $partial("templates/afl-agenda.md")$
 <table class="details" boder="0" cellspacing="0">
 <tr>  <td class="item">  Duration </td>
       <td class="value"> 1 day
-      <br /> 9am-5pm sharp. </td>
+      <br /> 9am-5pm. </td>
 </tr>
 <tr>  <td class="item">  Costs    </td>
       <td class="value"> 
