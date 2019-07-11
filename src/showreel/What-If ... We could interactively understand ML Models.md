@@ -1,6 +1,6 @@
 ---
 link: https://arxiv.org/pdf/1907.04135.pdf
-title: What-If ... We could interactively understand ML Models
+title: What-If ... We could interactively understand ML Models?
 image: "/images/showreel/What-If ... We could interactively understand ML Models.jpg"
 date: 2019-07-09
 tags: visualisation
