@@ -8,8 +8,49 @@
         <name>Braneshop Team</name>
         <email>noonsilk+-braneshop@gmail.com</email>
     </author>
-    <updated>2019-07-03T00:00:00Z</updated>
+    <updated>2019-07-11T00:00:00Z</updated>
     <entry>
+    <title>Deep learning showreel now online!</title>
+    <link href="https://braneshop.com.au/posts/Showreel-Online.html" />
+    <id>https://braneshop.com.au/posts/Showreel-Online.html</id>
+    <published>2019-07-11T00:00:00Z</published>
+    <updated>2019-07-11T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="section">
+  <div class="info">
+    Posted on July 11, 2019
+    
+      by Noon van der Silk
+    
+		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
+  </div>
+
+  <h4 class="blog-title">Deep learning showreel now online!</h4>
+
+  
+    <span class="tags">Tags: <a href="/tags/announcement.html">announcement</a></span>
+  
+
+  
+    <center> <p> <img src="/images/showreel/Understanding and Predicting Visual Humour.jpg" width="100%" /> 
+    <br /><small><a href="https://arxiv.org/pdf/1512.04407.pdf">My favourite paper of 2015</a>, and maybe of all time. See the <a href="/showreel.html">showreel</a> page for more!</small></p> </center>
+  
+
+  <div class="info">
+    
+  </div>
+
+  <p>We love staying up to date with the latest deep learning research. I typically catch up daily, via the <a href="https://scirate.com">SciRate</a> website (check if out if you haven’t already!)</p>
+<p>Every now and then, a paper really stands out as either cool, interesting, innovative, or useful. When something really appealed to me, I’d typically post it in various places, such as LinkedIn, or slack, or twitter, or just file it away in my head, waiting for the perfect moment to pop up again.</p>
+<p>We also typically include these as part of the workshops, to get people a bit excited about the field.</p>
+<p>Well, now I’ve decided to put that list online: <a href="/showreel.html">Deep learning showreel!</a></p>
+<p>Each paper comes with an indicative picture, and a little blurb explaining why it’s interesting/important or what we like about it. Feel free to take a browse only at those pictures that interest you. You can also browse by tag; for example here’s the items for <a href="showreel-tags/computer-vision.html">computer-vision</a> (you can see all the tags at the bottom of that page).</p>
+<p>This list will also go out in our monthly newsletter, so if you’re interested in such things, then subscribe below!</p>
+<p>If you’re technical, and want to get the items before they hit the page, I’ve <a href="https://github.com/BraneShop/showreel">set up a bit of a system on github</a> that lets me collect the interesting papers there, for later processing.</p>
+<p>We hope you find this useful!</p>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>State of the art attention models in PyText - Part 1</title>
     <link href="https://braneshop.com.au/posts/State-of-the-art-attention-models-in-PyText-Part-1.html" />
     <id>https://braneshop.com.au/posts/State-of-the-art-attention-models-in-PyText-Part-1.html</id>
@@ -956,60 +997,6 @@ In order to deal with the speed issue, we typically run a “smaller” or “co
 </center>
 <p>We were able to put together both of these projects much faster, and much more portably, because we were using JavaScript-based deep learning inference.</p>
 <p>So I encourage you to take a look at <a href="https://js.tensorflow.org/">TensorFlow.js</a>, and try and build something with it!</p>
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Thanks to Ren Imagery for our new logo!</title>
-    <link href="https://braneshop.com.au/posts/2019-01-30-Best-Designer-Ren-Imagery.html" />
-    <id>https://braneshop.com.au/posts/2019-01-30-Best-Designer-Ren-Imagery.html</id>
-    <published>2019-01-30T00:00:00Z</published>
-    <updated>2019-01-30T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<div class="section">
-  <div class="info">
-    Posted on January 30, 2019
-    
-      by Noon van der Silk
-    
-		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
-  </div>
-
-  <h4 class="blog-title">Thanks to Ren Imagery for our new logo!</h4>
-
-  
-    <span class="tags">Tags: <a href="/tags/announcement.html">announcement</a></span>
-  
-
-  
-
-  <div class="info">
-    
-  </div>
-
-  <p>We have a new logo! You can see it loud and proud at the top of every page; but here is it again:</p>
-<center>
-<img style='background: black; padding: 20px;' src="/images/braneshop-blue.png" width="400" />
-</center>
-<p>I like the logo because conveys “brain-ness” with the wavey lines; perhaps it reminds you of your own brain. It also feels a bit “80s” and “fun” to me; a style that <a href="https://silky.github.io/posts/2019-01-27-Designing-Functional-Cloths-with-Haskell.html">I’m well-known to love</a>, and, of course, it’s amenable to funky bright colours.</p>
-<p><a href="https://www.theloop.com.au/renlemon/portfolio/Graphic-Designer/Melbourne">Ren</a> is a well-rounded and wonderful designer, and I don’t just say that because she’s a friend of mine. Here are some of the reasons why:</p>
-<ul class="normal">
-<li>
-<strong>Collaborative</strong>: Ren communicates frequently; asks your opinion, and submits some designs for review and to guide further design.
-</li>
-<li>
-<strong>Diverse options</strong>: Unlike other designers I’ve worked with, each of Ren’s submitted designs was actually quite unique and distinctly different from the others. The differences are not just a slight colour changes, or lower case over upper case; each design has it’s own strong elements, story, and justifcation. I think this is a very important skill for design, that I’ve not seen many people be able to do, and Ren does it amazingly well.
-</li>
-<li>
-<strong>Comprehensive</strong>: Once a final design was sleceted, Ren provides the logo in many formats and colours, and also includes nice feature “elements” (such as the squiggle in the bottom-left of the logo) as seperate files. This allows me to include and use parts of the logo thematically through-out the website.
-</li>
-<li>
-<strong>Consistency</strong>: Ren has done design work for me in the past, and it has been consistently excellent. The previous work was for <a href="http://www.composeconference.org/">Compose Conference</a>, and the resulting logo was designed collaboratively between Ren, Lyndon and Myself, and I have to say that it’s now iconic in the functional-programming community as the “Lambda-Tram”:
-<center>
-<img src="/images/blog/LambdaTramWeb2017.png" />
-</center>
-</li>
-</ul>
-<p>So, if you’re looking for any kind of design work, definitely get in contact with her over at <a href="https://www.theloop.com.au/renlemon/portfolio/Graphic-Designer/Melbourne">Ren Imagery</a> or on <a href="https://www.linkedin.com/in/lauren-harris-22409899/">LinkedIn</a>!</p>
 </div>
 ]]></summary>
 </entry>
