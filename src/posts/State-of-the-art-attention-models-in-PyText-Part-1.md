@@ -7,6 +7,8 @@ code: https://github.com/Braneshop/pytext
 date: 2019-07-03
 preview: PyText is a relatively recent library from Facebook Research that allows people to try out a variety of text models. Let's use it to compute some state-of-the-art attention models!
 tags: deep-dive, pytext
+vimeo: https://player.vimeo.com/video/347859684
+vimeoTitle: Braneshop - Attention in PyText - Part 1
 ---
 
 I wanted to take some time to discuss a library that seems to have flown under

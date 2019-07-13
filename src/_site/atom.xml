@@ -31,6 +31,8 @@
   
 
   
+
+  
     <center> <p> <img src="/images/blog/noon-ruth-rrr.jpg" width="100%" /> 
     <br /><small>Ruth and I dropped by RRR to chat about the Braneshop and the AI community.</small></p> </center>
   
@@ -66,6 +68,8 @@
 
   
     <span class="tags">Tags: <a href="/tags/announcement.html">announcement</a></span>
+  
+
   
 
   
@@ -107,6 +111,14 @@
 
   
     <span class="tags">Tags: <a href="/tags/deep-dive.html">deep-dive</a>, <a href="/tags/pytext.html">pytext</a></span>
+  
+
+  
+  <p>Video summary:</p>
+  <center>
+    <iframe src="https://player.vimeo.com/video/347859684" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/347859684">Braneshop - Attention in PyText - Part 1</a></p>
+  </center>
   
 
   
@@ -519,6 +531,8 @@ Hack TensorBoard a bit and log an <em>image</em> instead of text, so that highli
   
 
   
+
+  
     <center> <p> <img src="/images/blog/BlueRock.jpg" width="100%" /> 
     <br /><small>The <a href="https://thebluerock.com.au/" rel="noopener">BlueRock</a> offices.</small></p> </center>
   
@@ -556,6 +570,8 @@ rel="noopener">flag staff station</a>, so it’s a very convenient location for 
 
   
     <span class="tags">Tags: <a href="/tags/tools.html">tools</a></span>
+  
+
   
 
   
@@ -606,6 +622,8 @@ rel="noopener">here</a>. It’s not the most elegant thing you’ll ever see, bu
   
 
   
+
+  
     <center> <p> <img src="/images/ruth-whiteboard.jpg" width="100%" /> 
     <br /><small>Me (Ruth!) teaching neural networks at the <a href="http://womeninai.com.au">Women in AI</a> leadership course in Brisbane, 2019.</small></p> </center>
   
@@ -649,6 +667,8 @@ rel="noopener">here</a>. It’s not the most elegant thing you’ll ever see, bu
 
   
     <span class="tags">Tags: <a href="/tags/talk.html">talk</a>, <a href="/tags/tensorflowjs.html">tensorflowjs</a></span>
+  
+
   
 
   
@@ -716,6 +736,8 @@ Q: Do the models need to be significantly smaller to run in the browser? (A: Dep
 
   
 
+  
+
   <div class="info">
     
   </div>
@@ -752,6 +774,8 @@ Q: Do the models need to be significantly smaller to run in the browser? (A: Dep
 
   
     <span class="tags">Tags: <a href="/tags/announcement.html">announcement</a>, <a href="/tags/creative-ai.html">creative-ai</a></span>
+  
+
   
 
   
@@ -841,6 +865,8 @@ from yours. [...]</code></pre>
 
   
     <span class="tags">Tags: <a href="/tags/tools.html">tools</a></span>
+  
+
   
 
   
