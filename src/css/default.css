@@ -567,6 +567,7 @@ div.important {
 small.tiny { font-size: 0.5em; }
 
 
+
 hr {
   height:           1px;
   border:           none;
@@ -681,13 +682,35 @@ ul.blog-list li {
 }
 
 #small-links {
-  border-top: solid 1px peachpuff;
-  padding:    20px;
-  margin-top: 20px;
-  display:    flex;
+  border-top:      solid 1px peachpuff;
+  padding:         20px;
+  margin-top:      20px;
+  display:         flex;
+  flex-direction:  row;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  flex-wrap:       wrap;
+  width:           100%;
+  background:      #000000aa;
+}
+
+h6 {
+  font-size:   1.2em;
+  margin:      0;
+  color:       lavenderblush;
+  font-family: "DM Serif Text";
+  font-weight: normal;
+}
+
+#small-links div.link-section a {
+  background: none;
+  margin:     4px;
+}
+
+#small-links div.link-section {
+  display:        flex;
+  flex-direction: column;
+  margin-left:    20px;
+  margin-right:   20px;
 }
 
 span.tags {
