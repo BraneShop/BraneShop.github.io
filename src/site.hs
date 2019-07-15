@@ -124,12 +124,17 @@ main = hakyll $ do
                     , "quickstart.html"
                     , "faq.html"
                     , "community.html"
+                    , "object-detection-in-the-browser.html"
                     ]) $ do
         route idRoute
+
+        let ctx = listContext "classes"
+                  `mappend` defaultContext
+
         compile $ do
             getResourceBody
-                >>= applyAsTemplate defaultContext
-                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= applyAsTemplate ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
 
@@ -225,3 +230,16 @@ postCtx =
 
 postCtxWithTags :: Tags -> Context String
 postCtxWithTags tags = tagsField "tags" tags `mappend` postCtx
+
+
+listContextWith :: Context String -> String -> Context a
+listContextWith ctx s = listField s ctx $ do
+    identifier <- getUnderlying
+    metadata <- getMetadata identifier
+    let metas = maybe [] (map trim . splitAll ",") $ lookupString s metadata
+    return $ map (\x -> Item (fromFilePath x) x) metas
+
+
+listContext :: String -> Context a
+listContext = listContextWith defaultContext
+

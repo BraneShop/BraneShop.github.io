@@ -15,7 +15,7 @@
     }
   </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Braneshop - Quick start</title>
+  <title>Braneshop - Object-detection in the browser!</title>
   <meta name="geo.region" content="AU-VIC" />
   <meta name="geo.placename" content="Melbourne" />
   <link rel="stylesheet" type="text/css" href="./css/default.css" />
@@ -78,26 +78,221 @@
 
   <!-- Content -->
   <div id="content">
-    <script src="./js/quickstart-app.js"></script>
-<div class="section" id="faq">
-  <a name="faq"></a>
-  <h3> <span>🤸 Quick start </span> </h3>
-  <div id="quick-start">
-    <p>Following in the style of some <a href="https://spacy.io/usage">notable</a> <a href="https://pytorch.org/get-started/locally/">quick start guides</a>, we've got
-       a little form to help you get started deep learning. We've set the
-       default option to be our favourite online coding environment: 
-       <a href="https://colab.research.google.com/" rel="noopener">Google Colaboratory</a>.
-    </p>
-    <h5>Get started with deep learning!</h5>
-    <p></p>
-    <div id="widget"></div>
-  </div>
-</div>
+    <!-- Load TensorFlow.js. This is required to use coco-ssd model. -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+<!-- Load the coco-ssd model. -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+<!-- Load our code. -->
+<script src="js/tfjs-object-detection.js"></script>
 
-<script language="javascript">
-  var node = document.getElementById("widget");
-  var app  = Elm.Main.init( { node: node } );
-</script>
+<div class="section">
+  <h3>🔮 Object-detection in the browser!</h3>
+
+  <p>Using <a href>TensorFlow.js</a> 
+  (see <a href="tags/tensorflowjs.html">here for our blog posts on the
+  topic</a>) we can use the camera on your device to detect objects and draw
+	boxes around them! In order to do this, we need to request to access your
+	camera. 
+  </p>
+
+  <p>When it's working, you will see something like the below (depending on
+  what it's pointing at!)
+  </p>
+  <center><img src="./images/object-dection-working.png" width="60%" /></center>
+
+  <p>Where we have black boxes drawn around what it thinks it sees; with the
+  name of the thing above it, and in brackets, (roughly) an estimate of "how
+  confident" the network is that what it's it is seeing. Note that the network
+  itself is not perfect, and it will get confused and certianly won't detect
+  everything (for example, it misses the second cup in this photo, as well as
+  the book). But it gives a feeling for the kinds of things that cna be done!
+  </p>
+          
+  <h5>Demo</h5>
+
+  <video id="video" playsinline></video>
+
+  <div class="video-stuffs">
+    <p id="loading">Loading ...</p>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <script>
+    startDetection();
+  </script>
+
+  <h5>Detectable things</h5>
+
+  <div class="detectable-things">
+    
+      <span>person</span>
+    
+      <span>bicycle</span>
+    
+      <span>car</span>
+    
+      <span>motorcycle</span>
+    
+      <span>airplane</span>
+    
+      <span>bus</span>
+    
+      <span>train</span>
+    
+      <span>truck</span>
+    
+      <span>boat</span>
+    
+      <span>traffic light</span>
+    
+      <span>fire hydrant</span>
+    
+      <span>stop sign</span>
+    
+      <span>parking meter</span>
+    
+      <span>bench</span>
+    
+      <span>bird</span>
+    
+      <span>cat</span>
+    
+      <span>dog</span>
+    
+      <span>horse</span>
+    
+      <span>sheep</span>
+    
+      <span>cow</span>
+    
+      <span>elephant</span>
+    
+      <span>bear</span>
+    
+      <span>zebra</span>
+    
+      <span>giraffe</span>
+    
+      <span>backpack</span>
+    
+      <span>umbrella</span>
+    
+      <span>handbag</span>
+    
+      <span>tie</span>
+    
+      <span>suitcase</span>
+    
+      <span>frisbee</span>
+    
+      <span>skis</span>
+    
+      <span>snowboard</span>
+    
+      <span>sports ball</span>
+    
+      <span>kite</span>
+    
+      <span>baseball bat</span>
+    
+      <span>baseball glove</span>
+    
+      <span>skateboard</span>
+    
+      <span>surfboard</span>
+    
+      <span>tennis racket</span>
+    
+      <span>bottle</span>
+    
+      <span>wine glass</span>
+    
+      <span>cup</span>
+    
+      <span>fork</span>
+    
+      <span>knife</span>
+    
+      <span>spoon</span>
+    
+      <span>bowl</span>
+    
+      <span>banana</span>
+    
+      <span>apple</span>
+    
+      <span>sandwich</span>
+    
+      <span>orange</span>
+    
+      <span>broccoli</span>
+    
+      <span>carrot</span>
+    
+      <span>hot dog</span>
+    
+      <span>pizza</span>
+    
+      <span>donut</span>
+    
+      <span>cake</span>
+    
+      <span>chair</span>
+    
+      <span>couch</span>
+    
+      <span>potted plant</span>
+    
+      <span>bed</span>
+    
+      <span>dining table</span>
+    
+      <span>toilet</span>
+    
+      <span>tv</span>
+    
+      <span>laptop</span>
+    
+      <span>mouse</span>
+    
+      <span>remote</span>
+    
+      <span>keyboard</span>
+    
+      <span>cell phone</span>
+    
+      <span>microwave</span>
+    
+      <span>oven</span>
+    
+      <span>toaster</span>
+    
+      <span>sink</span>
+    
+      <span>refrigerator</span>
+    
+      <span>book</span>
+    
+      <span>clock</span>
+    
+      <span>vase</span>
+    
+      <span>scissors</span>
+    
+      <span>teddy bear</span>
+    
+      <span>hair drier</span>
+    
+      <span>toothbrush</span>
+    
+  </div>
+  
+
+  <h5>Details</h5>
+  <p>This code is a light-weight wrapper around <a href="https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd" rel="noopener">coco-ssd</a> from the TensorFlow.js examples page.
+  </p>
+
+</div>
 
   </div>
 

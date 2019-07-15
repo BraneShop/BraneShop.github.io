@@ -832,3 +832,41 @@ div.tagCloud a {
 }
 
 span.hidden { color: white; }
+
+
+div.video-stuffs {
+  margin-left:     20px;
+  margin-bottom:   20px;
+  margin-top:      20px;
+  display:         flex;
+  justify-content: center;
+  align-items: center;
+  display:         flex;
+  flex-direction:  column;
+}
+
+video { display: none; }
+
+canvas {
+  background:  #eaeaea;
+  width:       720px;
+  height:      480px;
+} 
+
+
+div.detectable-things {
+  margin-left:    20px;
+  margin-bottom:  20px;
+  margin-top:     20px;
+  display:        flex;
+  flex-direction: row;
+  flex-wrap:      wrap;
+}
+
+div.detectable-things span {
+  font-size:     0.8em;
+  background:    #eaeaea;
+  padding:       5px;
+  margin:        5px;
+  border-radius: 5px;
+}
