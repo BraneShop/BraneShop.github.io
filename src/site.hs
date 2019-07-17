@@ -4,6 +4,7 @@ import           Data.Monoid (mappend)
 import           Hakyll
 import           Control.Applicative
 import qualified Data.Set as S
+import qualified Data.Map as M
 import           Text.Pandoc.Options
 import           Control.Monad
 import           Hakyll.Web.Diagrams (pandocCompilerDiagrams)
@@ -142,7 +143,7 @@ main = hakyll $ do
         route idRoute
         compile $ do
             tags  <- buildTags "showreel/*" (fromCapture "showreel-tags/*.html")
-            posts <- recentFirst =<< -- loadAll "showreel/*"
+            posts <- recentFirst =<<
                       loadAllSnapshots "showreel/*" "content"
 
             let ctx =
@@ -221,6 +222,23 @@ feedConf = FeedConfiguration
 
 
 --------------------------------------------------------------------------------
+-- buildTagsWith' :: MonadMetadata m
+--               => (Identifier -> m [String])
+--               -> Pattern
+--               -> (String -> Identifier)
+--               -> m Tags
+-- buildTagsWith' f pattern makeId = do
+--     ids    <- getMatches pattern
+--     tagMap <- foldM addTags M.empty ids
+--     let set' = S.fromList ids
+--     return $ Tags (M.toList tagMap) makeId (PatternDependency pattern set')
+--   where
+--     -- Create a tag map for one page
+--     addTags tagMap id' = do
+--         tags <- f id'
+--         let tagMap' = M.fromList $ zip tags $ repeat [id']
+--         return $ M.unionWith (++) tagMap tagMap'
+
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
