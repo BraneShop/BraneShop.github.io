@@ -213,7 +213,7 @@ table.details td.item {
 }
 
 table.details td.value, table.details td.item {
-  padding:    4px;
+  padding:    10px;
 }
 
 td.value ul {
@@ -869,4 +869,9 @@ div.detectable-things span {
   padding:       5px;
   margin:        5px;
   border-radius: 5px;
+}
+
+h5.s {
+  margin-left: 20px;
+  font-size: 1.1em;
 }

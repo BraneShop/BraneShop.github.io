@@ -7,20 +7,38 @@ those wanting to break into the AI industry.</em> </p>
 
 $partial("templates/6ww-overview.md")$
 
-<p> Knowledge is consolidated through each week of teaching enabling
-participants to build on work from previous weeks, group discussions, and
-homework. In order to support learning and development, we also provide
-"<b>office hours</b>" once per week: a supportive environment in which to
-complete assigned homework and solidify understanding. </p>
- 
-<p> At the end of the workshop series participants will have a showreel of
-completed projects to demonstrate their ability. </p>
+<h5 class="s">What can you expect to receive and achieve?</h5>
+<ul class="normal">
+<li>An intuitive understanding of deep learning and the essential concepts,</li>
+<li>Hands-on work in solving problems,</li>
+<li>Experience building models for typical domains of deep learning: understanding images,
+  videos, and text,</li>
+<li>Individual and group support,</li>
+<li>Completed a selection of projects in TensorFlow,</li>
+<li>A supportive and growing community during and after the workshop.</li>
+</ul>
 
-<h5>Who's it for?</h5>
+<h5 class="s">Every week we will ...</h5>
+<ul class="normal">
+<li>Have group discussions and learn together in a collaborative way,</li>
+<li>Consolidate your knowledge through exercises,</li>
+<li>Build on work from previous weeks through homework,</li>
+<li>Provide <em>additional</em>  support (other than teaching hours) through office hours.</li>
+</ul>
+
+<h5 class="s">Who's it for?</h5>
+<ul class="normal">
+<li>Data scientists wishing to move into AI and deep learning,</li>
+<li>Programmers looking to build, work with, or otherwise work with AI or deep learning projects,</li>
+<li>and broadly, technical people looking to break into the AI industry,
+  develop a new business or product, join an existing AI team, or generally
+  contribute to the AI ecosystem.</li>
+</ul>
 <p>
-Those wanting to break into the AI industry. We welcome people from a variety
-of backgrounds. To ensure success a minimum level of Python programming is
-required, and this is assessed in a prerequisite assessment.
+We welcome people from a variety of backgrounds. To ensure success in the
+workshop, a minimum level of Python programming is required, but this is
+self-assessed, using <a href="https://goo.gl/forms/VncQkZLylzh8JWez1">this
+quiz</a>.
 </p>
 
 
@@ -80,26 +98,18 @@ required, and this is assessed in a prerequisite assessment.
       </td>
 </tr>
 <tr>  <td class="item">  Location </td>
-      <td class="value"> CBD </td>
+      <td class="value"> Melbourne CBD </td>
 </tr>
-<!--
-<tr>  <td class="item">  Dates </td>
-      <td class="value"> 
-        $partial("templates/6ww-dates.md")$
-      </td>
-</tr>
-<tr>  <td class="item">  Requirements </td>
-      <td class="value"> 
-      A laptop.
-      </td>
-</tr>
--->
 <tr> <td class="item"> Prerequisites </td>
      <td class="value">
       <a href="https://goo.gl/forms/VncQkZLylzh8JWez1">Take our Python Quiz on Google Forms</a>
       <br />
-      <small> You should answer at least 70% of the questions in this quiz
-      correctly. </small>
+      <small> As a guide, you should answer at least 70% of the questions in this quiz
+      correctly. Note that it is a self-assessment, and you can attempt it as
+      many times as you like. If you're comfortable with your knowledge after
+      taking the quiz and reviewing the answers, we welcome you to the
+      workshop.
+      </small>
      </td>
 </table>
 
