@@ -9,11 +9,36 @@ leadership teams, looking to understand and adopt AI. </em> </p>
 
 $partial("templates/afl-overview.md")$
 
+<!--
 <p> We'll go over all the State of the Art in machine learning across a
 variety of applications, from text analysis, computer vision, to maps, and
 graphs, and audio; we'll see what kinds of data you can use to get started,
 and how to bootstrap the process so that you can get started sooner. </p>
+-->
 
+<h5 class="s">What can you expect to receive and achieve?</h5>
+</h5>
+<ul class="normal">
+<li>A framework for understanding when and where AI can be applied,</li>
+<li>Understanding of what data is required for what projects, how to get
+it, and how to estimate the costs,</li>
+<li>Tips and tricks for starting with AI earlier than you may think possible,</li>
+<li>Guidance on how to structure AI projects for success,</li>
+<li>Broad view of the technical makeup and tasks required to build AI into business processes,</li>
+<li>Understanding of the <em>risks</em> of AI systems and how they differ from
+people, and mechanisms for dealing with those risks,</li>
+<li>An overview of industry trends and capabilities to be on the look-out for.</li>
+</ul>
+
+<h5 class="s">Who's it for?</h5>
+<ul class="normal">
+<li>People in leadership teams looking to incorporate AI into their business,</li>
+<li>Managers looking to support technical teams building AI projects,</li>
+<li>and generally anyone who wants to understand how to adopt AI effectively and responsibily.</li>
+</ul>
+</h5>
+
+<!--
 <p> We'll cover how the multitude of ways AI can be adopted into your
 business; from internal teams and their makeup, to external services, from
 model, web to back-end APIs, and devices deployed at the "edge". We'll cover
@@ -23,6 +48,7 @@ the adoption path, what risks to watch out for, and how to mitigate them. </p>
 how these differ from the kinds of mistakes humans make, and how to mitigate
 the risks involved, as well as the ethics of AI, and how to implement AI
 systems responsibly. </p>
+-->
 
 $partial("templates/afl-agenda.md")$
 
