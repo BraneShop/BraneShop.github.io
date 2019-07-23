@@ -15,7 +15,7 @@
     }
   </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Braneshop - Posts tagged "creative-ai"</title>
+  <title>Braneshop - Scholarships for August Technical Deep Learning Workshop Close on Sunday!</title>
   <meta name="geo.region" content="AU-VIC" />
   <meta name="geo.placename" content="Melbourne" />
   <link rel="stylesheet" type="text/css" href="../css/default.css" />
@@ -78,47 +78,78 @@
 
   <!-- Content -->
   <div id="content">
-    ---
-class: compressed
----
-
-<div class="section">
-  <h3>🌅 Posts tagged "creative-ai"
-  </h3>
-  <ul class="blog-list normal">
-
-
-  
+    <div class="section">
+  <div class="info">
+    Posted on July 24, 2019
     
-    <li> 
-      <div class="blog-card">
-        <h5> <a href="../posts/2019-03-06-Mindful-Neural-Networks.html">Mindful Neural Networks</a> &mdash; March  6, 2019 </h5>
-
-        
-          <span class="tags">Tags: announcement, creative-ai</span>
-        
-
-        <div class="content">
-          <a href="../posts/2019-03-06-Mindful-Neural-Networks.html"><img src="../images/blog/thich-nhat-tanh.png" width="200" /></a>
-          <p> Through the <a href="https://www.meetup.com/Melbourne-Creative-AI-Meetup/">Creative AI Meetup</a> we explored ideas at the intersection of mindfulness and neural networks.
-          </p>
-        </div>
-      </li>
+      by Noon van der Silk
     
-  
-
-
-</ul>
-
-
-  <hr />
-
-  <p>All tags:</p>
-  <div class="tagCloud">
-    <a style="font-size: 168%" href="../tags/announcement.html">announcement</a> <a style="font-size: 90%" href="../tags/creative-ai.html">creative-ai</a> <a style="font-size: 101%" href="../tags/deep-dive.html">deep-dive</a> <a style="font-size: 90%" href="../tags/ethics.html">ethics</a> <a style="font-size: 90%" href="../tags/pytext.html">pytext</a> <a style="font-size: 90%" href="../tags/talk.html">talk</a> <a style="font-size: 101%" href="../tags/tensorflowjs.html">tensorflowjs</a> <a style="font-size: 101%" href="../tags/tools.html">tools</a>
+		| <a title="Blog: Recent posts" href="../blog.html">Back to recent posts</a>
   </div>
-</div>
 
+  <h4 class="blog-title">Scholarships for August Technical Deep Learning Workshop Close on Sunday!</h4>
+
+  
+    <span class="tags">Tags: <a href="../tags/announcement.html">announcement</a></span>
+  
+
+  
+  <p>Video summary:</p>
+  <center>
+    <iframe src="https://player.vimeo.com/video/349597581" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/349597581">Note on scholarships.</a></p>
+  </center>
+  
+
+  
+
+  <div class="info">
+    
+  </div>
+
+  <p>Ruth and I are very pleased to be offering scholarships for our workshop coming up on the 8th of August. We’ve already accept first-round scholarships (6 people), and so there are some remaining places.</p>
+<p>We’re encouraging applications from anyone that has typically faced barriers in their career/learning in the tech industry. One of our big aims at Braneshop is to increase the representation in the AI industry, and this is one way we’re working towards that goal.</p>
+<p>You can find the application form here: <a href="https://noonvandersilk.typeform.com/to/Tnfm4a">Scholarship for the 6 Week Technical Deep Learning Workshop</a>, and of course more details about the workshop itself here: <a href="../6-week-workshop-on-deep-learning.html">6 Week Workshop</a>.</p>
+<p>We’ve also got a scholarship for the <a href="../ai-for-leadership.html">AI For Leadership Workshop</a>, coming up in September. This is an important one for us as well, as, in order to see change broadly through-out the industry, we will need change in leadership positions.</p>
+<p>Here at the Braneshop we’re creating a welcoming and supportive community for everyone to be involved in AI.</p>
+<h4 id="technical-details-about-the-video">Technical details about the video …</h4>
+<p>I had a lot of fun making the video above. You’ll notice, if you watch it, that my person is cut out, and a new weird background is inserted. I did this using <a href="https://github.com/tensorflow/models/tree/master/research/deeplab">deep-lab</a> from TensorFlow. If you’re feeling adventurous you can try out their demo for yourself, on <a href="https://colab.sandbox.google.com/github/tensorflow/models/blob/master/research/deeplab/deeplab_demo.ipynb">Google Colab</a>.</p>
+<p>With that in hand, I worked out how to extract all the frames of the video as individual images, then ran that network over each of them (there were ~1600 images, but it only took a few minutes on my laptop (which doesn’t have a GPU)). After that, I made the little background animation<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, overlayed the images, and stitched them back together. I did all this using the “<a href="https://ffmpeg.org/">ffmpeg</a>” and <a href="https://imagemagick.org/index.php">ImageMagick</a><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1">I used my “<a href="https://github.com/silky/cppn-cli">cppn-cli</a>” program to do this.
+<pre class="terminal">
+# Having a pre-existing checkpoint
+cppn existing sample --checkpoint_dir logs/cf9ecd76 --width 288 --height 513 \
+ --out out/vid-bg --z_steps 1614
+</pre>
+<a href="#fnref1">↩</a></li>
+<li id="fn2">Roughly, here are the commands I used (ignoring the ones I used to generate the animations):
+<pre class="terminal">
+# Extract images
+ffmpeg -i original.mp4 images/img%05d.jpg -hide_banner
+#
+# In the "vid-bg" folder; make composite images.
+for i in *.png; do convert $i ~/dev/deep-lab/masked-images/img$i \
+  -gravity center -compose over -composite ~/dev/deep-lab/with-bg/$i.jpg; \
+done;
+#
+# Learn the framerate of the original video
+ffprobe -v 0 -of csv=p=0 -select_streams v:0 -show_entries stream=r_frame_rate \
+    original.mp4
+#
+# Make a video from images
+ffmpeg -framerate 29.5 -pattern_type glob -i 'images/*.jpg' \
+   -c:v libx264 -pix_fmt yuv420p out.mp4
+#
+# Copy audio into a video, from a video (named here "audio.mp4")
+ffmpeg -i video.mp4 -i audio.mp4 -c copy -map 0:0 -map 1:1 -shortest out.mp4
+</pre>
+<a href="#fnref2">↩</a></li>
+</ol>
+</div>
+</div>
 
   </div>
 

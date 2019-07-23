@@ -8,8 +8,89 @@
         <name>Braneshop Team</name>
         <email>noonsilk+-braneshop@gmail.com</email>
     </author>
-    <updated>2019-07-12T00:00:00Z</updated>
+    <updated>2019-07-24T00:00:00Z</updated>
     <entry>
+    <title>Scholarships for August Technical Deep Learning Workshop Close on Sunday!</title>
+    <link href="https://braneshop.com.au/posts/Aug-2019-Scholarships-Close-On-Sunday.html" />
+    <id>https://braneshop.com.au/posts/Aug-2019-Scholarships-Close-On-Sunday.html</id>
+    <published>2019-07-24T00:00:00Z</published>
+    <updated>2019-07-24T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="section">
+  <div class="info">
+    Posted on July 24, 2019
+    
+      by Noon van der Silk
+    
+		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
+  </div>
+
+  <h4 class="blog-title">Scholarships for August Technical Deep Learning Workshop Close on Sunday!</h4>
+
+  
+    <span class="tags">Tags: <a href="/tags/announcement.html">announcement</a></span>
+  
+
+  
+  <p>Video summary:</p>
+  <center>
+    <iframe src="https://player.vimeo.com/video/349597581" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/349597581">Note on scholarships.</a></p>
+  </center>
+  
+
+  
+
+  <div class="info">
+    
+  </div>
+
+  <p>Ruth and I are very pleased to be offering scholarships for our workshop coming up on the 8th of August. We’ve already accept first-round scholarships (6 people), and so there are some remaining places.</p>
+<p>We’re encouraging applications from anyone that has typically faced barriers in their career/learning in the tech industry. One of our big aims at Braneshop is to increase the representation in the AI industry, and this is one way we’re working towards that goal.</p>
+<p>You can find the application form here: <a href="https://noonvandersilk.typeform.com/to/Tnfm4a">Scholarship for the 6 Week Technical Deep Learning Workshop</a>, and of course more details about the workshop itself here: <a href="/6-week-workshop-on-deep-learning.html">6 Week Workshop</a>.</p>
+<p>We’ve also got a scholarship for the <a href="/ai-for-leadership.html">AI For Leadership Workshop</a>, coming up in September. This is an important one for us as well, as, in order to see change broadly through-out the industry, we will need change in leadership positions.</p>
+<p>Here at the Braneshop we’re creating a welcoming and supportive community for everyone to be involved in AI.</p>
+<h4 id="technical-details-about-the-video">Technical details about the video …</h4>
+<p>I had a lot of fun making the video above. You’ll notice, if you watch it, that my person is cut out, and a new weird background is inserted. I did this using <a href="https://github.com/tensorflow/models/tree/master/research/deeplab">deep-lab</a> from TensorFlow. If you’re feeling adventurous you can try out their demo for yourself, on <a href="https://colab.sandbox.google.com/github/tensorflow/models/blob/master/research/deeplab/deeplab_demo.ipynb">Google Colab</a>.</p>
+<p>With that in hand, I worked out how to extract all the frames of the video as individual images, then ran that network over each of them (there were ~1600 images, but it only took a few minutes on my laptop (which doesn’t have a GPU)). After that, I made the little background animation<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, overlayed the images, and stitched them back together. I did all this using the “<a href="https://ffmpeg.org/">ffmpeg</a>” and <a href="https://imagemagick.org/index.php">ImageMagick</a><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>
+<p>Also, while looking around and eventually settling on deep-lab, I found a <a href="https://www.tensorflow.org/js">TensorFlow.js</a> <a href="https://github.com/tensorflow/tfjs-models/tree/master/body-pix">demo project</a> that performs <a href="https://storage.googleapis.com/tfjs-models/demos/body-pix/index.html">person-segmentation in the browser</a>! It’s not amazingly high quality, but it runs in the browser! Pretty cool.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1">I used my “<a href="https://github.com/silky/cppn-cli">cppn-cli</a>” program to do this.
+<pre class="terminal">
+# Having a pre-existing checkpoint
+cppn existing sample --checkpoint_dir logs/cf9ecd76 --width 288 --height 513 \
+ --out out/vid-bg --z_steps 1614
+</pre>
+<a href="#fnref1">↩</a></li>
+<li id="fn2">Roughly, here are the commands I used (ignoring the ones I used to generate the animations):
+<pre class="terminal">
+# Extract images
+ffmpeg -i original.mp4 images/img%05d.jpg -hide_banner
+#
+# In the "vid-bg" folder; make composite images.
+for i in *.png; do convert $i ~/dev/deep-lab/masked-images/img$i \
+  -gravity center -compose over -composite ~/dev/deep-lab/with-bg/$i.jpg; \
+done;
+#
+# Learn the framerate of the original video
+ffprobe -v 0 -of csv=p=0 -select_streams v:0 -show_entries stream=r_frame_rate \
+    original.mp4
+#
+# Make a video from images
+ffmpeg -framerate 29.5 -pattern_type glob -i 'images/*.jpg' \
+   -c:v libx264 -pix_fmt yuv420p out.mp4
+#
+# Copy audio into a video, from a video (named here "audio.mp4")
+ffmpeg -i video.mp4 -i audio.mp4 -c copy -map 0:0 -map 1:1 -shortest out.mp4
+</pre>
+<a href="#fnref2">↩</a></li>
+</ol>
+</div>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>Braneshop scholarships and why we're focused on building a community</title>
     <link href="https://braneshop.com.au/posts/Braneshop-Scholarships-and-Why-We-are-Focused-On-Building-A-Community.html" />
     <id>https://braneshop.com.au/posts/Braneshop-Scholarships-and-Why-We-are-Focused-On-Building-A-Community.html</id>
@@ -843,106 +924,6 @@ from yours. [...]</code></pre>
 </li>
 </ul>
 <p>Overall, I had heaps of fun, and there was some discussion of a second installment, as there is heaps to explore here, so stay tuned to the <a href="https://www.meetup.com/Melbourne-Creative-AI-Meetup/">meetup</a> and join us next time!</p>
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>The Canary Set for Machine Learning Applications</title>
-    <link href="https://braneshop.com.au/posts/2019-03-01-The-Canary-Set.html" />
-    <id>https://braneshop.com.au/posts/2019-03-01-The-Canary-Set.html</id>
-    <published>2019-03-01T00:00:00Z</published>
-    <updated>2019-03-01T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<div class="section">
-  <div class="info">
-    Posted on March  1, 2019
-    
-      by Noon van der Silk
-    
-		| <a title="Blog: Recent posts" href="/blog.html">Back to recent posts</a>
-  </div>
-
-  <h4 class="blog-title">The Canary Set for Machine Learning Applications</h4>
-
-  
-    <span class="tags">Tags: <a href="/tags/tools.html">tools</a></span>
-  
-
-  
-
-  
-
-  <div class="info">
-    
-  </div>
-
-  <p>Earlier this week I was chatting to some people and we came up with a good idea. It’s what I refer to now as the “Canary Set”.</p>
-<p>We’re probably all familiar with the standard “canary in the cage” idea:</p>
-<center>
-<p>
-The standard canary in a cage.
-</p>
-<img src="/images/blog/canary-cage.png" alt="The standard canary in a cage." />
-</center>
-<p>It’s an item that can be carried with you into your hazardous job, and when it dies, it’s suggestive that the place your working in is unsafe. Poor canary.</p>
-<p>I’d like to propose that this can be a useful idea in machine learning, where instead of a canary, we carry around an “interesting set” of data:</p>
-<center>
-<p>
-A Canary Set of interesting data points.
-</p>
-<img src="/images/blog/canary-cage-data.png" alt="A Canary Set of data" />
-</center>
-<p>This would be called the “Canary Set” of data, and every time a new deployment of your ML model comes out, you run the mdoel across this dataset to see how it performs.</p>
-<center>
-<p>
-Going in …
-</p>
-<br/> <img src="/images/blog/canary-cage-ai.png" alt="The canary set going through the next version of the AI" /> <br /> <br />
-<p>
-Coming out with a report …
-</p>
-<br/> <img src="/images/blog/canary-cage-ai-out.png" alt="The canary set coming out with a report!" />
-</center>
-<p>Let’s go into a few details of why we might want this, how it differs from the “test” or “validation” set during the training/evaluation phase of machine learning algorithms, and what benefits we might get from it.</p>
-<h4 id="the-canary-set-main-justification">The Canary Set: Main Justification</h4>
-<p>The main point of the canary set is to give <strong>users of your machine learning service</strong> control over a set of data that they want to evaluate your new models against. In this way, it differs significantly from the standard “test” set in that it doesn’t need to contain a well-distributed set of samples, it just needs to contain those samples that the <strong>user</strong> is interested in.</p>
-<p>These might be:</p>
-<ul class="normal">
-<li>
-Rare inputs,
-</li>
-<li>
-Inputs for which they are uniquely concerned, as compared to other users,
-</li>
-<li>
-“Extreme” inputs, that check areas they are interested in,
-</li>
-<li>
-A random selection of their past inputs,
-</li>
-<li>
-… many more ideas!
-</li>
-</ul>
-<p>I think there’s a world of options here. The point is: <strong>The user gets some control</strong>. And this is a nice idea, given that we want them to be gaining confidence in the ML system.</p>
-<h4 id="secondary-benefits">Secondary benefits</h4>
-<p>Increasingly we’re going to see that there will be different environments for ML training and inference. We’ve already explored this in our last blog post on <a href="/posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html">TensorFlow.js</a>, but there are also the growing number of so-called “edge devices”, the <a href="https://cloud.google.com/edge-tpu/">Google Edge TPU</a>, the <a href="https://www.movidius.com/">Movidius</a> and the <a href="http://jevois.org/">JeVois</a>, among others.</p>
-<p>The point is, we can’t actually guarantee that when we do testing of our model during training that it will agree exactly with the inference world, because there may be many stages in between.</p>
-<p>This actually came up on a project I was working on last year. We trained a model, and when we deployed it to the cloud, it didn’t work well. We tracked it down to a bug in the GPU code relating to some post-processing of the models output. This error was only found becaues I decided it would be a good idea to test the model on some “real” data, before making it live. In other words, I made up my own canary set and tested the model on that first, before making it live.</p>
-<h4 id="conclusion">Conclusion</h4>
-<p>In summary, the idea is that in any machine learning service, for users, that you build, you could consider adding the facility for the users to be involved in selecting a set of data that is used to evaluate any new versions of the models.</p>
-<p>The benefits are:</p>
-<ul class="normal">
-<li>
-Increasing user engagement and trust,
-</li>
-<li>
-finding new interesting edge-cases where your algorithm fails,
-</li>
-<li>
-and ensuring the quality of inference when you may not be in control of the inference endpoint.
-</li>
-</ul>
-<p>Hope this idea is helpful!</p>
 </div>
 ]]></summary>
 </entry>
