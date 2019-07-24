@@ -1,6 +1,8 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend, (<>))
+{-# LANGUAGE FlexibleContexts  #-}
+
+import           Data.Monoid ((<>), mconcat)
 import           Hakyll
 import           Control.Applicative
 import qualified Data.Set as S
@@ -8,6 +10,9 @@ import qualified Data.Map as M
 import           Text.Pandoc.Options
 import           Control.Monad
 import           Hakyll.Web.Diagrams (pandocCompilerDiagrams)
+--
+-- Only available in Hakyll 4.5.*
+-- import           Hakyll.Web.Feed     (renderAtomWithTemplates)
 --------------------------------------------------------------------------------
 
 pandocMathCompiler =
@@ -206,7 +211,6 @@ main = hakyll $ do
         route idRoute
         compile $ do
             let feedCtx = postCtx <> teaserField "description" "content"
-
             posts <- fmap (take 10) . recentFirst =<<
                 loadAllSnapshots "posts/*" "content"
             renderAtom feedConf feedCtx posts
@@ -247,6 +251,14 @@ feedConf = FeedConfiguration
 --         tags <- f id'
 --         let tagMap' = M.fromList $ zip tags $ repeat [id']
 --         return $ M.unionWith (++) tagMap tagMap'
+
+
+-- customRenderAtom :: FeedConfiguration -> Context String -> [Item String] -> Compiler (Item String)
+-- customRenderAtom config context items = do
+--   atomTemplate     <- unsafeCompiler $ readFile "templates/atom.xml"
+--   atomItemTemplate <- unsafeCompiler $ readFile "templates/atom-item.xml"
+--   renderAtomWithTemplates atomTemplate atomItemTemplate config context items
+
 
 postCtx :: Context String
 postCtx =

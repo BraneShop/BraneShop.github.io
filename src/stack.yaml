@@ -1,12 +1,12 @@
 resolver: lts-8.0
 packages:
-    - .
+  - .
 extra-deps:
-    - git: https://github.com/silky/hakyll-diagrams.git
-      commit: 72936d978f08e638d1d845fc113401095db12bad
+  - git: https://github.com/silky/hakyll-diagrams.git
+    commit: 72936d978f08e638d1d845fc113401095db12bad
+  - git: https://github.com/silky/diagrams-pandoc.git
+    commit: 8bbf3811f9353e119df64f739ccfa5a1e7edfb2a
 
-    - git: https://github.com/silky/diagrams-pandoc.git
-      commit: 8bbf3811f9353e119df64f739ccfa5a1e7edfb2a
 flags: {}
 allow-newer: True
 extra-package-dbs: []
