@@ -1,0 +1,14 @@
+$if(vimeo)$
+<p>Video summary:</p>
+<center>
+  <iframe src="$vimeo$" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <p>Watch on Vimeo - <a href="$vimeo$">$vimeoTitle$</a></p>
+</center>
+$endif$
+
+$if(imageDescription)$
+  <center> <p> <img src="$image$" width="100%" /> 
+  <br /><small>$imageDescription$</small></p> </center>
+$endif$
+
+$body$

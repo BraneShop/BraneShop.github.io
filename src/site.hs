@@ -114,6 +114,7 @@ main = hakyll $ do
         route $ setExtension "html"
         compile $ 
                 pandocMathCompiler
+            >>= loadAndApplyTemplate "templates/post-with-video-and-image.html" (postCtxWithTags tags)
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
             >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)

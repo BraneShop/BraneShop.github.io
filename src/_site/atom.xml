@@ -15,7 +15,17 @@
     <id>https://braneshop.com.au/posts/Aug-2019-Scholarships-Close-On-Sunday.html</id>
     <published>2019-07-24T00:00:00Z</published>
     <updated>2019-07-24T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Ruth and I are very pleased to be offering scholarships for our workshop coming up on the 8th of August. We’ve already accept first-round scholarships (6 people), and so there are some remaining places.</p>
+    <summary type="html"><![CDATA[
+<p>Video summary:</p>
+<center>
+  <iframe src="https://player.vimeo.com/video/349597581" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/349597581">Note on scholarships.</a></p>
+</center>
+
+
+
+
+<p>Ruth and I are very pleased to be offering scholarships for our workshop coming up on the 8th of August. We’ve already accept first-round scholarships (6 people), and so there are some remaining places.</p>
 <p>We’re encouraging applications from anyone that has typically faced barriers in their career/learning in the tech industry. One of our big aims at Braneshop is to increase the representation in the AI industry, and this is one way we’re working towards that goal.</p>
 <p>You can find the application form here: <a href="https://noonvandersilk.typeform.com/to/Tnfm4a">Scholarship for the 6 Week Technical Deep Learning Workshop</a>, and of course more details about the workshop itself here: <a href="/6-week-workshop-on-deep-learning.html">6 Week Workshop</a>.</p>
 <p>We’ve also got a scholarship for the <a href="/ai-for-leadership.html">AI For Leadership Workshop</a>, coming up in September. This is an important one for us as well, as, in order to see change broadly through-out the industry, we will need change in leadership positions.</p>
@@ -28,7 +38,14 @@
     <id>https://braneshop.com.au/posts/Showreel-Online.html</id>
     <published>2019-07-11T00:00:00Z</published>
     <updated>2019-07-11T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>We love staying up to date with the latest deep learning research. I typically catch up daily, via the <a href="https://scirate.com">SciRate</a> website (check if out if you haven’t already!)</p>
+    <summary type="html"><![CDATA[
+
+
+  <center> <p> <img src="/images/showreel/Understanding and Predicting Visual Humour.jpg" width="100%" /> 
+  <br /><small><a href="https://arxiv.org/pdf/1512.04407.pdf">My favourite paper of 2015</a>, and maybe of all time. See the <a href="/showreel.html">showreel</a> page for more!</small></p> </center>
+
+
+<p>We love staying up to date with the latest deep learning research. I typically catch up daily, via the <a href="https://scirate.com">SciRate</a> website (check if out if you haven’t already!)</p>
 <p>Every now and then, a paper really stands out as either cool, interesting, innovative, or useful. When something really appealed to me, I’d typically post it in various places, such as LinkedIn, or slack, or twitter, or just file it away in my head, waiting for the perfect moment to pop up again.</p>
 <p>We also typically include these as part of the workshops, to get people a bit excited about the field.</p>
 <p>Well, now I’ve decided to put that list online: <a href="/showreel.html">Deep learning showreel!</a></p>
@@ -40,7 +57,20 @@
     <id>https://braneshop.com.au/posts/State-of-the-art-attention-models-in-PyText-Part-1.html</id>
     <published>2019-07-03T00:00:00Z</published>
     <updated>2019-07-03T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>I wanted to take some time to discuss a library that seems to have flown under the radar a little bit. It’s called <a href="https://github.com/facebookresearch/pytext">PyText</a>, and we’re going to explore how you can use it to run state of the art attention models!</p>
+    <summary type="html"><![CDATA[
+<p>Video summary:</p>
+<center>
+  <iframe src="https://player.vimeo.com/video/347859684" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/347859684">Braneshop - Attention in PyText - Part 1</a></p>
+</center>
+
+
+
+  <center> <p> <img src="/images/blog/at_1.jpg" width="100%" /> 
+  <br /><small>Attention being computed across a custom-dataset and being dsiplayed in TensorBoard!</small></p> </center>
+
+
+<p>I wanted to take some time to discuss a library that seems to have flown under the radar a little bit. It’s called <a href="https://github.com/facebookresearch/pytext">PyText</a>, and we’re going to explore how you can use it to run state of the art attention models!</p>
 <p>Here’s our plan:</p>
 <ol style="list-style-type: decimal">
 <li>Set a dataset,</li>
@@ -60,7 +90,14 @@
     <id>https://braneshop.com.au/posts/2019-06-28-First-workshop-at-Blue-Rock.html</id>
     <published>2019-06-28T00:00:00Z</published>
     <updated>2019-06-28T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>We’re very grateful to the very nice people at <a
+    <summary type="html"><![CDATA[
+
+
+  <center> <p> <img src="/images/blog/BlueRock.jpg" width="100%" /> 
+  <br /><small>The <a href="https://thebluerock.com.au/" rel="noopener">BlueRock</a> offices.</small></p> </center>
+
+
+<p>We’re very grateful to the very nice people at <a
 href="https://thebluerock.com.au/" rel="noopener">BlueRock</a> (be sure to check out their website!) who have agreed to be our venue hosts for the upcoming <a
 href="/6-week-workshop-on-deep-learning.html">6 week technical deep learning workshop</a>, kicking off on the 8th of August!</p>
 ]]></summary>
@@ -71,7 +108,11 @@ href="/6-week-workshop-on-deep-learning.html">6 week technical deep learning wor
     <id>https://braneshop.com.au/posts/2019-06-21-Deep-learning-quick-start.html</id>
     <published>2019-06-21T00:00:00Z</published>
     <updated>2019-06-21T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>It’s been in vogue for some time now to have a little “quick-start” install on your website. Notable examples are:</p>
+    <summary type="html"><![CDATA[
+
+
+
+<p>It’s been in vogue for some time now to have a little “quick-start” install on your website. Notable examples are:</p>
 <ul class="normal">
 <li>
 The <a href="https://spacy.io/usage" rel="noopener">spaCy</a> website,
@@ -90,7 +131,14 @@ The <a href="https://spacy.io/usage" rel="noopener">spaCy</a> website,
     <id>https://braneshop.com.au/posts/2019-06-09-Ruth-joins-Braneshop-and-Workshop-Launch.html</id>
     <published>2019-06-09T00:00:00Z</published>
     <updated>2019-06-09T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Hello friends!</p>
+    <summary type="html"><![CDATA[
+
+
+  <center> <p> <img src="/images/ruth-whiteboard.jpg" width="100%" /> 
+  <br /><small>Me (Ruth!) teaching neural networks at the <a href="http://womeninai.com.au">Women in AI</a> leadership course in Brisbane, 2019.</small></p> </center>
+
+
+<p>Hello friends!</p>
 <p>This is your first Braneshop blog post from me, and I’m very excited to be writing it to tell you about our first <a href="/6-week-workshop-on-deep-learning.html">6 Week Technical Deep Learning Workshop</a> scheduled to start on the 8th of August, which is <a href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">on sale now!</a></p>
 <p>(Not to mention our first <a href="/ai-for-leadership.html">AI for Leadership</a> workshop which is also on sale now, and our <a href="/deep-learning-workshop.html">Intensive Technical Deep Learning Workshop</a> which we can bring to your organisation — <a href="https://noonvandersilk.typeform.com/to/DYKvWN">get in touch!</a>)</p>
 <p>I recently joined my friend Noon at Braneshop as an instructor, here’s why:</p>
@@ -102,7 +150,11 @@ The <a href="https://spacy.io/usage" rel="noopener">spaCy</a> website,
     <id>https://braneshop.com.au/posts/2019-04-10-Deep-learning-in-the-browser-at-the-web-meetup.html</id>
     <published>2019-04-10T00:00:00Z</published>
     <updated>2019-04-10T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Last night I gave a talk at <a href="https://www.meetup.com/the-web/events/260211393/">The Web Meetup</a> on deep learning in the browser. It was mostly about how to deploy models built TensorFlow to the browser, by way of TensorFlow.js, but we did manage to try a model on the <a href="https://colab.research.google.com/">Google Colaboratory</a>, and deploy it to the browser all in the space of about 5 minutes!</p>
+    <summary type="html"><![CDATA[
+
+
+
+<p>Last night I gave a talk at <a href="https://www.meetup.com/the-web/events/260211393/">The Web Meetup</a> on deep learning in the browser. It was mostly about how to deploy models built TensorFlow to the browser, by way of TensorFlow.js, but we did manage to try a model on the <a href="https://colab.research.google.com/">Google Colaboratory</a>, and deploy it to the browser all in the space of about 5 minutes!</p>
 <p>We also discussed a few of the items that I brought up in my recent post about <a href="/posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html">deploying models via TensorFlow.js</a>.</p>
 <center>
 <img src="/images/blog/wmu-1.jpg" /> <br /> Deep learning in the browser! - Presentation at the April Web Meetup.
@@ -127,7 +179,11 @@ Code - <a href="https://github.com/silky/tfjs-fashion-mnist-classifier" class="u
     <id>https://braneshop.com.au/posts/2019-03-14-HRC-AI-Submission.html</id>
     <published>2019-03-14T00:00:00Z</published>
     <updated>2019-03-14T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>At Braneshop we’re keen to see AI develop positively in our community. The rules and regulation around AI will play a key role in ensuring that the AI that is ultimately built and used ends up creating good community outcomes.</p>
+    <summary type="html"><![CDATA[
+
+
+
+<p>At Braneshop we’re keen to see AI develop positively in our community. The rules and regulation around AI will play a key role in ensuring that the AI that is ultimately built and used ends up creating good community outcomes.</p>
 <p>The Australian Human Rights Commission recently put out a <a href="https://tech.humanrights.gov.au/consultation">call for consultation on AI - Governance and Leadership</a>. The deadline for a submission is the 18th of March at 5pm (so there’s still time if you’re quick!)</p>
 <p>Working with Martin and Sam at <a href="https://www.northraine.com/">Northraine</a> and other interested parties, we prepared a joint submission, which you can read here: <a href="/files/HRC_Submission.pdf">Our HRC Submission</a>.</p>
 ]]></summary>
@@ -138,7 +194,11 @@ Code - <a href="https://github.com/silky/tfjs-fashion-mnist-classifier" class="u
     <id>https://braneshop.com.au/posts/2019-03-06-Mindful-Neural-Networks.html</id>
     <published>2019-03-06T00:00:00Z</published>
     <updated>2019-03-06T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Last night at the <a href="https://www.meetup.com/Melbourne-Creative-AI-Meetup/">Creative AI Meetup</a> we had an awesome conversation around the idea of “Mindful” neural networks.</p>
+    <summary type="html"><![CDATA[
+
+
+
+<p>Last night at the <a href="https://www.meetup.com/Melbourne-Creative-AI-Meetup/">Creative AI Meetup</a> we had an awesome conversation around the idea of “Mindful” neural networks.</p>
 <center>
 <img width="600" src="/images/blog/thich-nhat-tanh.png" /> <br /> <i>Thich Nhat Tanh</i>
 </center>
@@ -155,7 +215,11 @@ Code - <a href="https://github.com/silky/tfjs-fashion-mnist-classifier" class="u
     <id>https://braneshop.com.au/posts/2019-03-01-The-Canary-Set.html</id>
     <published>2019-03-01T00:00:00Z</published>
     <updated>2019-03-01T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Earlier this week I was chatting to some people and we came up with a good idea. It’s what I refer to now as the “Canary Set”.</p>
+    <summary type="html"><![CDATA[
+
+
+
+<p>Earlier this week I was chatting to some people and we came up with a good idea. It’s what I refer to now as the “Canary Set”.</p>
 <p>We’re probably all familiar with the standard “canary in the cage” idea:</p>
 <center>
 <p>
