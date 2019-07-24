@@ -29,7 +29,9 @@ Finally, we'll jump in to a fork of PyText where I've added a few features
 that help out during training.
 
 If you want to follow along, all the code for this post is available
-[here]("").
+[here](https://github.com/Braneshop/pytext).
+
+<!--more-->
 
 #### The Dataset
 

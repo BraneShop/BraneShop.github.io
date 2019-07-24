@@ -14,6 +14,8 @@ upcoming <a
 href="/6-week-workshop-on-deep-learning.html">6 week
 technical deep learning workshop</a>, kicking off on the 8th of August!
 
+<!--more-->
+
 The office is right next to <a
 href="https://www.google.com.au/maps/place/BlueRock/@-37.811281,144.9549693,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad65d4b1f638f5d:0x4a6c97cd2eb48059!8m2!3d-37.811281!4d144.957158"
 rel="noopener">flag staff station</a>, so it's a very convenient location for

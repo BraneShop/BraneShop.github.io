@@ -25,6 +25,8 @@ now!](https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-w
 
 I recently joined my friend Noon at Braneshop as an instructor, here’s why:
 
+<!--more-->
+
 1. I love demystifying science into simple concepts to make it fun and
    accessible to people like you.
 

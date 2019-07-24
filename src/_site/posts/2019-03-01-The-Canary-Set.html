@@ -97,9 +97,7 @@
 
   
 
-  <div class="info">
-    
-  </div>
+  
 
   <p>Earlier this week I was chatting to some people and we came up with a good idea. It’s what I refer to now as the “Canary Set”.</p>
 <p>We’re probably all familiar with the standard “canary in the cage” idea:</p>
@@ -129,6 +127,7 @@ Coming out with a report …
 <br /> <img src="../images/blog/canary-cage-ai-out.png" alt="The canary set coming out with a report!" />
 </center>
 <p>Let’s go into a few details of why we might want this, how it differs from the “test” or “validation” set during the training/evaluation phase of machine learning algorithms, and what benefits we might get from it.</p>
+<!--more-->
 <h4 id="the-canary-set-main-justification">The Canary Set: Main Justification</h4>
 <p>The main point of the canary set is to give <strong>users of your machine learning service</strong> control over a set of data that they want to evaluate your new models against. In this way, it differs significantly from the standard “test” set in that it doesn’t need to contain a well-distributed set of samples, it just needs to contain those samples that the <strong>user</strong> is interested in.</p>
 <p>These might be:</p>

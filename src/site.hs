@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
+import           Data.Monoid (mappend, (<>))
 import           Hakyll
 import           Control.Applicative
 import qualified Data.Set as S
@@ -64,11 +64,11 @@ main = hakyll $ do
                 posts <- recentFirst =<< loadAll pattern
                 tagCloud <- renderTagCloud 90 180 tags
                 let ctx' = constField "title" title
-                          `mappend` listField "posts" postCtx (return posts)
-                          `mappend` constField "class" "compressed"
-                          `mappend` defaultContext
-                          `mappend` constField "tagCloud" tagCloud
-                          `mappend` constField "showreel" "showreel"
+                          <> listField "posts" postCtx (return posts)
+                          <> constField "class" "compressed"
+                          <> defaultContext
+                          <> constField "tagCloud" tagCloud
+                          <> constField "showreel" "showreel"
 
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx'
@@ -95,10 +95,10 @@ main = hakyll $ do
                 posts <- recentFirst =<< loadAll pattern
                 tagCloud <- renderTagCloud 90 180 tags
                 let ctx = constField "title" title
-                          `mappend` listField "posts" postCtx (return posts)
-                          `mappend` constField "class" "compressed"
-                          `mappend` defaultContext
-                          `mappend` constField "tagCloud" tagCloud
+                          <> listField "posts" postCtx (return posts)
+                          <> constField "class" "compressed"
+                          <> defaultContext
+                          <> constField "tagCloud" tagCloud
 
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx
@@ -108,9 +108,9 @@ main = hakyll $ do
 
         route $ setExtension "html"
         compile $ 
-                (pandocMathCompiler)
-            >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
+                pandocMathCompiler
             >>= saveSnapshot "content"
+            >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
             >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)
             >>= relativizeUrls
 
@@ -130,7 +130,7 @@ main = hakyll $ do
         route idRoute
 
         let ctx = listContext "classes"
-                  `mappend` defaultContext
+                  <> defaultContext
 
         compile $ do
             getResourceBody
@@ -148,8 +148,8 @@ main = hakyll $ do
 
             let ctx =
                     listField "posts" (postCtxWithTags tags) (return posts)
-                    `mappend` postCtx
-                    `mappend` bodyField "content"
+                    <> postCtx
+                    <> bodyField "content"
 
             getResourceBody
                 >>= applyAsTemplate ctx
@@ -164,8 +164,8 @@ main = hakyll $ do
             tags  <- buildTags "posts/*" (fromCapture "tags/*.html")
             posts <- recentFirst =<< loadAll "posts/*"
             let ctx =
-                    listField "posts" (postCtxWithTags tags) (return posts) `mappend`
-                    defaultContext
+                    listField "posts" (postCtxWithTags tags) (return posts)
+                    <> defaultContext
 
             getResourceBody
                 >>= applyAsTemplate ctx
@@ -190,8 +190,8 @@ main = hakyll $ do
             tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
             let ctx =
-                    listField "posts" (postCtxWithTags tags) (return posts) `mappend`
-                    defaultContext
+                    listField "posts" (postCtxWithTags tags) (return posts)
+                    <> defaultContext
 
             getResourceBody
                 >>= applyAsTemplate ctx
@@ -205,10 +205,19 @@ main = hakyll $ do
     create ["atom.xml"] $ do
         route idRoute
         compile $ do
-            let feedCtx = postCtx `mappend` bodyField "description"
+            let feedCtx = postCtx <> teaserField "description" "content"
+
             posts <- fmap (take 10) . recentFirst =<<
                 loadAllSnapshots "posts/*" "content"
             renderAtom feedConf feedCtx posts
+
+    create ["rss.xml"] $ do
+        route idRoute
+        compile $ do
+            let feedCtx = postCtx <> teaserField "description" "content"
+            posts <- fmap (take 10) . recentFirst =<<
+                loadAllSnapshots "posts/*" "content"
+            renderRss feedConf feedCtx posts
 
 
 feedConf :: FeedConfiguration
@@ -216,7 +225,7 @@ feedConf = FeedConfiguration
     { feedTitle         = "Braneshop | braneshop.com.au"
     , feedDescription   = "The blog of the Braneshop team."
     , feedAuthorName    = "Braneshop Team"
-    , feedAuthorEmail   = "noonsilk+-braneshop@gmail.com"
+    , feedAuthorEmail   = "hello@braneshop.com.au"
     , feedRoot          = "https://braneshop.com.au"
     }
 
@@ -241,13 +250,15 @@ feedConf = FeedConfiguration
 
 postCtx :: Context String
 postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
-    constField "class" "compressed" `mappend`
-    defaultContext
+    dateField "date" "%B %e, %Y"
+    <> constField "class" "compressed"
+    <> teaserField "teaser" "content"
+    <> defaultContext
 
 
 postCtxWithTags :: Tags -> Context String
-postCtxWithTags tags = tagsField "tags" tags `mappend` postCtx
+postCtxWithTags tags = tagsField "tags" tags
+                       <> postCtx
 
 
 listContextWith :: Context String -> String -> Context a

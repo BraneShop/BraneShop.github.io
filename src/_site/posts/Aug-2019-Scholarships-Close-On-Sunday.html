@@ -103,15 +103,14 @@
 
   
 
-  <div class="info">
-    
-  </div>
+  
 
   <p>Ruth and I are very pleased to be offering scholarships for our workshop coming up on the 8th of August. We’ve already accept first-round scholarships (6 people), and so there are some remaining places.</p>
 <p>We’re encouraging applications from anyone that has typically faced barriers in their career/learning in the tech industry. One of our big aims at Braneshop is to increase the representation in the AI industry, and this is one way we’re working towards that goal.</p>
 <p>You can find the application form here: <a href="https://noonvandersilk.typeform.com/to/Tnfm4a">Scholarship for the 6 Week Technical Deep Learning Workshop</a>, and of course more details about the workshop itself here: <a href="../6-week-workshop-on-deep-learning.html">6 Week Workshop</a>.</p>
 <p>We’ve also got a scholarship for the <a href="../ai-for-leadership.html">AI For Leadership Workshop</a>, coming up in September. This is an important one for us as well, as, in order to see change broadly through-out the industry, we will need change in leadership positions.</p>
-<p>Here at the Braneshop we’re creating a welcoming and supportive community for everyone to be involved in AI.</p>
+<p>Here at the Braneshop we’re creating a welcoming and supportive community for everyone to be involved in AI. We hope you join us!</p>
+<!--more-->
 <h4 id="technical-details-about-the-video">Technical details about the video …</h4>
 <p>I had a lot of fun making the video above. You’ll notice, if you watch it, that my person is cut out, and a new weird background is inserted. I did this using <a href="https://github.com/tensorflow/models/tree/master/research/deeplab">deep-lab</a> from TensorFlow. If you’re feeling adventurous you can try out their demo for yourself, on <a href="https://colab.sandbox.google.com/github/tensorflow/models/blob/master/research/deeplab/deeplab_demo.ipynb">Google Colab</a>.</p>
 <p>With that in hand, I worked out how to extract all the frames of the video as individual images, then ran that network over each of them (there were ~1600 images, but it only took a few minutes on my laptop (which doesn’t have a GPU)). After that, I made the little background animation<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, overlayed the images, and stitched them back together. I did all this using the “<a href="https://ffmpeg.org/">ffmpeg</a>” and <a href="https://imagemagick.org/index.php">ImageMagick</a><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>

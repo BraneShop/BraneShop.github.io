@@ -20,6 +20,8 @@ Working with Martin and Sam at [Northraine](https://www.northraine.com/) and
 other interested parties, we prepared a joint submission, which you
 can read here: [Our HRC Submission](/files/HRC_Submission.pdf).
 
+<!--more-->
+
 One really important message regarding ethics and AI, that I've seen recently,
 comes from the following papers: [The Ethics of AI Ethics -- An Evaluation of
 Guidelines](https://scirate.com/arxiv/1903.03425).

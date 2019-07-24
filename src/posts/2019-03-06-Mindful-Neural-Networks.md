@@ -31,6 +31,8 @@ innovations in the field in the last few weeks. You can find the projects we
 discussed by looking over the slides here: [Creative AI Meetup - March
 2019](https://docs.google.com/presentation/d/167A6XXp9NIOb0tPTls51PveyMgKjGEEpKaeospVr54g/edit).
 
+<!--more-->
+
 Most notable were the variety of "this X does not exist" websites powered by
 [StyleGAN](https://github.com/NVlabs/stylegan):
 

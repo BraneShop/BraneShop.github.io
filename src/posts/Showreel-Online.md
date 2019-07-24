@@ -23,6 +23,8 @@ excited about the field.
 Well, now I've decided to put that list online: <a href="/showreel.html">Deep
 learning showreel!</a>
 
+<!--more-->
+
 Each paper comes with an indicative picture, and a little blurb explaining why
 it's interesting/important or what we like about it. Feel free to take a
 browse only at those pictures that interest you. You can also browse by tag;

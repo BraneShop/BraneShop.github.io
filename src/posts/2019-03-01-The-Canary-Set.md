@@ -46,6 +46,8 @@ Let's go into a few details of why we might want this, how it differs from the
 "test" or "validation" set during the training/evaluation phase of machine
 learning algorithms, and what benefits we might get from it.
 
+<!--more-->
+
 #### The Canary Set: Main Justification
 
 The main point of the canary set is to give **users of your machine learning

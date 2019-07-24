@@ -26,6 +26,8 @@ your best options is <a href="https://colab.research.google.com/">Google
 Colaboratory</a>. The other thing I did was to just collect together the
 information from the TensorFlow and the PyTorch installation pages.
 
+<!--more-->
+
 I actually had a bit of fun because I made it in Elm. You can find it at the
 link at the top, or <a href="https://github.com/Braneshop/quickstart-elm-app"
 rel="noopener">here</a>. It's not the most elegant thing you'll ever see, but

@@ -26,6 +26,7 @@ Deep learning in the browser! - Presentation at the April Web Meetup.
 
 Here are the links to the presentation and the code:
 
+
 <ul class="normal">
 <li> Presentation - [Deep learning in the browser!](https://docs.google.com/presentation/d/1_px6paltT1ZHZPKKTK_o-8KWKppremKcwe-5GY94kos/edit) </li>
 <li> Online Demo - [tfjs fashion mnist classifier](https://silky.github.io/tfjs-fashion-mnist-classifier/index.html)
@@ -34,6 +35,8 @@ Here are the links to the presentation and the code:
 </ul>
 
 Some of the discussion points from the audience were:
+
+<!--more-->
 
 <ul class="normal">
 <li>Q: What are some real-world use-cases of TensorFlow.js? (A: I haven't seen

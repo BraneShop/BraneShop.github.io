@@ -29,8 +29,9 @@ important one for us as well, as, in order to see change broadly through-out
 the industry, we will need change in leadership positions.
 
 Here at the Braneshop we're creating a welcoming and supportive community for
-everyone to be involved in AI.
+everyone to be involved in AI. We hope you join us!
 
+<!--more-->
 
 #### Technical details about the video ...
 
