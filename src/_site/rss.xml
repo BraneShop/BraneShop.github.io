@@ -7,8 +7,26 @@
         <description><![CDATA[The blog of the Braneshop team.]]></description>
         <atom:link href="https://braneshop.com.au/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Wed, 24 Jul 2019 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sat, 03 Aug 2019 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Non-Technical, But Detailed, Explanation of Our Business Card Designs!</title>
+    <link>https://braneshop.com.au/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html</link>
+    <description><![CDATA[
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/blog/business-cards.jpg" width="100%" /> 
+  <br /><small>An assorted collection of our new business cards!</small></p> </center>
+
+
+<p>Our new business cards arrived earlire this week, and since showing them around to a few people and getting some very nice feedback, I thought it might be of interest to talk a bit about how they were made.</p>
+<p>In particular I wanted to aim this discussion at people who are not intimately familiar with making graphics on computers.</p>
+<p>Let’s get into it!</p>
+]]></description>
+    <pubDate>Sat, 03 Aug 2019 00:00:00 UT</pubDate>
+    <guid>https://braneshop.com.au/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html</guid>
+    <dc:creator>Braneshop Team</dc:creator>
+</item>
+<item>
     <title>Scholarships for August Technical Deep Learning Workshop Close on Sunday!</title>
     <link>https://braneshop.com.au/posts/Aug-2019-Scholarships-Close-On-Sunday.html</link>
     <description><![CDATA[
@@ -206,46 +224,6 @@ Code - <a href="https://github.com/silky/tfjs-fashion-mnist-classifier" class="u
 ]]></description>
     <pubDate>Wed, 06 Mar 2019 00:00:00 UT</pubDate>
     <guid>https://braneshop.com.au/posts/2019-03-06-Mindful-Neural-Networks.html</guid>
-    <dc:creator>Braneshop Team</dc:creator>
-</item>
-<item>
-    <title>The Canary Set for Machine Learning Applications</title>
-    <link>https://braneshop.com.au/posts/2019-03-01-The-Canary-Set.html</link>
-    <description><![CDATA[
-
-
-
-<p>Earlier this week I was chatting to some people and we came up with a good idea. It’s what I refer to now as the “Canary Set”.</p>
-<p>We’re probably all familiar with the standard “canary in the cage” idea:</p>
-<center>
-<p>
-The standard canary in a cage.
-</p>
-<img src="/images/blog/canary-cage.png" alt="The standard canary in a cage." />
-</center>
-<p>It’s an item that can be carried with you into your hazardous job, and when it dies, it’s suggestive that the place your working in is unsafe. Poor canary.</p>
-<p>I’d like to propose that this can be a useful idea in machine learning, where instead of a canary, we carry around an “interesting set” of data:</p>
-<center>
-<p>
-A Canary Set of interesting data points.
-</p>
-<img src="/images/blog/canary-cage-data.png" alt="A Canary Set of data" />
-</center>
-<p>This would be called the “Canary Set” of data, and every time a new deployment of your ML model comes out, you run the mdoel across this dataset to see how it performs.</p>
-<center>
-<p>
-Going in …
-</p>
-<br/> <img src="/images/blog/canary-cage-ai.png" alt="The canary set going through the next version of the AI" /> <br /> <br />
-<p>
-Coming out with a report …
-</p>
-<br/> <img src="/images/blog/canary-cage-ai-out.png" alt="The canary set coming out with a report!" />
-</center>
-<p>Let’s go into a few details of why we might want this, how it differs from the “test” or “validation” set during the training/evaluation phase of machine learning algorithms, and what benefits we might get from it.</p>
-]]></description>
-    <pubDate>Fri, 01 Mar 2019 00:00:00 UT</pubDate>
-    <guid>https://braneshop.com.au/posts/2019-03-01-The-Canary-Set.html</guid>
     <dc:creator>Braneshop Team</dc:creator>
 </item>
 
