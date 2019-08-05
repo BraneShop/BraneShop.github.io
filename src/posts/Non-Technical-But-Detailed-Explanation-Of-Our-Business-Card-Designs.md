@@ -54,7 +54,7 @@ The space background you see on the website, and on the cards, was actually
 designed by me, in the programming language
 [Haskell](https://www.haskell.org/).
 
-I was inspired by this image (unfortunately I'm unable to find any details on
+I was _heavily_ inspired by this image (unfortunately I'm unable to find any details on
 the original artist):
 
 <center>
