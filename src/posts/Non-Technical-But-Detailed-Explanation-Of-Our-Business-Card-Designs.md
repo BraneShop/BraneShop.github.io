@@ -245,7 +245,7 @@ functions "cos", "sin", and "tanh"), and made a neat-looking image:
 <img src="/images/blog/cards/by-hand.png" />
 </center>
 
-In order words, we did this:
+In other words, we did this:
 
 <center>
 <img src="/images/blog/cards/hand-coded.png" />
