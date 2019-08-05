@@ -175,5 +175,7 @@ welcome to apply again in the future.  </p>
 
 <p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/Tnfm4a">Apply for the Scholarship</a> </center> </p>
 
-<p>The closing date for the application process is the 28th of July.
-Scholarship decisions will be sent out on the 31st of July.</p>
+<p> Note that the scholarships for the August workshop have closed, and
+your application will be considered for the February workshop. We
+will send out confirmations mid January.
+</p>
