@@ -45,7 +45,7 @@ multicoloured, which is typically blueish. See here:
 
 If I have any regrets, it's that I only did this once, so that although every
 card has a different background, the logo itself is the same. This might
-change in future vresions of the cards.
+change in future versions of the cards.
 
 
 ### The Part With The Details
