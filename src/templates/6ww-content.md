@@ -1,5 +1,5 @@
 <p> <center> 
-<a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get tickets for August intake!</a> </center> </p>
+<a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop-feb">Get tickets for Feb intake!</a> </center> </p>
 
 <p> <em class="tag">A six-week hands-on deep learning workshop for
 those wanting to break into the AI industry.</em> </p>
@@ -117,6 +117,7 @@ quiz</a>.
 
 <h5>Dates and Tickets</h5>
 <div class="events">
+<!--
 	<div class="event">
 		<h5> 6 Week Workshop - August Intake </h5>
     <ul class="normal dates">
@@ -137,7 +138,7 @@ quiz</a>.
     <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">Get Tickets for August intake</a></center></p>
 		</div>
 	</div>
-
+-->
 
 	<div class="event">
 		<h5> 6 Week Workshop - February Intake </h5>
@@ -148,7 +149,7 @@ quiz</a>.
       <li> Week 4 - February 27th, 2019</li>
       <li> Week 5 - March 5th, 2019</li>
       <li> Week 6 - March 12th, 2019</li>
-      <li> <br /><b>Location:</b> Melbourne CBD. </li>
+      <li> <br /><b>Location:</b> Melbourne CBD, TBC. </li>
     </ul>
 		<div>
     <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop-feb">Get Tickets for February intake</a></center></p>
