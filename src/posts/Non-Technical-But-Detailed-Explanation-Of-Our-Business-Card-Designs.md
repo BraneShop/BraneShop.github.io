@@ -8,7 +8,7 @@ preview: Learn the details around how we designed our colourful business cards!
 tags: creative-ai, exploratory
 ---
 
-Our new business cards arrived earlire this week, and since showing them
+Our new business cards arrived earlier this week, and since showing them
 around to a few people and getting some very nice feedback, I thought it might
 be of interest to talk a bit about how they were made.
 
