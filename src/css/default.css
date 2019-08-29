@@ -25,7 +25,7 @@ div.workshops {
 }
 
 div.workshop {
-  width: 45%;
+  width: 24%;
 }
 
 #braneshop-fixed {
@@ -386,12 +386,9 @@ div.testimonial {
 
 div.value {
   display:        flex;
-  background:     lavender;
   border-radius:  10px;
   margin:         20px;
   flex-direction: column;
-  border-bottom:  solid 4px black;
-  border-right:   solid 4px black;
 }
 
 #footer h4 {
@@ -576,6 +573,9 @@ hr {
   width:            60%;
   text-align:       center;
   margin:           0 auto;
+  margin-top:       50px;
+  margin-bottom:    30px;
+
 }
 
 div.events {
@@ -661,10 +661,13 @@ ul.blog-list li {
 
 .btn {
   padding:       10px;
-  border-radius: 5px;
   background:    mediumslateblue;
   color:         white;
   transition:    0.3s;
+  text-decoration: none;
+  border-bottom: solid 4px lightgrey;
+  border-right:  solid 4px lightgrey;
+  border-radius: 10px;
 }
 
 .btn:hover {
@@ -874,4 +877,24 @@ div.detectable-things span {
 h5.s {
   margin-left: 20px;
   font-size: 1.1em;
+}
+
+div.hero-image  {
+  margin-left:  20px;
+  margin-right: 20px;
+}
+
+div.hero-image img {
+  width:         100%;
+  border-radius: 10px;
+}
+
+div.icon img {
+  height: 80px;
+}
+
+div.icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }

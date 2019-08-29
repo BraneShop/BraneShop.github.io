@@ -1,3 +1,7 @@
+<div class="hero-image">
+  <img src="/images/workshop-action-photos/ld_1070278.jpg" />
+</div>
+
 <p> <center> 
 <a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership">Get tickets for 23-Sep!</a> </center> </p>
 
