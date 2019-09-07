@@ -18,7 +18,7 @@
   </li>
   <li> Adoption 
     <ul class="sub-agenda">
-      <li> Roles, responsbilities </li>
+      <li> Roles, responsibilities </li>
       <li> Development approach to research </li>
       <li> Internal teams </li>
       <li> External consultancies </li>
