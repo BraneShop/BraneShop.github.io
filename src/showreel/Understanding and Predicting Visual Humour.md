@@ -7,7 +7,7 @@ tags: funny
 preview: Can a computer make un-funny things funny? Turns out&#58; Yes.
 ---
 
-Easily Noons favourite paper of 2015. In life we face many problems. One of them
+Easily Noon's favourite paper of 2015. In life we face many problems. One of them
 is, given some non-funny situation, how can we make it funny? Naively one
 might think computers can't begin to attemp to solve this problem. One would
 be wrong. Consider the top row of this image. Two people having dinner. Very
