@@ -372,8 +372,22 @@ p.by {
   justify-content: flex-end;
 }
 
+div.testimonial.alt img {
+  border-radius: 20px;
+  position:      relative;
+  left:          10px;
+  top:           -10px;
+  border-bottom: solid 4px white;
+  border-right:  solid 4px white;
+}
+
 div.testimonial img {
-  width: 300px;
+  border-radius: 20px;
+  position:      relative;
+  left:          -10px;
+  top:           -10px;
+  border-bottom: solid 4px white;
+  border-right:  solid 4px white;
 }
 
 div.testimonial {
