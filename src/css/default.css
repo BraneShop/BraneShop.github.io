@@ -935,3 +935,27 @@ table.stats th {
   width:        250px;
   border-right: solid 1px mediumslateblue;
 }
+
+#strike {
+  height:          4000px;
+  display:         flex;
+  justify-content: center;
+  color:           mediumslateblue;
+}
+
+#strike h1 {
+  font-size: 6em;
+  text-align: center;
+  margin: 20px;
+}
+
+#strike h1 small {
+  font-size: 0.7em;
+}
+
+#strike h1 a {
+  display:               flex;
+  justify-content:       center;
+  color:                 peachpuff;
+  text-decoration-color: mediumslateblue;
+}
