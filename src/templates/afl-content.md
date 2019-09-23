@@ -3,8 +3,7 @@
 </div>
 
 <p> <center> 
-<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership">Get tickets for 23-Sep!</a> </center> </p>
-
+<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-november">Get tickets for 25-Nov!</a> </center> </p>
 
 <p> <em class="tag"> Tailored to executives, startup founders, government, and
 leadership teams, looking to understand and adopt AI. </em> </p>
@@ -83,16 +82,8 @@ $partial("templates/afl-agenda.md")$
 <h5>Dates and Tickets</h5>
 <div class="events">
 	<div class="event">
-		<h5> AI For Leadership - September Session </h5>
-		<p>Monday, 23-Sep-2019, 9am-5pm, North Melbourne.
-        </p>
-		<div>
-    <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership">Get Tickets for September</a></center></p>
-		</div>
-	</div>
-	<div class="event">
 		<h5> AI For Leadership - November Session </h5>
-		<p>Monday, 25-Nov-2019, 9am-5pm, Melbourne CBD.
+		<p>Monday, 25-Nov-2019, 9am-5pm, Melbourne, Location TBA.
         </p>
 		<div>
     <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-november">Get Tickets for November</a></center></p>
@@ -100,7 +91,7 @@ $partial("templates/afl-agenda.md")$
 	</div>
 	<div class="event">
 		<h5> AI For Leadership - January Session </h5>
-		<p>Monday, 27-Jan-2020, 9am-5pm, Melbourne CBD.
+		<p>Monday, 27-Jan-2020, 9am-5pm, Melbourne Location TBA.
         </p>
 		<div>
     <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-january">Get Tickets for January, 2020</a></center></p>
@@ -126,6 +117,6 @@ welcome to apply again in the future.  </p>
 
 <p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/qMCtvX">Apply for the Scholarship</a> </center> </p>
 
-<p>The closing date for the application process is the 1st of September.
-Scholarship decisions will be sent out on the 3rd of September.</p>
+<p>The closing date for the application process is the 15th of November.
+Scholarship decisions will be sent out on the 18th of November.</p>
 
