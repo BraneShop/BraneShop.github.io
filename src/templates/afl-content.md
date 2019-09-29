@@ -1,5 +1,5 @@
 <div class="hero-image">
-  <img src="/images/workshop-action-photos/ld_1070278.jpg" />
+  <img src="/images/workshop-action-photos/23-sept-leadership-small.jpg" />
 </div>
 
 <p> <center> 
