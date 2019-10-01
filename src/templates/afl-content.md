@@ -83,7 +83,8 @@ $partial("templates/afl-agenda.md")$
 <div class="events">
 	<div class="event">
 		<h5> AI For Leadership - November Session </h5>
-		<p>Monday, 25-Nov-2019, 9am-5pm, Melbourne, Location TBA.
+		<p>Monday, 25-Nov-2019, 9am-5pm, Melbourne, At 
+    <a href="https://ochouse.com.au">OC House</a>.
         </p>
 		<div>
     <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-november">Get Tickets for November</a></center></p>
