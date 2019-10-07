@@ -267,7 +267,7 @@ If you want the details, then in this picture:
 
 - The first two circles (called "neurons") are the input numbers, the row number and the column numbers
 - The columns of circles are called layers,
-- The lines between the circles are _random_ numbers,
+- The lines between the circles are _random_ numbers (called "weights"),
 - The inner circles are the sum of the values flowing along the lines multiplied by the numbers associated with the lines
 - The function at the top is a final function that is applied to each value on each circle
 - The last function, `sigmoid`, just squishes the values into the range $0$ to $1$
