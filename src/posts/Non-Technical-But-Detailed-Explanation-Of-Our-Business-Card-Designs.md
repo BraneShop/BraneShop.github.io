@@ -54,8 +54,8 @@ The space background you see on the website, and on the cards, was actually
 designed by me, in the programming language
 [Haskell](https://www.haskell.org/).
 
-I was _heavily_ inspired by this image (unfortunately I'm unable to find any details on
-the original artist):
+I was _heavily_ inspired by this image (<s>unfortunately I'm unable to find any details on
+the original artist</s> by [Nelson Gonçalves](https://www.behance.net/gallery/53647339/Illustrations-for-Expansion-Mai-2017), thanks to Nathan of [Our Community](http://ourcommunity.com.au) for finding the source!):
 
 <center>
 <img src="/images/blog/cards/space-entry.png" width="600" />
