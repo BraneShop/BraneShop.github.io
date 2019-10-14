@@ -144,6 +144,11 @@ quiz</a>.
 </div>
 
 <p></p>
+<h5>Testimonials</h5>
+
+$partial("templates/6-week-workshop-testimonials.md")$
+
+<p></p>
 <h5>*Scholarship</h5>
 
 <p> There is a <a target="_blank"

@@ -101,6 +101,11 @@ $partial("templates/afl-agenda.md")$
 </div>
 
 <p></p>
+<h5>Testimonials</h5>
+
+$partial("templates/leadership-testimonials.md")$
+
+<p></p>
 <h5>*Scholarship</h5>
 
 <p> There is a <a target="_blank"

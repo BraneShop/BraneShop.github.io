@@ -229,7 +229,7 @@ td.value ul li a {
 }
 
 p, li {
-	line-height: 1.5em;
+	 line-height: 1.5em;
 }
 
 pre {
@@ -273,7 +273,7 @@ h5 {
   font-family: 'DM Serif Text', serif;
   font-weight: normal;
   font-size:   1.3em;
-  margin:      0;
+  margin:      20px;
   padding:     0;
 }
 
@@ -396,6 +396,12 @@ div.testimonial {
   border-radius:  10px;
   margin:         20px;
   flex-direction: row;
+  font-family:    "Karma";
+}
+
+div.testimonial img.logo {
+  border-radius: 0 !important;
+  border:        0 !important;
 }
 
 div.value {
@@ -936,3 +942,13 @@ table.stats th {
   border-right: solid 1px mediumslateblue;
 }
 
+div.cols {
+  display:         flex;
+  flex-direction:  row;
+  flex-wrap:       wrap;
+  justify-content: space-around;
+}
+
+div.cols div.c {
+  width: 400px;
+}
