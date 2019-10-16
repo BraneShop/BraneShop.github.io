@@ -1,5 +1,5 @@
 ---
-title: Introduction to Explainable AI - Event - 6th of Nov, 2019
+title: Introduction to Explainable AI - 6th of Nov, 2019
 author: Noon van der Silk
 image: /images/blog/xai-event.webp
 imageDescription: Join us for an evening of Explainable AI!
