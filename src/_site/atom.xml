@@ -8,8 +8,31 @@
         <name>Braneshop Team</name>
         <email>hello@braneshop.com.au</email>
     </author>
-    <updated>2019-08-03T00:00:00Z</updated>
+    <updated>2019-10-17T00:00:00Z</updated>
     <entry>
+    <title>Introduction to Explainable AI - Event - 6th of Nov, 2019</title>
+    <link href="https://braneshop.com.au/posts/Introduction-To-Explainable-AI-Event.html" />
+    <id>https://braneshop.com.au/posts/Introduction-To-Explainable-AI-Event.html</id>
+    <published>2019-10-17T00:00:00Z</published>
+    <updated>2019-10-17T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/blog/xai-event.webp" width="100%" /> 
+  <br /><small>Join us for an evening of Explainable AI!</small></p> </center>
+
+
+<p>From talking to people in various industries, we know that there is significant interested in “exaplainble” AI models. The reason is natural: When we deploy these decision-making tools, we need to understand <em>why</em> they make decisions; as this helps us learn if they are doing the “right” thing. And furthermore, it let’s us improve or adjust our processes.</p>
+<p>As such, we’ve organised an event to explore the landscape of Explainable AI. In particular, we will:</p>
+<ul>
+<li>Look at what’s available,</li>
+<li>Work out what is involved in applying it,</li>
+<li>and, Learn where the field is heading!</li>
+</ul>
+<p>We’re bringing together a few people in Melbourne who are doing interesting work in this area.</p>
+]]></summary>
+</entry>
+<entry>
     <title>Non-Technical, But Detailed, Explanation of Our Business Card Designs!</title>
     <link href="https://braneshop.com.au/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html" />
     <id>https://braneshop.com.au/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html</id>
@@ -19,7 +42,6 @@
 
 
   <center> <p> <img src="https://braneshop.com.au/images/blog/business-cards.jpg" width="100%" /> 
-  <!-- <center> <p> <img src="/images/blog/business-cards.jpg" width="100%" /> --> 
   <br /><small>An assorted collection of our new business cards!</small></p> </center>
 
 
@@ -61,7 +83,6 @@
 
 
   <center> <p> <img src="https://braneshop.com.au/images/showreel/Understanding and Predicting Visual Humour.jpg" width="100%" /> 
-  <!-- <center> <p> <img src="/images/showreel/Understanding and Predicting Visual Humour.jpg" width="100%" /> --> 
   <br /><small><a href="https://arxiv.org/pdf/1512.04407.pdf">My favourite paper of 2015</a>, and maybe of all time. See the <a href="/showreel.html">showreel</a> page for more!</small></p> </center>
 
 
@@ -87,7 +108,6 @@
 
 
   <center> <p> <img src="https://braneshop.com.au/images/blog/at_1.jpg" width="100%" /> 
-  <!-- <center> <p> <img src="/images/blog/at_1.jpg" width="100%" /> --> 
   <br /><small>Attention being computed across a custom-dataset and being dsiplayed in TensorBoard!</small></p> </center>
 
 
@@ -115,7 +135,6 @@
 
 
   <center> <p> <img src="https://braneshop.com.au/images/blog/BlueRock.jpg" width="100%" /> 
-  <!-- <center> <p> <img src="/images/blog/BlueRock.jpg" width="100%" /> --> 
   <br /><small>The <a href="https://thebluerock.com.au/" rel="noopener">BlueRock</a> offices.</small></p> </center>
 
 
@@ -157,7 +176,6 @@ The <a href="https://spacy.io/usage" rel="noopener">spaCy</a> website,
 
 
   <center> <p> <img src="https://braneshop.com.au/images/ruth-whiteboard.jpg" width="100%" /> 
-  <!-- <center> <p> <img src="/images/ruth-whiteboard.jpg" width="100%" /> --> 
   <br /><small>Me (Ruth!) teaching neural networks at the <a href="http://womeninai.com.au">Women in AI</a> leadership course in Brisbane, 2019.</small></p> </center>
 
 
@@ -209,27 +227,6 @@ Code - <a href="https://github.com/silky/tfjs-fashion-mnist-classifier" class="u
 <p>At Braneshop we’re keen to see AI develop positively in our community. The rules and regulation around AI will play a key role in ensuring that the AI that is ultimately built and used ends up creating good community outcomes.</p>
 <p>The Australian Human Rights Commission recently put out a <a href="https://tech.humanrights.gov.au/consultation">call for consultation on AI - Governance and Leadership</a>. The deadline for a submission is the 18th of March at 5pm (so there’s still time if you’re quick!)</p>
 <p>Working with Martin and Sam at <a href="https://www.northraine.com/">Northraine</a> and other interested parties, we prepared a joint submission, which you can read here: <a href="/files/HRC_Submission.pdf">Our HRC Submission</a>.</p>
-]]></summary>
-</entry>
-<entry>
-    <title>Mindful Neural Networks</title>
-    <link href="https://braneshop.com.au/posts/2019-03-06-Mindful-Neural-Networks.html" />
-    <id>https://braneshop.com.au/posts/2019-03-06-Mindful-Neural-Networks.html</id>
-    <published>2019-03-06T00:00:00Z</published>
-    <updated>2019-03-06T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-
-
-
-<p>Last night at the <a href="https://www.meetup.com/Melbourne-Creative-AI-Meetup/">Creative AI Meetup</a> we had an awesome conversation around the idea of “Mindful” neural networks.</p>
-<center>
-<img width="600" src="/images/blog/thich-nhat-tanh.png" /> <br /> <i>Thich Nhat Tanh</i>
-</center>
-<p>We were hosted by our friends at <a href="https://sheda.ltd">Sheda</a> over the <a href="https://neighbourhood.work">Neighbourhood.work</a> in Fitzroy, and we had a really nice group of people with varied and interesting backgrounds show up:</p>
-<center>
-<a href="/images/blog/creative-ai-march-2019.jpg"><img width="600" src="/images/blog/creative-ai-march-2019.jpg" /></a> <br /> <i>The Mindful Neural Network Group. Photo courtesy of Eike!</i>
-</center>
-<p>We did the usual Creative-AI opening where we review a bunch of recent innovations in the field in the last few weeks. You can find the projects we discussed by looking over the slides here: <a href="https://docs.google.com/presentation/d/167A6XXp9NIOb0tPTls51PveyMgKjGEEpKaeospVr54g/edit">Creative AI Meetup - March 2019</a>.</p>
 ]]></summary>
 </entry>
 
