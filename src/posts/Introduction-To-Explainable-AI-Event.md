@@ -8,6 +8,11 @@ date: 2019-10-17
 tags: event, announcement
 ---
 
+<center><i>
+[Join us on the 6th of November for an Introduction to Explainable AI - Opening the black
+box!](https://events.humanitix.com.au/making-the-black-box-of-ai-transparent-with-explainable-ai-xai)
+</i></center>
+
 From talking to people across different businesses for the last few months, we
 know that there is significant interest in "exaplainble" AI models. The reason
 is natural: When we deploy these decision-making tools, we need to understand
