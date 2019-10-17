@@ -3,14 +3,17 @@ title: Braneshop &mdash; "A Living Business" - Part 1 of 2
 author: Noon van der Silk
 image: /images/blog/living-business/braneshop-inspo.png
 imageDescription: Inspirations for a different way of thinking about the Braneshop business.
-date: 2019-10-16
+date: 2019-10-17
 preview: Some thoughts on the organisation of Braneshop (part 1 of 2).
 tags: thoughts, living-business
 ---
 
 <ul class="normal">
 <li>[Part 1 of 2 - Inspiration](/posts/Braneshop-A-Living-Business-Part-1.html) (this page)</li>
+<li>(Coming tomorrow!) Part 2 of 2 - The Idea: A Living Business</li>
+<!--
 <li>[Part 2 of 2 - The Idea: A Living Business](/posts/Braneshop-A-Living-Business-Part-2.html)</li>
+-->
 </ul>
 
 As the year draws to a close, and Braneshop is almost a year old (woo!) we
@@ -241,6 +244,7 @@ And, ultimately:
 
 **How will these ideas and values help us make decisions day-to-day?**
 
+<!--
 <i>[Read the follow-up here &mdash; The Idea: A Living
 Business](/posts/Braneshop-A-Living-Business-Part-2.html)</i>
-
+-->
