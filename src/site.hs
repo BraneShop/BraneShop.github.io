@@ -71,7 +71,7 @@ main = hakyll $ do
                 let ctx' = constField "title" title
                           <> listField "posts" postCtx (return posts)
                           <> constField "class" "compressed"
-                          <> defaultContext
+                          <> defaultContext'
                           <> constField "tagCloud" tagCloud
                           <> constField "showreel" "showreel"
 
@@ -102,7 +102,7 @@ main = hakyll $ do
                 let ctx = constField "title" title
                           <> listField "posts" postCtx (return posts)
                           <> constField "class" "compressed"
-                          <> defaultContext
+                          <> defaultContext'
                           <> constField "tagCloud" tagCloud
 
                 makeItem ""
@@ -136,7 +136,7 @@ main = hakyll $ do
         route idRoute
 
         let ctx = listContext "classes"
-                  <> defaultContext
+                  <> defaultContext'
 
         compile $ do
             getResourceBody
@@ -171,7 +171,7 @@ main = hakyll $ do
             posts <- recentFirst =<< loadAll "posts/*"
             let ctx =
                     listField "posts" (postCtxWithTags tags) (return posts)
-                    <> defaultContext
+                    <> defaultContext'
 
             getResourceBody
                 >>= applyAsTemplate ctx
@@ -183,8 +183,8 @@ main = hakyll $ do
         route idRoute
         compile $ do
             getResourceBody
-                >>= applyAsTemplate defaultContext
-                >>= loadAndApplyTemplate "templates/branded.html" defaultContext
+                >>= applyAsTemplate defaultContext'
+                >>= loadAndApplyTemplate "templates/branded.html" defaultContext'
                 >>= relativizeUrls
 
 
@@ -197,11 +197,11 @@ main = hakyll $ do
 
             let ctx =
                     listField "posts" (postCtxWithTags tags) (return posts)
-                    <> defaultContext
+                    <> defaultContext'
 
             getResourceBody
                 >>= applyAsTemplate ctx
-                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext'
                 >>= relativizeUrls
 
 
@@ -266,7 +266,14 @@ postCtx =
     dateField "date" "%B %e, %Y"
     <> constField "class" "compressed"
     <> teaserField "teaser" "content"
-    <> defaultContext
+    <> defaultContext'
+
+
+defaultContext' :: Context String
+defaultContext' = 
+  constField "rootUrl" "https://braneshop.com.au"
+  <> defaultContext
+
 
 
 postCtxWithTags :: Tags -> Context String
@@ -283,5 +290,5 @@ listContextWith ctx s = listField s ctx $ do
 
 
 listContext :: String -> Context a
-listContext = listContextWith defaultContext
+listContext = listContextWith defaultContext'
 
