@@ -62,10 +62,7 @@ at all costs, but rather incremental adaptations based on diagnosis (see item
 
 A necessary part of adaptation is the willingness to change approaches; drop
 old ideas, identify mistakes and adjust course. All of this comes about via
-the process of diagnosis.[^1]
-
-[^1]: Thanks to [Charlie](https://pluckyfrank.com/) for a conversation that lead
-to the inclusion of this note.
+the process of diagnosis.
 
 
 3. **Local focus over big goals**
@@ -127,21 +124,6 @@ need to listen to everyone and adapt based on feedback.
 We work on building empathy and understanding with the groups we work with and
 interact with.
 
-<!--
-
-Reference: https://www.goodreads.com/book/show/29214420-doughnut-economics
-
-OLD
-
-This is straight out of The Value of Everything, and is a growing movement
-world-wide.
-
-
-Some examples of this are the idea of pushing more ethics and empathy into AI,
-thinking about, and offsetting, the environmental impact of the
-computation required for machine learning, and generally engaging with
-those communities whom our work impacts.
--->
 
 ### Conclusion ... ?
 
