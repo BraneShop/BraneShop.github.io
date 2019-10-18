@@ -7,8 +7,35 @@
         <description><![CDATA[The blog of the Braneshop team.]]></description>
         <atom:link href="https://braneshop.com.au/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Thu, 17 Oct 2019 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Fri, 18 Oct 2019 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Braneshop &mdash; "A Living Business" - Part 2 of 3</title>
+    <link>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-2.html</link>
+    <description><![CDATA[
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/blog/living-business/business-approach.png" width="100%" /> 
+  <br /><small>A summary of the key aspects of the Braneshop business.</small></p> </center>
+
+
+<ul class="normal">
+<li>
+<a href="/posts/Braneshop-A-Living-Business-Part-1.html">Part 1 of 3 - Inspiration</a>
+</li>
+<li>
+<a href="/posts/Braneshop-A-Living-Business-Part-2.html">Part 2 of 3 - The Idea: A Living Business</a> (this page)
+</li>
+<li>
+(Coming soon!) Part 3 of 3 - Patterns for Braneshop
+</li>
+</ul>
+<p>This post is inspired by the ideas laid out in <a href="/posts/Braneshop-A-Living-Business-Part-1">first post in this series</a>.</p>
+]]></description>
+    <pubDate>Fri, 18 Oct 2019 00:00:00 UT</pubDate>
+    <guid>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-2.html</guid>
+    <dc:creator>Braneshop Team</dc:creator>
+</item>
+<item>
     <title>Introduction to Explainable AI - 6th of Nov, 2019</title>
     <link>https://braneshop.com.au/posts/Introduction-To-Explainable-AI-Event.html</link>
     <description><![CDATA[
@@ -37,7 +64,7 @@
     <dc:creator>Braneshop Team</dc:creator>
 </item>
 <item>
-    <title>Braneshop &mdash; "A Living Business" - Part 1 of 2</title>
+    <title>Braneshop &mdash; "A Living Business" - Part 1 of 3</title>
     <link>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-1.html</link>
     <description><![CDATA[
 
@@ -48,14 +75,14 @@
 
 <ul class="normal">
 <li>
-<a href="/posts/Braneshop-A-Living-Business-Part-1.html">Part 1 of 2 - Inspiration</a> (this page)
+<a href="/posts/Braneshop-A-Living-Business-Part-1.html">Part 1 of 3 - Inspiration</a> (this page)
 </li>
 <li>
-(Coming tomorrow!) Part 2 of 2 - The Idea: A Living Business
+<a href="/posts/Braneshop-A-Living-Business-Part-2.html">Part 2 of 3 - The Idea: A Living Business</a>
 </li>
-<!--
-<li>[Part 2 of 2 - The Idea: A Living Business](/posts/Braneshop-A-Living-Business-Part-2.html)</li>
--->
+<li>
+(Coming soon!) Part 3 of 3 - Patterns for Braneshop
+</li>
 </ul>
 <p>As the year draws to a close, and Braneshop is almost a year old (woo!) we have been thinking a lot about our business goals. As such, I (Noon) have been having some discussions with different people and businesses about how Braneshop could align and/or collaborate with their businesses, naturally this has lead into a lot of conversations about where Braneshop is “heading”.</p>
 <p>The question is this: What kind of business is Braneshop? How do I see it changing over the years? What are our aims?</p>
@@ -218,35 +245,6 @@ The <a href="https://spacy.io/usage" rel="noopener">spaCy</a> website,
 ]]></description>
     <pubDate>Sun, 09 Jun 2019 00:00:00 UT</pubDate>
     <guid>https://braneshop.com.au/posts/2019-06-09-Ruth-joins-Braneshop-and-Workshop-Launch.html</guid>
-    <dc:creator>Braneshop Team</dc:creator>
-</item>
-<item>
-    <title>Deep learning in the browser!</title>
-    <link>https://braneshop.com.au/posts/2019-04-10-Deep-learning-in-the-browser-at-the-web-meetup.html</link>
-    <description><![CDATA[
-
-
-
-<p>Last night I gave a talk at <a href="https://www.meetup.com/the-web/events/260211393/">The Web Meetup</a> on deep learning in the browser. It was mostly about how to deploy models built TensorFlow to the browser, by way of TensorFlow.js, but we did manage to try a model on the <a href="https://colab.research.google.com/">Google Colaboratory</a>, and deploy it to the browser all in the space of about 5 minutes!</p>
-<p>We also discussed a few of the items that I brought up in my recent post about <a href="/posts/2019-02-08-TensorFlowJS-How-to-easily-deploy-deep-learning-models.html">deploying models via TensorFlow.js</a>.</p>
-<center>
-<img src="/images/blog/wmu-1.jpg" /> <br /> Deep learning in the browser! - Presentation at the April Web Meetup.
-</center>
-<p>Here are the links to the presentation and the code:</p>
-<ul class="normal">
-<li>
-Presentation - <a href="https://docs.google.com/presentation/d/1_px6paltT1ZHZPKKTK_o-8KWKppremKcwe-5GY94kos/edit">Deep learning in the browser!</a>
-</li>
-<li>
-Online Demo - <a href="https://silky.github.io/tfjs-fashion-mnist-classifier/index.html">tfjs fashion mnist classifier</a>
-<li>
-Code - <a href="https://github.com/silky/tfjs-fashion-mnist-classifier" class="uri">https://github.com/silky/tfjs-fashion-mnist-classifier</a>
-</li>
-</ul>
-<p>Some of the discussion points from the audience were:</p>
-]]></description>
-    <pubDate>Wed, 10 Apr 2019 00:00:00 UT</pubDate>
-    <guid>https://braneshop.com.au/posts/2019-04-10-Deep-learning-in-the-browser-at-the-web-meetup.html</guid>
     <dc:creator>Braneshop Team</dc:creator>
 </item>
 
