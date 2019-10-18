@@ -30,10 +30,11 @@ For Braneshop that means acknowledging the present work. Enjoying the current
 workshop, the current group of people we’re working with, the current
 projects, the current activity.
 
-We aim to have a present-mindset over a growth-mindset, as such, when we think
-about the future we aspire to work on projects we enjoy with people we enjoy
-spending time with. This is a shift from the business status-quo of outlining
-growth in terms of the people employed or the revenue earned. 
+We aim to have a present-mindset over a grow-the-business-mindset, as such,
+when we think about the future we aspire to work on projects we enjoy with
+people we enjoy spending time with. This is a shift from the business
+status-quo of outlining growth in terms of the people employed or the
+revenue earned. 
 
 We focus our efforts on doing business without compromising our value of the
 present moment &mdash; No short term compromises for long term gain.
