@@ -1,7 +1,7 @@
 ---
 title: Braneshop &mdash; "A Living Business" - Part 2 of 3
 author: Noon van der Silk
-image: /images/blog/living-business/business-approach.png
+image: /images/blog/living-business/living-business.png
 imageDescription: A summary of the key aspects of the Braneshop business.
 date: 2019-10-18
 preview: Continued thoughts on the organisation of Braneshop (part 2 of 3).
