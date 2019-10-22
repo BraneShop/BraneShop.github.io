@@ -1,21 +1,21 @@
 ---
-title: Braneshop &mdash; "A Living Business" - Part 2 of 3
+title: Braneshop &mdash; "A Living Business" - Part 3 of 3
 author: Noon van der Silk
-image: /images/blog/living-business/business-approach.png
-imageDescription: A summary of the key aspects of the Braneshop business.
-date: 2019-10-18
-preview: Continued thoughts on the organisation of Braneshop (part 2 of 3).
+image: /images/blog/living-business/patterns.png
+imageDescription: <i>Patterns</i> of the Braneshop.
+date: 2019-10-20
+preview: Continued thoughts on the organisation of Braneshop (part 3 of 3).
 tags: thoughts, living-business
 ---
 
 <ul class="normal">
 <li>[Part 1 of 3 - Inspiration](/posts/Braneshop-A-Living-Business-Part-1.html)</li>
 <li>[Part 2 of 3 - The Idea: A Living Business](/posts/Braneshop-A-Living-Business-Part-2.html) (this page)</li>
-<li>(Coming soon!) Part 3 of 3 - Patterns for Braneshop</li>
-<!--
 <li>[Part 3 of 3 - Patterns for Braneshop](/posts/Braneshop-A-Living-Business-Part-2.html) (this page)</li>
--->
 </ul>
+
+In the final installment of this series, we look at a few of the "patterns"
+that will help us understand where we're at as a business.
 
 <!--more-->
 
@@ -57,6 +57,10 @@ helpful for me in thinking about various aspects of Braneshop.
 - Happiness of attendees
 - Do something new
 - Support of people
+- Voice for everyone
+
+**People**
+
 - Voice for everyone
 </div>
 <div class="c">
