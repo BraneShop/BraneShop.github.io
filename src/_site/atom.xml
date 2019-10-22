@@ -8,8 +8,31 @@
         <name>Braneshop Team</name>
         <email>hello@braneshop.com.au</email>
     </author>
-    <updated>2019-10-18T00:00:00Z</updated>
+    <updated>2019-10-23T00:00:00Z</updated>
     <entry>
+    <title>Introducing the CPPN Playground!</title>
+    <link href="https://braneshop.com.au/posts/CPPN-Playground.html" />
+    <id>https://braneshop.com.au/posts/CPPN-Playground.html</id>
+    <published>2019-10-23T00:00:00Z</published>
+    <updated>2019-10-23T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/blog/cppn-playground.jpg" width="100%" /> 
+  <br /><small>The main interface of the CPPN playground; reproducing a cool rendering of a black hole.</small></p> </center>
+
+
+<p>As we saw in the <a href="/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html">business card blog post</a> we love “CPPNs” here.</p>
+<p>We wanted to share the fun, so I made a little JavaScript app where you can play around with them. You can access it here: <a href="https://silky.github.io/cppn-playground/">CPPN Playground</a>.</p>
+<p>There’s a few main things you can do:</p>
+<ol style="list-style-type: decimal">
+<li>Look at the cool pictures! And adjust the network to get more.</li>
+<li>Train the network to reproduce a specific picture.</li>
+<li>Download a big (1000x1000) version of the image!</li>
+</ol>
+]]></summary>
+</entry>
+<entry>
     <title>Braneshop &mdash; "A Living Business" - Part 2 of 3</title>
     <link href="https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-2.html" />
     <id>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-2.html</id>
@@ -227,25 +250,6 @@ The <a href="https://spacy.io/usage" rel="noopener">spaCy</a> website,
 </ul>
 <p>My friend Hayden suggested that it might be nice to have a slightly higher-level one, so I made it: <a href="/quickstart.html">Braneshop deep learning quick start</a>, and you can find a link to it at the bottom of the page.</p>
 <p>The main thing I wanted to get across, for whatever it’s worth, is that one of your best options is <a href="https://colab.research.google.com/">Google Colaboratory</a>. The other thing I did was to just collect together the information from the TensorFlow and the PyTorch installation pages.</p>
-]]></summary>
-</entry>
-<entry>
-    <title>Ruth joins Braneshop, and new workshop launch!</title>
-    <link href="https://braneshop.com.au/posts/2019-06-09-Ruth-joins-Braneshop-and-Workshop-Launch.html" />
-    <id>https://braneshop.com.au/posts/2019-06-09-Ruth-joins-Braneshop-and-Workshop-Launch.html</id>
-    <published>2019-06-09T00:00:00Z</published>
-    <updated>2019-06-09T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/ruth-whiteboard.jpg" width="100%" /> 
-  <br /><small>Me (Ruth!) teaching neural networks at the <a href="http://womeninai.com.au">Women in AI</a> leadership course in Brisbane, 2019.</small></p> </center>
-
-
-<p>Hello friends!</p>
-<p>This is your first Braneshop blog post from me, and I’m very excited to be writing it to tell you about our first <a href="/6-week-workshop-on-deep-learning.html">6 Week Technical Deep Learning Workshop</a> scheduled to start on the 8th of August, which is <a href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop">on sale now!</a></p>
-<p>(Not to mention our first <a href="/ai-for-leadership.html">AI for Leadership</a> workshop which is also on sale now, and our <a href="/deep-learning-workshop.html">Intensive Technical Deep Learning Workshop</a> which we can bring to your organisation — <a href="https://noonvandersilk.typeform.com/to/DYKvWN">get in touch!</a>)</p>
-<p>I recently joined my friend Noon at Braneshop as an instructor, here’s why:</p>
 ]]></summary>
 </entry>
 

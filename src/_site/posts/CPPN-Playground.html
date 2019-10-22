@@ -16,7 +16,7 @@
     }
   </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Posts tagged "event" - Braneshop</title>
+  <title>Introducing the CPPN Playground! - Braneshop</title>
   <meta name="geo.region" content="AU-VIC" />
   <meta name="geo.placename" content="Melbourne" />
   <link rel="stylesheet" type="text/css" href="../css/default.css" />
@@ -50,9 +50,12 @@
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
   <!-- Meta tags for little cards and such. -->
-  <meta property="og:title" content="Posts tagged " event" - Braneshop" />
+  <meta property="og:title" content="Introducing the CPPN Playground! - Braneshop" />
   
-  <meta property="og:url" content="https://braneshop.com.au/tags/event.html" />
+  <meta property="og:image" content="https://braneshop.com.au/images/blog/cppn-playground.jpg" />
+  <meta property="og:description" content="The main interface of the CPPN playground; reproducing a cool rendering of a black hole." />
+  
+  <meta property="og:url" content="https://braneshop.com.au/posts/CPPN-Playground.html" />
 
 
 
@@ -93,47 +96,51 @@
 
   <!-- Content -->
   <div id="content">
-    ---
-class: compressed
----
-
-<div class="section">
-  <h3>🌅 Posts tagged "event"
-  </h3>
-  <ul class="blog-list normal">
-
-
-  
+    <div class="section">
+  <div class="info">
+    Posted on October 23, 2019
     
-    <li> 
-      <div class="blog-card">
-        <h5> <a href="../posts/Introduction-To-Explainable-AI-Event.html">Introduction to Explainable AI - 6th of Nov, 2019</a> &mdash; October 17, 2019 </h5>
-
-        
-          <span class="tags">Tags: event, announcement</span>
-        
-
-        <div class="content">
-          <a href="../posts/Introduction-To-Explainable-AI-Event.html"><img src="../images/blog/xai-event.webp" width="200" /></a>
-          <p> Interested in AI models you can interpret? Come and join us to find out how!
-          </p>
-        </div>
-      </li>
+      by Noon van der Silk
     
-  
-
-
-</ul>
-
-
-  <hr />
-
-  <p>All tags:</p>
-  <div class="tagCloud">
-    <a style="font-size: 170%" href="../tags/announcement.html">announcement</a> <a style="font-size: 100%" href="../tags/creative-ai.html">creative-ai</a> <a style="font-size: 100%" href="../tags/deep-dive.html">deep-dive</a> <a style="font-size: 90%" href="../tags/ethics.html">ethics</a> <a style="font-size: 90%" href="../tags/event.html">event</a> <a style="font-size: 90%" href="../tags/exploratory.html">exploratory</a> <a style="font-size: 100%" href="../tags/living-business.html">living-business</a> <a style="font-size: 90%" href="../tags/pytext.html">pytext</a> <a style="font-size: 90%" href="../tags/talk.html">talk</a> <a style="font-size: 100%" href="../tags/tensorflowjs.html">tensorflowjs</a> <a style="font-size: 100%" href="../tags/thoughts.html">thoughts</a> <a style="font-size: 90%" href="../tags/tool.html">tool</a> <a style="font-size: 100%" href="../tags/tools.html">tools</a>
+		| <a title="Blog: Recent posts" href="../blog.html">Back to recent posts</a>
   </div>
-</div>
 
+  <h4 class="blog-title">Introducing the CPPN Playground!</h4>
+
+  
+    <span class="tags">Tags: <a href="../tags/announcement.html">announcement</a>, <a href="../tags/tool.html">tool</a></span>
+  
+
+
+  
+
+  
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/blog/cppn-playground.jpg" width="100%" /> 
+  <br /><small>The main interface of the CPPN playground; reproducing a cool rendering of a black hole.</small></p> </center>
+
+
+<p>As we saw in the <a href="../posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html">business card blog post</a> we love “CPPNs” here.</p>
+<p>We wanted to share the fun, so I made a little JavaScript app where you can play around with them. You can access it here: <a href="https://silky.github.io/cppn-playground/">CPPN Playground</a>.</p>
+<p>There’s a few main things you can do:</p>
+<ol style="list-style-type: decimal">
+<li>Look at the cool pictures! And adjust the network to get more.</li>
+<li>Train the network to reproduce a specific picture.</li>
+<li>Download a big (1000x1000) version of the image!</li>
+</ol>
+<!--more-->
+<p>Here’s a big version of the black hole image:</p>
+<center>
+<img src="../images/blog/black-hole-big.jpg" />
+</center>
+<p>The way it works is almost exactly as laid out in the business card post. The reason we’re able to <i>reproduce</i> images is that we use the machinery of deep learning to ask the network to <i>match</i> a given image.</p>
+<p>Over time I’ll add a better explanation to the page, but for now I just wanted to get it out there so people can have a go and give some feedback!</p>
+<p>It’s also <a href="https://github.com/silky/cppn-playground/tree/master">open-source</a>, built using <a href="https://www.tensorflow.org/js">TensorFlow.js</a> and <a href="https://elm-lang.org/">Elm</a>, so feel free to clone it and hack around. There’s plenty more features to add! (I’ve put a list at the bottom of the readme).</p>
+<p>Hope you enjoy it!</p>
+<p>Reach out if you have any questions/comments/suggestions!</p>
+
+</div>
 
   </div>
 
