@@ -968,3 +968,15 @@ table.blog-split td, table.blog-split th {
   width:     50%;
   padding:   10px;
 }
+
+div.next-posts {
+  display:         flex;
+  flex-direction:  column;
+  justify-content: flex-end;
+  align-items:     flex-end;
+}
+
+
+div.next-posts a {
+  padding: 5px;
+}

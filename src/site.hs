@@ -2,6 +2,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE FlexibleContexts  #-}
 
+import           Data.List (isPrefixOf, tails, findIndex, intercalate, sortBy)
+import           Data.Maybe (fromMaybe)
+import           Control.Applicative (Alternative (..))
 import           Data.Monoid ((<>), mconcat)
 import           Hakyll
 import           Control.Applicative
@@ -10,10 +13,18 @@ import qualified Data.Map as M
 import           Text.Pandoc.Options
 import           Control.Monad
 import           Hakyll.Web.Diagrams (pandocCompilerDiagrams)
+import           Data.Time.Clock (UTCTime)
+import           System.FilePath (takeFileName)
+import           Data.Time.Format (parseTimeM)
+import           Data.Time.Format (defaultTimeLocale)
+import           Data.Time.Clock (UTCTime)
+
+
 --
 -- Only available in Hakyll 4.5.*
 -- import           Hakyll.Web.Feed     (renderAtomWithTemplates)
 --------------------------------------------------------------------------------
+
 
 pandocMathCompiler =
     let mathExtensions = [Ext_tex_math_dollars, Ext_latex_macros,
@@ -235,6 +246,67 @@ feedConf = FeedConfiguration
     }
 
 
+previousPostUrl :: Item String -> Compiler String
+previousPostUrl post = do
+    sortedPosts <- sortChronological =<< getMatches "posts/*"
+    let ident = itemIdentifier post
+        ident' = itemBefore sortedPosts ident
+    case ident' of
+        Just i -> (fmap (maybe empty toUrl) . getRoute) i
+        Nothing -> empty
+
+previousPostTitle :: Item String -> Compiler String
+previousPostTitle post = do
+    sortedPosts <- sortChronological =<< getMatches "posts/*"
+    let ident = itemIdentifier post
+        ident' = itemBefore sortedPosts ident
+    case ident' of
+        Just i -> fmap (maybe empty id) (getMetadataField i "title")
+        Nothing -> empty
+
+nextPostTitle :: Item String -> Compiler String
+nextPostTitle post = do
+    sortedPosts <- sortChronological =<< getMatches "posts/*"
+    let ident = itemIdentifier post
+        ident' = itemAfter sortedPosts ident
+    case ident' of
+        Just i -> fmap (maybe empty id) (getMetadataField i "title")
+        Nothing -> empty
+
+nextPostUrl :: Item String -> Compiler String
+nextPostUrl post = do
+    sortedPosts <- sortChronological =<< getMatches "posts/*"
+    let ident = itemIdentifier post
+        ident' = itemAfter sortedPosts ident
+    case ident' of
+        Just i -> fmap (maybe empty toUrl) (getRoute i)
+        Nothing -> empty
+
+sortIdentifiersByDate :: [Identifier] -> [Identifier]
+sortIdentifiersByDate identifiers =
+    reverse $ sortBy byDate identifiers
+        where
+            byDate id1 id2 =
+                let fn1 = takeFileName $ toFilePath id1
+                    fn2 = takeFileName $ toFilePath id2
+                    parseTime' fn = parseTimeM True defaultTimeLocale "%Y-%m-%d" $ intercalate "-" $ take 3 $ splitAll "-" fn
+                in compare ((parseTime' fn1) :: Maybe UTCTime) ((parseTime' fn2) :: Maybe UTCTime)
+
+itemAfter :: Eq a => [a] -> a -> Maybe a
+itemAfter xs x =
+    lookup x $ zip xs (tail xs)
+
+
+itemBefore :: Eq a => [a] -> a -> Maybe a
+itemBefore xs x =
+    lookup x $ zip (tail xs) xs
+
+
+urlOfPost :: Item String -> Compiler String
+urlOfPost =
+    fmap (maybe empty $ toUrl) . getRoute . itemIdentifier
+
+
 --------------------------------------------------------------------------------
 -- buildTagsWith' :: MonadMetadata m
 --               => (Identifier -> m [String])
@@ -266,6 +338,10 @@ postCtx =
     dateField "date" "%B %e, %Y"
     <> constField "class" "compressed"
     <> teaserField "teaser" "content"
+    <> field "nextPost" nextPostUrl
+    <> field "nextPostTitle" nextPostTitle
+    <> field "prevPost" previousPostUrl
+    <> field "previousPostTitle" previousPostTitle
     <> defaultContext'
 
 

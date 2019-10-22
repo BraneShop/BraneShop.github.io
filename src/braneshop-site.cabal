@@ -20,3 +20,5 @@ executable braneshop-site
     , containers
     , diagrams-lib
     , hakyll-diagrams
+    , time
+    , filepath

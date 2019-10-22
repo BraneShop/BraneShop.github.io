@@ -21,4 +21,17 @@
   $endif$
 
   $body$
+
+
+  <hr />
+
+  <div class="next-posts"> $if(prevPost)$
+    $if(nextPost)$
+    <a href="$nextPost$">Next post: $nextPostTitle$</a>
+    $endif$
+    <a href="$prevPost$">Previous post: $previousPostTitle$</a>
+    $endif$
+  </div>
 </div>
+
+
