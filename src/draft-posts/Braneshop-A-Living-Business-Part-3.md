@@ -2,15 +2,15 @@
 title: Braneshop &mdash; "A Living Business" - Part 3 of 3
 author: Noon van der Silk
 image: /images/blog/living-business/patterns.png
-imageDescription: <i>Patterns</i> of the Braneshop.
-date: 2019-10-20
+imageDescription: Rough grouping of <i>Patterns</i> for Braneshop.
+date: 2019-10-24
 preview: Continued thoughts on the organisation of Braneshop (part 3 of 3).
 tags: thoughts, living-business
 ---
 
 <ul class="normal">
 <li>[Part 1 of 3 - Inspiration](/posts/Braneshop-A-Living-Business-Part-1.html)</li>
-<li>[Part 2 of 3 - The Idea: A Living Business](/posts/Braneshop-A-Living-Business-Part-2.html) (this page)</li>
+<li>[Part 2 of 3 - The Idea: A Living Business](/posts/Braneshop-A-Living-Business-Part-2.html)</li>
 <li>[Part 3 of 3 - Patterns for Braneshop](/posts/Braneshop-A-Living-Business-Part-2.html) (this page)</li>
 </ul>
 
@@ -49,6 +49,8 @@ helpful for me in thinking about various aspects of Braneshop.
 - Support people changing careers
 - Support technical professionals
 - Strong pedagogical approach
+- Group activities and exercises 
+- Engaging
 
 **Day-to-day**
 
