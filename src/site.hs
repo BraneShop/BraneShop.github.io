@@ -142,6 +142,7 @@ main = hakyll $ do
                     , "quickstart.html"
                     , "faq.html"
                     , "community.html"
+                    , "events.html"
                     , "object-detection-in-the-browser.html"
                     ]) $ do
         route idRoute

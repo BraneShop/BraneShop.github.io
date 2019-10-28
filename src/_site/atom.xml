@@ -16,11 +16,15 @@
     <published>2019-10-28T00:00:00Z</published>
     <updated>2019-10-28T00:00:00Z</updated>
     <summary type="html"><![CDATA[
+<center>
+  <iframe src="https://player.vimeo.com/video/369242471" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/369242471">Snapshot of the attendees over the day.</a></p>
+</center>
+
 
 
   <center> <p> <img src="https://braneshop.com.au/images/workshop-action-photos/23-sept-leadership-small.jpg" width="100%" /> 
   <br /><small>One of the teams, at the first AI For Leadership workshop, working through one of the exercises.</small></p> </center>
-
 
 <p>Last month we had our first AI for Leadership workshop. In this post we take a look at what we covered, and discuss a few of the things we learned.</p>
 ]]></summary>
@@ -36,7 +40,6 @@
 
   <center> <p> <img src="https://braneshop.com.au/images/blog/cppn-playground.jpg" width="100%" /> 
   <br /><small>The main interface of the CPPN playground; reproducing a cool rendering of a black hole.</small></p> </center>
-
 
 <p>As we saw in the <a href="/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html">business card blog post</a> we love “CPPNs” here.</p>
 <p>We wanted to share the fun, so I made a little JavaScript app where you can play around with them. You can access it here: <a href="https://silky.github.io/cppn-playground/">CPPN Playground</a>.</p>
@@ -59,7 +62,6 @@
 
   <center> <p> <img src="https://braneshop.com.au/images/blog/living-business/living-business.png" width="100%" /> 
   <br /><small>A summary of the key aspects of the Braneshop business.</small></p> </center>
-
 
 <ul class="normal">
 <li>
@@ -87,7 +89,6 @@
   <center> <p> <img src="https://braneshop.com.au/images/blog/xai-event.webp" width="100%" /> 
   <br /><small>Join us for an evening of Explainable AI!</small></p> </center>
 
-
 <center>
 <i> <a href="https://events.humanitix.com.au/making-the-black-box-of-ai-transparent-with-explainable-ai-xai">Join us on the 6th of November for an Introduction to Explainable AI - Opening the black box!</a> </i>
 </center>
@@ -114,7 +115,6 @@
 
   <center> <p> <img src="https://braneshop.com.au/images/blog/living-business/braneshop-inspo.png" width="100%" /> 
   <br /><small>Inspirations for a different way of thinking about the Braneshop business.</small></p> </center>
-
 
 <ul class="normal">
 <li>
@@ -146,7 +146,6 @@
   <center> <p> <img src="https://braneshop.com.au/images/blog/business-cards.jpg" width="100%" /> 
   <br /><small>An assorted collection of our new business cards!</small></p> </center>
 
-
 <p>Our new business cards arrived earlier this week, and since showing them around to a few people and getting some very nice feedback, I thought it might be of interest to talk a bit about how they were made.</p>
 <p>In particular I wanted to aim this discussion at people who are not intimately familiar with making graphics on computers.</p>
 <p>Let’s get into it!</p>
@@ -159,12 +158,10 @@
     <published>2019-07-24T00:00:00Z</published>
     <updated>2019-07-24T00:00:00Z</updated>
     <summary type="html"><![CDATA[
-<p>Video summary:</p>
 <center>
   <iframe src="https://player.vimeo.com/video/349597581" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/349597581">Note on scholarships.</a></p>
 </center>
-
 
 
 
@@ -187,7 +184,6 @@
   <center> <p> <img src="https://braneshop.com.au/images/showreel/Understanding and Predicting Visual Humour.jpg" width="100%" /> 
   <br /><small><a href="https://arxiv.org/pdf/1512.04407.pdf">My favourite paper of 2015</a>, and maybe of all time. See the <a href="/showreel.html">showreel</a> page for more!</small></p> </center>
 
-
 <p>We love staying up to date with the latest deep learning research. I typically catch up daily, via the <a href="https://scirate.com">SciRate</a> website (check if out if you haven’t already!)</p>
 <p>Every now and then, a paper really stands out as either cool, interesting, innovative, or useful. When something really appealed to me, I’d typically post it in various places, such as LinkedIn, or slack, or twitter, or just file it away in my head, waiting for the perfect moment to pop up again.</p>
 <p>We also typically include these as part of the workshops, to get people a bit excited about the field.</p>
@@ -201,7 +197,6 @@
     <published>2019-07-03T00:00:00Z</published>
     <updated>2019-07-03T00:00:00Z</updated>
     <summary type="html"><![CDATA[
-<p>Video summary:</p>
 <center>
   <iframe src="https://player.vimeo.com/video/347859684" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/347859684">Braneshop - Attention in PyText - Part 1</a></p>
@@ -211,7 +206,6 @@
 
   <center> <p> <img src="https://braneshop.com.au/images/blog/at_1.jpg" width="100%" /> 
   <br /><small>Attention being computed across a custom-dataset and being dsiplayed in TensorBoard!</small></p> </center>
-
 
 <p>I wanted to take some time to discuss a library that seems to have flown under the radar a little bit. It’s called <a href="https://github.com/facebookresearch/pytext">PyText</a>, and we’re going to explore how you can use it to run state of the art attention models!</p>
 <p>Here’s our plan:</p>
@@ -238,7 +232,6 @@
 
   <center> <p> <img src="https://braneshop.com.au/images/blog/BlueRock.jpg" width="100%" /> 
   <br /><small>The <a href="https://thebluerock.com.au/" rel="noopener">BlueRock</a> offices.</small></p> </center>
-
 
 <p>We’re very grateful to the very nice people at <a
 href="https://thebluerock.com.au/" rel="noopener">BlueRock</a> (be sure to check out their website!) who have agreed to be our venue hosts for the upcoming <a

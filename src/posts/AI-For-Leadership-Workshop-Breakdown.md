@@ -5,6 +5,8 @@ imageDescription: One of the teams, at the first AI For Leadership workshop, wor
 date: 2019-10-28
 preview: A review of the first AI for Leadership workshop, and what to expect in the next one!
 tags: debrief
+vimeo: https://player.vimeo.com/video/369242471
+vimeoTitle: Snapshot of the attendees over the day.
 ---
 
 Last month we had our first AI for Leadership workshop. In this post we take a
