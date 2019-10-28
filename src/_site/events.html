@@ -75,7 +75,7 @@ You have entered the realm of
           <ul class="menu">
             <li><a href="./" title="Home">Home</a>|</li>
             <li><a href="./team.html" title="Team">Team</a>|</li>
-            <!-- <li><a href="/events.html" title="Events">Events</a>|</li> -->
+            <li><a href="./events.html" title="Events">Events</a>|</li>
             <li><a href="./blog.html" title="Blog">Blog</a>|</li>
             <li><a href="./community.html" title="Community">Community</a>|</li>
             <li><a href="./faq.html" title="FAQs">FAQs</a>|</li>
@@ -99,13 +99,61 @@ You have entered the realm of
 
   <!-- Content -->
   <div id="content">
-    <div class="section">
-  <h3>🎑Events</h3>
+    <script src="https://unpkg.com/@fullcalendar/core@4.3.1/main.min.js"></script>
+<script src="https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@fullcalendar/core@4.3.1/main.min.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.css" />
+
+<div class="section">
+  <h3>🎑 Events</h3>
 
   <p> We love getting out and about in the community, and meeting people.
-  Here's some of the events we'll be at.
+  Here's some of the events we'll be at over the next little while.
   </p>
+
+  <ul class="normal">
+  
+    <li><a href="https://events.humanitix.com.au/making-the-black-box-of-ai-transparent-with-explainable-ai-xai" target="_blank">November  6, 2019 - Explainable AI</a></li>
+  
+  </ul>
+
+  <hr />
+
+  <div id="calendar">
+  </div>
 </div>
+
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+var calendarEl = document.getElementById('calendar');
+
+var calendar   = new FullCalendar.Calendar(calendarEl,
+    { plugins: [ 'dayGrid' ]
+      // Open links in a new window.
+    , eventClick: function(info) {
+        info.jsEvent.preventDefault();
+        if (info.event.url) {
+          window.open(info.event.url);
+        }
+      }
+    }
+  );
+
+  
+    calendar.addEvent( 
+      { title: "Explainable AI"
+      , start: "2019-11-06"
+      , url: "https://events.humanitix.com.au/making-the-black-box-of-ai-transparent-with-explainable-ai-xai"
+      , end: "2019-11-06" }
+    );
+  
+
+
+	calendar.render();
+});
+</script>
+
 
   </div>
 

@@ -982,3 +982,28 @@ div.next-posts {
 div.next-posts a {
   padding: 5px;
 }
+
+#calendar h2 {
+  font-family: "DM Serif Text";
+  font-weight: normal;
+  font-size:   1.5em;
+}
+
+#calendar {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#calendar th {
+  font-family: "DM Serif Text";
+  font-weight: normal;
+}
+
+#calendar button.fc-button-primary {
+  background: deepskyblue;
+  border: none;
+}
+
+#calendar button.fc-button-primary:disabled {
+  background: skyblue;
+}

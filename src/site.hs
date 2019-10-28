@@ -68,6 +68,18 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
+    match "events/*" $ do
+        let ctx = defaultContext'
+
+        route $ setExtension "html"
+
+        compile $ 
+                (pandocMathCompiler)
+            >>= applyAsTemplate ctx
+            >>= loadAndApplyTemplate "templates/event-item.html" ctx
+            -- >>= loadAndApplyTemplate "templates/default.html" ctx
+            >>= relativizeUrls
+
     match "showreel/*" $ do
         tags <- buildTags "showreel/*" (fromCapture "showreel-tags/*.html")
 
@@ -142,7 +154,6 @@ main = hakyll $ do
                     , "quickstart.html"
                     , "faq.html"
                     , "community.html"
-                    , "events.html"
                     , "object-detection-in-the-browser.html"
                     ]) $ do
         route idRoute
@@ -151,6 +162,21 @@ main = hakyll $ do
                   <> defaultContext'
 
         compile $ do
+            getResourceBody
+                >>= applyAsTemplate ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
+
+    match (fromList ["events.html"]) $ do
+        route idRoute
+        compile $ do
+            events <- recentFirst =<< loadAll "events/*"
+
+            let ctx =
+                    listField "events" defaultContext' (return events)
+                    <> bodyField "content"
+                    <> defaultContext'
+
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
@@ -335,10 +361,8 @@ urlOfPost =
 
 
 postCtx :: Context String
-postCtx =
-    dateField "date" "%B %e, %Y"
-    <> constField "class" "compressed"
-    <> teaserField "teaser" "content"
+postCtx = 
+       teaserField "teaser" "content"
     <> field "nextPost" nextPostUrl
     <> field "nextPostTitle" nextPostTitle
     <> field "prevPost" previousPostUrl
@@ -349,6 +373,9 @@ postCtx =
 defaultContext' :: Context String
 defaultContext' = 
   constField "rootUrl" "https://braneshop.com.au"
+  <> constField "class" "compressed"
+  <> dateField "date" "%B %e, %Y"
+  <> dateField "jsDate" "%0Y-%m-%d"
   <> defaultContext
 
 

@@ -3,10 +3,58 @@ title: Events
 class: compressed
 ---
 
+<script src="https://unpkg.com/@fullcalendar/core@4.3.1/main.min.js"></script>
+<script src="https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@fullcalendar/core@4.3.1/main.min.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.css" />
+
 <div class="section">
-  <h3>🎑$title$</h3>
+  <h3>🎑 $title$</h3>
 
   <p> We love getting out and about in the community, and meeting people.
-  Here's some of the events we'll be at.
+  Here's some of the events we'll be at over the next little while.
   </p>
+
+  <ul class="normal">
+  $for(events)$
+    <li><a href="$url$" target="_blank">$date$ - $title$</a></li>
+  $endfor$
+  </ul>
+
+  <hr />
+
+  <div id="calendar">
+  </div>
 </div>
+
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+var calendarEl = document.getElementById('calendar');
+
+var calendar   = new FullCalendar.Calendar(calendarEl,
+    { plugins: [ 'dayGrid' ]
+      // Open links in a new window.
+    , eventClick: function(info) {
+        info.jsEvent.preventDefault();
+        if (info.event.url) {
+          window.open(info.event.url);
+        }
+      }
+    }
+  );
+
+  $for(events)$
+    calendar.addEvent( 
+      { title: "$title$"
+      , start: "$jsDate$"
+      , url: "$url$"
+      , end: "$jsDate$" }
+    );
+  $endfor$
+
+
+	calendar.render();
+});
+</script>
+
