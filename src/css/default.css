@@ -174,10 +174,11 @@ video.profile-video {
 }
 
 #header small {
-  font-size:   0.7em;
-  font-weight: normal;
+  font-weight: bold;
+  font-size:   0.6em;
+  font-family: "Bowlby One SC";
   font-family: "PT Mono";
-  text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px  0px 0px #000, 1px  0px 0px #000, -1px  1px 0px #000, 0px  1px 0px #000, 1px  1px 0px #000;
+  background:  black;
 }
 
 div.section {

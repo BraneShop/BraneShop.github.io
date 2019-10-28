@@ -3,7 +3,7 @@ title: Braneshop &mdash; "A Living Business" - Part 3 of 3
 author: Noon van der Silk
 image: /images/blog/living-business/patterns.png
 imageDescription: Rough grouping of <i>Patterns</i> for Braneshop.
-date: 2019-10-24
+date: 2019-10-25
 preview: Continued thoughts on the organisation of Braneshop (part 3 of 3).
 tags: thoughts, living-business
 ---
@@ -16,6 +16,10 @@ tags: thoughts, living-business
 
 In the final installment of this series, we look at a few of the "patterns"
 that will help us understand where we're at as a business.
+
+The main point here will be to list those patterns &mdash; the patterns of
+behaviour, attitudes, business processes &mdash; that we'd like to have at
+Braneshop. These should be
 
 <!--more-->
 

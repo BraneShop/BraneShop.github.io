@@ -5,7 +5,7 @@ image: /images/blog/cppn-playground.jpg
 imageDescription: The main interface of the CPPN playground; reproducing a cool rendering of a black hole.
 date: 2019-10-23
 preview: A fun little neural-network-based tool to make cool pictures!
-tags: announcement, tool
+tags: announcement, tools
 ---
 
 As we saw in the [business card blog post](/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html)

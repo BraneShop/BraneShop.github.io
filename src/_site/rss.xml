@@ -7,8 +7,24 @@
         <description><![CDATA[The blog of the Braneshop team.]]></description>
         <atom:link href="https://braneshop.com.au/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Wed, 23 Oct 2019 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Mon, 28 Oct 2019 00:00:00 UT</lastBuildDate>
         <item>
+    <title>AI For Leadership Workshop - Breakdown</title>
+    <link>https://braneshop.com.au/posts/AI-For-Leadership-Workshop-Breakdown.html</link>
+    <description><![CDATA[
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/workshop-action-photos/23-sept-leadership-small.jpg" width="100%" /> 
+  <br /><small>One of the teams, at the first AI For Leadership workshop, working through one of the exercises.</small></p> </center>
+
+
+<p>Last month we had our first AI for Leadership workshop. In this post we take a look at what we covered, and discuss a few of the things we learned.</p>
+]]></description>
+    <pubDate>Mon, 28 Oct 2019 00:00:00 UT</pubDate>
+    <guid>https://braneshop.com.au/posts/AI-For-Leadership-Workshop-Breakdown.html</guid>
+    <dc:creator>Braneshop Team</dc:creator>
+</item>
+<item>
     <title>Introducing the CPPN Playground!</title>
     <link>https://braneshop.com.au/posts/CPPN-Playground.html</link>
     <description><![CDATA[
@@ -226,29 +242,6 @@ href="/6-week-workshop-on-deep-learning.html">6 week technical deep learning wor
 ]]></description>
     <pubDate>Fri, 28 Jun 2019 00:00:00 UT</pubDate>
     <guid>https://braneshop.com.au/posts/2019-06-28-First-workshop-at-Blue-Rock.html</guid>
-    <dc:creator>Braneshop Team</dc:creator>
-</item>
-<item>
-    <title>Deep learning quick start</title>
-    <link>https://braneshop.com.au/posts/2019-06-21-Deep-learning-quick-start.html</link>
-    <description><![CDATA[
-
-
-
-<p>It’s been in vogue for some time now to have a little “quick-start” install on your website. Notable examples are:</p>
-<ul class="normal">
-<li>
-The <a href="https://spacy.io/usage" rel="noopener">spaCy</a> website,
-</li>
-<li>
-<a href="https://pytorch.org/" rel="noopener">PyTorch</a>.
-</li>
-</ul>
-<p>My friend Hayden suggested that it might be nice to have a slightly higher-level one, so I made it: <a href="/quickstart.html">Braneshop deep learning quick start</a>, and you can find a link to it at the bottom of the page.</p>
-<p>The main thing I wanted to get across, for whatever it’s worth, is that one of your best options is <a href="https://colab.research.google.com/">Google Colaboratory</a>. The other thing I did was to just collect together the information from the TensorFlow and the PyTorch installation pages.</p>
-]]></description>
-    <pubDate>Fri, 21 Jun 2019 00:00:00 UT</pubDate>
-    <guid>https://braneshop.com.au/posts/2019-06-21-Deep-learning-quick-start.html</guid>
     <dc:creator>Braneshop Team</dc:creator>
 </item>
 
