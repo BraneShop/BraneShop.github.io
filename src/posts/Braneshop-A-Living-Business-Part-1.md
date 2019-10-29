@@ -1,5 +1,5 @@
 ---
-title: Braneshop &mdash; "A Living Business" - Part 1 of 3
+title: Braneshop - "A Living Business" - Part 1 of 3
 author: Noon van der Silk
 image: /images/blog/living-business/braneshop-inspo.png
 imageDescription: Inspirations for a different way of thinking about the Braneshop business.
