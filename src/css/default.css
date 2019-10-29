@@ -270,6 +270,12 @@ div.concepts ul li {
   padding:   2px;
 }
 
+h2 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: normal;
+  font-size:   1.5em;
+}
+
 h5 {
   font-family: 'DM Serif Text', serif;
   font-weight: normal;
