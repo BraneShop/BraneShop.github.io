@@ -169,7 +169,7 @@ main = hakyll $ do
     match (fromList ["events.html"]) $ do
         route idRoute
         compile $ do
-            events <- recentFirst =<< loadAll "events/*"
+            events <- chronological =<< loadAll "events/*"
 
             let ctx =
                     listField "events" defaultContext' (return events)
