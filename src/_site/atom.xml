@@ -10,6 +10,34 @@
     </author>
     <updated>2019-11-07T00:00:00Z</updated>
     <entry>
+    <title>Braneshop &mdash; "A Living Business" - Part 3 of 3</title>
+    <link href="https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-3.html" />
+    <id>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-3.html</id>
+    <published>2019-11-07T00:00:00Z</published>
+    <updated>2019-11-07T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/blog/living-business/patterns.png" width="100%" /> 
+  <br /><small>Rough grouping of <i>Patterns</i> for Braneshop.</small></p> </center>
+
+<ul class="normal">
+<li>
+<a href="/posts/Braneshop-A-Living-Business-Part-1.html">Part 1 of 3 - Inspiration</a>
+</li>
+<li>
+<a href="/posts/Braneshop-A-Living-Business-Part-2.html">Part 2 of 3 - The Idea: A Living Business</a>
+</li>
+<li>
+<a href="/posts/Braneshop-A-Living-Business-Part-3.html">Part 3 of 3 - Patterns for Braneshop</a> (this page)
+</li>
+</ul>
+<p>In the final installment of this series, we look at a few of the “patterns” that will help us understand where we’re at as a business.</p>
+<p>The main point here will be to list those patterns — the patterns of behaviour, attitudes, business processes — that we’d like to have at Braneshop.</p>
+<p>The patterns should be <strong>measurable</strong> insofar as we ourselves will need to ask ourselves how well we’re doing when measuring ourselves on them. And we won’t be doing perfectly on each of them, and over the years we can expect our success across any given one to fluctuate. But that’s okay. The <i>process</i> is what is important.</p>
+]]></summary>
+</entry>
+<entry>
     <title>Explainable AI Event - Slides and Debrief</title>
     <link href="https://braneshop.com.au/posts/2019-11-07-Event-Debrief-Explainable-AI.html" />
     <id>https://braneshop.com.au/posts/2019-11-07-Event-Debrief-Explainable-AI.html</id>
@@ -86,7 +114,7 @@
 <a href="/posts/Braneshop-A-Living-Business-Part-2.html">Part 2 of 3 - The Idea: A Living Business</a> (this page)
 </li>
 <li>
-(Coming soon!) Part 3 of 3 - Patterns for Braneshop
+<a href="/posts/Braneshop-A-Living-Business-Part-3.html">Part 3 of 3 - Patterns for Braneshop</a>
 </li>
 </ul>
 <p>This post is inspired by the ideas laid out in <a href="/posts/Braneshop-A-Living-Business-Part-1">first post in this series</a>.</p>
@@ -139,7 +167,7 @@
 <a href="/posts/Braneshop-A-Living-Business-Part-2.html">Part 2 of 3 - The Idea: A Living Business</a>
 </li>
 <li>
-(Coming soon!) Part 3 of 3 - Patterns for Braneshop
+<a href="/posts/Braneshop-A-Living-Business-Part-3.html">Part 3 of 3 - Patterns for Braneshop</a>
 </li>
 </ul>
 <p>As the year draws to a close, and Braneshop is almost a year old (woo!) we have been thinking a lot about our business goals. As such, I (Noon) have been having some discussions with different people and businesses about how Braneshop could align and/or collaborate with their businesses, naturally this has lead into a lot of conversations about where Braneshop is “heading”.</p>
@@ -203,37 +231,6 @@
 <p>Every now and then, a paper really stands out as either cool, interesting, innovative, or useful. When something really appealed to me, I’d typically post it in various places, such as LinkedIn, or slack, or twitter, or just file it away in my head, waiting for the perfect moment to pop up again.</p>
 <p>We also typically include these as part of the workshops, to get people a bit excited about the field.</p>
 <p>Well, now I’ve decided to put that list online: <a href="/showreel.html">Deep learning showreel!</a></p>
-]]></summary>
-</entry>
-<entry>
-    <title>State of the art attention models in PyText - Part 1</title>
-    <link href="https://braneshop.com.au/posts/State-of-the-art-attention-models-in-PyText-Part-1.html" />
-    <id>https://braneshop.com.au/posts/State-of-the-art-attention-models-in-PyText-Part-1.html</id>
-    <published>2019-07-03T00:00:00Z</published>
-    <updated>2019-07-03T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<center>
-  <iframe src="https://player.vimeo.com/video/347859684" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/347859684">Braneshop - Attention in PyText - Part 1</a></p>
-</center>
-
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/blog/at_1.jpg" width="100%" /> 
-  <br /><small>Attention being computed across a custom-dataset and being dsiplayed in TensorBoard!</small></p> </center>
-
-<p>I wanted to take some time to discuss a library that seems to have flown under the radar a little bit. It’s called <a href="https://github.com/facebookresearch/pytext">PyText</a>, and we’re going to explore how you can use it to run state of the art attention models!</p>
-<p>Here’s our plan:</p>
-<ol style="list-style-type: decimal">
-<li>Set a dataset,</li>
-<li>See how we prepare the data for training in PyText,</li>
-<li>Get PyText,</li>
-<li>Train it,</li>
-<li>Visualise it,</li>
-<li>Consider extensions,</li>
-</ol>
-<p>Finally, we’ll jump in to a fork of PyText where I’ve added a few features that help out during training.</p>
-<p>If you want to follow along, all the code for this post is available <a href="https://github.com/Braneshop/pytext">here</a>.</p>
 ]]></summary>
 </entry>
 

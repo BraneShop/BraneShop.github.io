@@ -11,7 +11,7 @@ tags: thoughts, living-business
 <ul class="normal">
 <li>[Part 1 of 3 - Inspiration](/posts/Braneshop-A-Living-Business-Part-1.html) (this page)</li>
 <li>[Part 2 of 3 - The Idea: A Living Business](/posts/Braneshop-A-Living-Business-Part-2.html)</li>
-<li>(Coming soon!) Part 3 of 3 - Patterns for Braneshop</li>
+<li>[Part 3 of 3 - Patterns for Braneshop](/posts/Braneshop-A-Living-Business-Part-3.html)</li>
 </ul>
 
 As the year draws to a close, and Braneshop is almost a year old (woo!) we

@@ -986,7 +986,8 @@ div.next-posts {
 
 
 div.next-posts a {
-  padding: 5px;
+  margin-top:    3px;
+  margin-bottom: 3px;
 }
 
 #calendar h2 {
