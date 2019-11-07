@@ -153,6 +153,16 @@ var calendar   = new FullCalendar.Calendar(calendarEl,
   $endfor$
 
 
+  $for(pastEvents)$
+    calendar.addEvent( 
+      { title: "$title$"
+      , start: "$jsDate$"
+      , url: "$url$"
+      , color: "sandybrown"
+      , end: "$jsDate$" }
+    );
+  $endfor$
+
 	calendar.render();
 });
 </script>

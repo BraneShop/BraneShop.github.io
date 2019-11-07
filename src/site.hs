@@ -77,7 +77,17 @@ main = hakyll $ do
                 (pandocMathCompiler)
             >>= applyAsTemplate ctx
             >>= loadAndApplyTemplate "templates/event-item.html" ctx
-            -- >>= loadAndApplyTemplate "templates/default.html" ctx
+            >>= relativizeUrls
+
+    match "past-events/*" $ do
+        let ctx = defaultContext'
+
+        route $ setExtension "html"
+
+        compile $ 
+                (pandocMathCompiler)
+            >>= applyAsTemplate ctx
+            >>= loadAndApplyTemplate "templates/event-item.html" ctx
             >>= relativizeUrls
 
     match "showreel/*" $ do
@@ -169,10 +179,12 @@ main = hakyll $ do
     match (fromList ["events.html"]) $ do
         route idRoute
         compile $ do
-            events <- chronological =<< loadAll "events/*"
-
+            events     <- chronological =<< loadAll "events/*"
+            pastEvents <- chronological =<< loadAll "past-events/*"
+  
             let ctx =
                     listField "events" defaultContext' (return events)
+                    <> listField "pastEvents" defaultContext' (return pastEvents)
                     <> bodyField "content"
                     <> defaultContext'
 

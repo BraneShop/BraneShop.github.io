@@ -7,8 +7,23 @@
         <description><![CDATA[The blog of the Braneshop team.]]></description>
         <atom:link href="https://braneshop.com.au/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Mon, 28 Oct 2019 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 07 Nov 2019 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Explainable AI Event - Slides and Debrief</title>
+    <link>https://braneshop.com.au/posts/2019-11-07-Event-Debrief-Explainable-AI.html</link>
+    <description><![CDATA[
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/blog/xai-picture.png" width="100%" /> 
+  <br /><small>Can humans explain their decisions via attention?</small></p> </center>
+
+<p>Last night we held a discussion group, here at <a href="https://ochouse.com.au/">OC House</a> around Explainable AI. Here’s an overview of what we covered:</p>
+]]></description>
+    <pubDate>Thu, 07 Nov 2019 00:00:00 UT</pubDate>
+    <guid>https://braneshop.com.au/posts/2019-11-07-Event-Debrief-Explainable-AI.html</guid>
+    <dc:creator>Braneshop Team</dc:creator>
+</item>
+<item>
     <title>AI For Leadership Workshop - Breakdown</title>
     <link>https://braneshop.com.au/posts/AI-For-Leadership-Workshop-Breakdown.html</link>
     <description><![CDATA[
@@ -218,23 +233,6 @@
 ]]></description>
     <pubDate>Wed, 03 Jul 2019 00:00:00 UT</pubDate>
     <guid>https://braneshop.com.au/posts/State-of-the-art-attention-models-in-PyText-Part-1.html</guid>
-    <dc:creator>Braneshop Team</dc:creator>
-</item>
-<item>
-    <title>Venue for the first workshop - BlueRock!</title>
-    <link>https://braneshop.com.au/posts/2019-06-28-First-workshop-at-Blue-Rock.html</link>
-    <description><![CDATA[
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/blog/BlueRock.jpg" width="100%" /> 
-  <br /><small>The <a href="https://thebluerock.com.au/" rel="noopener">BlueRock</a> offices.</small></p> </center>
-
-<p>We’re very grateful to the very nice people at <a
-href="https://thebluerock.com.au/" rel="noopener">BlueRock</a> (be sure to check out their website!) who have agreed to be our venue hosts for the upcoming <a
-href="/6-week-workshop-on-deep-learning.html">6 week technical deep learning workshop</a>, kicking off on the 8th of August!</p>
-]]></description>
-    <pubDate>Fri, 28 Jun 2019 00:00:00 UT</pubDate>
-    <guid>https://braneshop.com.au/posts/2019-06-28-First-workshop-at-Blue-Rock.html</guid>
     <dc:creator>Braneshop Team</dc:creator>
 </item>
 
