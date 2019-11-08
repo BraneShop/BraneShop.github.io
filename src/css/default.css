@@ -1014,3 +1014,53 @@ div.next-posts a {
 #calendar button.fc-button-primary:disabled {
   background: skyblue;
 }
+
+div.topics {
+  margin-left:     20px;
+  display:         flex;
+  flex-direction:  row;
+  flex-wrap:       wrap;
+  justify-content: space-around;
+}
+
+div.topic p, div.topic li {
+  font-size: 0.8em;
+}
+
+div.topic h5 {
+  margin:     0;
+  padding:    20px;
+  font-size:  1.2em;
+  background: peachpuff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+div.topic ul.normal li {
+  margin-right: 20px;
+}
+
+div.topic {
+  display:        flex;
+  flex-direction: column;
+  width:          380px;
+  background:     linen;
+  border-radius:  30px;
+  border-bottom:  solid 4px white;
+  border-right:   solid 4px white;
+  margin-bottom:  20px;
+}
+
+
+div.topic hr {
+  margin-top: 0;
+}
+div.topic b {
+  margin-left: 10px;
+  margin-top:  20px;
+  font-size:   0.8em;
+}
+
+div.topic small {
+  margin-bottom: 20px;
+}

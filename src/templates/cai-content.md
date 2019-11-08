@@ -1,0 +1,183 @@
+<p> <em class="tag"> Collaborate with us to build a workshop focused around
+your projects, specialised to your team.  </em> </p>
+
+<h5>About</h5>
+
+<p> Co-design a focused AI workshop for your team and your projects. We will
+work with you to support your team on their AI adoption journey.
+</p>
+
+<p>Below is a list of topics that we can build upon.
+</p>
+
+<h5>Topics</h5>
+
+<div class="topics">
+  <div class="topic">
+  <h5>Text processing</h5>
+  <b>About</b>
+  <p> Also called "Natural language processing (NLP)", this is a technique for
+  getting computers to work with and understand text. 
+  </p>
+
+  <center><img src="/images/custom-cards/nlp.png" width="300" /></center>
+
+  <b>Key Applications</b>
+  <ul class="normal">
+  <li>Categorising documents,</li>
+  <li>and <a href="/posts/State-of-the-art-attention-models-in-PyText-Part-1.html">predicting "sentiment"</a> ("good" or "bad").</li>
+  </ul>
+
+  <hr />
+
+  <small><center><a href="/showreel-tags/text%20%28NLP%29.html">More examples from
+  recent research</a></center></small>
+
+  </div>
+
+  <div class="topic">
+  <h5>Model interpretability</h5>
+  <b>About</b>
+  <p> 
+  Also referred to as "explainability", this is the general
+  approach of working to understand <i>why</i> a model made
+  a certain decision. </p>
+
+  <center><img src="/images/custom-cards/xai.png" width="300" /></center>
+  <b>Key Applications</b>
+  <ul class="normal">
+  <li>Debugging a model while developing it,</li>
+  <li>explaining model decisions to end-users,</li>
+  <li>and, understanding and correcting dataset biases.</li>
+  </ul>
+
+  <hr />
+
+  <small><center><a href="/showreel-tags/explainability%20%28XAI%29.html">More examples from
+  recent research</a></center></small>
+  </div>
+
+  <div class="topic">
+  <h5>Model compression</h5>
+  <b>About</b>
+  <p> 
+  The business of taking large models and making them run efficiently on
+  mobile devices or other "embedded" hardware.
+  </p>
+
+  <center><img src="/images/custom-cards/compression.png" width="300" /></center>
+  <b>Key Applications</b>
+  <ul class="normal">
+  <li>Making a model run fast on a phone,</li>
+  <li>enabling privacy by allowing the models to <i>train</i> on the
+  phone,</li>
+  <li>and, running <a href="/tags/tensorflowjs.html">models entirely in the browser</a>.</li>
+  </ul>
+
+  <hr />
+
+  <small><center><a href="/showreel-tags/compression.html">More examples from
+  recent research</a></center></small>
+  </div>
+
+
+  <div class="topic">
+  <h5>Computer vision</h5>
+  <b>About</b>
+  <p> The field of learning from images and videos. For most of us, our
+  experience of the world is strongly visual so there is an almost endless
+  supply of data and information in this area.
+  </p>
+
+
+  <center><img src="/images/custom-cards/cv.png" width="300" /></center>
+
+  <b>Key Applications</b>
+  <ul class="normal">
+  <li><a href="/object-detection-in-the-browser.html">Identifying objects in video</a>,</li>
+  <li>tracking or counting objects in video or satellite imagery,</li>
+  <li>and, self-driving cars.</li>
+  </ul>
+
+  <p>This is a rich area, with many applications.
+  </p>
+
+  <hr />
+
+  <small><center><a href="/showreel-tags/computer-vision.html">More examples from
+  recent research</a></center></small>
+
+  </div>
+
+
+  <div class="topic">
+  <h5>Creative AI</h5>
+  <b>About</b>
+  <p> 
+  The art of using data and algoritms to design new paintings, clothes,
+  stories, and experiences.
+  </p>
+
+  <center><img src="/images/custom-cards/creative.png" width="300" /></center>
+
+  <b>Key Applications</b>
+  <ul class="normal">
+  <li>Producing, and discovering, new <a href="/showreel-tags/art.html">art</a>,</li>
+  <li>generating new images, audio and videos,</li>
+  <li>and extending peoples creative capacity.</li>
+  </ul>
+
+  <hr />
+
+  <small><center><a href="/showreel-tags/generative.html">More examples from
+  recent research</a></center></small>
+  </div>
+
+
+  <div class="topic">
+  <h5>Quantum machine learning</h5>
+  <b>About</b>
+  <p> 
+  An emerging field that combines quantum computing and machine learning.
+  </p>
+
+  <center><img src="/images/custom-cards/quantum.png" width="300" /></center>
+
+  <p>The applications in this field are still being researched.</p>
+
+  <b>Key Applications</b>
+  <ul class="normal">
+  <li>Machine learning on "quantum" data, </li>
+  <li>faster computation of certain algorithms on classical data,</li>
+  <li>discovery of faster <i>classical</i> algorithms.</li>
+  </ul>
+
+
+  <!--
+  <hr />
+
+  <small><center><a href="/showreel-tags/quantum.html">More examples from
+  recent research</a></center></small>
+  -->
+  </div>
+</div>
+
+
+<!--
+To add:
+
+- Timeseries
+- TensorFlow/PyTorch/TensorFlow.js/Model Debugging
+
+-->
+
+<h5>Essential Details</h5>
+
+<p>As this workshop is specialised to your needs, please get in touch
+to learn more!</p>
+
+<p> <center> 
+  <a class="btn" href="https://noonvandersilk.typeform.com/to/DYKvWN"
+  rel="noopener">Express interest</a> or 
+  <a class="btn" href="/contact.html">Get in contact</a> </center> </p>
+

@@ -154,8 +154,14 @@ main = hakyll $ do
             >>= relativizeUrls
 
 
+    create ["deep-learning-workshop.html"] $ do
+      route idRoute
+      compile $ makeItem $ Redirect "ai-for-leadership.html"
+
+
     match (fromList ["deep-learning-workshop.html"
                     , "ai-for-leadership.html"
+                    , "custom-ai-workshop.html"
                     , "6-week-workshop-on-deep-learning.html"
                     , "team.html"
                     , "contact.html"
