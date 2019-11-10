@@ -162,6 +162,47 @@ work with you to support your team on their AI adoption journey.
   </div>
 </div>
 
+<h5>Tools</h5>
+<div class="topics">
+  <div class="topic">
+  <h5>TensorFlow</h5>
+  <b>About</b>
+  <p> A Python-focused library for deep learning. Widely used through-out
+  industry and research to develp models and run them in production.
+  </p>
+
+  <center><img src="/images/custom-cards/tensorflow.svg" width="300" /></center>
+
+  <b>Key Areas</b>
+  <ul class="normal">
+  <li>Building and training models,</li>
+  <li>training and inference pipelines,</li>
+  <li>running models in the browser through TensorFlow.js,</li>
+  <li>visualising models through TensorBoard.</li>
+  <li>debugging models,</li>
+  <li>and, deploying models in production.</li>
+  </ul>
+  </div>
+
+
+  <div class="topic">
+  <h5>PyTorch</h5>
+  <b>About</b>
+  <p> Another Python-focused library for deep learning. Used widely by NLP
+  researchers.
+  </p>
+
+  <center><img src="/images/custom-cards/pytorch.png" width="300" /></center>
+
+  <b>Key Areas</b>
+  <ul class="normal">
+  <li>Building and training models,</li>
+  <li>training and inference pipelines,</li>
+  <li>debugging models,</li>
+  <li>and deploying models in production.</li>
+  </ul>
+  </div>
+</div>
 
 <!--
 To add:
@@ -171,10 +212,32 @@ To add:
 
 -->
 
-<h5>Essential Details</h5>
 
-<p>As this workshop is specialised to your needs, please get in touch
-to learn more!</p>
+<h5>Essential Details</h5>
+<table class="details" boder="0" cellspacing="0">
+<tr>  <td class="item">  Duration </td>
+      <td class="value"> 
+      Negotiable. </td>
+</tr>
+<tr>  <td class="item">  Attendance </td>
+      <td class="value"> 
+      20 people, maximum. No minimum. </td>
+</tr>
+<tr>  <td class="item">  Costs    </td>
+      <td class="value"> 
+        Ranges from $$5,000 to $$20,000.
+      </td>
+</tr>
+<tr>  <td class="item">  Location </td>
+      <td class="value"> Your office or ours. </td>
+</tr>
+<tr> <td class="item"> Prerequisites </td>
+     <td class="value">
+     Based on content.
+     </td>
+</table>
+
+<p>Please get in touch to learn more!</p>
 
 <p> <center> 
   <a class="btn" href="https://noonvandersilk.typeform.com/to/DYKvWN"
