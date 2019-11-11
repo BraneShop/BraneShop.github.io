@@ -19,4 +19,14 @@
   $endif$
 
   $body$
+
+  <hr />
+
+  <div class="next-posts"> $if(prevPost)$
+    $if(nextPost)$
+    <a href="$nextPost$">Next item: $nextPostTitle$</a>
+    $endif$
+    <a href="$prevPost$">Previous item: $prevPostTitle$</a>
+    $endif$
+  </div>
 </div>

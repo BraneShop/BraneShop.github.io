@@ -93,7 +93,13 @@ main = hakyll $ do
     match "showreel/*" $ do
         tags <- buildTags "showreel/*" (fromCapture "showreel-tags/*.html")
 
-        let ctx = postCtxWithTags tags
+        let ctx = defaultContext'
+                    <> tagsField "tags" tags
+                    <> constField "imageDescription" "Braneshop Showreel"
+                    <> field "nextPost" (nextPostUrl "showreel/*")
+                    <> field "nextPostTitle" (nextPostTitle "showreel/*")
+                    <> field "prevPost" (previousPostUrl "showreel/*")
+                    <> field "prevPostTitle" (previousPostTitle "showreel/*")
 
         tagsRules tags $ \tag pattern -> do
             let title = "Items tagged \"" ++ tag ++ "\""
@@ -291,36 +297,36 @@ feedConf = FeedConfiguration
     }
 
 
-previousPostUrl :: Item String -> Compiler String
-previousPostUrl post = do
-    sortedPosts <- sortChronological =<< getMatches "posts/*"
+previousPostUrl :: Pattern -> Item String -> Compiler String
+previousPostUrl path post = do
+    sortedPosts <- sortChronological =<< getMatches path
     let ident = itemIdentifier post
         ident' = itemBefore sortedPosts ident
     case ident' of
         Just i -> (fmap (maybe empty toUrl) . getRoute) i
         Nothing -> empty
 
-previousPostTitle :: Item String -> Compiler String
-previousPostTitle post = do
-    sortedPosts <- sortChronological =<< getMatches "posts/*"
+previousPostTitle :: Pattern -> Item String -> Compiler String
+previousPostTitle path post = do
+    sortedPosts <- sortChronological =<< getMatches path
     let ident = itemIdentifier post
         ident' = itemBefore sortedPosts ident
     case ident' of
         Just i -> fmap (maybe empty id) (getMetadataField i "title")
         Nothing -> empty
 
-nextPostTitle :: Item String -> Compiler String
-nextPostTitle post = do
-    sortedPosts <- sortChronological =<< getMatches "posts/*"
+nextPostTitle :: Pattern -> Item String -> Compiler String
+nextPostTitle path post = do
+    sortedPosts <- sortChronological =<< getMatches path
     let ident = itemIdentifier post
         ident' = itemAfter sortedPosts ident
     case ident' of
         Just i -> fmap (maybe empty id) (getMetadataField i "title")
         Nothing -> empty
 
-nextPostUrl :: Item String -> Compiler String
-nextPostUrl post = do
-    sortedPosts <- sortChronological =<< getMatches "posts/*"
+nextPostUrl :: Pattern -> Item String -> Compiler String
+nextPostUrl path post = do
+    sortedPosts <- sortChronological =<< getMatches path
     let ident = itemIdentifier post
         ident' = itemAfter sortedPosts ident
     case ident' of
@@ -381,10 +387,10 @@ urlOfPost =
 postCtx :: Context String
 postCtx = 
        teaserField "teaser" "content"
-    <> field "nextPost" nextPostUrl
-    <> field "nextPostTitle" nextPostTitle
-    <> field "prevPost" previousPostUrl
-    <> field "previousPostTitle" previousPostTitle
+    <> field "nextPost" (nextPostUrl "posts/*")
+    <> field "nextPostTitle" (nextPostTitle "posts/*")
+    <> field "prevPost" (previousPostUrl "posts/*")
+    <> field "prevPostTitle" (previousPostTitle "posts/*")
     <> defaultContext'
 
 
