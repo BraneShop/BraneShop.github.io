@@ -1064,3 +1064,8 @@ div.topic b {
 div.topic small {
   margin-bottom: 20px;
 }
+
+.blog-list h5 {
+  margin:        0;
+  margin-bottom: 10px;
+}

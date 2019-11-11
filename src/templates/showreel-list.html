@@ -8,10 +8,12 @@
         $else$
           <div class="showreel-card">
         $endif$
-        <h5> <a href="$link$" rel="noopener">$title$</a> &mdash; $date$ </h5>
+        <h5> <a href="$url$" rel="noopener">$title$</a> &mdash; $date$ </h5>
 
         $if(tags)$
-          <span class="tags">Tags: $tags$</span>
+          <span class="tags">Tags: $tags$
+            | <small><a href="$link$">Paper</a></small>
+          </span>
         $endif$
 
         <div class="content">
@@ -22,6 +24,8 @@
           $endif$
 
           $body$
+
+
         </div>
       </li>
       $endif$

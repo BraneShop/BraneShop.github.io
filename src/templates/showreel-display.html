@@ -1,0 +1,22 @@
+<div class="section">
+  <div class="info">
+    Posted on $date$
+		| <a title="Showreel" href="/showreel.html">Back to Showreel</a>
+  </div>
+
+  <h4 class="blog-title">$title$</h4>
+
+  $if(tags)$
+    <span class="tags">Tags: $tags$
+      | <small><a href="$link$">Paper</a></small>
+    </span>
+  $endif$
+
+  $if(imageWidth)$
+  <center><a href="$link$"><img src="$image$" width="$imageWidth$" /></a></center>
+  $else$
+    <center><a href="$link$"><img src="$image$" width="100%" /></a></center>
+  $endif$
+
+  $body$
+</div>

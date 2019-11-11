@@ -6,10 +6,12 @@ $if(showreel)$
     $else$
     <li> 
       <div class="blog-card">
-        <h5> <a href="$link$">$title$</a> &mdash; $date$ </h5>
+        <h5> <a href="$url$">$title$</a> &mdash; $date$ </h5>
 
         $if(tags)$
-          <span class="tags">Tags: $tags$</span>
+          <span class="tags">Tags: $tags$
+          | <small><a href="$link$">Paper</a></small>
+          </span>
         $endif$
 
         <div class="content">

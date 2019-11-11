@@ -119,6 +119,7 @@ main = hakyll $ do
             >>= applyAsTemplate ctx
             >>= loadAndApplyTemplate "templates/showreel-item.html" ctx
             >>= saveSnapshot "content"
+            >>= loadAndApplyTemplate "templates/showreel-display.html" ctx
             >>= loadAndApplyTemplate "templates/default.html" ctx
             >>= relativizeUrls
 

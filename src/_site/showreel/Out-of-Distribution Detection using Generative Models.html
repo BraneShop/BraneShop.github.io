@@ -83,12 +83,32 @@ You have entered the realm of
 
   <!-- Content -->
   <div id="content">
-    <p><a href="../posts/2018-12-17-How-Much-Data-For-Retraining.html">In an old blogpost</a> we discussed the problem of networks making over-confident predictions. This paper focused on over-confidence on images that the network has <em>never</em> seen (i.e. trained on cats and dogs, then very confident that a picture of a boat is a dog).</p>
+    <div class="section">
+  <div class="info">
+    Posted on July 10, 2019
+		| <a title="Showreel" href="../showreel.html">Back to Showreel</a>
+  </div>
+
+  <h4 class="blog-title">Out-of-Distribution Detection using Generative Models</h4>
+
+  
+    <span class="tags">Tags: <a href="../showreel-tags/generative.html">generative</a>, <a href="../showreel-tags/technical.html">technical</a>
+      | <small><a href="https://arxiv.org/pdf/1907.04572.pdf">Paper</a></small>
+    </span>
+  
+
+  
+    <center><a href="https://arxiv.org/pdf/1907.04572.pdf"><img src="../images/showreel/Out-of-Distribution Detection using Generative Models.jpg" width="100%" /></a></center>
+  
+
+  <p><a href="../posts/2018-12-17-How-Much-Data-For-Retraining.html">In an old blogpost</a> we discussed the problem of networks making over-confident predictions. This paper focused on over-confidence on images that the network has <em>never</em> seen (i.e. trained on cats and dogs, then very confident that a picture of a boat is a dog).</p>
 <p>A classical idea (we saw it in the “Detecting the Unexpected” paper) is that if we think about how well we can <em>reconstruct</em> a given image, that might tell us something about how often our network has seen it; i.e. if it’s “in-dstribution” or not.</p>
 <p>This paper notes that one problem with that idea is that if the thing we’re looking at is “simple” (technically, has “small variance”), then because the generative models are powerful, they might still do a good job.</p>
 <p>The approach they provide in the paper is to use a different kind of generative network, the so-called “Neural Rendering Model (NRM)”, to do the image generation, and that this new technique just happens to be better at being informative when the data is from a set the network has never seen.</p>
 <p>The picture above shows that the NRM-approach does quite a good job of seperating between images the network has seen and hasn’t seen.</p>
 <p>This is a bit of a technical result, but it’s a crucially important area of research for networks that are going to be used in the real world.</p>
+
+</div>
 
   </div>
 
