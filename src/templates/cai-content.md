@@ -20,7 +20,8 @@ work with you to support your team on their AI adoption journey.
   getting computers to work with and understand text. 
   </p>
 
-  <center><img src="/images/custom-cards/nlp.png" width="300" /></center>
+  <center><img src="/images/custom-cards/nlp.png" width="300" 
+    alt="Text processing example" /></center>
 
   <b>Key Applications</b>
   <ul class="normal">
@@ -30,8 +31,8 @@ work with you to support your team on their AI adoption journey.
 
   <hr />
 
-  <small><center><a href="/showreel-tags/text%20%28NLP%29.html">More examples from
-  recent research</a></center></small>
+  <center><small><a href="/showreel-tags/text%20%28NLP%29.html">More examples from
+  recent research</a></small></center>
 
   </div>
 
@@ -43,7 +44,8 @@ work with you to support your team on their AI adoption journey.
   approach of working to understand <i>why</i> a model made
   a certain decision. </p>
 
-  <center><img src="/images/custom-cards/xai.png" width="300" /></center>
+  <center><img src="/images/custom-cards/xai.png" width="300"
+    alt="Model interpretability example" /></center>
   <b>Key Applications</b>
   <ul class="normal">
   <li>Debugging a model while developing it,</li>
@@ -53,8 +55,8 @@ work with you to support your team on their AI adoption journey.
 
   <hr />
 
-  <small><center><a href="/showreel-tags/explainability%20%28XAI%29.html">More examples from
-  recent research</a></center></small>
+  <center><small><a href="/showreel-tags/explainability%20%28XAI%29.html">More examples from
+  recent research</a></small></center>
   </div>
 
   <div class="topic">
@@ -65,7 +67,9 @@ work with you to support your team on their AI adoption journey.
   mobile devices or other "embedded" hardware.
   </p>
 
-  <center><img src="/images/custom-cards/compression.png" width="300" /></center>
+  <center><img src="/images/custom-cards/compression.png" width="300"
+    alt="Model compression example" /></center>
+
   <b>Key Applications</b>
   <ul class="normal">
   <li>Making a model run fast on a phone,</li>
@@ -76,8 +80,8 @@ work with you to support your team on their AI adoption journey.
 
   <hr />
 
-  <small><center><a href="/showreel-tags/compression.html">More examples from
-  recent research</a></center></small>
+  <center><small><a href="/showreel-tags/compression.html">More examples from
+  recent research</a></small></center>
   </div>
 
 
@@ -90,7 +94,8 @@ work with you to support your team on their AI adoption journey.
   </p>
 
 
-  <center><img src="/images/custom-cards/cv.png" width="300" /></center>
+  <center><img src="/images/custom-cards/cv.png" width="300" 
+    alt="Computer vision example" /></center>
 
   <b>Key Applications</b>
   <ul class="normal">
@@ -104,8 +109,8 @@ work with you to support your team on their AI adoption journey.
 
   <hr />
 
-  <small><center><a href="/showreel-tags/computer-vision.html">More examples from
-  recent research</a></center></small>
+  <center><small><a href="/showreel-tags/computer-vision.html">More examples from
+  recent research</a></small></center>
 
   </div>
 
@@ -118,7 +123,8 @@ work with you to support your team on their AI adoption journey.
   stories, and experiences.
   </p>
 
-  <center><img src="/images/custom-cards/creative.png" width="300" /></center>
+  <center><img src="/images/custom-cards/creative.png" width="300"
+    alt="Creative AI example" /></center>
 
   <b>Key Applications</b>
   <ul class="normal">
@@ -129,8 +135,8 @@ work with you to support your team on their AI adoption journey.
 
   <hr />
 
-  <small><center><a href="/showreel-tags/generative.html">More examples from
-  recent research</a></center></small>
+  <center><small><a href="/showreel-tags/generative.html">More examples from
+  recent research</a></small></center>
   </div>
 
 
@@ -141,7 +147,8 @@ work with you to support your team on their AI adoption journey.
   An emerging field that combines quantum computing and machine learning.
   </p>
 
-  <center><img src="/images/custom-cards/quantum.png" width="300" /></center>
+  <center><img src="/images/custom-cards/quantum.png" width="300" 
+    alt="Quantum machine learning example" /></center>
 
   <p>The applications in this field are still being researched.</p>
 
@@ -171,7 +178,8 @@ work with you to support your team on their AI adoption journey.
   industry and research to develp models and run them in production.
   </p>
 
-  <center><img src="/images/custom-cards/tensorflow.svg" width="300" /></center>
+  <center><img src="/images/custom-cards/tensorflow.svg" width="300" 
+    alt="TensorFlow Logo" /></center>
 
   <b>Key Areas</b>
   <ul class="normal">
@@ -192,7 +200,8 @@ work with you to support your team on their AI adoption journey.
   researchers.
   </p>
 
-  <center><img src="/images/custom-cards/pytorch.png" width="300" /></center>
+  <center><img src="/images/custom-cards/pytorch.png" width="300"
+    alt="PyTorch Logo" /></center>
 
   <b>Key Areas</b>
   <ul class="normal">
@@ -214,7 +223,7 @@ To add:
 
 
 <h5>Essential Details</h5>
-<table class="details" boder="0" cellspacing="0">
+<table class="details" border="0" cellspacing="0" summary="Pricing details for this workshop.">
 <tr>  <td class="item">  Duration </td>
       <td class="value"> 
       Negotiable. </td>
@@ -239,8 +248,8 @@ To add:
 
 <p>Please get in touch to learn more!</p>
 
-<p> <center> 
+<div class="btn-b">
   <a class="btn" href="https://noonvandersilk.typeform.com/to/DYKvWN"
   rel="noopener">Express interest</a> or 
-  <a class="btn" href="/contact.html">Get in contact</a> </center> </p>
+  <a class="btn" href="/contact.html">Get in contact</a> </div>
 

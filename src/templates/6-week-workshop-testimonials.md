@@ -1,6 +1,6 @@
-<div id="testimonials-list">
+<div class="testimonials-list">
   <div class="testimonial">
-    <div><img src="/images/real_testimonials/sam-small.jpg" /></div>
+    <div><img src="/images/real_testimonials/sam-small.jpg" alt="Sam" /></div>
     <p>
     "The team at Braneshop create a learning environment that is such a pleasant
     contrast to anything I've experienced at university. Ruth and Noon, with the
@@ -25,11 +25,11 @@
     <br /><br />
     &mdash; Michelle Low - Zoho
     </p>
-    <div><img src="/images/real_testimonials/michelle.jpg" /></div>
+    <div><img src="/images/real_testimonials/michelle.jpg" alt="Michelle" /></div>
   </div>
 
   <div class="testimonial">
-    <div><img src="/images/real_testimonials/himal.jpg" /></div>
+    <div><img src="/images/real_testimonials/himal.jpg" alt="Himal" /></div>
     <p>
     "[...] It has been a great learning experience so far with Ruth and Noon
     who are fantastic in breaking down complex deep learning concepts into

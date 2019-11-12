@@ -1,6 +1,6 @@
-<div id="testimonials-list">
+<div class="testimonials-list">
   <div class="testimonial">
-    <div><img src="/images/real_testimonials/leisa.jpg" /></div>
+    <div><img src="/images/real_testimonials/leisa.jpg" alt="Leisa" /></div>
     <p>
     "I loved all the examples of AI in real life and I also found the
     activity of working through the framework as a team on the example we
@@ -16,6 +16,7 @@
     &mdash; Leisa Hart - Adaptive Change Mindset
     <br /><br />
     <a href="https://www.adaptivechangemindset.com/" target="_blank"><img
+      alt="Adaptive Change Mindset Logo"
       class="logo" height="70" src="/images/real_testimonials/AdaptiveLogo.webp" /></a>
     </p>
   </div>
@@ -33,13 +34,14 @@
     &mdash; Sarah Kaur - Portable
     <br /><br />
     <a href="https://www.portable.com.au/" target="_blank"><img 
+      alt="Portable logo"
       class="logo" height="20" src="/images/real_testimonials/portable-logo.svg" /></a>
     </p>
-    <div><img src="/images/real_testimonials/sarah-k.jpg" /></div>
+    <div><img src="/images/real_testimonials/sarah-k.jpg" alt="Sarah" /></div>
   </div>
 
   <div class="testimonial">
-    <div><img src="/images/real_testimonials/damian.jpg" /></div>
+    <div><img src="/images/real_testimonials/damian.jpg" alt="Damian" /></div>
     <p>
     "It's given me a greater understanding of AI and the way I can implement
     it in my business including some of the challenges.

@@ -250,8 +250,7 @@ main = hakyll $ do
                 >>= relativizeUrls
 
 
-    match (fromList [ "index.html"
-                    ]) $ do
+    match "index.html" $ do
         route idRoute
         compile $ do
             posts <- fmap (take 4) . recentFirst =<< loadAll "posts/*"
@@ -265,6 +264,7 @@ main = hakyll $ do
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext'
                 >>= relativizeUrls
+                -- >>= minifyHTML
 
 
     match "templates/*" $ compile templateCompiler
@@ -419,4 +419,35 @@ listContextWith ctx s = listField s ctx $ do
 
 listContext :: String -> Context a
 listContext = listContextWith defaultContext'
+
+
+
+minifyHTML :: Item String -> Compiler (Item String)
+minifyHTML = withItemBody $ unixFilter "tidy" (tidyOptionsHTML ++ tidyOptionsMinify)
+
+tidyOptionsDefault =
+    [ "-q"
+    , "--output-encoding utf8"
+    , "--tidy-mark no"
+    -- , "--mute-id yes"
+    , "--wrap 0"
+    -- , "--keep-tabs yes"
+    ]
+
+tidyOptionsHTML =
+    tidyOptionsDefault ++
+    [ "--output-html yes"
+    , "--logical-emphasis yes"
+    , "--warn-proprietary-attributes no"
+    , "--priority-attributes id,class,name,property,rel,href"
+    , "--sort-attributes alpha"
+    , "--merge-divs no"
+    , "--merge-spans no"
+    , "--drop-empty-elements no"
+    ]
+
+tidyOptionsMinify =
+    [ 
+    -- "--vertical-space auto"
+    ]
 

@@ -1,9 +1,10 @@
 <div class="hero-image">
-  <img src="/images/workshop-action-photos/image6_720.jpg" />
+  <img src="/images/workshop-action-photos/image6_720.jpg"
+    alt="Attendees at a recent workshop!" />
 </div>
 
-<p> <center> 
-<a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop-feb">Get tickets for Feb intake!</a> </center> </p>
+<div class="btn-b">
+<a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop-feb">Get tickets for Feb intake!</a> </div>
 
 
 <p> <em class="tag">A six-week hands-on deep learning workshop for
@@ -92,11 +93,12 @@ quiz</a>.
 </ul>
 
 <div class="hero-image">
-  <img src="/images/workshop-action-photos/image2_720.jpg" />
+  <img src="/images/workshop-action-photos/image2_720.jpg"
+    alt="Attendees working together!" />
 </div>
 
 <h5>Essential details</h5>
-<table class="details" boder="0" cellspacing="0">
+<table class="details" border="0" cellspacing="0" summary="Pricing details for this workshop.">
 <tr>  <td class="item">  Duration </td>
       <td class="value"> 6 weeks
       <br /> Weekly, on Thursdays: 4pm-7pm. </td>
@@ -138,7 +140,7 @@ quiz</a>.
       <li> <br /><b>Location:</b> Melbourne CBD, TBC. </li>
     </ul>
 		<div>
-    <p><center><a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop-feb">Get Tickets for February intake</a></center></p>
+    <div class="btn-b"><a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop-feb">Get Tickets for February intake</a></div>
 		</div>
 	</div>
 </div>
@@ -164,7 +166,7 @@ are discounted 50% to <b>$$594 per person</b>.
 application below. If you miss out due to demand, this time around, you are
 welcome to apply again in the future.  </p>
 
-<p> <center> <a class="btn" href="https://noonvandersilk.typeform.com/to/Tnfm4a">Apply for the Scholarship</a> </center> </p>
+<div class="btn-b"> <a class="btn" href="https://noonvandersilk.typeform.com/to/Tnfm4a">Apply for the Scholarship</a> </div>
 
 <p> Note that the scholarships for the August workshop have closed, and
 your application will be considered for the February workshop. We

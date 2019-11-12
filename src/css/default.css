@@ -6,7 +6,6 @@ body {
   font-family:      "Lato";
 }
 
-
 em {
   font-weight: bold;
   font-style:  normal;
@@ -367,7 +366,7 @@ p {
 }
 
 
-#values-list, #testimonials-list {
+#values-list, .testimonials-list {
   display:         flex;
   justify-content: center;
   flex-wrap:       wrap;
@@ -1052,6 +1051,10 @@ div.topic {
 }
 
 
+div.topic center {
+  margin-bottom: 20px;
+}
+
 div.topic hr {
   margin-top: 0;
 }
@@ -1068,4 +1071,11 @@ div.topic small {
 .blog-list h5 {
   margin:        0;
   margin-bottom: 10px;
+}
+
+div.btn-b {
+  display:         flex;
+  justify-content: center;
+  margin-top:      10px;
+  margin-bottom:   10px;
 }
