@@ -5,7 +5,7 @@ title: Can a Robot Become a Movie Director?
 image: /images/showreel/1904.02579.png
 tags: drones, computer-vision
 width: 600px
-imageWidth: 500px
+imageWidth: 500
 preview: A proposal that drones can know where to film, by tracking movement.
 ---
 

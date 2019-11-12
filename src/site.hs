@@ -166,10 +166,9 @@ main = hakyll $ do
       compile $ makeItem $ Redirect "ai-for-leadership.html"
 
 
-    match (fromList ["deep-learning-workshop.html"
-                    , "ai-for-leadership.html"
-                    , "custom-ai-workshop.html"
+    match (fromList [ "custom-ai-workshop.html"
                     , "6-week-workshop-on-deep-learning.html"
+                    , "ai-for-leadership.html"
                     , "team.html"
                     , "contact.html"
                     , "thesetestimonialsdontexist.html"
@@ -205,6 +204,7 @@ main = hakyll $ do
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
+                >>= minifyHTML
 
 
     match (fromList ["showreel.html"]) $ do
@@ -241,15 +241,6 @@ main = hakyll $ do
                 >>= relativizeUrls
 
 
-    match (fromList ["poster.html"]) $ do
-        route idRoute
-        compile $ do
-            getResourceBody
-                >>= applyAsTemplate defaultContext'
-                >>= loadAndApplyTemplate "templates/branded.html" defaultContext'
-                >>= relativizeUrls
-
-
     match "index.html" $ do
         route idRoute
         compile $ do
@@ -264,7 +255,7 @@ main = hakyll $ do
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext'
                 >>= relativizeUrls
-                -- >>= minifyHTML
+                >>= minifyHTML
 
 
     match "templates/*" $ compile templateCompiler
@@ -429,9 +420,8 @@ tidyOptionsDefault =
     [ "-q"
     , "--output-encoding utf8"
     , "--tidy-mark no"
-    -- , "--mute-id yes"
+    , "--mute-id yes"
     , "--wrap 0"
-    -- , "--keep-tabs yes"
     ]
 
 tidyOptionsHTML =
@@ -444,10 +434,10 @@ tidyOptionsHTML =
     , "--merge-divs no"
     , "--merge-spans no"
     , "--drop-empty-elements no"
+    , "--mute ILLEGAL_URI_REFERENCE,ILLEGAL_URI_CODEPOINT"
     ]
 
 tidyOptionsMinify =
     [ 
-    -- "--vertical-space auto"
+    "--vertical-space auto"
     ]
-

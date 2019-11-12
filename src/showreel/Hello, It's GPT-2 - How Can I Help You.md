@@ -5,7 +5,7 @@ image: "/images/showreel/Hello, It's GPT-2 - How Can I Help You.jpg"
 date: 2019-07-12
 tags: generative, text (NLP), ux-of-ai
 preview: Combining generative text networks with "belief" to answer queries.
-imageWidth: 500px
+imageWidth: 500
 ---
 
 This is an interesting one. They use the now-famous [GPT-2

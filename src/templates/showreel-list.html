@@ -18,17 +18,16 @@
 
         <div class="content">
           $if(imageWidth)$
-          <center><a href="$image$"><img src="$image$" width="$imageWidth$" /></a></center>
+          <center><a href="$image$"><img alt="" src="$image$" width="$imageWidth$" /></a></center>
           $else$
-            <center><a href="$image$"><img src="$image$" /></a></center>
+            <center><a href="$image$"><img alt="" src="$image$" /></a></center>
           $endif$
 
           $body$
-
-
         </div>
-      </li>
-      $endif$
+      </div>
+    </li>
+    $endif$
   $endfor$
 </ul>
 
