@@ -1,5 +1,5 @@
 ---
-title: Broadside Debrief
+title: Broadside 2019 Debrief
 author: Noon van der Silk
 image: /images/blog/broadside-books.png?b
 imageDescription: Our haul of books from the Broadside book shop!
