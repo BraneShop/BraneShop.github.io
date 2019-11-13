@@ -8,8 +8,24 @@
         <name>Braneshop Team</name>
         <email>hello@braneshop.com.au</email>
     </author>
-    <updated>2019-11-07T00:00:00Z</updated>
+    <updated>2019-11-13T00:00:00Z</updated>
     <entry>
+    <title>Broadside Debrief</title>
+    <link href="https://braneshop.com.au/posts/Broadside-Debrief.html" />
+    <id>https://braneshop.com.au/posts/Broadside-Debrief.html</id>
+    <published>2019-11-13T00:00:00Z</published>
+    <updated>2019-11-13T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/blog/broadside-books.png" width="100%" /> 
+  <br /><small>Our haul of books from the Broadside book shop!</small></p> </center>
+
+<p>Gala and I went to the <a href="https://broadside.wheelercentre.com/">Broadside festival</a>, put on by the Wheeler Centre, last weekend. You can find people tweeting about it <a href="https://twitter.com/hashtag/broadside2019">here</a>. You can also find a cool image review by the <a href="https://www.wheelercentre.com/news/broadside-2019-graphic-recording-gallery">Wheeler Centre themselves</a>.</p>
+<p>The festival was billed as “An unapologetically feminist agenda”; and it really delivered. Not only was it full of feminist views, those views were being shared by a quite diverse set of people.</p>
+]]></summary>
+</entry>
+<entry>
     <title>Braneshop &mdash; "A Living Business" - Part 3 of 3</title>
     <link href="https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-3.html" />
     <id>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-3.html</id>
@@ -213,24 +229,6 @@
 <p>You can find the application form here: <a href="https://noonvandersilk.typeform.com/to/Tnfm4a">Scholarship for the 6 Week Technical Deep Learning Workshop</a>, and of course more details about the workshop itself here: <a href="/6-week-workshop-on-deep-learning.html">6 Week Workshop</a>.</p>
 <p>We’ve also got a scholarship for the <a href="/ai-for-leadership.html">AI For Leadership Workshop</a>, coming up in September. This is an important one for us as well, as, in order to see change broadly through-out the industry, we will need change in leadership positions.</p>
 <p>Here at the Braneshop we’re creating a welcoming and supportive community for everyone to be involved in AI. We hope you join us!</p>
-]]></summary>
-</entry>
-<entry>
-    <title>Deep learning showreel now online!</title>
-    <link href="https://braneshop.com.au/posts/Showreel-Online.html" />
-    <id>https://braneshop.com.au/posts/Showreel-Online.html</id>
-    <published>2019-07-11T00:00:00Z</published>
-    <updated>2019-07-11T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/showreel/Understanding and Predicting Visual Humour.jpg" width="100%" /> 
-  <br /><small><a href="https://arxiv.org/pdf/1512.04407.pdf">My favourite paper of 2015</a>, and maybe of all time. See the <a href="/showreel.html">showreel</a> page for more!</small></p> </center>
-
-<p>We love staying up to date with the latest deep learning research. I typically catch up daily, via the <a href="https://scirate.com">SciRate</a> website (check if out if you haven’t already!)</p>
-<p>Every now and then, a paper really stands out as either cool, interesting, innovative, or useful. When something really appealed to me, I’d typically post it in various places, such as LinkedIn, or slack, or twitter, or just file it away in my head, waiting for the perfect moment to pop up again.</p>
-<p>We also typically include these as part of the workshops, to get people a bit excited about the field.</p>
-<p>Well, now I’ve decided to put that list online: <a href="/showreel.html">Deep learning showreel!</a></p>
 ]]></summary>
 </entry>
 
