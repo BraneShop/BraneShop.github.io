@@ -1,7 +1,7 @@
 ---
 title: Broadside Debrief
 author: Noon van der Silk
-image: /images/blog/broadside-books.png
+image: /images/blog/broadside-books.png?b
 imageDescription: Our haul of books from the Broadside book shop!
 date: 2019-11-13
 preview: Thoughts on the Broadside festival. (Spoiler &mdash; It was awesome!)
