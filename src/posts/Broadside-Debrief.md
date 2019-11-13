@@ -151,9 +151,8 @@ it's an incredible book and I'd probably recommend reading it first!)
 <li>[Thick](https://www.goodreads.com/book/show/40365093-thick) by Tressie McMillan Cottom,</li>
 <li>[The Runaways](https://www.goodreads.com/book/show/40545831-the-runaways)
 by Fatima Bhutto,</li>
-<li>[The
-Motherhood](https://www.goodreads.com/book/show/39033908-the-motherhood) by
-Jamila Rizvi</li>
+<li>[The Motherhood](https://www.goodreads.com/book/show/39033908-the-motherhood)
+edited by Jamila Rizvi,</li>
 <li>[The Seven Necessary Sins for Women and
 Girls](https://www.goodreads.com/book/show/43427042-the-seven-necessary-sins-for-women-and-girls)
 by Mona Eltahawy,</li>
