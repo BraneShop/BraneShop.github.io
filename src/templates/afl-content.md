@@ -4,7 +4,7 @@
 </div>
 
 <div class="btn-b">
-<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-november">Get tickets for 25-Nov!</a> </div>
+<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-january">Get tickets for 20-Jan!</a> </div>
 
 <p> <em class="tag"> Tailored to executives, startup founders, government, and
 leadership teams, looking to understand and adopt AI. </em> </p>
@@ -68,15 +68,6 @@ $partial("templates/afl-agenda.md")$
 
 <h5>Dates and Tickets</h5>
 <div class="events">
-	<div class="event">
-		<h5> AI For Leadership - November Session </h5>
-		<p>Monday, 25-Nov-2019, 9am-5pm, Melbourne, At 
-    <a href="https://ochouse.com.au">OC House</a>.
-        </p>
-		<div>
-    <div class="btn-b"><a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-november">Get Tickets for November</a></div>
-		</div>
-	</div>
 	<div class="event">
 		<h5> AI For Leadership - January Session </h5>
 		<p>Monday, 27-Jan-2020, 9am-5pm, Melbourne Location TBA.
