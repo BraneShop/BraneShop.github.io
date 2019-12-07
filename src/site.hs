@@ -40,7 +40,7 @@ pandocMathCompiler =
 
 main :: IO ()
 main = hakyll $ do
-    match "images/**/*" $ do
+    match "images/**" $ do
         route   idRoute
         compile copyFileCompiler
 
@@ -48,23 +48,19 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "images/*" $ do
+    match "files/**" $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "files/*" $ do
+    match "js/**" $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "js/*" $ do
+    match "data/**" $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "data/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "css/*" $ do
+    match "css/**" $ do
         route   idRoute
         compile compressCssCompiler
 
@@ -164,6 +160,15 @@ main = hakyll $ do
     create ["deep-learning-workshop.html"] $ do
       route idRoute
       compile $ makeItem $ Redirect "ai-for-leadership.html"
+
+    create ["manifold/index.html"] $ do
+      route idRoute
+      let ctx = defaultContext'
+      compile $ do
+          getResourceBody
+              >>= applyAsTemplate ctx
+              -- >>= loadAndApplyTemplate "templates/manifold.html" ctx
+              >>= relativizeUrls
 
 
     match (fromList [ "custom-ai-workshop.html"
