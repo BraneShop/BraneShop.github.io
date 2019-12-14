@@ -7,8 +7,21 @@
         <description><![CDATA[The blog of the Braneshop team.]]></description>
         <atom:link href="https://braneshop.com.au/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Wed, 13 Nov 2019 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Fri, 13 Dec 2019 00:00:00 UT</lastBuildDate>
         <item>
+    <title>What Happened In 2019 😯</title>
+    <link>https://braneshop.com.au/posts/What-Happened-In-2019.html</link>
+    <description><![CDATA[
+
+
+<p>We are in the middle of gatherings, celebrations and reflections.</p>
+<p>Several things happened during the year and we want to share them with you:</p>
+]]></description>
+    <pubDate>Fri, 13 Dec 2019 00:00:00 UT</pubDate>
+    <guid>https://braneshop.com.au/posts/What-Happened-In-2019.html</guid>
+    <dc:creator>Braneshop Team</dc:creator>
+</item>
+<item>
     <title>Broadside 2019 Debrief</title>
     <link>https://braneshop.com.au/posts/Broadside-Debrief.html</link>
     <description><![CDATA[
@@ -207,27 +220,6 @@
 ]]></description>
     <pubDate>Sat, 03 Aug 2019 00:00:00 UT</pubDate>
     <guid>https://braneshop.com.au/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html</guid>
-    <dc:creator>Braneshop Team</dc:creator>
-</item>
-<item>
-    <title>Scholarships for August Technical Deep Learning Workshop Close on Sunday!</title>
-    <link>https://braneshop.com.au/posts/Aug-2019-Scholarships-Close-On-Sunday.html</link>
-    <description><![CDATA[
-<center>
-  <iframe src="https://player.vimeo.com/video/349597581" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/349597581">Note on scholarships.</a></p>
-</center>
-
-
-
-<p>Ruth and I are very pleased to be offering scholarships for our workshop coming up on the 8th of August. We’ve already accept first-round scholarships (6 people), and so there are some remaining places.</p>
-<p>We’re encouraging applications from anyone that has typically faced barriers in their career/learning in the tech industry. One of our big aims at Braneshop is to increase the representation in the AI industry, and this is one way we’re working towards that goal.</p>
-<p>You can find the application form here: <a href="https://noonvandersilk.typeform.com/to/Tnfm4a">Scholarship for the 6 Week Technical Deep Learning Workshop</a>, and of course more details about the workshop itself here: <a href="/6-week-workshop-on-deep-learning.html">6 Week Workshop</a>.</p>
-<p>We’ve also got a scholarship for the <a href="/ai-for-leadership.html">AI For Leadership Workshop</a>, coming up in September. This is an important one for us as well, as, in order to see change broadly through-out the industry, we will need change in leadership positions.</p>
-<p>Here at the Braneshop we’re creating a welcoming and supportive community for everyone to be involved in AI. We hope you join us!</p>
-]]></description>
-    <pubDate>Wed, 24 Jul 2019 00:00:00 UT</pubDate>
-    <guid>https://braneshop.com.au/posts/Aug-2019-Scholarships-Close-On-Sunday.html</guid>
     <dc:creator>Braneshop Team</dc:creator>
 </item>
 

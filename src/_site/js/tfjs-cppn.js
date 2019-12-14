@@ -1,24 +1,12 @@
 class CppnNetwork {
 
-  constructor (outputWidth, outputHeight) {
+  constructor (outputWidth, outputHeight, latentVector) {
     this.net              = null;
     this.walking          = false;
     this.outputWidth      = outputWidth;
     this.outputHeight     = outputHeight;
-    // this.latentVector     = [0.2, 0.3, 0.5, 0.9];
-    this.latentVector = [];
-this.latentVector = [-0.81, 1.48, 0.07, -2.44, 0.1, 0.59, 0.59, -2.12, -0.72, -0.06, 0.64, -0.26, 1.86, 0.57, -0.38, -1.49, 1.26, -0.03, -0.26, 1.53, -1.74, -0.44, -0.57, 0.32, 1.13, -2.28, 0.48, -1.31, 0.36, -1.73, -0.04, 0.9, -1.38, 1.48, -0.25, -0.73, -0.2, 0.07, 0.63, -1.57, 1.33, -1.17, 0.03, 0.48, 0.44, -0.32, -0.45, -1.81, 0.12, -0.77]
-    ;
+    this.latentVector     = latentVector;
     this.latentDimensions = this.latentVector.length;
-
-    this.layers = 
-      [ { units: 20, activationFunction: "tanh", seed: 0 }
-      , { units: 20, activationFunction: "tanh", seed: 2 }
-      , { units: 20, activationFunction: "tanh", seed: 3 }
-      , { units: 20, activationFunction: "relu", seed: 4 }
-      , { units: 20, activationFunction: "tanh", seed: 5 }
-      , { units: 20, activationFunction: "tanh", seed: 5 }
-      ];
   }
 
   async loadModel (modelUrl) {
@@ -35,12 +23,8 @@ this.latentVector = [-0.81, 1.48, 0.07, -2.44, 0.1, 0.59, 0.59, -2.12, -0.72, -0
     tf.tidy( () => {
       // Build input
       var data = this.buildInput(this.outputWidth, this.outputHeight, this.latentVector);
-      // var outputNames = [ this.net.getLayer( undefined, this.layers.length ).output.name ];
-
-      // const outputs = this.net.execute(data, outputNames);
-      const outputs = [ this.net.predict(data) ];
-      // outputs.print();
-      this.renderEverything(outputs);
+      const output = this.net.predict(data);
+      this.renderEverything(output);
     } );
   }
 
@@ -70,11 +54,10 @@ this.latentVector = [-0.81, 1.48, 0.07, -2.44, 0.1, 0.59, 0.59, -2.12, -0.72, -0
 
 
   /** */
-  renderEverything (outputs) {
-    var result = outputs[outputs.length - 1];
+  renderEverything (output) {
     // Render it in the final neuron
     const node = document.getElementById("final-neuron");
-    this.drawPicture(node, result.dataSync(), this.outputWidth, this.outputHeight, 0, 0);
+    this.drawPicture(node, output.dataSync(), this.outputWidth, this.outputHeight, 0, 0);
   }
 
 
@@ -92,7 +75,6 @@ this.latentVector = [-0.81, 1.48, 0.07, -2.44, 0.1, 0.59, 0.59, -2.12, -0.72, -0
         img.data[ix + 1] = Math.floor(255 * data[iv + 1]);
         img.data[ix + 2] = Math.floor(255 * data[iv + 2]);
         img.data[ix + 3] = 255;
-        // img.data[ix + 3] = Math.floor(255 * data[iv + 3]);
       }
     }
 
@@ -102,9 +84,6 @@ this.latentVector = [-0.81, 1.48, 0.07, -2.44, 0.1, 0.59, 0.59, -2.12, -0.72, -0
 
   /** */
   resetModel () {
-    // console.log("Resetting model ...");
-    // console.table(tf.memory());
-    // Dispose the old network.
     if ( this.net ) {
       tf.dispose(this.net);
     }
@@ -114,9 +93,6 @@ this.latentVector = [-0.81, 1.48, 0.07, -2.44, 0.1, 0.59, 0.59, -2.12, -0.72, -0
     this.net = this.buildNetwork();
 
     this.forward();
-    // latent.initialiseLatentVector();
-    // console.log("End of reset model ...");
-    // console.table(tf.memory());
   }
 
 
