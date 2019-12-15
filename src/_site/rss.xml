@@ -7,8 +7,21 @@
         <description><![CDATA[The blog of the Braneshop team.]]></description>
         <atom:link href="https://braneshop.com.au/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Fri, 13 Dec 2019 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Mon, 16 Dec 2019 00:00:00 UT</lastBuildDate>
         <item>
+    <title>2019 Books</title>
+    <link>https://braneshop.com.au/posts/2019-Books.html</link>
+    <description><![CDATA[
+
+
+<p>Last year I put together <a href="https://silky.github.io/posts/2019-01-03-2018-books.html">a list of the books that I read</a>. I thought I’d keep the tradition going this year.</p>
+<p>So, here we go, the books that I finished this year, in no particular order.</p>
+]]></description>
+    <pubDate>Mon, 16 Dec 2019 00:00:00 UT</pubDate>
+    <guid>https://braneshop.com.au/posts/2019-Books.html</guid>
+    <dc:creator>Braneshop Team</dc:creator>
+</item>
+<item>
     <title>What Happened In 2019 😯</title>
     <link>https://braneshop.com.au/posts/What-Happened-In-2019.html</link>
     <description><![CDATA[
@@ -203,23 +216,6 @@
 ]]></description>
     <pubDate>Thu, 17 Oct 2019 00:00:00 UT</pubDate>
     <guid>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-1.html</guid>
-    <dc:creator>Braneshop Team</dc:creator>
-</item>
-<item>
-    <title>Non-Technical, But Detailed, Explanation of Our Business Card Designs!</title>
-    <link>https://braneshop.com.au/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html</link>
-    <description><![CDATA[
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/blog/business-cards.jpg" width="100%" /> 
-  <br /><small>An assorted collection of our new business cards!</small></p> </center>
-
-<p>Our new business cards arrived earlier this week, and since showing them around to a few people and getting some very nice feedback, I thought it might be of interest to talk a bit about how they were made.</p>
-<p>In particular I wanted to aim this discussion at people who are not intimately familiar with making graphics on computers.</p>
-<p>Let’s get into it!</p>
-]]></description>
-    <pubDate>Sat, 03 Aug 2019 00:00:00 UT</pubDate>
-    <guid>https://braneshop.com.au/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html</guid>
     <dc:creator>Braneshop Team</dc:creator>
 </item>
 

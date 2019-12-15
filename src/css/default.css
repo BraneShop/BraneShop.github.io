@@ -1079,3 +1079,15 @@ div.btn-b {
   margin-top:      10px;
   margin-bottom:   10px;
 }
+
+
+
+div.book {
+ display:        flex;
+ flex-direction: row;
+ padding:        10px;
+}
+
+div.book img { margin-right: 10px; width: 150px; }
+
+div.alt { background: #eaeaea; }
