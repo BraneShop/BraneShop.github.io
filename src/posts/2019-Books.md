@@ -31,6 +31,27 @@ So, here we go, the books that I finished this year, in no particular order.
 </div>
 
 <div class="book">
+  <div class="img"><img src="/images/2019-reading/1013.jpg" /></div>
+  <div class="text">
+   <strong><a href="https://www.goodreads.com//book/show/48254342-finding-the-heart-of-the-nation---the-journey-of-the-uluru-statement-tow">Finding the Heart of the Nation - The Journey of the Uluru Statement towards Voice, Treaty and Truth</a></strong> by Mayor, Thomas
+
+   <p>Thoughtful, well-written and a very interesting read. I'm taking my
+   time with this one; and am still reading it, but it's nice to let the
+   stories settle in your mind. This book is about the journey towards
+   creating the Uluru Statement From The Heart, and a subsequent journey of
+   taking the statement around Australia, and talking with people about what
+   it means to them, and what their life and experience has been.
+   </p>
+   <p>I've learned a significant amount of history from this book that I'd
+   never been exposed to before. I like this book so much it's permanently
+   linked in the footer of this website.
+   </p>
+   </p>
+  </div>
+</div>
+
+
+<div class="book">
   <div class="img"><img src="/images/2019-reading/991.jpg" /></div>
   <div class="text">
    <strong><a href="https://www.goodreads.com/book/show/26195941-the-age-of-surveillance-capitalism">The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power</a></strong> by Zuboff, Shoshana
@@ -236,6 +257,23 @@ So, here we go, the books that I finished this year, in no particular order.
   </div>
 </div>
 
+<div class="book">
+  <div class="img"><img src="/images/2019-reading/1060.jpg" /></div>
+  <div class="text">
+   <strong><a href="https://www.goodreads.com//book/show/32571298-after-piketty">After Piketty: The Agenda for Economics and Inequality</a></strong> by Boushey, Heather
+
+   <p>This is a collection of essays reacting to the ideas presented
+   in a recent famous book in economics by Thomas Piketty. I haven't read the original book,
+   [Capitalism in the Twenty-First
+   Century](https://www.goodreads.com/book/show/18736925-capital-in-the-twenty-first-century),
+   so I was not sure how I'd find this one. In the end, I only made it part
+   the way through. I think a few of the articles were interesting, but a lot
+   of it seemed to be kind of in-fighting between other economists who wanted
+   their ideas heard of Piketty. Might be worth a glance for the hard-core
+   economics fan, but I'm not sure I'll ever finish it.
+   </p>
+  </div>
+</div>
 
 <div class="book">
   <div class="img"><img src="/images/2019-reading/47.jpg" /></div>
@@ -330,8 +368,8 @@ So, here we go, the books that I finished this year, in no particular order.
 
 
 <div class="book">
-  <div class="img"><img src="/images/2019-reading/55.jpg" /></div>
-  <div class="img"><img src="/images/2019-reading/56.jpg" /></div>
+  <div class="img"><img src="/images/2019-reading/55.jpg" style="width: 125px;" /></div>
+  <div class="img"><img src="/images/2019-reading/56.jpg" style="width: 125px;" /></div>
   <div class="text">
    <strong><a href="https://www.goodreads.com/book/show/16878.Arctic_Dreams">Arctic Dreams</a></strong>
    and <strong><a href="https://www.goodreads.com/book/show/15259073-horizon">Horizon</a></strong> by Lopez, Barry
