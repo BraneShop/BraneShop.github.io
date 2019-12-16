@@ -267,7 +267,7 @@ So, here we go, the books that I finished this year, in no particular order.
   <div class="text">
    <strong><a href="https://www.goodreads.com/book/show/32950884-a-city-is-not-a-tree">A City is Not a Tree</a></strong> by Alexander, Christopher W.
 
-   <p>A sort, quirky one. Someone at a meetup I went to early in the year
+   <p>A short, quirky one. Someone at a meetup I went to early in the year
    recommended it to me. Probably only worth reading from Christopher
    Alexander fans.
    </p>
