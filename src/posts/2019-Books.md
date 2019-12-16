@@ -31,6 +31,20 @@ So, here we go, the books that I finished this year, in no particular order.
 </div>
 
 <div class="book">
+  <div class="img"><img src="/images/2019-reading/991.jpg" /></div>
+  <div class="text">
+   <strong><a href="https://www.goodreads.com/book/show/26195941-the-age-of-surveillance-capitalism">The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power</a></strong> by Zuboff, Shoshana
+
+   <p>Incredible book. Amazingly well-researched, and highlights many issues
+   that have bothered me for many years, but I've never been able to express
+   well. It's a huge read, but absolutely worth your time. Highly recommended
+   to anyone working in AI or with data and people.
+   </p>
+  </div>
+</div>
+
+
+<div class="book">
   <div class="img"><img src="/images/2019-reading/0.jpg" /></div>
   <div class="text">
    <strong><a href="https://www.goodreads.com/book/show/79788.Community_and_Privacy">Community and Privacy: Toward a New Architecture of Humanism</a></strong> by Chermayeff, Serge
