@@ -15,7 +15,7 @@ So, here we go, the books that I finished this year, in no particular order.
 
 <!--more-->
 
-#### Fiction
+#### Non-Fiction
 
 <div class="book-list">
 <div class="book">
@@ -400,7 +400,7 @@ So, here we go, the books that I finished this year, in no particular order.
 
 
 
-#### Non-Fiction
+#### Fiction
 <div class="book-list">
 
 <div class="book">
