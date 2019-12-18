@@ -374,7 +374,7 @@ So, here we go, the books that I finished this year, in no particular order.
    <strong><a href="https://www.goodreads.com/book/show/16878.Arctic_Dreams">Arctic Dreams</a></strong>
    and <strong><a href="https://www.goodreads.com/book/show/15259073-horizon">Horizon</a></strong> by Lopez, Barry
 
-   <p>I loved this books, and found them incredibly inspiring. They both
+   <p>I loved these books, and found them incredibly inspiring. They both
    convey the idea and importantance of indigenous and local knowledge, and
    the search for meaning in place. Very poetically written.
    </p>
