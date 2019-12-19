@@ -426,6 +426,27 @@ So, here we go, the books that I finished this year, in no particular order.
 
 
 <div class="book">
+  <div class="img"><img src="/images/2019-reading/2011.jpg" /></div>
+  <div class="text">
+   <strong><a href="https://www.goodreads.com//book/show/44767249-she-said">She Said: Breaking the Sexual Harassment Story That Helped Ignite a Movement</a></strong> by Kantor, Jodi and Twohey, Megan
+
+   <p>Covers the story of Harvey Weinstein, and also Brett Kavanaugh, and the
+   lives of the women that brought up claims against them. I couldn't put this
+   one down. It was quite shocking to learn of all the confidential pay-offs
+   made in order to silence the victims, and the basically criminal compnents
+   of those agreements which prevents people from ever speaking out. It's also
+   totally astounding to learn of the terrible people that work with these
+   abusers to cover up their behaviour. It's actually some of the same laywers
+   that were involved in the Bad Blood story!
+   </p>
+
+   <p>Ultimately, shows the power of speaking up, as a group, but also the
+   risks and difficultities of coming to such a decision.</p>
+  </div>
+</div>
+
+
+<div class="book">
   <div class="img"><img src="/images/2019-reading/60.jpg" /></div>
   <div class="text">
    <strong><a href="https://www.goodreads.com/book/show/39703115-the-guilty-feminist">The Guilty Feminist: From Our Noble Goals to Our Worst Hypocrisies</a></strong> by Frances-white, Deborah
