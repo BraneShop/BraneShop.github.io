@@ -445,6 +445,20 @@ So, here we go, the books that I finished this year, in no particular order.
   </div>
 </div>
 
+<div class="book">
+  <div class="img"><img src="/images/2019-reading/3015.jpg" /></div>
+  <div class="text">
+   <strong><a href="https://www.goodreads.com//book/show/46650277-catch-and-kill">Catch and Kill: Lies, Spies, and a Conspiracy to Protect Predators</a></strong> by Farrow, Ronan
+
+   <p>Also covers Harvey Weinstein, but also Matt Lauer and (briefly) Trump. I
+   read this following the "She Said" book. Both are good, and really
+   demonstrate the completely horrible environment that was, and probably
+   still is, present in many of these entertainment companies, and again the
+   power of collective action and of investigative journalism in general.
+   </p>
+  </div>
+</div>
+
 
 <div class="book">
   <div class="img"><img src="/images/2019-reading/60.jpg" /></div>
