@@ -469,6 +469,35 @@ So, here we go, the books that I finished this year, in no particular order.
    </p>
   </div>
 </div>
+
+
+<div class="book">
+  <div class="img"><img src="/images/2019-reading/4000.jpg" /></div>
+  <div class="text">
+   <strong><a href="https://www.goodreads.com//book/show/40046057-falter">Falter: Has the Human Game Begun to Play Itself Out?</a></strong> by McKibben, Bill
+
+  <p>I started reading this one because I found out that some of the
+  [350.org](http://350.org/)
+  team were based in my co-working space at [OC
+  House](https://ochouse.com.au/). It's about climate change, but also covers
+  a few other technologies that seek to fundamentally change what it means to
+  be human. I found his coverage of AI to be a bit weak; but I think it's
+  always hard to be an expert in so many fields, when you try and make such
+  broad-reaching statements. Overall, I found it good, but I'd recommend "On
+  Fire", over this one, if you're looking for optimisim.
+  </p>
+
+  <p>One of the interesting points I take away from this is his comment that
+  nonviolent campaigning is an important "technology" that we should harness.
+  I really like this idea. And, of course, we should use solar panels
+  everywhere!
+  </p>
+  </div>
+</div>
+
+
+
+
 </div>
 
 
