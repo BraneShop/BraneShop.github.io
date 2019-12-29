@@ -495,6 +495,21 @@ So, here we go, the books that I finished this year, in no particular order.
   </div>
 </div>
 
+<div class="book">
+  <div class="img"><img src="/images/2019-reading/5004.jpg" /></div>
+  <div class="text">
+   <strong><a href="https://www.goodreads.com//book/show/764165.The_Snow_Leopard">The Snow Leopard</a></strong> by Matthiessen, Peter
+
+   <p>I picked this one up from the local bookstore in North Melbourne on a
+   whim. I've not read many classics, but this one seemed interesting in that
+   it combines my (new) love of travel writing and buddhist-style books. I
+   really enjoyed this book, despite it being a bit dated. It's especially
+   cool to go and look up the places that they travelled on and see pictures!
+   </p>
+
+  </div>
+</div>
+
 
 
 
