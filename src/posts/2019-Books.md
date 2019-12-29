@@ -506,7 +506,9 @@ So, here we go, the books that I finished this year, in no particular order.
    really enjoyed this book, despite it being a bit dated. It's especially
    cool to go and look up the places that they travelled on and see pictures!
    </p>
-
+   <p>Well worth reading, especially if you're into other peoples journeys
+   into Buddhism.
+   </p>
   </div>
 </div>
 
