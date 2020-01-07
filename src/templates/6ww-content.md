@@ -137,7 +137,7 @@ quiz</a>.
       <li> Week 4 - February 27th, 2019</li>
       <li> Week 5 - March 5th, 2019</li>
       <li> Week 6 - March 12th, 2019</li>
-      <li> <br /><b>Location:</b> Melbourne CBD, TBC. </li>
+      <li> <br /><b>Location:</b> <a href="https://ochouse.com.au/">OC House</a>, North Melbourne. </li>
     </ul>
 		<div>
     <div class="btn-b"><a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop-feb">Get Tickets for February intake</a></div>
