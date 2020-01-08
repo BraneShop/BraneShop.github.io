@@ -37,7 +37,7 @@ time, on the 17th. Details below.
 **6 Week Workshop**
 
 <div class="ws">
-  <a href="/6-week-workshop-on-deep-learning.html"><img src="/images/workshop-action-photos/image6_720.jpg" /></a>
+  <a href="/6-week-workshop-on-deep-learning.html"><img src="/images/workshop-action-photos/image6_720.jpg" style="width: 400px;" /></a>
   <div>
   <i>Starts on the 6th of Feb</i>
 
@@ -56,7 +56,7 @@ time, on the 17th. Details below.
 **AI For Leadership**
 
 <div class="ws">
-  <a href="/ai-for-leadership.html"><img src="/images/workshop-action-photos/23-sept-leadership-small.jpg" /></a>
+  <a href="/ai-for-leadership.html"><img src="/images/workshop-action-photos/23-sept-leadership-small.jpg" style="width: 400px;" /></a>
   <div>
   <i>Runs on the 17th of Feb</i>
 
