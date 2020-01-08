@@ -1091,3 +1091,14 @@ div.book {
 div.book img { margin-right: 10px; width: 150px; }
 
 div.alt { background: #eaeaea; }
+
+div.ws {
+  display:         flex;
+  flex-direction:  row;
+  align-items:     center;
+  justify-content: space-around;
+}
+
+
+div.ws img { width: 400px;
+border-radius: 20px; }
