@@ -24,6 +24,15 @@ fuel. [Bank Australia](https://www.bankaust.com.au/responsible-banking/) has
 been my choice.  Finally, Gala and I have also gone through our house and
 found a bunch of things to give away. 
 
+Here's some good links if you're looking for places to donate:
+
+<ul class="normal">
+<li>[GiveNow - How Can I Donate To Help With The Bushfies?](https://help.givenow.com.au/hc/en-us/articles/360001315355-How-can-I-donate-to-help-with-the-bushfires-)</li>
+<li>[The Guardian - Do your homework, give cash and avoid scams: How to donate
+to Australia's bushfire
+crisis](https://www.theguardian.com/australia-news/2020/jan/08/do-your-homework-give-cash-and-avoid-scams-how-to-give-to-australias-bushfire-crisis)</li>
+</ul>
+
 
 <!--more-->
 
