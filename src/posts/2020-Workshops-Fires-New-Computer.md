@@ -1,5 +1,5 @@
 ---
-title: Workshops, Fires, and a New Computer
+title: Workshops, Fires, New computer, and a Datathon!
 author: Noon van der Silk
 image: /images/blog/mona.png
 date: 2020-01-08
@@ -74,10 +74,11 @@ time, on the 17th. Details below.
 
 <center><img src="/images/blog/mona.png" style="width: 500px" /></center>
 
-This is the face that greets you when you log in to our new GPU training
-machine, `eltahawy`. It is, of course, [Mona
-Eltahawy](https://twitter.com/monaeltahawy), feminist giant and
-[author](https://en.wikipedia.org/wiki/Mona_Eltahawy#Bibliography).
+We have decided to name it after someone that inspires us to be better. [Mona
+Eltahawy](https://twitter.com/monaeltahawy) greets you when you log into our
+new GPU training machine. If you do not know Mona, you should. She is a
+feminist giant and [author](https://en.wikipedia.org/wiki/Mona_Eltahawy#Bibliography). We were
+lucky to see her speak at [Broadside 2019](/posts/Broadside-Debrief.html) in December of last year. 
 
 The computer is this one from
 [ScorpTec](https://www.scorptec.com.au/product/Ready-to-Run-PCs/Gaming-PC/77756-SS-TEMPEST2080TI-2). 
@@ -101,3 +102,27 @@ experimentation, but also useful for training provenance/etc.
 In any case, if you're looking for a GPU machine, ScorpTec is a great place to
 go! Because I bought off-the-shelf, I ordered the machine at 7.30am and it was
 ready to pick up at 9.30am that same day! So cool.
+
+
+#### Datathon for Social Good
+
+[Our Community](https://www.ourcommunity.com.au/) is hosting a
+[datathon](https://www.ourcommunity.com.au/datathon) in Feb-March. 
+
+The aim is to
+work with a community organisation ([Community Hubs](http://www.communityhubs.org.au/), in this case),
+and get a bunch of people together and work on a problem, based on data. The
+event is seeking all kinds of different people, from attendees to mentors.
+There will be technical work to do, but also work around general problem
+solving and framing, as well as UI and design work!
+
+Key dates:
+
+- 22-Feb - Launch Event
+- 23-Feb - "Hack day"
+- 20-Mar - Submission deadline
+- 26-Mar - Awards presentation
+
+Check out the website for more details: [Datathon For Social
+Good](https://www.ourcommunity.com.au/datathon).  We're very excited to be a
+part of the event!
