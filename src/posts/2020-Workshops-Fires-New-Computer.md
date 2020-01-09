@@ -41,7 +41,7 @@ crisis](https://www.theguardian.com/australia-news/2020/jan/08/do-your-homework-
 We've got _two_ workshops in Feb! We're running the 6 Week Technical Deep
 Learning Workshop for the second time. It starts on the 6th of Feb. And we're
 (in the middle of that workshop!) doing the leadership workshop for the 3rd
-time, on the 17th. Details below.
+time, on the 24th. Details below.
 
 **6 Week Workshop**
 
@@ -67,14 +67,14 @@ time, on the 17th. Details below.
 <div class="ws">
   <a href="/ai-for-leadership.html"><img src="/images/workshop-action-photos/23-sept-leadership-small.jpg" style="width: 400px;" /></a>
   <div>
-  <i>Runs on the 17th of Feb</i>
+  <i>Runs on the 24th of Feb</i>
 
   - State-of-the-Art
   - Risks
   - Tips and ticks
   - AI adoption framework
   <div class="btn-b">
-<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-feb">Get tickets for Feb 17th intake!</a> </div>
+<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-feb">Get tickets for Feb 24th intake!</a> </div>
   </div>
 </div>
 
