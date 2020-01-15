@@ -250,7 +250,7 @@ test  <span class="op">=</span> scited[11_500:]       <span class="op">+</span> 
 write_csv(train, <span class="st">&quot;../data/train&quot;</span>)
 write_csv(val,   <span class="st">&quot;../data/val&quot;</span>)
 write_csv(test,  <span class="st">&quot;../data/test&quot;</span>)</code></pre></div>
-<p>This is just a little hacked-together bit of code that grabs out papers that I’ve definitely scited, and those for which I haven’t scited. Note that it limits it to those papers from the last 5 years, and also randomly orders them. If we wanted to be a bit more precise, we could do the random ordering according to a seed, but we’re just in a blog post here, so we can be a bit related :)</p>
+<p>This is just a little hacked-together bit of code that grabs out papers that I’ve definitely scited, and those for which I haven’t scited. Note that it limits it to those papers from the last 5 years, and also randomly orders them. If we wanted to be a bit more precise, we could do the random ordering according to a seed, but we’re just in a blog post here, so we can be a bit relaxed :)</p>
 <p>Note that this code requires the SciRate database, so you can’t run it, but here’s the output: <a href="https://drive.google.com/file/d/16HIXwe_8MP2fXm_aqrHCdkLZzpjBFwMr/view?usp=sharing">noons scites - download</a> if you want to follow along with this exact dataset.</p>
 <p>Great! Now I have my data in the <code>data</code> folder:</p>
 <pre class="terminal">

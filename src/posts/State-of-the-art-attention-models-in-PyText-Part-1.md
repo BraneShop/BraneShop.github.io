@@ -194,7 +194,7 @@ I've definitely scited, and those for which I haven't scited. Note that it
 limits it to those papers from the last 5 years, and also randomly orders
 them. If we wanted to be a bit more precise, we could do the random ordering
 according to a seed, but we're just in a blog post here, so we can be a bit
-related :)
+relaxed :)
 
 Note that this code requires the SciRate database, so you can't run it, but
 here's the output: [noons scites -
