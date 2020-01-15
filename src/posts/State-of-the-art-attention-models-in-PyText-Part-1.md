@@ -516,7 +516,7 @@ paper](https://github.com/facebookresearch/pytext/issues/173), so that we get th
 power of the attention that the paper (supposedly!) provides.
 
 We'll address the first item first, as it should be independent of the second.
-We'll leave the second item for
+We'll leave the second item for another day.
 
 ##### So, how do we get the attention out, and display it?
 
