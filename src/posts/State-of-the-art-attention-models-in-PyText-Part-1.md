@@ -261,7 +261,7 @@ to build a JSON file like so:
 }
 ```
 
-So, let's think out our problem here as a "classification" problem.  We have
+So, let's think about our problem here as a "classification" problem.  We have
 two independent classes, "scited" and "not scited". 
 
 Now, glancing at the [PyText
@@ -313,7 +313,7 @@ Going back to the above config, we note that we don't have a "TSV"
 ```
 
 (Note: the `field_names` needs to match the order in the CSV, and furthermore,
- hte fields "label" and "text" are used because they correspond to the names
+ the fields "label" and "text" are used because they correspond to the names
  _in pytext code_, not because they are the names of the columns in our
  document. Further note: [there's a
  bug](https://github.com/facebookresearch/pytext/issues/747) where the

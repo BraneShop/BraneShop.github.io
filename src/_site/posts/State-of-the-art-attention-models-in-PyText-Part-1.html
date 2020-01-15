@@ -291,7 +291,7 @@ drwxrwxr-x 7 noon noon 4.0K Jul  2 08:26 ..
     <span class="fu">}</span>
   <span class="fu">}</span>
 <span class="fu">}</span></code></pre></div>
-<p>So, let’s think out our problem here as a “classification” problem. We have two independent classes, “scited” and “not scited”.</p>
+<p>So, let’s think about our problem here as a “classification” problem. We have two independent classes, “scited” and “not scited”.</p>
 <p>Now, glancing at the <a href="https://github.com/facebookresearch/pytext#overview">PyText classifiers</a> that they have set up by default, the one I want to use is this one: <a href="https://arxiv.org/abs/1703.03130">Lin et al. (2017): A Structured Self-attentive Sentence Embedding</a>. I’m picking this one because, firstly, it’s got this notion of <em>attention</em>. Scrolling through the paper, this is the kind of output we can expect to get from this paper:</p>
 <center>
 <img src="../images/blog/attention.jpg" width="900" title="Attention in the sentence embedding paper" alt="Attention in the sentence-embedding paper." />
@@ -320,7 +320,7 @@ drwxrwxr-x 7 noon noon 4.0K Jul  2 08:26 ..
     <span class="fu">}</span>
   <span class="fu">}</span>
 <span class="fu">}</span></code></pre></div>
-<p>(Note: the <code>field_names</code> needs to match the order in the CSV, and furthermore, hte fields “label” and “text” are used because they correspond to the names <em>in pytext code</em>, not because they are the names of the columns in our document. Further note: <a href="https://github.com/facebookresearch/pytext/issues/747">there’s a bug</a> where the TCV-parser doesn’t respect quoted strings with the seperator in them.)</p>
+<p>(Note: the <code>field_names</code> needs to match the order in the CSV, and furthermore, the fields “label” and “text” are used because they correspond to the names <em>in pytext code</em>, not because they are the names of the columns in our document. Further note: <a href="https://github.com/facebookresearch/pytext/issues/747">there’s a bug</a> where the TCV-parser doesn’t respect quoted strings with the seperator in them.)</p>
 <p>Okay. Ambitiously, let’s just try putting everything together, and running it! I’m going to call it <code>02-Jul-2019-Run-1.json</code> and it will have:</p>
 <div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
   <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span>
