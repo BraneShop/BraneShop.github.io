@@ -1,7 +1,7 @@
 ---
 title: Introduction to Explainable AI - 6th of Nov, 2019
 author: Noon van der Silk
-image: /images/blog/xai-event.webp
+image: /images/blog/xai-event.jpg
 imageDescription: Join us for an evening of Explainable AI!
 preview: Interested in AI models you can interpret? Come and join us to find out how!
 date: 2019-10-17
