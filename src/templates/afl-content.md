@@ -100,7 +100,3 @@ application below. If you miss out due to demand, this time around, you are
 welcome to apply again in the future.  </p>
 
 <div class="btn-b"> <a class="btn" href="https://noonvandersilk.typeform.com/to/qMCtvX">Apply for the Scholarship</a> </div>
-
-<p>The closing date for the application process is the 15th of November.
-Scholarship decisions will be sent out on the 18th of November.</p>
-

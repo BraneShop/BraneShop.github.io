@@ -166,9 +166,4 @@ are discounted 50% to <b>$$594 per person</b>.
 application below. If you miss out due to demand, this time around, you are
 welcome to apply again in the future.  </p>
 
-<div class="btn-b"> <a class="btn" href="https://noonvandersilk.typeform.com/to/Tnfm4a">Apply for the Scholarship</a> </div>
-
-<p> Note that the scholarships for the August workshop have closed, and
-your application will be considered for the February workshop. We
-will send out confirmations mid January.
-</p>
+<div class="btn-b"> <a class="btn" href="https://noonvandersilk.typeform.com/to/qMCtvX">Apply for the Scholarship</a> </div>
