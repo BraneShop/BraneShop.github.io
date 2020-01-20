@@ -106,7 +106,7 @@ On the 6th of February, we will quick off our next [Technical
 Workshop](/6-week-workshop-on-deep-learning.html) edition. 
 </li>
 <li>
-On the 24th of February, we will have an intensive day of [AI for
+On the 16th of March, we will have an intensive day of [AI for
 Leadership](/ai-for-leadership.html). 
 </li>
 </ul>

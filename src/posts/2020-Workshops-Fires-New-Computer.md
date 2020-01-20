@@ -38,10 +38,10 @@ crisis](https://www.theguardian.com/australia-news/2020/jan/08/do-your-homework-
 
 #### Workshops
 
-We've got _two_ workshops in Feb! We're running the 6 Week Technical Deep
-Learning Workshop for the second time. It starts on the 6th of Feb. And we're
-(in the middle of that workshop!) doing the leadership workshop for the 3rd
-time, on the 24th. Details below.
+We've got one workshop in Feb, and a second in March! We're running the 6 Week
+Technical Deep Learning Workshop for the second time. It starts on the 6th of
+Feb. And we're (in the middle of that workshop!) doing the leadership workshop
+for the 3rd time, on the 16th of March. Details below.
 
 **6 Week Workshop**
 
