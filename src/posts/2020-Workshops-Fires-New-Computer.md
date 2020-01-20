@@ -13,9 +13,9 @@ It's been a terrible start of the year for Australia. I've been following the
 news over on [The
 Guardian](https://www.theguardian.com/australia-news/live/2020/jan/08/nsw-fires-live-updates-victoria-bushfires-south-australia-fire-sa-australian-bushfire-near-me-rfs-cfa-latest-news-wednesday).
 
-**As a result, we've decided to donate 50% of our profits** (i.e. just less the
-venue costs and teaching time), from our two workshops in Feb. Hopefully this
-will be a few thousand dollars.
+**As a result, we've decided to donate 50% of our profits** (i.e. just less
+    the venue costs and teaching time), from our two workshops in Feb and
+March. Hopefully this will be a few thousand dollars.
 
 If you want to do more, my friend Milly noted in a nice
 [thread](https://twitter.com/meelijane/status/1213251935035260928) you can
@@ -67,14 +67,14 @@ time, on the 24th. Details below.
 <div class="ws">
   <a href="/ai-for-leadership.html"><img src="/images/workshop-action-photos/23-sept-leadership-small.jpg" style="width: 400px;" /></a>
   <div>
-  <i>Runs on the 24th of Feb</i>
+  <i>Runs on the 16th of March</i>
 
   - State-of-the-Art
   - Risks
   - Tips and ticks
   - AI adoption framework
   <div class="btn-b">
-<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-feb">Get tickets for Feb 24th intake!</a> </div>
+<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-march">Get tickets for March 16th intake!</a> </div>
   </div>
 </div>
 
