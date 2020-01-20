@@ -109,7 +109,7 @@ quiz</a>.
       </td>
 </tr>
 <tr>  <td class="item">  Location </td>
-      <td class="value"> Melbourne CBD </td>
+      <td class="value"> <a href="https://ochouse.com.au/">OC House</a>, North Melbourne. </td>
 </tr>
 <tr> <td class="item"> Prerequisites </td>
      <td class="value">
