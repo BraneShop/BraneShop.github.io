@@ -25,16 +25,11 @@ class: compressed
   <p> Here's some of the events we'll be at over the next little while.
   </p>
 
-  <ul class="normal">
-  $for(events)$
-    <li><a href="$url$" target="_blank">$date$ - $title$</a></li>
-  $endfor$
-  </ul>
+  <center>
 
-  <hr />
-
-  <div id="calendar">
-  </div>
+    <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Australia%2FMelbourne&amp;src=bjJudjB1b2hiMWRidXVnZGhlNGNwcTM1cGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23871111&amp;showNav=1&amp;showPrint=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  
+  </center>
 
 
   <h2> Community Groups </h2>
@@ -124,45 +119,3 @@ class: compressed
 	</div>
 
 </div>
-
-
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-var calendarEl = document.getElementById('calendar');
-
-var calendar   = new FullCalendar.Calendar(calendarEl,
-    { plugins: [ 'dayGrid' ]
-      // Open links in a new window.
-    , eventClick: function(info) {
-        info.jsEvent.preventDefault();
-        if (info.event.url) {
-          window.open(info.event.url);
-        }
-      }
-    }
-  );
-
-  $for(events)$
-    calendar.addEvent( 
-      { title: "$title$"
-      , start: "$jsDate$"
-      , url: "$url$"
-      , end: "$jsDate$" }
-    );
-  $endfor$
-
-
-  $for(pastEvents)$
-    calendar.addEvent( 
-      { title: "$title$"
-      , start: "$jsDate$"
-      , url: "$url$"
-      , color: "sandybrown"
-      , end: "$jsDate$" }
-    );
-  $endfor$
-
-	calendar.render();
-});
-</script>
-
