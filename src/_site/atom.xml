@@ -8,8 +8,40 @@
         <name>Braneshop Team</name>
         <email>hello@braneshop.com.au</email>
     </author>
-    <updated>2020-01-08T00:00:00Z</updated>
+    <updated>2020-01-28T00:00:00Z</updated>
     <entry>
+    <title>Post-Prediction Unconference!</title>
+    <link href="https://braneshop.com.au/posts/Post-Prediction-Unconference-2020.html" />
+    <id>https://braneshop.com.au/posts/Post-Prediction-Unconference-2020.html</id>
+    <published>2020-01-28T00:00:00Z</published>
+    <updated>2020-01-28T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+
+
+<p>We’re very excited to be co-orgainising the first “<a href="https://postpredictionconference.github.io/">Post-Prediction</a>” unconference next month, Feb 18th (a Tuesday).</p>
+<p>The event was conceived while I was reading this book — <a href="https://www.goodreads.com/book/show/26195941-the-age-of-surveillance-capitalism">The Age of Surveillance Capitalism</a> by Shoshana Zuboff.</p>
+<p>Notably, in the book, Shoshana brings up the problem of how we, as a society, will deal with the (coming, but also already present) motivations of behavioural change that “ultimately-predictive” abilities will give us.</p>
+<p>So, this unconference is centered around this idea, with a particular focus/interest on:</p>
+<ul>
+<li>Empathy and ethics, bias and fairness,</li>
+<li>Projects for social good,</li>
+<li>Creative applications,</li>
+<li>Inclusion and community-building,</li>
+<li>Teaching and education,</li>
+<li>Journalism and story-telling,</li>
+<li>Privacy and security,</li>
+<li>Sustainability,</li>
+<li>Data governance,</li>
+<li>Human-in-the-loop systems,</li>
+<li>The UI the experience of AI.</li>
+</ul>
+<p>Now, the event is running in an <a href="https://en.wikipedia.org/wiki/Unconference">unconference</a> style, and that means it will be entirely driven by those present. The focus will all be on engaging with <em>each other</em>, on topics that we agree upon on the day.</p>
+<p>We have three (pretty big) rooms to work with, so there will be plenty of space to work together.</p>
+<p>Roughly, the way it will work is, we write up on the whiteboard things we want to talk about, then talk about that!</p>
+<p>To make things concrete, here’s some things I’m thinking I’d like to see/discuss:</p>
+]]></summary>
+</entry>
+<entry>
     <title>Workshops, Fires, New computer, and a Datathon!</title>
     <link href="https://braneshop.com.au/posts/2020-Workshops-Fires-New-Computer.html" />
     <id>https://braneshop.com.au/posts/2020-Workshops-Fires-New-Computer.html</id>
@@ -184,33 +216,6 @@
 </li>
 </ul>
 <p>This post is inspired by the ideas laid out in <a href="/posts/Braneshop-A-Living-Business-Part-1">first post in this series</a>.</p>
-]]></summary>
-</entry>
-<entry>
-    <title>Introduction to Explainable AI - 6th of Nov, 2019</title>
-    <link href="https://braneshop.com.au/posts/Introduction-To-Explainable-AI-Event.html" />
-    <id>https://braneshop.com.au/posts/Introduction-To-Explainable-AI-Event.html</id>
-    <published>2019-10-17T00:00:00Z</published>
-    <updated>2019-10-17T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/blog/xai-event.jpg" width="100%" /> 
-  <br /><small>Join us for an evening of Explainable AI!</small></p> </center>
-
-<center>
-<i> <a href="https://events.humanitix.com.au/making-the-black-box-of-ai-transparent-with-explainable-ai-xai">Join us on the 6th of November for an Introduction to Explainable AI - Opening the black box!</a> </i>
-</center>
-<p>From talking to people across different businesses for the last few months, we know that there is significant interest in “exaplainble” AI models. The reason is natural: When we deploy these decision-making tools, we need to understand <em>why</em> they make decisions; as this helps us learn if they are doing the “right” thing. And furthermore, it let’s us improve or adjust our processes.</p>
-<p>Our intention is to give you a high-level overview, and cover one or two areas in some detail, so you can get a feel for what’s involved.</p>
-<p>As such, we’ve organised an event to explore the landscape of Explainable AI. In particular, we will:</p>
-<ul>
-<li>Look at what’s available,</li>
-<li>Work out what is involved in applying it,</li>
-<li>and, Learn where the field is heading!</li>
-</ul>
-<p>We’re bringing together a few people in Melbourne who are doing interesting work in this area!</p>
-<p>After attending this event, you should be able to understand:</p>
 ]]></summary>
 </entry>
 
