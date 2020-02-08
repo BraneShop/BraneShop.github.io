@@ -37,6 +37,20 @@ pandocMathCompiler =
                         }
     in pandocCompilerWith defaultHakyllReaderOptions writerOptions
 
+simpleServe =  do
+  route idRoute
+
+  let ctx = listContext "classes"
+            <> defaultContext'
+
+  compile $ do
+      getResourceBody
+          >>= applyAsTemplate ctx
+          >>= loadAndApplyTemplate "templates/default.html" ctx
+          >>= relativizeUrls
+          >>= minifyHTML
+
+
 
 main :: IO ()
 main = hakyll $ do
@@ -169,6 +183,20 @@ main = hakyll $ do
               >>= applyAsTemplate ctx
               -- >>= loadAndApplyTemplate "templates/manifold.html" ctx
               >>= relativizeUrls
+
+    match "workshops.html" simpleServe
+    -- match "team.html"      simpleServe
+        -- route idRoute
+
+        -- let ctx = listContext "classes"
+        --           <> defaultContext'
+
+        -- compile $ do
+        --     getResourceBody
+        --         >>= applyAsTemplate ctx
+        --         >>= loadAndApplyTemplate "templates/default.html" ctx
+        --         >>= relativizeUrls
+        --         >>= minifyHTML
 
 
     match (fromList [ "custom-ai-workshop.html"
