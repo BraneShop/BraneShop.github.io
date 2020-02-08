@@ -3,22 +3,17 @@
     alt="Leadership group working through an exercises." />
 </div>
 
-<div class="btn-b">
-<a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-march">Get tickets for 16-March!</a> </div>
+$for(firstWorkshop)$
+  <div class="btn-b"><a class="btn" href="$tickets$">Secure your spot for $date$</a></div>
+$endfor$
 
-<p> <em class="tag"> Tailored to executives, startup founders, government, and
+<p> <em class="tag">Designed for executives, startup founders, government, and
 leadership teams, looking to understand and adopt AI. </em> </p>
 
 <h5>About</h5>
 
-$partial("templates/afl-overview.md")$
-
-<!--
-<p> We'll go over all the State of the Art in machine learning across a
-variety of applications, from text analysis, computer vision, to maps, and
-graphs, and audio; we'll see what kinds of data you can use to get started,
-and how to bootstrap the process so that you can get started sooner. </p>
--->
+<p> In this <b>one-day</b> intensive session, we will cover everything that
+you need to know in order to build AI into your organisation.</p>
 
 <h5 class="s">What can you expect to receive and achieve?</h5>
 <ul class="normal">
@@ -67,16 +62,11 @@ $partial("templates/afl-agenda.md")$
 <p></p>
 
 <h5>Dates and Tickets</h5>
-<div class="events">
-	<div class="event">
-		<h5> AI For Leadership - March Session </h5>
-		<p>Monday, 16-March-2020, 9am-5pm, 
-      <a href="https://ochouse.com.au/">OC House</a>, North Melbourne.
-        </p>
-		<div>
-    <div class="btn-b"><a class="btn" href="https://events.humanitix.com.au/braneshop-ai-for-leadership-march">Get Tickets for March, 2020</a></div>
-		</div>
-	</div>
+
+<div class="workshops">
+  $for(aflWorkshops)$
+    $partial("templates/workshop-item.md")$
+  $endfor$
 </div>
 
 <p></p>
@@ -93,7 +83,7 @@ diversity within the field of AI</a>. We know that members of marginalised
 groups face barriers to entry and success within AI, and related fields. To
 improve the representation of marginalised and under-represented groups in our
 workshop, and community, we are supporting up to 5 diversity tickets, which
-are discounted 50% to <b>$$962.50 per person</b>.
+are discounted 50%.
 </p>
 
 <p> To apply for a diversity ticket please complete the scholarship

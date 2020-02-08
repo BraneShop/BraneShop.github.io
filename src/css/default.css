@@ -670,35 +670,19 @@ hr {
 
 }
 
-div.events {
-  display:         flex;
-  flex-direction:  row;
-  flex-wrap:       wrap;
-  justify-content: center;
-}
 
 div.event h5 {
-  text-align:     left;
-  padding-bottom: 5px;
+  font-size:     1em;
+  border-bottom: solid 1px black;
 }
 
-div.event {
-  font-size: 0.8em;
-  display:        flex;
-  border-radius:  20px;
-  max-width:      380px;
-  margin:         20px;
-  flex-direction: column;
-  border-bottom:  solid 4px black;
-  border-right:   solid 4px black;
-  background:     peachpuff;
-  padding:        10px;
+div.event li {
+  font-size: 0.9em;
 }
 
 ul.blog-list li {
   list-style:      none;
 }
-
 
 .showreel-card {
   display:        flex;

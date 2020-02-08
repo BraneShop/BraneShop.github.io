@@ -3,15 +3,24 @@
     alt="Attendees at a recent workshop!" />
 </div>
 
-<div class="btn-b">
-<a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop-feb">Get tickets for Feb intake!</a> </div>
+$for(firstWorkshop)$
+  <div class="btn-b"><a class="btn" href="$tickets$">Secure your spot for $date$</a></div>
+$endfor$
 
+<p> <em class="tag">A hands-on deep learning workshop for those looking to
+use AI in their projects.
+</em> </p>
 
-<p> <em class="tag">A six-week hands-on deep learning workshop for
-those wanting to break into the AI industry.</em> </p>
 <h5>About</h5>
 
-$partial("templates/6ww-overview.md")$
+<p> Over an intensive <b>two days</b>, and a subsequent afternoon session, you
+will get to grips with deep learning through Python, TensorFlow and Google
+Colaboratory.  This is a hands-on technical workshop, with a substantial
+programming component. </p>
+
+<p>The workshop is limited to <b>a small amount of people per class</b>. This allows the presentation
+can be specific to the audience, and the session to be highly interactive and
+targeted. </p>
 
 <h5 class="s">What can you expect to receive and achieve?</h5>
 <ul class="normal">
@@ -24,12 +33,11 @@ $partial("templates/6ww-overview.md")$
 <li>A supportive and growing community during and after the workshop.</li>
 </ul>
 
-<h5 class="s">Every week we will ...</h5>
+<h5 class="s">As part of the process we will ...</h5>
 <ul class="normal">
 <li>Have group discussions and learn together in a collaborative way,</li>
 <li>Consolidate your knowledge through exercises,</li>
-<li>Build on work from previous weeks through homework,</li>
-<li>Provide <em>additional</em>  support (other than teaching hours) through office hours.</li>
+<li>Provide <em>additional</em> support (other than teaching hours) through office hours.</li>
 </ul>
 
 <h5 class="s">Who's it for?</h5>
@@ -51,43 +59,29 @@ quiz</a>.
 <h5>Overview</h5>
 
 <ul class="agenda">
-  <li> Week 1
+  <li> Day 1
     <ul class="sub-agenda">
       <li> Showreel and State of the Art </li>
       <li> Learning vs. Programming </li>
       <li> Neural Notation </li>
-    </ul>
-  </li>
-  <li> Week 2
-    <ul class="sub-agenda">
       <li> TensorFlow: Computations, Graphs </li>
       <li> Image classification with Fashion MNIST </li>
-    </ul>
-  </li>
-  <li> Week 3
-    <ul class="sub-agenda">
       <li> Convolutions </li>
       <li> TensorBoard: Visualising learning </li>
     </ul>
   </li>
-  <li> Week 4
+  <li> Day 2
     <ul class="sub-agenda">
       <li> Embedding and Autoencoding </li>
       <li> Unsupervised models </li>
       <li> Generative models </li>
-      <li> Group projects </li>
-    </ul>
-  </li>
-  <li> Week 5
-    <ul class="sub-agenda">
-      <li> Continue group projects </li>
-    </ul>
-  </li>
-  <li> Week 6
-    <ul class="sub-agenda">
-      <li> Group project review </li>
       <li> Ethics </li>
       <li> Further techniques and the future </li>
+    </ul>
+  </li>
+  <li> Final Afternoon 
+    <ul class="sub-agenda">
+      <li> Project kick-off and support </li>
     </ul>
   </li>
 </ul>
@@ -100,16 +94,14 @@ quiz</a>.
 <h5>Essential details</h5>
 <table class="details" border="0" cellspacing="0" summary="Pricing details for this workshop.">
 <tr>  <td class="item">  Duration </td>
-      <td class="value"> 6 weeks
-      <br /> Weekly, on Thursdays: 4pm-7pm. </td>
+      <td class="value"> 2 days + 1 afternoon + office hours
+      <br /> 9am-5pm + 1pm-5pm + as arranged.
+      </td>
 </tr>
 <tr>  <td class="item">  Costs    </td>
       <td class="value"> 
-        $$1,188* per person.
+        $$1,485* per person.
       </td>
-</tr>
-<tr>  <td class="item">  Location </td>
-      <td class="value"> <a href="https://ochouse.com.au/">OC House</a>, North Melbourne. </td>
 </tr>
 <tr> <td class="item"> Prerequisites </td>
      <td class="value">
@@ -127,22 +119,11 @@ quiz</a>.
 <p></p>
 
 <h5>Dates and Tickets</h5>
-<div class="events">
-	<div class="event">
-		<h5> 6 Week Workshop - February Intake </h5>
-    <ul class="normal dates">
-      <li> Week 1 - February 6th, 2019</li>
-      <li> Week 2 - February 13th, 2019</li>
-      <li> Week 3 - February 20th, 2019</li>
-      <li> Week 4 - February 27th, 2019</li>
-      <li> Week 5 - March 5th, 2019</li>
-      <li> Week 6 - March 12th, 2019</li>
-      <li> <br /><b>Location:</b> <a href="https://ochouse.com.au/">OC House</a>, North Melbourne. </li>
-    </ul>
-		<div>
-    <div class="btn-b"><a class="btn" href="https://events.humanitix.com.au/braneshop-6-week-technical-deep-learning-workshop-feb">Get Tickets for February intake</a></div>
-		</div>
-	</div>
+
+<div class="workshops">
+  $for(techWorkshops)$
+    $partial("templates/workshop-item.md")$
+  $endfor$
 </div>
 
 <p></p>
@@ -159,7 +140,7 @@ diversity within the field of AI</a>. We know that members of marginalised
 groups face barriers to entry and success within AI, and related fields. To
 improve the representation of marginalised and under-represented groups in our
 workshop, and community, we are supporting up to 10 diversity tickets, which
-are discounted 50% to <b>$$594 per person</b>.
+are discounted 50%.
 </p>
 
 <p> To apply for a diversity ticket please complete the scholarship

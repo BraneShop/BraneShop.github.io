@@ -37,20 +37,6 @@ pandocMathCompiler =
                         }
     in pandocCompilerWith defaultHakyllReaderOptions writerOptions
 
-simpleServe =  do
-  route idRoute
-
-  let ctx = listContext "classes"
-            <> defaultContext'
-
-  compile $ do
-      getResourceBody
-          >>= applyAsTemplate ctx
-          >>= loadAndApplyTemplate "templates/default.html" ctx
-          >>= relativizeUrls
-          >>= minifyHTML
-
-
 
 main :: IO ()
 main = hakyll $ do
@@ -78,32 +64,16 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    match "events/*" $ do
-        let ctx = defaultContext'
-
-        route $ setExtension "html"
-
-        compile $ 
-                (pandocMathCompiler)
-            >>= applyAsTemplate ctx
-            >>= loadAndApplyTemplate "templates/event-item.html" ctx
-            >>= relativizeUrls
-
-    match "past-events/*" $ do
-        let ctx = defaultContext'
-
-        route $ setExtension "html"
-
-        compile $ 
-                (pandocMathCompiler)
-            >>= applyAsTemplate ctx
-            >>= loadAndApplyTemplate "templates/event-item.html" ctx
-            >>= relativizeUrls
+    -- Load the upcoming workshops for consideration.
+    match "workshops/**" $ do
+        route idRoute
+        compile $ getResourceBody
+                    >>= applyAsTemplate (defaultContext <> listContext "|" "dates")
 
     match "showreel/*" $ do
         tags <- buildTags "showreel/*" (fromCapture "showreel-tags/*.html")
 
-        let ctx = defaultContext'
+        let ctx = braneContext
                     <> tagsField "tags" tags
                     <> constField "imageDescription" "Braneshop Showreel"
                     <> field "nextPost" (nextPostUrl "showreel/*")
@@ -120,7 +90,7 @@ main = hakyll $ do
                 let ctx' = constField "title" title
                           <> listField "posts" postCtx (return posts)
                           <> constField "class" "compressed"
-                          <> defaultContext'
+                          <> braneContext
                           <> constField "tagCloud" tagCloud
                           <> constField "showreel" "showreel"
 
@@ -152,7 +122,7 @@ main = hakyll $ do
                 let ctx = constField "title" title
                           <> listField "posts" postCtx (return posts)
                           <> constField "class" "compressed"
-                          <> defaultContext'
+                          <> braneContext
                           <> constField "tagCloud" tagCloud
 
                 makeItem ""
@@ -171,61 +141,74 @@ main = hakyll $ do
             >>= relativizeUrls
 
 
+    create ["6-week-workshop-on-deep-learning.html"] $ do
+      route idRoute
+      compile $ makeItem $ Redirect "technical-deep-learning-workshop.html"
+
+
     create ["deep-learning-workshop.html"] $ do
       route idRoute
       compile $ makeItem $ Redirect "ai-for-leadership.html"
 
+
     create ["manifold/index.html"] $ do
       route idRoute
-      let ctx = defaultContext'
+      let ctx = braneContext
       compile $ do
           getResourceBody
               >>= applyAsTemplate ctx
               -- >>= loadAndApplyTemplate "templates/manifold.html" ctx
               >>= relativizeUrls
 
-    match "workshops.html" simpleServe
-    match "contact.html"   simpleServe
-    match "privacy.html"   simpleServe
-    match "thesetestimonialsdontexist.html" simpleServe
-    match "pathway.html"   simpleServe
-
     match (fromList [ "custom-ai-workshop.html"
-                    , "6-week-workshop-on-deep-learning.html"
-                    , "ai-for-leadership.html"
                     , "team.html"
                     , "quickstart.html"
                     , "faq.html"
+                    , "pathway.html"
+                    , "privacy.html"
+                    , "contact.html"
+                    , "events.html"
+                    , "workshops.html"
+                    , "thesetestimonialsdontexist.html"
                     , "object-detection-in-the-browser.html"
                     ]) $ do
         route idRoute
 
-        let ctx = listContext "classes"
-                  <> defaultContext'
-
         compile $ do
+            let ctx = braneContext
+
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
-    match (fromList ["events.html"]) $ do
+
+    match "ai-for-leadership.html" $ do
         route idRoute
         compile $ do
-            events     <- chronological =<< loadAll "events/*"
-            pastEvents <- chronological =<< loadAll "past-events/*"
-  
-            let ctx =
-                    listField "events" defaultContext' (return events)
-                    <> listField "pastEvents" defaultContext' (return pastEvents)
-                    <> bodyField "content"
-                    <> defaultContext'
-
+            -- Hack: We take it as a list, so we can for-loop over it and
+            -- extract out fields. But we'll only ever have one.
+            firstWorkshop <- fmap (take 1) . chronological =<< loadAll "workshops/leadership/*"
+            let ctx = braneContext
+                        <> listField "aflWorkshops" workshopContext (chronological =<< loadAll "workshops/leadership/**")
+                        <> listField "firstWorkshop" workshopContext (return firstWorkshop)
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
-                >>= minifyHTML
+                    
+
+    match "technical-deep-learning-workshop.html" $ do
+        route idRoute
+        compile $ do
+            firstWorkshop <- fmap (take 1) . chronological =<< loadAll "workshops/tdl/*"
+            let ctx = braneContext
+                        <> listField "techWorkshops" workshopContext (chronological =<< loadAll "workshops/tdl/**")
+                        <> listField "firstWorkshop" workshopContext (return firstWorkshop)
+            getResourceBody
+                >>= applyAsTemplate ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
 
 
     match (fromList ["showreel.html"]) $ do
@@ -245,7 +228,6 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
-
     match (fromList ["blog.html"]) $ do
         route idRoute
         compile $ do
@@ -254,33 +236,31 @@ main = hakyll $ do
             posts <- recentFirst =<< loadAll "posts/*"
             let ctx =
                     listField "posts" (postCtxWithTags tags) (return posts)
-                    <> defaultContext'
+                    <> braneContext
 
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
-
     match "index.html" $ do
         route idRoute
         compile $ do
             posts <- fmap (take 4) . recentFirst =<< loadAll "posts/*"
-            tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+            tags  <- buildTags "posts/*" (fromCapture "tags/*.html")
 
             let ctx =
                     listField "posts" (postCtxWithTags tags) (return posts)
-                    <> defaultContext'
+                    <> braneContext
 
             getResourceBody
                 >>= applyAsTemplate ctx
-                >>= loadAndApplyTemplate "templates/default.html" defaultContext'
+                >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
                 >>= minifyHTML
 
 
-    match "templates/*" $ compile templateCompiler
-
+    match "templates/**" $ compile templateCompiler
 
     create ["atom.xml"] $ do
         route idRoute
@@ -403,39 +383,50 @@ postCtx =
     <> field "nextPostTitle" (nextPostTitle "posts/*")
     <> field "prevPost" (previousPostUrl "posts/*")
     <> field "prevPostTitle" (previousPostTitle "posts/*")
-    <> defaultContext'
+    <> braneContext
 
 
-defaultContext' :: Context String
-defaultContext' = 
+workshopContext :: Context String
+workshopContext 
+  = dateField "date" "%B %e, %Y"
+  <> listFieldWith "dates" defaultContext (\i -> do 
+      let identifier = itemIdentifier i 
+      metadata <- getMetadata identifier
+      let metas = maybe [] (map trim . splitAll "\\|") $ lookupString "dates" metadata
+      return $ map (\x -> Item (fromFilePath x) x) metas
+    )
+  <> defaultContext
+
+
+braneContext :: Context String
+braneContext = 
   constField "rootUrl" "https://braneshop.com.au"
   <> constField "class" "compressed"
   <> dateField "date" "%B %e, %Y"
-  <> dateField "jsDate" "%0Y-%m-%d"
+  <> listField "workshops" workshopContext (chronological =<< loadAll "workshops/**")
+  <> listContext "," "classes" -- Converts this field into a proper list.
   <> defaultContext
-
 
 
 postCtxWithTags :: Tags -> Context String
 postCtxWithTags tags = tagsField "tags" tags
                        <> postCtx
 
-
-listContextWith :: Context String -> String -> Context a
-listContextWith ctx s = listField s ctx $ do
+listContextWith :: String -> Context String -> String -> Context a
+listContextWith token ctx s = listField s ctx $ do
     identifier <- getUnderlying
-    metadata <- getMetadata identifier
-    let metas = maybe [] (map trim . splitAll ",") $ lookupString s metadata
+    metadata   <- getMetadata identifier
+    let metas = maybe [] (map trim . splitAll token) $ lookupString s metadata
     return $ map (\x -> Item (fromFilePath x) x) metas
 
 
-listContext :: String -> Context a
-listContext = listContextWith defaultContext'
-
+listContext :: String -> String -> Context a
+listContext token = listContextWith token defaultContext
 
 
 minifyHTML :: Item String -> Compiler (Item String)
 minifyHTML = withItemBody $ unixFilter "tidy" (tidyOptionsHTML ++ tidyOptionsMinify)
+
 
 tidyOptionsDefault =
     [ "-q"
