@@ -441,7 +441,6 @@ tidyOptionsHTML =
     , "--merge-divs no"
     , "--merge-spans no"
     , "--drop-empty-elements no"
-    , "--mute ILLEGAL_URI_REFERENCE,ILLEGAL_URI_CODEPOINT"
     ]
 
 tidyOptionsMinify =
