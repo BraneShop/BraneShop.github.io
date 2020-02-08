@@ -93,7 +93,9 @@
         3,
         4,
         7,
-        8
+        8,
+        31,
+        32
       ],
       "matches": {
         "4": 1
@@ -107,7 +109,9 @@
         3,
         4,
         7,
-        8
+        8,
+        31,
+        32
       ],
       "matches": {
         "4": 3
@@ -168,7 +172,7 @@
         "3": 1
       },
       "id": 31,
-      "html": "<h3>Join us at our next Technical Deep Learhing Workshop, ... <br/> or design a\n  specialised one!</h3>\n<p> Our <a href=\"/technical-deep-learning-workshop.html\">technical deep learning workshop</a> is based in TensorFlow, and designed for programmers and data scientists. We cover all the aspects of building a deep learning model from scratch, going over some key ideas in the theory of deep learning, all in an highly personalised and targetted teaching environment of at most five attendees per session. </p> <p>As you're interested in bringing your team, it might be very useful to design a focused workshop for your particular set of problems. Please <a href=\"/contact.html\">reach out</a> to discuss! </p>\n"
+      "html": "<h3>Join us at our next Technical Deep Learning Workshop, ... <br/> or design a\n  specialised one!</h3>\n<p> Our <a href=\"/technical-deep-learning-workshop.html\">technical deep learning workshop</a> is based in TensorFlow, and designed for programmers and data scientists. We cover all the aspects of building a deep learning model from scratch, going over some key ideas in the theory of deep learning, all in an highly personalised and targetted teaching environment of at most five attendees per session. </p> <p>As you're interested in bringing your team, it might be very useful to design a focused workshop for your particular set of problems. Please <a href=\"/contact.html\">reach out</a> to discuss! </p>\n"
     },
     {
       "matches": {
@@ -176,7 +180,7 @@
         "3": 1
       },
       "id": 32,
-      "html": "<h3>Join us at our next Technical Deep Learhing Workshop, ... <br/> or design a\n  specialised one!</h3>\n<p> Our <a href=\"/technical-deep-learning-workshop.html\">technical deep learning workshop</a> is based in TensorFlow, and designed for programmers and data scientists. We cover all the aspects of building a deep learning model from scratch, going over some key ideas in the theory of deep learning, all in an highly personalised and targetted teaching environment of at most five attendees per session. </p> <p>As you're interested in bringing your team, it might be very useful to design a focused workshop for your particular set of problems. Please <a href=\"/contact.html\">reach out</a> to discuss! </p>\n"
+      "html": "<h3>Join us at our next Technical Deep Learning Workshop, ... <br/> or design a\n  specialised one!</h3>\n<p> Our <a href=\"/technical-deep-learning-workshop.html\">technical deep learning workshop</a> is based in TensorFlow, and designed for programmers and data scientists. We cover all the aspects of building a deep learning model from scratch, going over some key ideas in the theory of deep learning, all in an highly personalised and targetted teaching environment of at most five attendees per session. </p> <p>As you're interested in bringing your team, it might be very useful to design a focused workshop for your particular set of problems. Please <a href=\"/contact.html\">reach out</a> to discuss! </p>\n"
     },
     {
       "matches": {

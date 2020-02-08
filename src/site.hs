@@ -185,31 +185,17 @@ main = hakyll $ do
               >>= relativizeUrls
 
     match "workshops.html" simpleServe
-    -- match "team.html"      simpleServe
-        -- route idRoute
-
-        -- let ctx = listContext "classes"
-        --           <> defaultContext'
-
-        -- compile $ do
-        --     getResourceBody
-        --         >>= applyAsTemplate ctx
-        --         >>= loadAndApplyTemplate "templates/default.html" ctx
-        --         >>= relativizeUrls
-        --         >>= minifyHTML
-
+    match "contact.html"   simpleServe
+    match "privacy.html"   simpleServe
+    match "thesetestimonialsdontexist.html" simpleServe
+    match "pathway.html"   simpleServe
 
     match (fromList [ "custom-ai-workshop.html"
                     , "6-week-workshop-on-deep-learning.html"
                     , "ai-for-leadership.html"
                     , "team.html"
-                    , "contact.html"
-                    , "thesetestimonialsdontexist.html"
-                    , "privacy.html"
                     , "quickstart.html"
                     , "faq.html"
-                    , "workshops.html"
-                    , "pathway.html"
                     , "object-detection-in-the-browser.html"
                     ]) $ do
         route idRoute
