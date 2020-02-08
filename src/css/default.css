@@ -79,6 +79,10 @@ div.logos {
   align-items:    center;
 }
 
+div.callout h3 {
+  text-align: center;
+}
+
 #header h2 {
   margin:        0;
   margin-bottom: 10px;
