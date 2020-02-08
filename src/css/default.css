@@ -2,7 +2,6 @@ body {
   margin:           0px;
   background-color: black;
   background-image: url(/images/stars-big.png);
-  font-size:        20px;
   font-family:      "Lato";
 }
 
@@ -48,9 +47,15 @@ div.workshop {
   transition:     1s;
 }
 
-div.top {
-  display: flex;
-  flex-direction: row;
+#header {
+  background-image: url(/images/cppn/bg1.png) !important;
+}
+
+#header-top {
+  display:        flex;
+  width:          100%;
+  flex-direction: column;
+  align-items:    center;
 }
 
 #header.compressed .logos small {
@@ -61,12 +66,26 @@ div.top {
 
 #header-logo.compressed {
   transition: 1s;
-  width:      230px;
+  width:      350px;
 }
 
 pre {
   font-size: 0.8em;
 }
+
+div.logos {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+}
+
+#header h2 {
+  margin:        0;
+  margin-bottom: 10px;
+  font-size:     1.1em;
+  width:         70%;
+}
+
 
 #content {
   display:          flex;
@@ -76,10 +95,8 @@ pre {
   background-size:  cover;
 }
 
-/* p span { background: royalblue; color: white; } */
-
 #footer {
-  border-top:       solid 10px royalblue;
+  border-top:       solid 10px mediumslateblue;
   display:          flex;
   min-height:       300px;
   padding:          20px;
@@ -91,6 +108,10 @@ pre {
 
 #acknowledgement p, #newsletter h4, #newsletter p {
   background: white;
+}
+
+div.menu-box ul li a {
+  border-radius: 5px;
 }
 
 span.input {
@@ -145,7 +166,50 @@ img.wibble {
   padding:          10px;
   background-image: url(/images/header-bg-simple.svg);
   background-size:  cover;
-  border-bottom:    solid 10px mediumslateblue;
+}
+
+div.menu-box {
+  display:         flex;
+  align-items:     center;
+  flex-direction:  column;
+  justify-content: center;
+  border-top:      solid 5px mediumslateblue;
+  border-bottom:   solid 5px mediumslateblue;
+}
+
+div.segment {
+  padding:        50px;
+  display:        flex;
+  flex-direction: row;
+}
+
+div.top.segment {
+  align-items:    center;
+  flex-direction: column;
+  background:     none;
+  color:          linen !important;
+}
+
+div.top.segment h1, 
+div.top.segment h3, 
+div.top.segment p {
+  background: #00000099;
+}
+
+
+div.big h3 {
+  margin:      0;
+  padding:     20px;
+  font-weight: normal;
+  font-size:   1.5em;
+}
+
+div.segment div.c {
+  max-width: 850px;
+}
+
+div.menu-box ul li a {
+  border-radius: 5px;
 }
 
 #header h1 a, #header small, ul li a {
@@ -175,9 +239,15 @@ video.profile-video {
 #header small {
   font-weight: bold;
   font-size:   0.6em;
-  font-family: "Bowlby One SC";
   font-family: "PT Mono";
   background:  black;
+}
+
+div.big h3 {
+  margin:      0;
+  padding:     20px;
+  font-weight: normal;
+  font-size:   1.5em;
 }
 
 div.section {
@@ -317,7 +387,6 @@ h1 a:hover {
 a:hover { 
   background:  royalblue;
   color:       white !important;
-  font-weight: bold;
 }
 
 ul.dates {
@@ -326,7 +395,7 @@ ul.dates {
   padding-left: 20px;
 }
 
-#header ul, ul.summary { 
+div.menu-box ul { 
   display:         flex;
   justify-content: center;
   list-style:      none;
@@ -334,22 +403,17 @@ ul.dates {
   flex-wrap:       wrap;
 }
 
-ul.summary {
-  margin: 0;
-}
-
-ul.summary li {
-  padding-left:  5px;
-  padding-right: 5px;
-  font-family:   "PT Mono";
-}
-
-#header ul { 
-}
-
-#header ul li {
-  font-size:   0.6em;
+div.menu-box ul li {
   font-family: "PT Mono";
+  margin: 10px;
+}
+
+#header h2 {
+  color:         white;
+  border-radius: 20px;
+  text-shadow:   -1px -1px 1px #fff, 1px 1px 1px #000;
+  font-family:   "PT Mono";
+  font-size:     0.9em;
 }
 
 ul.normal li {
@@ -490,8 +554,6 @@ ul.menu span.important {
   padding: 2px;
 }
 
-.section center p {
-}
 
 blockquote {
   padding:       5px;
@@ -686,14 +748,15 @@ ul.blog-list li {
 }
 
 .btn {
-  padding:       10px;
-  background:    mediumslateblue;
-  color:         white;
-  transition:    0.3s;
+  padding:         10px;
+  background:      mediumslateblue;
+  color:           white;
+  transition:      0.3s;
   text-decoration: none;
-  border-bottom: solid 4px lightgrey;
-  border-right:  solid 4px lightgrey;
-  border-radius: 10px;
+  border-bottom:   solid 4px lightgrey;
+  border-right:    solid 4px lightgrey;
+  border-radius:   10px;
+  font-family:     "Gilda Display";
 }
 
 .btn:hover {
@@ -1073,6 +1136,11 @@ div.topic small {
   margin-bottom: 10px;
 }
 
+div.btn-b .btn {
+  margin-left:  5px;
+  margin-right: 5px;
+}
+
 div.btn-b {
   display:         flex;
   justify-content: center;
@@ -1100,5 +1168,113 @@ div.ws {
 }
 
 
-div.ws img { width: 400px;
-border-radius: 20px; }
+div.ws img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+div.big h1 {
+  font-weight: normal;
+}
+
+ul.menu a {
+font-family: 'Gilda Display', serif;
+font-size: 0.9em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quando', serif;
+}
+
+div.big p {
+  font-size:   1.2em;
+  text-align:  justify;
+}
+
+
+
+
+/* Quizzes
+ * */
+#quiz-widget {
+  width: 900px;
+}
+
+#quiz-widget button:focus {
+  outline: none;
+}
+
+#quiz-widget button.active {
+  background: peachpuff;
+  color: black;
+}
+
+#quiz-widget button:hover {
+  background: dodgerblue;
+  color: white;
+}
+
+#quiz-widget button {
+  border:          0;
+  padding:         8px;
+  background:      mediumslateblue;
+  color:           white;
+  text-decoration: none;
+  border-bottom:   solid 2px lightgrey;
+  border-right:    solid 2px lightgrey;
+  border-radius:   10px;
+  margin:          4px;
+  font-family:     "Gilda Display";
+  cursor:          pointer;
+  font-size:       15px;
+}
+
+
+#quiz-widget ul.questions {
+  list-style:     none;
+  display:        flex;
+  flex-direction: column;
+  margin:         0;
+}
+
+#quiz-widget ul.questions li {
+  padding-left:  10px;
+  border-left:   solid 2px royalblue;
+  margin-top:    10px;
+  margin-bottom: 10px;
+}
+
+#quiz-widget ul.buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+div.segment.simple h4 {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+div.segment.simple h3,
+div.segment.simple h4,
+div.segment.simple p,
+div.segment.simple a,
+div.segment.simple li {
+  color: linen;
+  background: #00000099;
+}
+
+div.segment.simple {
+  width: 900px;
+}
+
+div.segment.simple a:hover {
+  background: royalblue;
+}
+
+div.segment.simple {
+  background: none;
+  max-width: 950px;
+}
+

@@ -180,6 +180,8 @@ main = hakyll $ do
                     , "privacy.html"
                     , "quickstart.html"
                     , "faq.html"
+                    , "workshops.html"
+                    , "pathway.html"
                     , "object-detection-in-the-browser.html"
                     ]) $ do
         route idRoute
@@ -209,7 +211,7 @@ main = hakyll $ do
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
-                >>= minifyHTML
+                -- >>= minifyHTML
 
 
     match (fromList ["showreel.html"]) $ do
@@ -260,7 +262,7 @@ main = hakyll $ do
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext'
                 >>= relativizeUrls
-                >>= minifyHTML
+                -- >>= minifyHTML
 
 
     match "templates/*" $ compile templateCompiler

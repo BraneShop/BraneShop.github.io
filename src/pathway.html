@@ -1,0 +1,27 @@
+---
+title: Home!
+class: landing
+---
+
+<script src="/js/elm-flow.js"></script>
+
+<div class="segment simple">
+  <h3>Find your pathway!
+  </h3>
+
+  <!-- <center> -->
+  <!-- <img src="/images/your-path.png" height="300" /> -->
+  <!-- </center> -->
+
+  <div id="quiz"></div>
+  <script language="javascript">
+  var node = document.getElementById("quiz");
+  var app  = Elm.Main.init( { node: node } );
+  
+  app.ports.setQuizUrl.send("/data/quizzes/opening-qs.json");
+  </script>
+
+
+  </div>
+</div>
+
