@@ -1206,6 +1206,10 @@ div.big p, div.segment.simple p {
 #quiz-widget .visible { display: flex !important; }
 
 
+#quiz-widget section.answer {
+  flex-direction: column;
+}
+
 #quiz-widget button {
   border:          0;
   padding:         8px;
