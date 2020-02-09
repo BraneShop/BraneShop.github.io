@@ -1174,7 +1174,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Quando', serif;
 }
 
-div.big p {
+div.big p, div.segment.simple p {
   font-size:   1.2em;
   text-align:  justify;
 }
@@ -1202,10 +1202,14 @@ div.big p {
   color: white;
 }
 
+#quiz-widget .hidden  { display: none !important;  }
+#quiz-widget .visible { display: flex !important; }
+
+
 #quiz-widget button {
   border:          0;
   padding:         8px;
-  background:      mediumslateblue;
+  background:      royalblue;
   color:           white;
   text-decoration: none;
   border-bottom:   solid 2px lightgrey;
@@ -1214,7 +1218,25 @@ div.big p {
   margin:          4px;
   font-family:     "Gilda Display";
   cursor:          pointer;
-  font-size:       15px;
+  font-size:       16px;
+}
+
+#quiz-widget .answer-button button {
+  background: mediumslateblue;
+  padding: 15px;
+  font-size: 18px;
+}
+
+#quiz-widget .answer-button button:disabled {
+  background: gray;
+  cursor: default;
+}
+
+#quiz-widget .answer-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  margin-top: 10px;
 }
 
 
@@ -1223,6 +1245,7 @@ div.big p {
   display:        flex;
   flex-direction: column;
   margin:         0;
+  font-size:      1.2em;
 }
 
 #quiz-widget ul.questions li {
@@ -1240,8 +1263,18 @@ div.big p {
   align-items: flex-start;
 }
 div.segment.simple h4 {
-  font-size: 0.9em;
+  font-size: 1.1em;
   font-weight: bold;
+}
+
+div.segment.simple h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+div.segment.simple {
+  display: flex;
+  flex-direction: column;
 }
 
 div.segment.simple h3,
@@ -1262,7 +1295,6 @@ div.segment.simple a:hover {
 }
 
 div.segment.simple {
-  background: none;
   max-width: 950px;
 }
 
