@@ -139,12 +139,11 @@ href="https://ainowinstitute.org/discriminatingsystems.pdf">crisis of
 diversity within the field of AI</a>. We know that members of marginalised
 groups face barriers to entry and success within AI, and related fields. To
 improve the representation of marginalised and under-represented groups in our
-workshop, and community, we are supporting up to 10 diversity tickets, which
+workshop, and community, we are supporting unlimited scholarship tickets, which
 are discounted 50%.
 </p>
 
 <p> To apply for a diversity ticket please complete the scholarship
-application below. If you miss out due to demand, this time around, you are
-welcome to apply again in the future.  </p>
+application below. </p>
 
 <div class="btn-b"> <a class="btn" href="https://noonvandersilk.typeform.com/to/qMCtvX">Apply for the Scholarship</a> </div>
