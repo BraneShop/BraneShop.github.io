@@ -8,8 +8,24 @@
         <name>Braneshop Team</name>
         <email>hello@braneshop.com.au</email>
     </author>
-    <updated>2020-01-28T00:00:00Z</updated>
+    <updated>2020-02-23T00:00:00Z</updated>
     <entry>
+    <title>Workshops in 2020</title>
+    <link href="https://braneshop.com.au/posts/Workshops-In-2020.html" />
+    <id>https://braneshop.com.au/posts/Workshops-In-2020.html</id>
+    <published>2020-02-23T00:00:00Z</published>
+    <updated>2020-02-23T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/workshop-plans-2020.jpg?" width="100%" /> 
+  <br /><small>Noon and Esmeralda, with their new banner, at the Datathon for Social Good!</small></p> </center>
+
+<p>This year, we’ve been thinking about our prior workshops: what worked well, what what should change, and what we’d like to focus on this year.</p>
+<p>A few ideas have emerged.</p>
+]]></summary>
+</entry>
+<entry>
     <title>Post-Prediction Unconference!</title>
     <link href="https://braneshop.com.au/posts/Post-Prediction-Unconference-2020.html" />
     <id>https://braneshop.com.au/posts/Post-Prediction-Unconference-2020.html</id>
@@ -190,32 +206,6 @@
 <li>Train the network to reproduce a specific picture.</li>
 <li>Download a big (1000x1000) version of the image!</li>
 </ol>
-]]></summary>
-</entry>
-<entry>
-    <title>Braneshop - "A Living Business" - Part 2 of 3</title>
-    <link href="https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-2.html" />
-    <id>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-2.html</id>
-    <published>2019-10-18T00:00:00Z</published>
-    <updated>2019-10-18T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/blog/living-business/living-business.png" width="100%" /> 
-  <br /><small>A summary of the key aspects of the Braneshop business.</small></p> </center>
-
-<ul class="normal">
-<li>
-<a href="/posts/Braneshop-A-Living-Business-Part-1.html">Part 1 of 3 - Inspiration</a>
-</li>
-<li>
-<a href="/posts/Braneshop-A-Living-Business-Part-2.html">Part 2 of 3 - The Idea: A Living Business</a> (this page)
-</li>
-<li>
-<a href="/posts/Braneshop-A-Living-Business-Part-3.html">Part 3 of 3 - Patterns for Braneshop</a>
-</li>
-</ul>
-<p>This post is inspired by the ideas laid out in <a href="/posts/Braneshop-A-Living-Business-Part-1">first post in this series</a>.</p>
 ]]></summary>
 </entry>
 

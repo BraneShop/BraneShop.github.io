@@ -7,8 +7,24 @@
         <description><![CDATA[The blog of the Braneshop team.]]></description>
         <atom:link href="https://braneshop.com.au/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Tue, 28 Jan 2020 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sun, 23 Feb 2020 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Workshops in 2020</title>
+    <link>https://braneshop.com.au/posts/Workshops-In-2020.html</link>
+    <description><![CDATA[
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/workshop-plans-2020.jpg?" width="100%" /> 
+  <br /><small>Noon and Esmeralda, with their new banner, at the Datathon for Social Good!</small></p> </center>
+
+<p>This year, we’ve been thinking about our prior workshops: what worked well, what what should change, and what we’d like to focus on this year.</p>
+<p>A few ideas have emerged.</p>
+]]></description>
+    <pubDate>Sun, 23 Feb 2020 00:00:00 UT</pubDate>
+    <guid>https://braneshop.com.au/posts/Workshops-In-2020.html</guid>
+    <dc:creator>Braneshop Team</dc:creator>
+</item>
+<item>
     <title>Post-Prediction Unconference!</title>
     <link>https://braneshop.com.au/posts/Post-Prediction-Unconference-2020.html</link>
     <description><![CDATA[
@@ -189,32 +205,6 @@
 ]]></description>
     <pubDate>Wed, 23 Oct 2019 00:00:00 UT</pubDate>
     <guid>https://braneshop.com.au/posts/CPPN-Playground.html</guid>
-    <dc:creator>Braneshop Team</dc:creator>
-</item>
-<item>
-    <title>Braneshop - "A Living Business" - Part 2 of 3</title>
-    <link>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-2.html</link>
-    <description><![CDATA[
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/blog/living-business/living-business.png" width="100%" /> 
-  <br /><small>A summary of the key aspects of the Braneshop business.</small></p> </center>
-
-<ul class="normal">
-<li>
-<a href="/posts/Braneshop-A-Living-Business-Part-1.html">Part 1 of 3 - Inspiration</a>
-</li>
-<li>
-<a href="/posts/Braneshop-A-Living-Business-Part-2.html">Part 2 of 3 - The Idea: A Living Business</a> (this page)
-</li>
-<li>
-<a href="/posts/Braneshop-A-Living-Business-Part-3.html">Part 3 of 3 - Patterns for Braneshop</a>
-</li>
-</ul>
-<p>This post is inspired by the ideas laid out in <a href="/posts/Braneshop-A-Living-Business-Part-1">first post in this series</a>.</p>
-]]></description>
-    <pubDate>Fri, 18 Oct 2019 00:00:00 UT</pubDate>
-    <guid>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-2.html</guid>
     <dc:creator>Braneshop Team</dc:creator>
 </item>
 
