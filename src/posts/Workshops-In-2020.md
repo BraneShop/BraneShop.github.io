@@ -95,3 +95,7 @@ Overall, our aim remains the same:
 world!
 
 If you have any thoughts, [please send them our way!](/contact.html).
+
+In particular, if you'd like to join a workshop, but have some specific needs
+that we're not meeting, or concerns that are holding you back, please reach
+out! We'll do our best to help.
