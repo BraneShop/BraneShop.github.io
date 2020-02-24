@@ -17,7 +17,7 @@ A few ideas have emerged.
 <!--more-->
 
 
-#### [Technical Workshop](/technical-deep-learning-workshop.html)
+#### [Technical Workshop](/technical-deep-learning-workshop.html) <small>(on the 10th of April)</small>
 
 **#1 Smaller classes**
 
@@ -55,7 +55,7 @@ We've also put the workshop so that it has a weekend during the middle of the
 two days.
 
 
-#### [AI For Leadership Workshop](/ai-for-leadership.html)
+#### [AI For Leadership Workshop](/ai-for-leadership.html) <small>(on the 23rd of March)</small>
 
 
 We've run a few of these now, and overall they're going well. The one-day
