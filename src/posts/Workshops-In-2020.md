@@ -70,12 +70,12 @@ of other areas to cover:
 - Tools: What's good? How should we adopt it?
 - Case studies: What are other companies doing out there?
 
-We're already working in parts of the last one, so we'll focus on doing that a
-bit more.
+We already cover a few case studies, but we'll try and add in a few more.
 
 I also want to allow this workshop to develop along the interests of the
 attendees, so perhaps we'll find a way to work in a bit of the themes of the
-afternoon session from the tech workshop into this format.
+afternoon session from the tech workshop into this format. I.e. a "BYO
+Problem" discussion section.
 
 
 #### Overall
