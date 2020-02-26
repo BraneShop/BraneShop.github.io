@@ -70,6 +70,10 @@ main = hakyll $ do
         compile $ getResourceBody
                     >>= applyAsTemplate (defaultContext <> listContext "|" "dates")
 
+    match "videos/**" $ do
+        route idRoute
+        compile $ getResourceBody
+
     match "showreel/*" $ do
         tags <- buildTags "showreel/*" (fromCapture "showreel-tags/*.html")
 
@@ -181,6 +185,21 @@ main = hakyll $ do
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
+
+
+    match "about.html" $ do
+        route idRoute
+        compile $ do
+            -- Hack: We take it as a list, so we can for-loop over it and
+            -- extract out fields. But we'll only ever have one.
+            let ctx = braneContext
+                        <> listField "videos" braneContext (recentFirst =<< loadAll "videos/**")
+
+            getResourceBody
+                >>= applyAsTemplate ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
+                    
 
 
     match "ai-for-leadership.html" $ do

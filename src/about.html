@@ -1,0 +1,46 @@
+---
+title: About
+class: compressed
+---
+
+<div class="section">
+  <h3>🧠 $title$</h3>
+
+  <p> Braneshop is focused on improving the AI ecosystem, and making it a more
+  inclusive and representative space. Our aim is to <i>support</i> people with
+  their own goals and dreams within AI.
+  </p>
+
+  <p>We want to see a world in which AI is used to create positive and
+  inclusive social change.
+  </p>
+
+  <h4>Videos</h4>
+
+  <p>Below are some videos from our recent events/workshops.
+  </p>
+
+  $for(videos)$
+    $if(vimeo)$
+    <center>
+      <iframe src="https://player.vimeo.com/video/$vimeo$" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <p>Watch on Vimeo - <a href="https://vimeo.com/$vimeo$">$title$</a> - $date$</p>
+    </center>
+    $endif$
+
+    $if(youtube)$
+    <center>
+      <iframe src="https://www.youtube.com/embed/$youtube$" width="800" height="400" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>Watch on YouTube - <a href="https://www.youtube.com/watch?v=$youtube$">$title$</a> - $date$</p>
+    </center>
+    $endif$
+
+  $endfor$
+
+<!--   - Mission/Goal -->
+<!--   - Living Business -->
+<!--   - Diversity/Representation -->
+<!--   - Our Story -->
+
+
+</div>
