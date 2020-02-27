@@ -8,8 +8,30 @@
         <name>Braneshop Team</name>
         <email>hello@braneshop.com.au</email>
     </author>
-    <updated>2020-02-23T00:00:00Z</updated>
+    <updated>2020-02-27T00:00:00Z</updated>
     <entry>
+    <title>Post Post-Prediction Unconference Post!</title>
+    <link href="https://braneshop.com.au/posts/Post-Post-Prediction-Unconference-2020.html" />
+    <id>https://braneshop.com.au/posts/Post-Post-Prediction-Unconference-2020.html</id>
+    <published>2020-02-27T00:00:00Z</published>
+    <updated>2020-02-27T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+<center>
+  <iframe src="https://player.vimeo.com/video/392866633" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/392866633">Post-Prediction Un-Conference Highlights!</a></p>
+</center>
+
+
+
+  <center> <p> <img src="https://braneshop.com.au/images/blog/ppc-day.png" width="100%" /> 
+  <br /><small>One of the groups during one of the unconference sessions on the day, discussing AI and climate.</small></p> </center>
+
+<p>Last week we helped organise the first <a href="https://postpredictionconference.github.io/">Post-Prediction Conference</a>. We organised it as an Unconference.</p>
+<p>The event went amazingly well! We had a really diverse and interesting, and interested attendees, who were ready to discuss a wide-ranging series of topics all relating to <em>what we do</em> when we have powerful AIs at our disposal.</p>
+<p>Let’s break-down how things went.</p>
+]]></summary>
+</entry>
+<entry>
     <title>Workshops in 2020</title>
     <link href="https://braneshop.com.au/posts/Workshops-In-2020.html" />
     <id>https://braneshop.com.au/posts/Workshops-In-2020.html</id>
@@ -184,28 +206,6 @@
   <br /><small>One of the teams, at the first AI For Leadership workshop, working through one of the exercises.</small></p> </center>
 
 <p>Last month we had our first AI for Leadership workshop. In this post we take a look at what we covered, and discuss a few of the things we learned.</p>
-]]></summary>
-</entry>
-<entry>
-    <title>Introducing the CPPN Playground!</title>
-    <link href="https://braneshop.com.au/posts/CPPN-Playground.html" />
-    <id>https://braneshop.com.au/posts/CPPN-Playground.html</id>
-    <published>2019-10-23T00:00:00Z</published>
-    <updated>2019-10-23T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/blog/cppn-playground.jpg" width="100%" /> 
-  <br /><small>The main interface of the CPPN playground; reproducing a cool rendering of a black hole.</small></p> </center>
-
-<p>As we saw in the <a href="/posts/Non-Technical-But-Detailed-Explanation-Of-Our-Business-Card-Designs.html">business card blog post</a> we love “CPPNs” here.</p>
-<p>We wanted to share the fun, so I made a little JavaScript app where you can play around with them. You can access it here: <a href="https://silky.github.io/cppn-playground/">CPPN Playground</a>.</p>
-<p>There’s a few main things you can do:</p>
-<ol style="list-style-type: decimal">
-<li>Look at the cool pictures! And adjust the network to get more.</li>
-<li>Train the network to reproduce a specific picture.</li>
-<li>Download a big (1000x1000) version of the image!</li>
-</ol>
 ]]></summary>
 </entry>
 

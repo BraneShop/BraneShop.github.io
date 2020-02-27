@@ -1,2 +1,2 @@
 #!/bin/sh
-stack run -- -- clean && stack run -- -- watch --port 8000
+stack run -- -- clean && stack run -- -- watch --port 8001
