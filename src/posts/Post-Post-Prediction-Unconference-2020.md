@@ -93,4 +93,5 @@ format.
 If you're keen to be involved, then please [reach out](/contact.html) to us,
 or join our newsletter to receive updates!
 
-Big thanks to James Harland from RMIT for organising the venue for us!
+Thanks to all the other organisers, and volunteers, and a big thanks to James
+Harland from RMIT for organising the venue for us!
