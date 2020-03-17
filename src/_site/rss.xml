@@ -7,8 +7,20 @@
         <description><![CDATA[The blog of the Braneshop team.]]></description>
         <atom:link href="https://braneshop.com.au/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Thu, 27 Feb 2020 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 17 Mar 2020 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Braneshop &amp; COVID-19</title>
+    <link>https://braneshop.com.au/posts/Braneshop-Covid-19.html</link>
+    <description><![CDATA[
+
+
+<p>Hope you’re all staying safe out there in light of all the COVID-19 news. My favourite place for information is <a href="https://www.theguardian.com/au">The Guardian</a> and <a href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert">health.gov.au</a>.</p>
+]]></description>
+    <pubDate>Tue, 17 Mar 2020 00:00:00 UT</pubDate>
+    <guid>https://braneshop.com.au/posts/Braneshop-Covid-19.html</guid>
+    <dc:creator>Braneshop Team</dc:creator>
+</item>
+<item>
     <title>Post Post-Prediction Unconference Post!</title>
     <link>https://braneshop.com.au/posts/Post-Post-Prediction-Unconference-2020.html</link>
     <description><![CDATA[
@@ -185,26 +197,6 @@
 ]]></description>
     <pubDate>Thu, 07 Nov 2019 00:00:00 UT</pubDate>
     <guid>https://braneshop.com.au/posts/2019-11-07-Event-Debrief-Explainable-AI.html</guid>
-    <dc:creator>Braneshop Team</dc:creator>
-</item>
-<item>
-    <title>AI For Leadership Workshop - Breakdown</title>
-    <link>https://braneshop.com.au/posts/AI-For-Leadership-Workshop-Breakdown.html</link>
-    <description><![CDATA[
-<center>
-  <iframe src="https://player.vimeo.com/video/369242471" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/369242471">Snapshot of the attendees over the day.</a></p>
-</center>
-
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/workshop-action-photos/23-sept-leadership-small.jpg" width="100%" /> 
-  <br /><small>One of the teams, at the first AI For Leadership workshop, working through one of the exercises.</small></p> </center>
-
-<p>Last month we had our first AI for Leadership workshop. In this post we take a look at what we covered, and discuss a few of the things we learned.</p>
-]]></description>
-    <pubDate>Mon, 28 Oct 2019 00:00:00 UT</pubDate>
-    <guid>https://braneshop.com.au/posts/AI-For-Leadership-Workshop-Breakdown.html</guid>
     <dc:creator>Braneshop Team</dc:creator>
 </item>
 

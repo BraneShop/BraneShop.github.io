@@ -35,15 +35,11 @@ You have entered the realm of
   <title>$title$ - Braneshop</title>
   <meta name="geo.region" content="AU-VIC" />
   <meta name="geo.placename" content="Melbourne" />
-  <link rel="stylesheet" type="text/css" href="/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="/css/default.css?1" />
   <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
-
   <!-- TODO: Clean up fonts. -->
   <link href="https://fonts.googleapis.com/css?family=PT+Mono|Lato|DM+Serif+Text|Karma" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gilda+Display|Quando" rel="stylesheet">
-
-
-
   <script type="text/javascript"
     src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <!-- Meta tags for little cards and such. -->
@@ -99,6 +95,11 @@ s.parentNode.insertBefore(b, s);})();
 
 </head>
 <body>
+
+  <div id="covid">
+    <a title="Workshops on hold" href="/posts/Braneshop-Covid-19.html">Workshops on hold until COVID-19 clears up.</a>
+  </div>
+
   <div id="braneshop-fixed" onclick="document.location = '/';"></div>
   <!-- Header -->
   <div id="header">
@@ -199,7 +200,11 @@ receive monthly updates, and notifications of courses.
       <div class="link-section">
         <h6>Upcoming Workshops</h6>
         $for(workshops)$
-          <a title="Get tickets for $title$ - $date$ " href="$tickets$">$date$ - $title$</a>
+          $if(postponed)$
+            <a title="Get tickets for $title$ - $date$ " href="/posts/Braneshop-Covid-19.html">Workshop Postponed - $date$ - $title$</a>
+          $else$
+            <a title="Get tickets for $title$ - $date$ " href="$tickets$">$date$ - $title$</a>
+          $endif$
         $endfor$
       </div>
     </div>

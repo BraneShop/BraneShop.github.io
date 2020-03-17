@@ -8,8 +8,20 @@
         <name>Braneshop Team</name>
         <email>hello@braneshop.com.au</email>
     </author>
-    <updated>2020-02-27T00:00:00Z</updated>
+    <updated>2020-03-17T00:00:00Z</updated>
     <entry>
+    <title>Braneshop &amp; COVID-19</title>
+    <link href="https://braneshop.com.au/posts/Braneshop-Covid-19.html" />
+    <id>https://braneshop.com.au/posts/Braneshop-Covid-19.html</id>
+    <published>2020-03-17T00:00:00Z</published>
+    <updated>2020-03-17T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+
+
+<p>Hope you’re all staying safe out there in light of all the COVID-19 news. My favourite place for information is <a href="https://www.theguardian.com/au">The Guardian</a> and <a href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert">health.gov.au</a>.</p>
+]]></summary>
+</entry>
+<entry>
     <title>Post Post-Prediction Unconference Post!</title>
     <link href="https://braneshop.com.au/posts/Post-Post-Prediction-Unconference-2020.html" />
     <id>https://braneshop.com.au/posts/Post-Post-Prediction-Unconference-2020.html</id>
@@ -186,26 +198,6 @@
   <br /><small>Can humans explain their decisions via attention?</small></p> </center>
 
 <p>Last night we held a discussion group, here at <a href="https://ochouse.com.au/">OC House</a> around Explainable AI. Here’s an overview of what we covered:</p>
-]]></summary>
-</entry>
-<entry>
-    <title>AI For Leadership Workshop - Breakdown</title>
-    <link href="https://braneshop.com.au/posts/AI-For-Leadership-Workshop-Breakdown.html" />
-    <id>https://braneshop.com.au/posts/AI-For-Leadership-Workshop-Breakdown.html</id>
-    <published>2019-10-28T00:00:00Z</published>
-    <updated>2019-10-28T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<center>
-  <iframe src="https://player.vimeo.com/video/369242471" width="800" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  <p>Watch on Vimeo - <a href="https://player.vimeo.com/video/369242471">Snapshot of the attendees over the day.</a></p>
-</center>
-
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/workshop-action-photos/23-sept-leadership-small.jpg" width="100%" /> 
-  <br /><small>One of the teams, at the first AI For Leadership workshop, working through one of the exercises.</small></p> </center>
-
-<p>Last month we had our first AI for Leadership workshop. In this post we take a look at what we covered, and discuss a few of the things we learned.</p>
 ]]></summary>
 </entry>
 

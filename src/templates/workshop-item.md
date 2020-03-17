@@ -1,4 +1,10 @@
-<div class="workshop event"  onclick="document.location = '$tickets$'">
+<div class="workshop event"  
+$if(postponed)$
+  onclick="document.location = '/posts/Braneshop-Covid-19.html'"
+$else$
+  onclick="document.location = '$tickets$'"
+$endif$
+>
   <h5> $title$ - $date$ </h5>
 
   <ul class="normal dates">
@@ -13,8 +19,14 @@
   </ul>
 
   <div>
-    <div class="btn-b">
-      <a class="btn" href="$tickets$">Secure your spot!</a>
-    </div>
+    $if(postponed)$
+      <div class="btn-b">
+        <b><a href="/posts/Braneshop-Covid-19.html">Postponed</a></b>
+      </div>
+    $else$
+      <div class="btn-b">
+        <a class="btn" href="$tickets$">Secure your spot!</a>
+      </div>
+    $endif$
   </div>
 </div>

@@ -5,6 +5,10 @@ body {
   font-family:      "Lato";
 }
 
+div.postponed {
+
+}
+
 em {
   font-weight: bold;
   font-style:  normal;
@@ -24,6 +28,22 @@ div.workshops {
 
 div.workshop {
   width: 24%;
+}
+
+#covid {
+  position:      fixed;
+  margin:        20px;
+  background:    linen;
+  border-radius: 10px;
+  padding:       5px;
+  padding-left:  20px;
+  padding-right: 20px;
+  height:        30px;
+  left:          80px;
+  display:       flex;
+  align-items:   center;
+  border-bottom: solid 2px peachpuff;
+  border-right:  solid 2px peachpuff;
 }
 
 #braneshop-fixed {
@@ -1135,8 +1155,6 @@ div.btn-b {
   margin-top:      10px;
   margin-bottom:   10px;
 }
-
-
 
 div.book {
  display:        flex;
