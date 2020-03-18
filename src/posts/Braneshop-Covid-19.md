@@ -25,7 +25,8 @@ events.
 
 In the mean time, we're keen to try out some different ways of engaging
 online, so stay tuned for what they may look like. We're open to ideas for
-what you might like to see, so please send in your suggestions.
+what you might like to see, so please send in your suggestions (you can use
+the chat-box on the bottom-right of every page).
 
 Finally, an  alternative revenue stream for us is consulting, so [reach
 out](/contact.html) if you have anything, related to computer-vision, NLP,
