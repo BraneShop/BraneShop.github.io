@@ -28,6 +28,10 @@ online, so stay tuned for what they may look like. We're open to ideas for
 what you might like to see, so please send in your suggestions (you can use
 the chat-box on the bottom-right of every page).
 
+We're also open to just collaborating with people on
+interesting/fun/socially-focused projects, so reach out if you have something
+along those lines.
+
 Finally, an  alternative revenue stream for us is consulting, so [reach
 out](/contact.html) if you have anything, related to computer-vision, NLP,
 data engineering, AI strategy or otherwise AI-related that we can help you with!
