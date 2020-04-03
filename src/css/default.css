@@ -787,7 +787,7 @@ ul.blog-list li {
   margin-top:      20px;
   display:         flex;
   flex-direction:  row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap:       wrap;
   width:           100%;
   background:      #000000aa;

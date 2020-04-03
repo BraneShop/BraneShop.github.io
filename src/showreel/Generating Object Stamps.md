@@ -8,6 +8,6 @@ preview: A novel method for placing objects in scenes.
 ---
 
 Here we have the idea of, given some background image, can we fill it with
-arbitrary objects so that it looks realistic? Here htey show that they are
+arbitrary objects so that it looks realistic? Here they show that they are
 able to solve this problem very nicely, by filling a diverse range of wildlife
 scenes with animals!
