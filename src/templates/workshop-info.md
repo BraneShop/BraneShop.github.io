@@ -51,10 +51,11 @@ entirely-online format.
   <hr />
 </div>
 
-<h5>Workshops on hold</h5>
+<h5>On hold</h5>
 
-<p>The following workshops are on hold until the COVID-19 pandemic has
-cleared and it is safe to gather in groups again.
+<p>The following workshops are on hold until the COVID-19 pandemic has cleared
+and it is safe to gather in groups again. If you're interested in running one
+of these workshops remotely, please <a href="/contact.html">reach out</a>.
 </p>
 
 <div class="workshops">
@@ -67,5 +68,8 @@ cleared and it is safe to gather in groups again.
     <p> <em class="tag">Designed for executives, startup founders, government, and
     leadership teams, looking to understand and adopt AI. </em> </p>
 
+    <div class="buttons">
+      <a class="btn" href="/ai-for-leadership.html">Read more</a> 
+    </div>
   </div>
 </div>
