@@ -4,11 +4,11 @@
 </div> 
 
 <p> We have a two-pronged approach to AI education: <em>technical</em> and
-<em>strategic</em>. Our workshops are small, which allows the presentation
-can be specific to the audience, and the session to be highly interactive and
-targeted.
-</p>
+<em>strategic</em>. 
 
+In light of the COVID-19 virus, we've shifted our workshops to an
+entirely-online format.
+</p>
 
 <div class="workshops">
   <!-- ** technical workshop -->
