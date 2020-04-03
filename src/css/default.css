@@ -1320,3 +1320,15 @@ div.segment.simple {
   max-width: 950px;
 }
 
+
+div.workshop.on-hold:hover,
+div.workshop.on-hold {
+  background:     #eaeaea;
+  color:          gray;
+  border-right:   solid 4px darkgray;
+  border-bottom:  solid 4px darkgray;
+  cursor:         default;
+  filter:         gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter:         grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}

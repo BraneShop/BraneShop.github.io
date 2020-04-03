@@ -3,10 +3,6 @@
     alt="Leadership group working through an exercises." />
 </div>
 
-$for(firstWorkshop)$
-  <div class="btn-b"><a class="btn" href="$tickets$">Secure your spot for $date$</a></div>
-$endfor$
-
 <p> <em class="tag">Designed for executives, startup founders, government, and
 leadership teams, looking to understand and adopt AI. </em> </p>
 
@@ -63,11 +59,7 @@ $partial("templates/afl-agenda.md")$
 
 <h5>Dates and Tickets</h5>
 
-<div class="workshops">
-  $for(aflWorkshops)$
-    $partial("templates/workshop-item.md")$
-  $endfor$
-</div>
+$partial("templates/on-hold.md")$
 
 <p></p>
 <h5>Testimonials</h5>

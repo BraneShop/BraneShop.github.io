@@ -230,15 +230,9 @@ To add:
 </tr>
 <tr>  <td class="item">  Attendance </td>
       <td class="value"> 
-      20 people, maximum. No minimum. </td>
-</tr>
-<tr>  <td class="item">  Costs    </td>
-      <td class="value"> 
-        Ranges from $$5,000 to $$20,000.
+      Due to the COVID-19 virus, any custom workshop must be conducted
+      remotely.
       </td>
-</tr>
-<tr>  <td class="item">  Location </td>
-      <td class="value"> Your office or ours. </td>
 </tr>
 <tr> <td class="item"> Prerequisites </td>
      <td class="value">
