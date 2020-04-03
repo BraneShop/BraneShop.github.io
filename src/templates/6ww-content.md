@@ -3,6 +3,10 @@
     alt="Attendees at a recent workshop!" />
 </div>
 
+<div class="btn-b"><a class="btn"
+alt"Book a time to chat with an instructor about this workshop."
+href="https://calendly.com/noonvandersilk/technical-workshop-initial-chat">Book a time to chat!</a></div>
+
 <!--
 $for(firstWorkshop)$
 $endfor$
@@ -135,9 +139,9 @@ is a good place to start, and what a good rhythm for working together.
 </p>
 
 <div class="btn-b"><a class="btn"
-href="https://calendly.com/noonvandersilk/technical-workshop-initial-chat">Book a time to chat</a></div>
+alt"Book a time to chat with an instructor about this workshop."
+href="https://calendly.com/noonvandersilk/technical-workshop-initial-chat">Book a time to chat!</a></div>
 
-<p></p>
 <h5>Testimonials</h5>
 
 $partial("templates/6-week-workshop-testimonials.md")$
