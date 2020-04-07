@@ -12,8 +12,8 @@ $for(firstWorkshop)$
 $endfor$
 -->
 
-<p> <em class="tag">A hands-on deep learning workshop for those looking to
-use AI in their projects.
+<p> <em class="tag">A hands-on personalised deep learning workshop for those
+looking to use AI in their projects.
 </em> </p>
 
 <h5>About</h5>
@@ -25,29 +25,39 @@ programming component. </p>
 
 <p>
 Due to COVID-19, and the current laws and guidelines around social distancing,
-this workshop will be run <b>online</b> in the following way:
+this workshop will be run <b>online</b>.
 </p>
 
-<ul class="normal">
-<li>Content will be released to you week by week,</li>
-<li>At your own pace, read through the content and attempt the exercises,</li> 
-<li>At end of each week, we'll have an hour-long one-on-one with an instructor, to
-go over any questions on the material, the homework, or anything else that
-comes up,
-</li>
-<li>The workshop culminates in the completion of all the exercises and
-content, and a final discussion outlining where to from here.
-</li>
-</ul>
+<div class="features">
+  <div class="feature">
+  <img src="/images/week-by-week.png" />
+  <p>Content will be released to you week-by-week.</p>
+  </div>
+  <div class="feature">
+  <img src="/images/your-pace.png" />
+  <p>Read the content and exercises at your own pace.
+  </p>
+  </div>
+  <div class="feature">
+  <img src="/images/1-on-1.png" />
+  <p>One-on-one video-chat sessions with an instructor each week.
+  </p>
+  </div>
+  <div class="feature">
+  <img src="/images/exercises.png" />
+  <p>Complete exercises and homework to consolidate your knowledge.
+  </p>
+  </div>
+</div>
 
 <p>
 Our intention is to maintain our high standard of personal
 attention through these one-on-one sessions.
 </p>
 
-
 <h5 class="s">What can you expect to receive and achieve?</h5>
 <ul class="normal">
+<li>Personalsed teaching approach through 1-on-1s,</li> 
 <li>An intuitive understanding of deep learning and the essential concepts,</li>
 <li>Hands-on work in solving problems,</li>
 <li>Experience building models for typical domains of deep learning: understanding images,
@@ -82,6 +92,13 @@ quiz</a>.
 
 <h5>Overview of content</h5>
 
+<div class="images">
+  <a href="/images/content-examples/ex1.png.jpg"><img src="/images/content-examples/ex1.png.jpg" /></a>
+  <a href="/images/content-examples/ex2.png.jpg"><img src="/images/content-examples/ex2.png.jpg" /></a>
+  <a href="/images/content-examples/ex3.png.jpg"><img src="/images/content-examples/ex3.png.jpg" /></a>
+  <a href="/images/content-examples/ex4.png.jpg"><img src="/images/content-examples/ex4.png.jpg" /></a>
+</div>
+
 <ul class="agenda">
 <li> Showreel and State of the Art </li>
 <li> Learning vs. Programming </li>
@@ -110,7 +127,7 @@ quiz</a>.
 </tr>
 <tr>  <td class="item">  Costs    </td>
   <td class="value"> 
-    $$850* per person.
+    AUD$$850* per person.
   </td>
 </tr>
 <tr> <td class="item"> Prerequisites </td>

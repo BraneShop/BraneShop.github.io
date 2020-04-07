@@ -171,6 +171,7 @@ main = hakyll $ do
                     , "pathway.html"
                     , "privacy.html"
                     , "contact.html"
+                    , "advisory-and-consulting.html"
                     , "events.html"
                     , "workshops.html"
                     , "thesetestimonialsdontexist.html"
