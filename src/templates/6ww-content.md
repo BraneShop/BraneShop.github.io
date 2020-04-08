@@ -163,7 +163,7 @@ href="https://calendly.com/noonvandersilk/technical-workshop-initial-chat">Book 
 
 $partial("templates/6-week-workshop-testimonials.md")$
 
-<p></p>
+<p></p><a name="scholarship"></a>
 <h5>*Scholarship</h5>
 
 <p> There is a <a target="_blank"
