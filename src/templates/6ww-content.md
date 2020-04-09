@@ -23,27 +23,7 @@ Due to COVID-19, and the current laws and guidelines around social distancing,
 this workshop will be run <b>online</b>.
 </p>
 
-<div class="features">
-  <div class="feature">
-  <img src="/images/week-by-week.png" />
-  <p>Content will be released to you week-by-week.</p>
-  </div>
-  <div class="feature">
-  <img src="/images/your-pace.png" />
-  <p>Read the content and exercises at your own pace.
-  </p>
-  </div>
-  <div class="feature">
-  <img src="/images/1-on-1.png" />
-  <p>One-on-one video-chat sessions with an instructor each week.
-  </p>
-  </div>
-  <div class="feature">
-  <img src="/images/exercises.png" />
-  <p>Complete exercises and homework to consolidate your knowledge.
-  </p>
-  </div>
-</div>
+$partial("templates/workshop-features.html")$
 
 <p>
 Our intention is to maintain our high standard of personal
