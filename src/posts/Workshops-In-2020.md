@@ -1,7 +1,7 @@
 ---
 title: Workshops in 2020
 author: Noon van der Silk
-image: /images/workshop-plans-2020.jpg?
+image: /images/workshop-plans-2020.jpg
 imageDescription: Noon and Esmeralda, with their new banner, at the Datathon for Social Good!
 date: 2020-02-23
 preview: Some thoughts on the direction we want to take the workshops in, this year.

@@ -93,7 +93,7 @@ workshop](/technical-deep-learning-workshop.html) page.
 
 We have decided to put the leadership workshop on hold, for now.
 The format works best as a group, and as a focused day. We are still thinking
-about how we can make that work online; if you haves, email us!
+about how we can make that work online; if you have ideas, email us!
 
 We have, instead, extended our offering to include [advisory and consulting
 work, which we've detailed here](/advisory-and-consulting.html).

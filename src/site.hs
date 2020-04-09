@@ -1,25 +1,26 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE FlexibleContexts  #-}
+{-# LANGUAGE DeriveGeneric     #-}
 
-import           Data.List (isPrefixOf, tails, findIndex, intercalate, sortBy)
-import           Data.Maybe (fromMaybe, fromJust)
-import           Control.Applicative (Alternative (..))
-import           Data.Monoid ((<>), mconcat)
-import           Hakyll
 import           Control.Applicative
-import qualified Data.Set as S
-import qualified Data.Map as M
-import           Text.Pandoc.Options
+import           Control.Applicative (Alternative (..))
 import           Control.Monad
+import           Data.Aeson
+import           Data.List (isPrefixOf, tails, findIndex, intercalate, sortBy)
+import           Data.Maybe (fromMaybe, fromJust, isJust)
+import           Data.Monoid ((<>), mconcat)
+import           Data.String.Conv (toS)
+import           Data.Time.Clock (UTCTime)
+import           Data.Time.Format (defaultTimeLocale, parseTimeM)
+import           GHC.Generics
+import           Hakyll
 import           Hakyll.Web.Diagrams (pandocCompilerDiagrams)
-import           Data.Time.Clock (UTCTime)
 import           System.FilePath (takeFileName)
-import           Data.Time.Format (parseTimeM)
-import           Data.Time.Format (defaultTimeLocale)
-import           Data.Time.Clock (UTCTime)
 import           Text.HTML.TagSoup (Tag (..))
+import           Text.Pandoc.Options
 import qualified Data.Map as M
+import qualified Data.Set as S
 
 
 --
@@ -44,7 +45,11 @@ data ImageData = ImageData
   { base64String :: String
   , width        :: Int
   , height       :: Int
-  }
+  , name         :: String
+  } deriving (Generic)
+
+
+instance FromJSON ImageData
 
 
 type ImageMetaDataMap = M.Map String ImageData
@@ -52,14 +57,20 @@ type ImageMetaDataMap = M.Map String ImageData
 
 computeImageMetaData :: IO (ImageMetaDataMap)
 computeImageMetaData = do
-  -- 1. 
-  return $ M.empty
+  items <- lines <$> readFile "./metadata/images.jsonl"
+
+  let decoded' :: [Maybe ImageData]
+      decoded' = map (decode' . toS) items
+      decoded  = map fromJust (filter isJust decoded')
+  
+  return $ M.fromList (map (\i -> (name i, i)) decoded)
 
 
 main :: IO ()
 main = do
-
   imageMetaData <- computeImageMetaData
+
+  putStrLn $ "Found: " ++ show (length imageMetaData) ++ " meta items."
 
   hakyll $ do
     match "images/**" $ do
@@ -123,6 +134,7 @@ main = do
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx'
                     >>= loadAndApplyTemplate "templates/default.html" ctx'
+                    -- >>= lqipImages imageMetaData
                     >>= relativizeUrls
 
         route $ setExtension "html"
@@ -133,6 +145,7 @@ main = do
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/showreel-display.html" ctx
             >>= loadAndApplyTemplate "templates/default.html" ctx
+            -- >>= lqipImages imageMetaData
             >>= relativizeUrls
 
 
@@ -154,6 +167,7 @@ main = do
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx
                     >>= loadAndApplyTemplate "templates/default.html" ctx
+                    -- >>= lqipImages imageMetaData
                     >>= relativizeUrls
 
 
@@ -164,6 +178,7 @@ main = do
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
             >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)
+            -- >>= lqipImages imageMetaData
             >>= relativizeUrls
 
 
@@ -184,6 +199,7 @@ main = do
           getResourceBody
               >>= applyAsTemplate ctx
               -- >>= loadAndApplyTemplate "templates/manifold.html" ctx
+              -- >>= lqipImages imageMetaData
               >>= relativizeUrls
 
     match (fromList [ "custom-ai-workshop.html"
@@ -207,8 +223,8 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
+                -- >>= lqipImages imageMetaData
                 >>= relativizeUrls
-                >>= lqipImages imageMetaData
 
 
     match "about.html" $ do
@@ -222,8 +238,8 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
+                -- >>= lqipImages imageMetaData
                 >>= relativizeUrls
-                    
 
 
     match "ai-for-leadership.html" $ do
@@ -238,6 +254,7 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
+                -- >>= lqipImages imageMetaData
                 >>= relativizeUrls
                     
 
@@ -251,6 +268,7 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
+                -- >>= lqipImages imageMetaData
                 >>= relativizeUrls
 
 
@@ -269,7 +287,9 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
+                -- >>= lqipImages imageMetaData
                 >>= relativizeUrls
+
 
     match (fromList ["blog.html"]) $ do
         route idRoute
@@ -284,6 +304,7 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
+                -- >>= lqipImages imageMetaData
                 >>= relativizeUrls
 
     match "index.html" $ do
@@ -299,6 +320,7 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
+                -- >>= lqipImages imageMetaData
                 >>= relativizeUrls
                 >>= minifyHTML
 
@@ -322,27 +344,24 @@ main = do
             renderRss feedConf feedCtx posts
 
 
--- convert ../images/workshop-action-photos/image4_720.jpg -blur 0x16 +dither -colors 16  a.png
--- style="background-size: cover; background-image: url(data:image/png;base64,...);"
 lqipImages :: ImageMetaDataMap -> Item String -> Compiler (Item String)
 lqipImages imageMetaData = return . fmap (withTags . switchInLqipImages $ imageMetaData)
 
-  -- set: width, height
-  -- 1) compute comppressed image
-  -- 2) set it!
-  -- 3) done!
+
 switchInLqipImages :: ImageMetaDataMap -> (Tag String -> Tag String)
--- switchInLqipImages imageMetaDataMap t@(TagOpen "img" attrs) = newTag
---   where
---     newAttrs  = [ ("width", show (width imageData))
---                 , ("height", show (height imageData))
---                 , ("style", "background-size: cover; background-image: url(data:image/png;base64," ++ base64String imageData ++ ");")
---                 ]
---     attrDict  = M.fromList attrs
---     src       = fromJust $ M.lookup "src" attrDict
---     newTag    = TagOpen "img" (attrs ++ newAttrs)
---     imageData = fromJust $ M.lookup src imageMetaDataMap
---
+switchInLqipImages imageMetaDataMap t@(TagOpen "img" attrs) = newTag
+  where
+    newAttrs  = [ ("width", show (width imageData))
+                , ("height", show (height imageData))
+                , ( "style"
+                  , "background-size: cover; background-image: url(data:image/png;base64," ++ base64String imageData ++ ");"
+                  )
+                , ( "onload", "this.style.backgroundImage = '';" )
+                ]
+    attrDict  = M.fromList attrs
+    newTag    = if take 24 src == "https://braneshop.com.au" then t else TagOpen "img" (attrs ++ newAttrs)
+    src       = fromMaybe (error $ "Error finding image src, tag: "       ++ show t) (M.lookup "src" attrDict) 
+    imageData = fromMaybe (error $ "Error finding image meta data, tag: " ++ show t) (M.lookup (drop 1 src) imageMetaDataMap) 
 switchInLqipImages _ t = t
 
 

@@ -12,14 +12,16 @@ executable braneshop-site
   main-is: site.hs
   build-depends:
     base                   >= 4.0    && < 5.0
-    , text
-    , system-filepath
-    , transformers 
-    , pandoc
-    , hakyll
+    , aeson
     , containers
     , diagrams-lib
-    , hakyll-diagrams
-    , time
     , filepath
+    , hakyll
+    , hakyll-diagrams
+    , pandoc
+    , system-filepath
     , tagsoup
+    , text
+    , time
+    , transformers 
+    , string-conv
