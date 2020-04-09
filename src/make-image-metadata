@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+set -x
+
+# 
+find images -print0 | xargs -0 -I {} \
+  convert "{}" -blur 0x16 +dither -colours 5 "{}.compressed"

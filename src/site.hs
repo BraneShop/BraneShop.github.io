@@ -3,7 +3,7 @@
 {-# LANGUAGE FlexibleContexts  #-}
 
 import           Data.List (isPrefixOf, tails, findIndex, intercalate, sortBy)
-import           Data.Maybe (fromMaybe)
+import           Data.Maybe (fromMaybe, fromJust)
 import           Control.Applicative (Alternative (..))
 import           Data.Monoid ((<>), mconcat)
 import           Hakyll
@@ -18,7 +18,8 @@ import           System.FilePath (takeFileName)
 import           Data.Time.Format (parseTimeM)
 import           Data.Time.Format (defaultTimeLocale)
 import           Data.Time.Clock (UTCTime)
-import qualified Text.HTML.TagSoup               as TS
+import           Text.HTML.TagSoup (Tag (..))
+import qualified Data.Map as M
 
 
 --
@@ -39,13 +40,26 @@ pandocMathCompiler =
     in pandocCompilerWith defaultHakyllReaderOptions writerOptions
 
 
-computeImageInfoCache :: IO ()
-computeImageInfoCache = undefined
+data ImageData = ImageData 
+  { base64String :: String
+  , width        :: Int
+  , height       :: Int
+  }
+
+
+type ImageMetaDataMap = M.Map String ImageData
+
+
+computeImageMetaData :: IO (ImageMetaDataMap)
+computeImageMetaData = do
+  -- 1. 
+  return $ M.empty
+
 
 main :: IO ()
 main = do
 
-  -- computeImageInfoCache
+  imageMetaData <- computeImageMetaData
 
   hakyll $ do
     match "images/**" $ do
@@ -194,7 +208,7 @@ main = do
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
-                >>= lqipImages
+                >>= lqipImages imageMetaData
 
 
     match "about.html" $ do
@@ -310,29 +324,26 @@ main = do
 
 -- convert ../images/workshop-action-photos/image4_720.jpg -blur 0x16 +dither -colors 16  a.png
 -- style="background-size: cover; background-image: url(data:image/png;base64,...);"
-lqipImages :: Item String -> Compiler (Item String)
-lqipImages = return . fmap (withTags switchInLqipImages)
-
-
-
+lqipImages :: ImageMetaDataMap -> Item String -> Compiler (Item String)
+lqipImages imageMetaData = return . fmap (withTags . switchInLqipImages $ imageMetaData)
 
   -- set: width, height
   -- 1) compute comppressed image
   -- 2) set it!
   -- 3) done!
-switchInLqipImages :: (TS.Tag String -> TS.Tag String)
--- switchInLqipImages (TS.TagOpen "img" attrs) = (TS.TagOpen "img" [("title", "Yo!!!!"), ("src", "/images/gala.png")])
-switchInLqipImages t = t
-
-
--- | Apply a function to each Image on a webpage
-withImages :: (String -> String) -> String -> String
-withImages f = undefined
--- withImages f = withTags tag
+switchInLqipImages :: ImageMetaDataMap -> (Tag String -> Tag String)
+-- switchInLqipImages imageMetaDataMap t@(TagOpen "img" attrs) = newTag
 --   where
---     tag (TS.TagOpen s a) = TS.TagOpen s $ map attr a
---     tag x                = if isImage k then f x else x
---     attr (k, v)          = (k, if isUrlAttribute k then f v else v)
+--     newAttrs  = [ ("width", show (width imageData))
+--                 , ("height", show (height imageData))
+--                 , ("style", "background-size: cover; background-image: url(data:image/png;base64," ++ base64String imageData ++ ");")
+--                 ]
+--     attrDict  = M.fromList attrs
+--     src       = fromJust $ M.lookup "src" attrDict
+--     newTag    = TagOpen "img" (attrs ++ newAttrs)
+--     imageData = fromJust $ M.lookup src imageMetaDataMap
+--
+switchInLqipImages _ t = t
 
 
 feedConf :: FeedConfiguration
