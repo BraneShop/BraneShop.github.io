@@ -12,13 +12,14 @@ Hope you're all doing well.
 I've been thinking a bit about how Braneshop can continue down the workshop
 path, in some online capacity.
 
-After chatting to lots of different people, one particular conversation with
-my friend [Eike](https://www.linkedin.com/in/eike-zeller-1464b767/) really inspired
-me to come up with a plan that I actually like, and I think respects the
+After chatting to lots of different people about how to manage this new
+environment, one particular conversation with my friend
+[Eike](https://www.linkedin.com/in/eike-zeller-1464b767/) really inspired me
+to come up with a plan that I actually like, and I think respects the
 intention and goals of Braneshop.
 
 Eike challenged me to come up with some idea that would work particularly well
-in this new environment. So here's what I came up with.
+in this new environment. So here's the resulting idea.
 
 <!--more-->
 
