@@ -18,6 +18,7 @@ import           System.FilePath (takeFileName)
 import           Data.Time.Format (parseTimeM)
 import           Data.Time.Format (defaultTimeLocale)
 import           Data.Time.Clock (UTCTime)
+import qualified Text.HTML.TagSoup               as TS
 
 
 --
@@ -186,6 +187,7 @@ main = hakyll $ do
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
+                >>= lqipImages
 
 
     match "about.html" $ do
@@ -297,6 +299,31 @@ main = hakyll $ do
             posts <- fmap (take 10) . recentFirst =<<
                 loadAllSnapshots "posts/*" "content"
             renderRss feedConf feedCtx posts
+
+
+-- convert ../images/workshop-action-photos/image4_720.jpg -blur 0x16 +dither -colors 16  a.png
+-- style="background-size: cover; background-image: url(data:image/png;base64,...);"
+lqipImages :: Item String -> Compiler (Item String)
+lqipImages = return . fmap (withTags switchInLqipImages)
+
+
+  -- set: width, height
+  -- 1) compute comppressed image
+  -- 2) set it!
+  -- 3) done!
+switchInLqipImages :: (TS.Tag String -> TS.Tag String)
+-- switchInLqipImages (TS.TagOpen "img" attrs) = (TS.TagOpen "img" [("title", "Yo!!!!"), ("src", "/images/gala.png")])
+switchInLqipImages t = t
+
+
+-- | Apply a function to each Image on a webpage
+withImages :: (String -> String) -> String -> String
+withImages f = undefined
+-- withImages f = withTags tag
+--   where
+--     tag (TS.TagOpen s a) = TS.TagOpen s $ map attr a
+--     tag x                = if isImage k then f x else x
+--     attr (k, v)          = (k, if isUrlAttribute k then f v else v)
 
 
 feedConf :: FeedConfiguration

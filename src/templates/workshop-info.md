@@ -1,6 +1,6 @@
 <div class="hero-image">
   <img src="/images/workshop-action-photos/image4_720.jpg"
-    alt="People working together during a workshop!" />
+        alt="People working together during a workshop!" />
 </div> 
 
 <p> We have a two-pronged approach to AI education: <em>technical</em> and
@@ -10,14 +10,10 @@ In light of the COVID-19 virus, we've shifted most of our workshops to an
 entirely-online format, which will be more personal and suited to
 individualised learning. 
 
-<!-- 
-Read more about our approach <a href="...">here</a>.
-
-TODO: Put in the proper link. -->
 </p>
 
 <div class="workshops">
-  <!-- ** technical workshop -->
+  <!-- ** Technical Workshop -->
   <div class="workshop" id="technical-workshop" onclick="document.location = '/technical-deep-learning-workshop.html'">
     <div class="icon"><img src="/images/icons/code.png" alt="Technical workshop" /></div>
     <h4> Technical Deep Learning Workshop

@@ -47,54 +47,61 @@ in this new environment. So here's the resulting idea.
   </div>
 </div>
 
-Focusing on the [technical workshop](/technical-deep-learning-workshop.html),
-the main thing I've noticed in other online courses is that they are focused
-on the quantity of people through; with video lectures and automated assessment.
-This might work well for some people, but there's definitely a group for whom
-it doesn't work well. I'm one of those people.
+One of the things I have observed is in common among different online course
+offerings, is that the companies are focused on throughput &mdash; as such, video
+lectures and automated assessments seem to be the norm. While this might work
+for some people, there are many of us for which that does not work well. 
 
-As a result, the plan that I've come up with is to flip things around; we'll
-let people read the content and attempt the exercises **at their own pace**,
-but we will have **weekly check-ins** with an instructor, for an hour long
-1-on-1 chat.
+As a result, we have developed a plan for the [technical
+workshop](/technical-deep-learning-workshop.html), which flips things around:
+we'll let people read the content and attempt exercises at their own pace, and
+have weekly check-ins with an instructor for an hour long 1-on-1 chat. 
 
-I like this idea for several reasons:
+We see lots of positives to this approach:
 
-- Individualised and targeted learning is a way we stand out. This allows us
-to continue to do that really well. We can expose different content for different
-people, and really focus in our help.
-- It means anyone can join at any time; there should be less scheduling
-conflicts with us running the workshop on a specific date.
-- The format can't "scale" well, but that's okay, because we really want to
-just focus on individuals, rather than large groups.
-- The self-paced style, but _with check-ins_, means people don't get lost
-mid-way through the course, and means they always feel supported.
+<ul class="normal">
+<li>Individualised and targeted learning is a way we stand out. We can expose
+different content for different people, making the learning bespoke, and build
+in space for focused and useful support.</li>
+<li>Anyone can join at any time; there should be less scheduling conflicts and
+flexibility for different needs.</li>
+<li>The self-paced style, with regular check-ins, means people don't get lost
+mid-way through the course, and allows for the flexibility for them to always
+feel supported.</li>
+<li>The format scales in a way that we like &amp; across individuals and up to
+our capacity to interact meaningfully. [This stays true to our our style.](/tags/living-business.html)</li>
+<li>The self-paced style, but _with check-ins_, means people don't get lost
+mid-way through the course, and means they always feel supported.</li>
+</ul>
 
 In order to join this course, we'll first have a (free) 1-on-1 video chat, to
 get a feeling for where you are at currently, and where you want to go. We'll
-chat over the course and how it'll be structured, and then take it from there.
+chat over the course, how it'll be structured, and then start from where you
+are.
 
 We've reduced the price, given that the format is changing, but we're keeping
-the [scholarship](/technical-deep-learning-workshop.html#scholarship), as we
-haven't changed our thinking about increasing the diversity and representation
-within the AI community.
+the [scholarship](/technical-deep-learning-workshop.html#scholarship), as our
+focus to increase the diversity and representation
+within the AI community has not changed.
 
-You can read more about this format [over on the technical deep learning
+You can read more about this [over on the technical deep learning
 workshop](/technical-deep-learning-workshop.html) page.
 
 
 
 #### On the Leadership workshop ...
 
-For the leadership workshop, we've decided to leave that one on hold, for now.
-The format there works best as a group, where everyone can be completely
-focused for a day. I think it'd be pushing it to make that work online, at
-this point; or at least I can't see how.
+We have decided to put the leadership workshop on hold, for now.
+The format works best as a group, and as a focused day. We are still thinking
+about how we can make that work online; if you haves, email us!
 
-We have, however, extended our offering to include [advisory and consulting
-work, which we've detailed on this new page](/advisory-and-consulting.html).
-Our aim is to still work with companies in a strategic way, but, again, in a
-more targeted way.
+We have, instead, extended our offering to include [advisory and consulting
+work, which we've detailed here](/advisory-and-consulting.html).
+Our aim is to continue work with companies in a strategic and targeted way,
+and to support leaders to make the best of AI.
+
+We are really excited for this new offering and are looking forward to
+working with organisations in this capacity!
 
 
 #### Trial of the Online Technical Deep Learning Workshop
