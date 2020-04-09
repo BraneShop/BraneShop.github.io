@@ -7,11 +7,6 @@
 alt"Book a time to chat with an instructor about this workshop."
 href="https://calendly.com/noonvandersilk/technical-workshop-initial-chat">Book a time to chat!</a></div>
 
-<!--
-$for(firstWorkshop)$
-$endfor$
--->
-
 <p> <em class="tag">A hands-on personalised deep learning workshop for those
 looking to use AI in their projects.
 </em> </p>
