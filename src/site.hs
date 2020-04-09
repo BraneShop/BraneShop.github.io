@@ -39,8 +39,15 @@ pandocMathCompiler =
     in pandocCompilerWith defaultHakyllReaderOptions writerOptions
 
 
+computeImageInfoCache :: IO ()
+computeImageInfoCache = undefined
+
 main :: IO ()
-main = hakyll $ do
+main = do
+
+  -- computeImageInfoCache
+
+  hakyll $ do
     match "images/**" $ do
         route   idRoute
         compile copyFileCompiler
@@ -305,6 +312,8 @@ main = hakyll $ do
 -- style="background-size: cover; background-image: url(data:image/png;base64,...);"
 lqipImages :: Item String -> Compiler (Item String)
 lqipImages = return . fmap (withTags switchInLqipImages)
+
+
 
 
   -- set: width, height
