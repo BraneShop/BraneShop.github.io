@@ -75,20 +75,6 @@ drift.SNIPPET_VERSION = '0.3.1';
 drift.load('gge7kn9kp4gc');
 </script>
 <!-- End of Async Drift Code -->
-<!-- LinkedIn -->
-<script type="text/javascript">
-_linkedin_partner_id = "1775578";
-window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-</script><script type="text/javascript">
-(function(){var s = document.getElementsByTagName("script")[0];
-var b = document.createElement("script");
-b.type = "text/javascript";b.async = true;
-b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-s.parentNode.insertBefore(b, s);})();
-</script>
-
-
 </head>
 <body>
   <div id="braneshop-fixed" onclick="document.location = '/';"></div>
@@ -150,7 +136,7 @@ s.parentNode.insertBefore(b, s);})();
 
 <p>I wanted to take some time to discuss a library that seems to have flown under the radar a little bit. It’s called <a href="https://github.com/facebookresearch/pytext">PyText</a>, and we’re going to explore how you can use it to run state of the art attention models!</p>
 <p>Here’s our plan:</p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>Set a dataset,</li>
 <li>See how we prepare the data for training in PyText,</li>
 <li>Get PyText,</li>
@@ -169,18 +155,18 @@ Given some new research paper, will I be interested in it? And if so, why?
 </blockquote>
 <p>This will be labelled data. Specifically, we will need two fields: <code>title_and_abstract</code> (a blob of text which is the title of the paper and the abstract concatenated together) and <code>scited</code> (a number, <code>1</code> if I “scited” it, <code>0</code> if I didn’t).</p>
 <p>Here’s an example, in Python:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">title_and_abstract <span class="op">=</span> <span class="st">&quot;&quot;&quot;Generalized criteria of symmetry breaking. A strategy</span>
-<span class="st">for quantum time crystals. The aim of this paper is to propose a criterion</span>
-<span class="st">of spontaneous symmetry breaking that makes reference to the properties of</span>
-<span class="st">pure phases defined by a translationally invariant state. By avoiding</span>
-<span class="st">any reference to the ground state, at the basis of the standard</span>
-<span class="st">approach, this criterion applies to a wider class of models. An</span>
-<span class="st">interesting application is the breaking of time translations. Indeed, we</span>
-<span class="st">discuss explicit theoretical models which exhibit the prototypical</span>
-<span class="st">features of quantum time crystals, without the need of a time-dependent</span>
-<span class="st">Hamiltonian.&quot;&quot;&quot;</span>
-scited <span class="op">=</span> <span class="dv">0</span>
-arxiv_id <span class="op">=</span> <span class="st">&quot;1906.12293&quot;</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1">title_and_abstract <span class="op">=</span> <span class="st">&quot;&quot;&quot;Generalized criteria of symmetry breaking. A strategy</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="st">for quantum time crystals. The aim of this paper is to propose a criterion</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="st">of spontaneous symmetry breaking that makes reference to the properties of</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="st">pure phases defined by a translationally invariant state. By avoiding</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="st">any reference to the ground state, at the basis of the standard</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="st">approach, this criterion applies to a wider class of models. An</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="st">interesting application is the breaking of time translations. Indeed, we</span></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="st">discuss explicit theoretical models which exhibit the prototypical</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="st">features of quantum time crystals, without the need of a time-dependent</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="st">Hamiltonian.&quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb1-11" title="11">scited <span class="op">=</span> <span class="dv">0</span></a>
+<a class="sourceLine" id="cb1-12" title="12">arxiv_id <span class="op">=</span> <span class="st">&quot;1906.12293&quot;</span></a></code></pre></div>
 <p>(Note: For reference, we’ll also keep the arXiv id around, so we can cross-check more information, as we need it, by <a href="https://scirate.com/arxiv/1906.12293">visiting the link</a>)</p>
 <h5 id="the-dataset---building-it">The Dataset - Building it</h5>
 <p>Now, given that I manage the SciRate website, I have direct access to the database. Here’s the kind of dataset I’d like to build:</p>
@@ -199,90 +185,90 @@ source activate pytext-scirate-recommendation
 pip install jupyter psycopg2
 </pre>
 <p>Then, in the Jupyter notebook:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">
-
-<span class="im">import</span> psycopg2
-
-my_user_id <span class="op">=</span> <span class="dv">857</span>
-max_items  <span class="op">=</span> 12_000
-
-scited_query <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span>
-<span class="ss">select</span>
-<span class="ss">    abstract,</span>
-<span class="ss">    title,</span>
-<span class="ss">    uid,</span>
-<span class="ss">    1 as scited</span>
-<span class="ss">from</span>
-<span class="ss">    papers</span>
-<span class="ss">inner join</span>
-<span class="ss">    scites on</span>
-<span class="ss">    scites.paper_uid = papers.uid</span>
-<span class="ss">    and scites.user_id = </span><span class="sc">{</span>my_user_id<span class="sc">}</span>
-<span class="ss">where</span>
-<span class="ss">    papers.submit_date &gt; '01-Jan-2016'</span>
-<span class="ss">order</span>
-<span class="ss">    by random()</span>
-<span class="ss">limit</span>
-<span class="ss">    </span><span class="sc">{</span>max_items<span class="sc">}</span>
-<span class="ss">&quot;&quot;&quot;</span>
-
-not_scited_query <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span>
-<span class="ss">select</span>
-<span class="ss">    abstract,</span>
-<span class="ss">    title,</span>
-<span class="ss">    uid,</span>
-<span class="ss">    0 as scited</span>
-<span class="ss">from</span>
-<span class="ss">    papers</span>
-<span class="ss">left outer join</span>
-<span class="ss">    scites on</span>
-<span class="ss">    scites.paper_uid = papers.uid</span>
-<span class="ss">    and scites.user_id = </span><span class="sc">{</span>my_user_id<span class="sc">}</span>
-<span class="ss">where</span>
-<span class="ss">    scites.id is null</span>
-<span class="ss">    and</span>
-<span class="ss">    papers.submit_date &gt; '01-Jan-2016'</span>
-<span class="ss">order</span>
-<span class="ss">    by random()</span>
-<span class="ss">limit</span>
-<span class="ss">    </span><span class="sc">{</span>max_items<span class="sc">}</span>
-<span class="ss">&quot;&quot;&quot;</span>
-
-<span class="cf">with</span> psycopg2.<span class="ex">connect</span>(<span class="st">&quot;dbname=scirate&quot;</span>) <span class="im">as</span> connection:
-    cursor <span class="op">=</span> connection.cursor()
-    
-    cursor.execute(scited_query)
-    scited <span class="op">=</span> cursor.fetchall()
-
-    cursor.execute(not_scited_query)
-    not_scited <span class="op">=</span> cursor.fetchall()
-
-<span class="cf">assert</span> <span class="bu">len</span>(scited) <span class="op">==</span> <span class="bu">len</span>(not_scited) <span class="op">==</span> max_items
-
-train <span class="op">=</span> scited[:10_000]       <span class="op">+</span> not_scited[:10_000]
-val   <span class="op">=</span> scited[10_000:11_500] <span class="op">+</span> not_scited[10_000:11_500]
-test  <span class="op">=</span> scited[11_500:]       <span class="op">+</span> not_scited[11_500:]
-
-<span class="cf">assert</span> <span class="bu">len</span>(train) <span class="op">==</span> 20_000
-<span class="cf">assert</span> <span class="bu">len</span>(val)   <span class="op">==</span>  3_000
-<span class="cf">assert</span> <span class="bu">len</span>(test)  <span class="op">==</span>  1_000
-
-<span class="im">import</span> pandas <span class="im">as</span> pd
-
-<span class="kw">def</span> write_csv (rows, name):
-    df <span class="op">=</span> pd.DataFrame(rows, columns<span class="op">=</span>[<span class="st">&quot;abstract&quot;</span>, <span class="st">&quot;title&quot;</span>, <span class="st">&quot;arxiv_id&quot;</span>, <span class="st">&quot;scited&quot;</span>])
-    df[<span class="st">&quot;abstract_and_title&quot;</span>] <span class="op">=</span> (df[<span class="st">&quot;title&quot;</span>] <span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> df[<span class="st">&quot;abstract&quot;</span>])<span class="op">\</span>
-                                .replace(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>)<span class="op">\</span>
-                                .replace(<span class="st">&quot;</span><span class="ch">\r</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>)<span class="op">\</span>
-                                .replace(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>)
-    df <span class="op">=</span> df.drop(columns<span class="op">=</span>[<span class="st">&quot;abstract&quot;</span>, <span class="st">&quot;title&quot;</span>])
-    
-    df.to_csv(name <span class="op">+</span> <span class="st">&quot;.csv&quot;</span>, index<span class="op">=</span><span class="va">False</span>, header<span class="op">=</span><span class="va">False</span>, sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)
-
-
-write_csv(train, <span class="st">&quot;../data/train&quot;</span>)
-write_csv(val,   <span class="st">&quot;../data/val&quot;</span>)
-write_csv(test,  <span class="st">&quot;../data/test&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"></a>
+<a class="sourceLine" id="cb2-2" title="2"></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="im">import</span> psycopg2</a>
+<a class="sourceLine" id="cb2-4" title="4"></a>
+<a class="sourceLine" id="cb2-5" title="5">my_user_id <span class="op">=</span> <span class="dv">857</span></a>
+<a class="sourceLine" id="cb2-6" title="6">max_items  <span class="op">=</span><span class="dv"> 12_000</span></a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8">scited_query <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="ss">select</span></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="ss">    abstract,</span></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="ss">    title,</span></a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="ss">    uid,</span></a>
+<a class="sourceLine" id="cb2-13" title="13"><span class="ss">    1 as scited</span></a>
+<a class="sourceLine" id="cb2-14" title="14"><span class="ss">from</span></a>
+<a class="sourceLine" id="cb2-15" title="15"><span class="ss">    papers</span></a>
+<a class="sourceLine" id="cb2-16" title="16"><span class="ss">inner join</span></a>
+<a class="sourceLine" id="cb2-17" title="17"><span class="ss">    scites on</span></a>
+<a class="sourceLine" id="cb2-18" title="18"><span class="ss">    scites.paper_uid = papers.uid</span></a>
+<a class="sourceLine" id="cb2-19" title="19"><span class="ss">    and scites.user_id = </span><span class="sc">{</span>my_user_id<span class="sc">}</span></a>
+<a class="sourceLine" id="cb2-20" title="20"><span class="ss">where</span></a>
+<a class="sourceLine" id="cb2-21" title="21"><span class="ss">    papers.submit_date &gt; '01-Jan-2016'</span></a>
+<a class="sourceLine" id="cb2-22" title="22"><span class="ss">order</span></a>
+<a class="sourceLine" id="cb2-23" title="23"><span class="ss">    by random()</span></a>
+<a class="sourceLine" id="cb2-24" title="24"><span class="ss">limit</span></a>
+<a class="sourceLine" id="cb2-25" title="25"><span class="ss">    </span><span class="sc">{</span>max_items<span class="sc">}</span></a>
+<a class="sourceLine" id="cb2-26" title="26"><span class="ss">&quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb2-27" title="27"></a>
+<a class="sourceLine" id="cb2-28" title="28">not_scited_query <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb2-29" title="29"><span class="ss">select</span></a>
+<a class="sourceLine" id="cb2-30" title="30"><span class="ss">    abstract,</span></a>
+<a class="sourceLine" id="cb2-31" title="31"><span class="ss">    title,</span></a>
+<a class="sourceLine" id="cb2-32" title="32"><span class="ss">    uid,</span></a>
+<a class="sourceLine" id="cb2-33" title="33"><span class="ss">    0 as scited</span></a>
+<a class="sourceLine" id="cb2-34" title="34"><span class="ss">from</span></a>
+<a class="sourceLine" id="cb2-35" title="35"><span class="ss">    papers</span></a>
+<a class="sourceLine" id="cb2-36" title="36"><span class="ss">left outer join</span></a>
+<a class="sourceLine" id="cb2-37" title="37"><span class="ss">    scites on</span></a>
+<a class="sourceLine" id="cb2-38" title="38"><span class="ss">    scites.paper_uid = papers.uid</span></a>
+<a class="sourceLine" id="cb2-39" title="39"><span class="ss">    and scites.user_id = </span><span class="sc">{</span>my_user_id<span class="sc">}</span></a>
+<a class="sourceLine" id="cb2-40" title="40"><span class="ss">where</span></a>
+<a class="sourceLine" id="cb2-41" title="41"><span class="ss">    scites.id is null</span></a>
+<a class="sourceLine" id="cb2-42" title="42"><span class="ss">    and</span></a>
+<a class="sourceLine" id="cb2-43" title="43"><span class="ss">    papers.submit_date &gt; '01-Jan-2016'</span></a>
+<a class="sourceLine" id="cb2-44" title="44"><span class="ss">order</span></a>
+<a class="sourceLine" id="cb2-45" title="45"><span class="ss">    by random()</span></a>
+<a class="sourceLine" id="cb2-46" title="46"><span class="ss">limit</span></a>
+<a class="sourceLine" id="cb2-47" title="47"><span class="ss">    </span><span class="sc">{</span>max_items<span class="sc">}</span></a>
+<a class="sourceLine" id="cb2-48" title="48"><span class="ss">&quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb2-49" title="49"></a>
+<a class="sourceLine" id="cb2-50" title="50"><span class="cf">with</span> psycopg2.<span class="ex">connect</span>(<span class="st">&quot;dbname=scirate&quot;</span>) <span class="im">as</span> connection:</a>
+<a class="sourceLine" id="cb2-51" title="51">    cursor <span class="op">=</span> connection.cursor()</a>
+<a class="sourceLine" id="cb2-52" title="52">    </a>
+<a class="sourceLine" id="cb2-53" title="53">    cursor.execute(scited_query)</a>
+<a class="sourceLine" id="cb2-54" title="54">    scited <span class="op">=</span> cursor.fetchall()</a>
+<a class="sourceLine" id="cb2-55" title="55"></a>
+<a class="sourceLine" id="cb2-56" title="56">    cursor.execute(not_scited_query)</a>
+<a class="sourceLine" id="cb2-57" title="57">    not_scited <span class="op">=</span> cursor.fetchall()</a>
+<a class="sourceLine" id="cb2-58" title="58"></a>
+<a class="sourceLine" id="cb2-59" title="59"><span class="cf">assert</span> <span class="bu">len</span>(scited) <span class="op">==</span> <span class="bu">len</span>(not_scited) <span class="op">==</span> max_items</a>
+<a class="sourceLine" id="cb2-60" title="60"></a>
+<a class="sourceLine" id="cb2-61" title="61">train <span class="op">=</span> scited[:<span class="dv">10</span>_000]       <span class="op">+</span> not_scited[:<span class="dv">10</span>_000]</a>
+<a class="sourceLine" id="cb2-62" title="62">val   <span class="op">=</span> scited[<span class="dv">10</span>_000:<span class="dv">11</span>_500] <span class="op">+</span> not_scited[<span class="dv">10</span>_000:<span class="dv">11</span>_500]</a>
+<a class="sourceLine" id="cb2-63" title="63">test  <span class="op">=</span> scited[<span class="dv">11</span>_500:]       <span class="op">+</span> not_scited[<span class="dv">11</span>_500:]</a>
+<a class="sourceLine" id="cb2-64" title="64"></a>
+<a class="sourceLine" id="cb2-65" title="65"><span class="cf">assert</span> <span class="bu">len</span>(train) <span class="op">==</span><span class="dv"> 20_000</span></a>
+<a class="sourceLine" id="cb2-66" title="66"><span class="cf">assert</span> <span class="bu">len</span>(val)   <span class="op">==</span>  <span class="dv">3</span>_000</a>
+<a class="sourceLine" id="cb2-67" title="67"><span class="cf">assert</span> <span class="bu">len</span>(test)  <span class="op">==</span>  <span class="dv">1</span>_000</a>
+<a class="sourceLine" id="cb2-68" title="68"></a>
+<a class="sourceLine" id="cb2-69" title="69"><span class="im">import</span> pandas <span class="im">as</span> pd</a>
+<a class="sourceLine" id="cb2-70" title="70"></a>
+<a class="sourceLine" id="cb2-71" title="71"><span class="kw">def</span> write_csv (rows, name):</a>
+<a class="sourceLine" id="cb2-72" title="72">    df <span class="op">=</span> pd.DataFrame(rows, columns<span class="op">=</span>[<span class="st">&quot;abstract&quot;</span>, <span class="st">&quot;title&quot;</span>, <span class="st">&quot;arxiv_id&quot;</span>, <span class="st">&quot;scited&quot;</span>])</a>
+<a class="sourceLine" id="cb2-73" title="73">    df[<span class="st">&quot;abstract_and_title&quot;</span>] <span class="op">=</span> (df[<span class="st">&quot;title&quot;</span>] <span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> df[<span class="st">&quot;abstract&quot;</span>])<span class="op">\</span></a>
+<a class="sourceLine" id="cb2-74" title="74">                                .replace(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>)<span class="op">\</span></a>
+<a class="sourceLine" id="cb2-75" title="75">                                .replace(<span class="st">&quot;</span><span class="ch">\r</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>)<span class="op">\</span></a>
+<a class="sourceLine" id="cb2-76" title="76">                                .replace(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>)</a>
+<a class="sourceLine" id="cb2-77" title="77">    df <span class="op">=</span> df.drop(columns<span class="op">=</span>[<span class="st">&quot;abstract&quot;</span>, <span class="st">&quot;title&quot;</span>])</a>
+<a class="sourceLine" id="cb2-78" title="78">    </a>
+<a class="sourceLine" id="cb2-79" title="79">    df.to_csv(name <span class="op">+</span> <span class="st">&quot;.csv&quot;</span>, index<span class="op">=</span><span class="va">False</span>, header<span class="op">=</span><span class="va">False</span>, sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a>
+<a class="sourceLine" id="cb2-80" title="80"></a>
+<a class="sourceLine" id="cb2-81" title="81"></a>
+<a class="sourceLine" id="cb2-82" title="82">write_csv(train, <span class="st">&quot;../data/train&quot;</span>)</a>
+<a class="sourceLine" id="cb2-83" title="83">write_csv(val,   <span class="st">&quot;../data/val&quot;</span>)</a>
+<a class="sourceLine" id="cb2-84" title="84">write_csv(test,  <span class="st">&quot;../data/test&quot;</span>)</a></code></pre></div>
 <p>This is just a little hacked-together bit of code that grabs out papers that I’ve definitely scited, and those for which I haven’t scited. Note that it limits it to those papers from the last 5 years, and also randomly orders them. If we wanted to be a bit more precise, we could do the random ordering according to a seed, but we’re just in a blog post here, so we can be a bit relaxed :)</p>
 <p>Note that this code requires the SciRate database, so you can’t run it, but here’s the output: <a href="https://drive.google.com/file/d/16HIXwe_8MP2fXm_aqrHCdkLZzpjBFwMr/view?usp=sharing">noons scites - download</a> if you want to follow along with this exact dataset.</p>
 <p>Great! Now I have my data in the <code>data</code> folder:</p>
@@ -300,30 +286,30 @@ drwxrwxr-x 7 noon noon 4.0K Jul  2 08:26 ..
 <p>Okay, now that we have <em>some</em> data, let’s see what format PyText wants. Let’s head over to the <a href="https://pytext.readthedocs.io/en/master/">PyText Documentation</a>.</p>
 <h5 id="turns-out-we-have-to-first-pick-a-model">… turns out we have to first pick a model</h5>
 <p>Glancing at the <a href="https://pytext.readthedocs.io/en/master/train_your_first_model.html">Train your first model</a> we can see that we need to build some kind of configuration object; and that in particular we need to decide on a “task” and a “model”. Specifically, we need to build a JSON file like so:</p>
-<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
-  <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span>
-  <span class="dt">&quot;task&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-    <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-      <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-        <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-          <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-            <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;slots&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span>
-            <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;pytext/tests/data/train_data_tiny.tsv&quot;</span><span class="fu">,</span>
-            <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;pytext/tests/data/test_data_tiny.tsv&quot;</span><span class="fu">,</span>
-            <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;pytext/tests/data/test_data_tiny.tsv&quot;</span>
-          <span class="fu">}</span>
-        <span class="fu">}</span>
-      <span class="fu">},</span>
-      <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-        <span class="dt">&quot;DocModel&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-          <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-            <span class="dt">&quot;DocNNRepresentation&quot;</span><span class="fu">:</span> <span class="fu">{}</span>
-          <span class="fu">}</span>
-        <span class="fu">}</span>
-      <span class="fu">}</span>
-    <span class="fu">}</span>
-  <span class="fu">}</span>
-<span class="fu">}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-3" title="3">  <span class="dt">&quot;task&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-4" title="4">    <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-5" title="5">      <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-6" title="6">        <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-7" title="7">          <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-8" title="8">            <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;slots&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-9" title="9">            <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;pytext/tests/data/train_data_tiny.tsv&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-10" title="10">            <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;pytext/tests/data/test_data_tiny.tsv&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb3-11" title="11">            <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;pytext/tests/data/test_data_tiny.tsv&quot;</span></a>
+<a class="sourceLine" id="cb3-12" title="12">          <span class="fu">}</span></a>
+<a class="sourceLine" id="cb3-13" title="13">        <span class="fu">}</span></a>
+<a class="sourceLine" id="cb3-14" title="14">      <span class="fu">},</span></a>
+<a class="sourceLine" id="cb3-15" title="15">      <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-16" title="16">        <span class="dt">&quot;DocModel&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-17" title="17">          <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb3-18" title="18">            <span class="dt">&quot;DocNNRepresentation&quot;</span><span class="fu">:</span> <span class="fu">{}</span></a>
+<a class="sourceLine" id="cb3-19" title="19">          <span class="fu">}</span></a>
+<a class="sourceLine" id="cb3-20" title="20">        <span class="fu">}</span></a>
+<a class="sourceLine" id="cb3-21" title="21">      <span class="fu">}</span></a>
+<a class="sourceLine" id="cb3-22" title="22">    <span class="fu">}</span></a>
+<a class="sourceLine" id="cb3-23" title="23">  <span class="fu">}</span></a>
+<a class="sourceLine" id="cb3-24" title="24"><span class="fu">}</span></a></code></pre></div>
 <p>So, let’s think about our problem here as a “classification” problem. We have two independent classes, “scited” and “not scited”.</p>
 <p>Now, glancing at the <a href="https://github.com/facebookresearch/pytext#overview">PyText classifiers</a> that they have set up by default, the one I want to use is this one: <a href="https://arxiv.org/abs/1703.03130">Lin et al. (2017): A Structured Self-attentive Sentence Embedding</a>. I’m picking this one because, firstly, it’s got this notion of <em>attention</em>. Scrolling through the paper, this is the kind of output we can expect to get from this paper:</p>
 <center>
@@ -331,54 +317,54 @@ drwxrwxr-x 7 noon noon 4.0K Jul  2 08:26 ..
 </center>
 <p>Looks cool! It’s certainly the idea we’re going for — a kind of “explanation” — the relevant words are highlighted (with a strength!) indicating why the decision (here, a 1-star review) was made.</p>
 <p>Now, glancing at the documentation for the config file, our <code>&quot;model&quot;</code> section will need to be like this:</p>
-<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
-  <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-    <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-      <span class="dt">&quot;BiLSTMDocAttention&quot;</span><span class="fu">:</span> <span class="fu">{}</span>
-    <span class="fu">}</span>
-  <span class="fu">}</span>
-<span class="fu">}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb4-2" title="2">  <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb4-3" title="3">    <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb4-4" title="4">      <span class="dt">&quot;BiLSTMDocAttention&quot;</span><span class="fu">:</span> <span class="fu">{}</span></a>
+<a class="sourceLine" id="cb4-5" title="5">    <span class="fu">}</span></a>
+<a class="sourceLine" id="cb4-6" title="6">  <span class="fu">}</span></a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="fu">}</span></a></code></pre></div>
 <p>Going back to the above config, we note that we don’t have a “TSV” (Tab-seperated values) we have a CSV, so we might need something like this:</p>
-<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
-  <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-    <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-      <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-        <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-          <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span>    <span class="ot">[</span><span class="st">&quot;arxiv_id&quot;</span><span class="ot">,</span> <span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span>
-          <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;./data/train.csv&quot;</span><span class="fu">,</span>
-          <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/test.csv&quot;</span><span class="fu">,</span>
-          <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/val.csv&quot;</span>
-        <span class="fu">}</span>
-      <span class="fu">}</span>
-    <span class="fu">}</span>
-  <span class="fu">}</span>
-<span class="fu">}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-2" title="2">  <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-3" title="3">    <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-4" title="4">      <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-5" title="5">        <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb5-6" title="6">          <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span>    <span class="ot">[</span><span class="st">&quot;arxiv_id&quot;</span><span class="ot">,</span> <span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-7" title="7">          <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;./data/train.csv&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-8" title="8">          <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/test.csv&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb5-9" title="9">          <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/val.csv&quot;</span></a>
+<a class="sourceLine" id="cb5-10" title="10">        <span class="fu">}</span></a>
+<a class="sourceLine" id="cb5-11" title="11">      <span class="fu">}</span></a>
+<a class="sourceLine" id="cb5-12" title="12">    <span class="fu">}</span></a>
+<a class="sourceLine" id="cb5-13" title="13">  <span class="fu">}</span></a>
+<a class="sourceLine" id="cb5-14" title="14"><span class="fu">}</span></a></code></pre></div>
 <p>(Note: the <code>field_names</code> needs to match the order in the CSV, and furthermore, the fields “label” and “text” are used because they correspond to the names <em>in pytext code</em>, not because they are the names of the columns in our document. Further note: <a href="https://github.com/facebookresearch/pytext/issues/747">there’s a bug</a> where the TCV-parser doesn’t respect quoted strings with the seperator in them.)</p>
 <p>Okay. Ambitiously, let’s just try putting everything together, and running it! I’m going to call it <code>02-Jul-2019-Run-1.json</code> and it will have:</p>
-<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
-  <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span>
-  <span class="dt">&quot;task&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-    <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-      <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-        <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-          <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-            <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span>    <span class="ot">[</span><span class="st">&quot;arxiv_id&quot;</span><span class="ot">,</span> <span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span>
-            <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;./data/train.csv&quot;</span><span class="fu">,</span>
-            <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/test.csv&quot;</span><span class="fu">,</span>
-            <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/val.csv&quot;</span>
-          <span class="fu">}</span>
-        <span class="fu">}</span>
-      <span class="fu">},</span>
-      <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-        <span class="dt">&quot;DocModel&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-          <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-            <span class="dt">&quot;BiLSTMDocAttention&quot;</span><span class="fu">:</span> <span class="fu">{}</span>
-          <span class="fu">}</span>
-        <span class="fu">}</span>
-      <span class="fu">}</span>
-    <span class="fu">}</span>
-  <span class="fu">}</span>
-<span class="fu">}</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb6-2" title="2">  <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb6-3" title="3">  <span class="dt">&quot;task&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb6-4" title="4">    <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb6-5" title="5">      <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb6-6" title="6">        <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb6-7" title="7">          <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb6-8" title="8">            <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span>    <span class="ot">[</span><span class="st">&quot;arxiv_id&quot;</span><span class="ot">,</span> <span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb6-9" title="9">            <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;./data/train.csv&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb6-10" title="10">            <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/test.csv&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb6-11" title="11">            <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/val.csv&quot;</span></a>
+<a class="sourceLine" id="cb6-12" title="12">          <span class="fu">}</span></a>
+<a class="sourceLine" id="cb6-13" title="13">        <span class="fu">}</span></a>
+<a class="sourceLine" id="cb6-14" title="14">      <span class="fu">},</span></a>
+<a class="sourceLine" id="cb6-15" title="15">      <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb6-16" title="16">        <span class="dt">&quot;DocModel&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb6-17" title="17">          <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb6-18" title="18">            <span class="dt">&quot;BiLSTMDocAttention&quot;</span><span class="fu">:</span> <span class="fu">{}</span></a>
+<a class="sourceLine" id="cb6-19" title="19">          <span class="fu">}</span></a>
+<a class="sourceLine" id="cb6-20" title="20">        <span class="fu">}</span></a>
+<a class="sourceLine" id="cb6-21" title="21">      <span class="fu">}</span></a>
+<a class="sourceLine" id="cb6-22" title="22">    <span class="fu">}</span></a>
+<a class="sourceLine" id="cb6-23" title="23">  <span class="fu">}</span></a>
+<a class="sourceLine" id="cb6-24" title="24"><span class="fu">}</span></a></code></pre></div>
 <p>(Note: It took me a few goes to get this config right; in the first instance I even forgot to include the labels (“0” or “1”) in the original CSV data! But through the magic of blogging, it looks like I got it right the first time!)</p>
 <p>Firstly, I’ll just install <code>pytext</code>!</p>
 <pre class="terminal">
@@ -451,7 +437,7 @@ tensorboard --logdir runs
 <h4 id="building-attention-visualisation-into-tensorboard">Building attention visualisation into TensorBoard</h4>
 <p>In order to do this, we’re going to have to get funky with the pytext source code (unfortunately, this isn’t a feature that’s supported out-of-the-box.)</p>
 <p>This is our process:</p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>Work out how to get attention out of the model,</li>
 <li>Pick a few fixed samples that we run through the network during evaluation,</li>
 <li>Somehow coax TensorBoard to display those samples with attention.</li>
@@ -476,32 +462,32 @@ python setup.py develop
 <h5 id="so-how-do-we-get-the-attention-out-and-display-it">So, how do we get the attention out, and display it?</h5>
 <p>Unfortunately, it turned out to be an involved process. I ended up spending the better part of a day hacking around to make this work. It’s all captured in a branch which you can view here: <a href="https://github.com/BraneShop/pytext/compare/master...BraneShop:attention-hacking">attention-hacking branch</a>. It’s not super elegant, but it’s enough to keep us going.</p>
 <p>Here’s the final config file I ended up using:</p>
-<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
-  <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span>
-  <span class="dt">&quot;task&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-    <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-      <span class="dt">&quot;trainer&quot;</span><span class="fu">:</span>  <span class="fu">{</span> <span class="dt">&quot;epochs&quot;</span><span class="fu">:</span> <span class="dv">20</span> <span class="fu">},</span>
-      <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-        <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-          <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-            <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span>    <span class="ot">[</span><span class="st">&quot;arxiv_id&quot;</span><span class="ot">,</span> <span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span>
-            <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;./data/train.csv&quot;</span><span class="fu">,</span>
-            <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/test.csv&quot;</span><span class="fu">,</span>
-            <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/val.csv&quot;</span>
-          <span class="fu">}</span>
-        <span class="fu">}</span>
-      <span class="fu">},</span>
-      <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-        <span class="dt">&quot;DocModel&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-          <span class="dt">&quot;decoder&quot;</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">&quot;has_attention&quot;</span><span class="fu">:</span> <span class="kw">true</span> <span class="fu">},</span>
-          <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span>
-            <span class="dt">&quot;BiLSTMDocAttention&quot;</span><span class="fu">:</span> <span class="fu">{}</span>
-          <span class="fu">}</span>
-        <span class="fu">}</span>
-      <span class="fu">}</span>
-    <span class="fu">}</span>
-  <span class="fu">}</span>
-<span class="fu">}</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb7-2" title="2">  <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb7-3" title="3">  <span class="dt">&quot;task&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb7-4" title="4">    <span class="dt">&quot;DocumentClassificationTask&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb7-5" title="5">      <span class="dt">&quot;trainer&quot;</span><span class="fu">:</span>  <span class="fu">{</span> <span class="dt">&quot;epochs&quot;</span><span class="fu">:</span> <span class="dv">20</span> <span class="fu">},</span></a>
+<a class="sourceLine" id="cb7-6" title="6">      <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb7-7" title="7">        <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb7-8" title="8">          <span class="dt">&quot;TSVDataSource&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb7-9" title="9">            <span class="dt">&quot;field_names&quot;</span><span class="fu">:</span>    <span class="ot">[</span><span class="st">&quot;arxiv_id&quot;</span><span class="ot">,</span> <span class="st">&quot;label&quot;</span><span class="ot">,</span> <span class="st">&quot;text&quot;</span><span class="ot">]</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb7-10" title="10">            <span class="dt">&quot;train_filename&quot;</span><span class="fu">:</span> <span class="st">&quot;./data/train.csv&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb7-11" title="11">            <span class="dt">&quot;test_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/test.csv&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb7-12" title="12">            <span class="dt">&quot;eval_filename&quot;</span><span class="fu">:</span>  <span class="st">&quot;./data/val.csv&quot;</span></a>
+<a class="sourceLine" id="cb7-13" title="13">          <span class="fu">}</span></a>
+<a class="sourceLine" id="cb7-14" title="14">        <span class="fu">}</span></a>
+<a class="sourceLine" id="cb7-15" title="15">      <span class="fu">},</span></a>
+<a class="sourceLine" id="cb7-16" title="16">      <span class="dt">&quot;model&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb7-17" title="17">        <span class="dt">&quot;DocModel&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb7-18" title="18">          <span class="dt">&quot;decoder&quot;</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">&quot;has_attention&quot;</span><span class="fu">:</span> <span class="kw">true</span> <span class="fu">},</span></a>
+<a class="sourceLine" id="cb7-19" title="19">          <span class="dt">&quot;representation&quot;</span><span class="fu">:</span> <span class="fu">{</span></a>
+<a class="sourceLine" id="cb7-20" title="20">            <span class="dt">&quot;BiLSTMDocAttention&quot;</span><span class="fu">:</span> <span class="fu">{}</span></a>
+<a class="sourceLine" id="cb7-21" title="21">          <span class="fu">}</span></a>
+<a class="sourceLine" id="cb7-22" title="22">        <span class="fu">}</span></a>
+<a class="sourceLine" id="cb7-23" title="23">      <span class="fu">}</span></a>
+<a class="sourceLine" id="cb7-24" title="24">    <span class="fu">}</span></a>
+<a class="sourceLine" id="cb7-25" title="25">  <span class="fu">}</span></a>
+<a class="sourceLine" id="cb7-26" title="26"><span class="fu">}</span></a></code></pre></div>
 <p>(The main thing is that I added a new config option, <code>has_attention</code>, that lets me introduce this extra functionality without (hopefully!) breaking anything.)</p>
 <p>I won’t bore you with all the details (you can glance at the diff above to see what I actually changed; it’s not a lot), but the main highlights were:</p>
 <ul class="normal">

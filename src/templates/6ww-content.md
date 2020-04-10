@@ -90,7 +90,7 @@ quiz</a>.
 </ul>
 
 <div class="hero-image">
-  <img src="/images/workshop-action-photos/image2_720.jpg"
+  <img src="/images/workshop-action-photos/image2_720.jpg" 
     alt="Attendees working together!" />
 </div>
 

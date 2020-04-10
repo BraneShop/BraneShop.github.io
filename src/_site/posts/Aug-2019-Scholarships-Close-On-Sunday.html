@@ -72,20 +72,6 @@ drift.SNIPPET_VERSION = '0.3.1';
 drift.load('gge7kn9kp4gc');
 </script>
 <!-- End of Async Drift Code -->
-<!-- LinkedIn -->
-<script type="text/javascript">
-_linkedin_partner_id = "1775578";
-window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-</script><script type="text/javascript">
-(function(){var s = document.getElementsByTagName("script")[0];
-var b = document.createElement("script");
-b.type = "text/javascript";b.async = true;
-b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-s.parentNode.insertBefore(b, s);})();
-</script>
-
-
 </head>
 <body>
   <div id="braneshop-fixed" onclick="document.location = '/';"></div>
@@ -146,9 +132,9 @@ s.parentNode.insertBefore(b, s);})();
 <!--more-->
 <h4 id="technical-details-about-the-video">Technical details about the video …</h4>
 <p>I had a lot of fun making the video above. You’ll notice, if you watch it, that my person is cut out, and a new weird background is inserted. I did this using <a href="https://github.com/tensorflow/models/tree/master/research/deeplab">deep-lab</a> from TensorFlow. If you’re feeling adventurous you can try out their demo for yourself, on <a href="https://colab.sandbox.google.com/github/tensorflow/models/blob/master/research/deeplab/deeplab_demo.ipynb">Google Colab</a>.</p>
-<p>With that in hand, I worked out how to extract all the frames of the video as individual images, then ran that network over each of them (there were ~1600 images, but it only took a few minutes on my laptop (which doesn’t have a GPU)). After that, I made the little background animation<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, overlayed the images, and stitched them back together. I did all this using the “<a href="https://ffmpeg.org/">ffmpeg</a>” and <a href="https://imagemagick.org/index.php">ImageMagick</a><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>
+<p>With that in hand, I worked out how to extract all the frames of the video as individual images, then ran that network over each of them (there were ~1600 images, but it only took a few minutes on my laptop (which doesn’t have a GPU)). After that, I made the little background animation<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, overlayed the images, and stitched them back together. I did all this using the “<a href="https://ffmpeg.org/">ffmpeg</a>” and <a href="https://imagemagick.org/index.php">ImageMagick</a><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
 <p>Also, while looking around and eventually settling on deep-lab, I found a <a href="https://www.tensorflow.org/js">TensorFlow.js</a> <a href="https://github.com/tensorflow/tfjs-models/tree/master/body-pix">demo project</a> that performs <a href="https://storage.googleapis.com/tfjs-models/demos/body-pix/index.html">person-segmentation in the browser</a>! It’s not amazingly high quality, but it runs in the browser! Pretty cool.</p>
-<div class="footnotes">
+<section class="footnotes">
 <hr />
 <ol>
 <li id="fn1">I used my “<a href="https://github.com/silky/cppn-cli">cppn-cli</a>” program to do this.
@@ -157,7 +143,7 @@ s.parentNode.insertBefore(b, s);})();
 cppn existing sample --checkpoint_dir logs/cf9ecd76 --width 288 --height 513 \
  --out out/vid-bg --z_steps 1614
 </pre>
-<a href="#fnref1">↩</a></li>
+<a href="#fnref1" class="footnote-back">↩</a></li>
 <li id="fn2">Roughly, here are the commands I used (ignoring the ones I used to generate the animations):
 <pre class="terminal">
 # Extract images
@@ -179,9 +165,9 @@ ffmpeg -framerate 29.5 -pattern_type glob -i 'images/*.jpg' \
 # Copy audio into a video, from a video (named here "audio.mp4")
 ffmpeg -i video.mp4 -i audio.mp4 -c copy -map 0:0 -map 1:1 -shortest out.mp4
 </pre>
-<a href="#fnref2">↩</a></li>
+<a href="#fnref2" class="footnote-back">↩</a></li>
 </ol>
-</div>
+</section>
 
 
 

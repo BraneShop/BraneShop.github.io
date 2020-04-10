@@ -27,7 +27,7 @@ she's a friend of mine. Here are some of the reasons why:
 <li> **Diverse options**: Unlike other designers I've worked with, each of Ren's submitted designs was actually quite unique and distinctly different from the others. The differences are not just a slight colour changes, or lower case over upper case; each design has it's own strong elements, story, and justifcation.  I think this is a very important skill for design, that I've not seen many people be able to do, and Ren does it amazingly well.
 </li>
 
-<li> **Comprehensive**: Once a final design was sleceted, Ren provides the logo
+<li> **Comprehensive**: Once a final design was selected, Ren provides the logo
 in many formats and colours, and also includes nice feature "elements" (such as
 the squiggle in the bottom-left of the logo) as seperate files. This allows
 me to include and use parts of the logo thematically through-out the website.

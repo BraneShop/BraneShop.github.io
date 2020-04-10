@@ -8,6 +8,7 @@ import           Control.Applicative (Alternative (..))
 import           Control.Monad
 import           Data.Aeson
 import           Data.List (isPrefixOf, tails, findIndex, intercalate, sortBy)
+import           Data.List.Split (splitOn)
 import           Data.Maybe (fromMaybe, fromJust, isJust)
 import           Data.Monoid ((<>), mconcat)
 import           Data.String.Conv (toS)
@@ -33,7 +34,8 @@ pandocMathCompiler =
     let mathExtensions = [Ext_tex_math_dollars, Ext_latex_macros,
                          Ext_backtick_code_blocks]
         defaultExtensions = writerExtensions defaultHakyllWriterOptions
-        newExtensions = foldr S.insert defaultExtensions mathExtensions
+        -- TODO: Fix this.
+        newExtensions = defaultExtensions -- foldr S.insert defaultExtensions mathExtensions
         writerOptions = defaultHakyllWriterOptions {
                           writerExtensions = newExtensions,
                           writerHTMLMathMethod = MathJax ""
@@ -134,7 +136,7 @@ main = do
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx'
                     >>= loadAndApplyTemplate "templates/default.html" ctx'
-                    -- >>= lqipImages imageMetaData
+                    >>= lqipImages imageMetaData
                     >>= relativizeUrls
 
         route $ setExtension "html"
@@ -145,7 +147,7 @@ main = do
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/showreel-display.html" ctx
             >>= loadAndApplyTemplate "templates/default.html" ctx
-            -- >>= lqipImages imageMetaData
+            >>= lqipImages imageMetaData
             >>= relativizeUrls
 
 
@@ -167,7 +169,7 @@ main = do
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx
                     >>= loadAndApplyTemplate "templates/default.html" ctx
-                    -- >>= lqipImages imageMetaData
+                    >>= lqipImages imageMetaData
                     >>= relativizeUrls
 
 
@@ -178,7 +180,7 @@ main = do
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
             >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)
-            -- >>= lqipImages imageMetaData
+            >>= lqipImages imageMetaData
             >>= relativizeUrls
 
 
@@ -199,7 +201,7 @@ main = do
           getResourceBody
               >>= applyAsTemplate ctx
               -- >>= loadAndApplyTemplate "templates/manifold.html" ctx
-              -- >>= lqipImages imageMetaData
+              >>= lqipImages imageMetaData
               >>= relativizeUrls
 
     match (fromList [ "custom-ai-workshop.html"
@@ -223,7 +225,7 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
-                -- >>= lqipImages imageMetaData
+                >>= lqipImages imageMetaData
                 >>= relativizeUrls
 
 
@@ -238,7 +240,7 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
-                -- >>= lqipImages imageMetaData
+                >>= lqipImages imageMetaData
                 >>= relativizeUrls
 
 
@@ -254,7 +256,7 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
-                -- >>= lqipImages imageMetaData
+                >>= lqipImages imageMetaData
                 >>= relativizeUrls
                     
 
@@ -268,7 +270,7 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
-                -- >>= lqipImages imageMetaData
+                >>= lqipImages imageMetaData
                 >>= relativizeUrls
 
 
@@ -287,7 +289,7 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
-                -- >>= lqipImages imageMetaData
+                >>= lqipImages imageMetaData
                 >>= relativizeUrls
 
 
@@ -304,7 +306,7 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
-                -- >>= lqipImages imageMetaData
+                >>= lqipImages imageMetaData
                 >>= relativizeUrls
 
     match "index.html" $ do
@@ -320,9 +322,9 @@ main = do
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
-                -- >>= lqipImages imageMetaData
+                >>= lqipImages imageMetaData
                 >>= relativizeUrls
-                >>= minifyHTML
+                -- >>= minifyHTML
 
 
     match "templates/**" $ compile templateCompiler
@@ -345,23 +347,27 @@ main = do
 
 
 lqipImages :: ImageMetaDataMap -> Item String -> Compiler (Item String)
-lqipImages imageMetaData = return . fmap (withTags . switchInLqipImages $ imageMetaData)
+lqipImages imageMetaData = return . fmap id
+-- No LQIP for now.
+-- lqipImages imageMetaData = return . fmap (withTags . switchInLqipImages $ imageMetaData)
 
 
 switchInLqipImages :: ImageMetaDataMap -> (Tag String -> Tag String)
 switchInLqipImages imageMetaDataMap t@(TagOpen "img" attrs) = newTag
   where
-    newAttrs  = [ ("width", show (width imageData))
-                , ("height", show (height imageData))
-                , ( "style"
-                  , "background-size: cover; background-image: url(data:image/png;base64," ++ base64String imageData ++ ");"
-                  )
-                , ( "onload", "this.style.backgroundImage = '';" )
-                ]
-    attrDict  = M.fromList attrs
-    newTag    = if take 24 src == "https://braneshop.com.au" then t else TagOpen "img" (attrs ++ newAttrs)
-    src       = fromMaybe (error $ "Error finding image src, tag: "       ++ show t) (M.lookup "src" attrDict) 
-    imageData = fromMaybe (error $ "Error finding image meta data, tag: " ++ show t) (M.lookup (drop 1 src) imageMetaDataMap) 
+    doLqip      = True -- Could be condition on some class.
+    classes     = splitOn " " (fromMaybe "" $ M.lookup "class" attrDict)
+    attrDict    = M.fromList attrs
+    nonSrcAttrs = [ (k, v) | (k, v) <- attrs, v /= "src" ]
+    --
+    src       = fromMaybe (error $ "No source for tag: " ++ show t) (M.lookup "src" attrDict)
+    imageData = M.lookup (drop 1 src) imageMetaDataMap
+    script    = ("onload", "this.src = '" ++ src ++ "';")
+    --
+    newAttrs  = (\d -> script : ("src", "data:image/png;base64," ++ base64String d) : nonSrcAttrs) <$> imageData
+    newTag    = case newAttrs of
+                  Nothing -> t
+                  Just nt -> if doLqip then (TagOpen "img" nt) else t
 switchInLqipImages _ t = t
 
 

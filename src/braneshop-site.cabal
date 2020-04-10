@@ -19,9 +19,10 @@ executable braneshop-site
     , hakyll
     , hakyll-diagrams
     , pandoc
+    , split
+    , string-conv
     , system-filepath
     , tagsoup
     , text
     , time
     , transformers 
-    , string-conv

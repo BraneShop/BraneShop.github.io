@@ -36,12 +36,12 @@ in this new environment. So here's the resulting idea.
   </p>
   </div>
   <div class="feature">
-  <img src="/images/1-on-1.png" alt="1-on-1 chats to support learning"/>
+  <img src="/images/1-on-1.png" alt="1-on-1 chats to support learning" />
   <p>One-on-one video-chat sessions with an instructor each week.
   </p>
   </div>
   <div class="feature">
-  <img src="/images/exercises.png" alt="Complete exercises and homework to build knowledge."/>
+  <img src="/images/exercises.png" alt="Complete exercises and homework to build knowledge." />
   <p>Complete exercises and homework to consolidate your knowledge.
   </p>
   </div>
