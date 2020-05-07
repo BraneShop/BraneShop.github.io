@@ -4,8 +4,9 @@ title: Convolutional Neural Networks for Image-based Corn Kernel Detection and C
 image: /images/showreel/Convolutional Neural Networks for Image-based Corn Kernel Detection and Counting.jpg
 date: 2020-03-26
 tags: real-world
-draft: draft
-preview:
+preview: This is just a nice real-world application. How much corn is on the cob?
 ---
 
+I like this because it's just a simple idea, implemented well, that is
+probably of use to someone!
 
