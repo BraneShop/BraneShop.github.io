@@ -53,7 +53,6 @@ data ImageData = ImageData
 
 instance FromJSON ImageData
 
-
 type ImageMetaDataMap = M.Map String ImageData
 
 
