@@ -178,6 +178,7 @@ main = do
             >>= loadAndApplyTemplate "templates/post-with-video-and-image.html" (postCtxWithTags tags)
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
+            >>= saveSnapshot "postContent"
             >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)
             >>= lqipImages imageMetaData
             >>= relativizeUrls
@@ -185,23 +186,27 @@ main = do
 
     create ["6-week-workshop-on-deep-learning.html"] $ do
       route idRoute
-      compile $ makeItem $ Redirect "technical-deep-learning-workshop.html"
+      compile $ makeItem $ Redirect "index.html"
 
 
     create ["deep-learning-workshop.html"] $ do
       route idRoute
-      compile $ makeItem $ Redirect "ai-for-leadership.html"
+      compile $ makeItem $ Redirect "index.html"
+                    --
 
-
-    create ["manifold/index.html"] $ do
+    match (fromList ["thesetestimonialsdontexist.html"
+                    , "object-detection-in-the-browser.html"
+                    ]) $ do
       route idRoute
-      let ctx = braneContext
       compile $ do
+          let ctx = braneContext
+
           getResourceBody
               >>= applyAsTemplate ctx
-              -- >>= loadAndApplyTemplate "templates/manifold.html" ctx
+              >>= loadAndApplyTemplate "templates/default.html" ctx
               >>= lqipImages imageMetaData
               >>= relativizeUrls
+
 
     match (fromList [ "custom-ai-workshop.html"
                     , "team.html"
@@ -213,19 +218,9 @@ main = do
                     , "advisory-and-consulting.html"
                     , "events.html"
                     , "workshops.html"
-                    , "thesetestimonialsdontexist.html"
-                    , "object-detection-in-the-browser.html"
                     ]) $ do
         route idRoute
-
-        compile $ do
-            let ctx = braneContext
-
-            getResourceBody
-                >>= applyAsTemplate ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= lqipImages imageMetaData
-                >>= relativizeUrls
+        compile $ makeItem $ Redirect "index.html"
 
 
     match "about.html" $ do
@@ -245,32 +240,22 @@ main = do
 
     match "ai-for-leadership.html" $ do
         route idRoute
-        compile $ do
-            -- Hack: We take it as a list, so we can for-loop over it and
-            -- extract out fields. But we'll only ever have one.
-            firstWorkshop <- fmap (take 1) . chronological =<< loadAll "workshops/leadership/*"
-            let ctx = braneContext
-                        <> listField "aflWorkshops" workshopContext (chronological =<< loadAll "workshops/leadership/**")
-                        <> listField "firstWorkshop" workshopContext (return firstWorkshop)
-            getResourceBody
-                >>= applyAsTemplate ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= lqipImages imageMetaData
-                >>= relativizeUrls
+        compile $ makeItem $ Redirect "index.html"
                     
 
     match "technical-deep-learning-workshop.html" $ do
         route idRoute
-        compile $ do
-            firstWorkshop <- fmap (take 1) . chronological =<< loadAll "workshops/tdl/*"
-            let ctx = braneContext
-                        <> listField "techWorkshops" workshopContext (chronological =<< loadAll "workshops/tdl/**")
-                        <> listField "firstWorkshop" workshopContext (return firstWorkshop)
-            getResourceBody
-                >>= applyAsTemplate ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= lqipImages imageMetaData
-                >>= relativizeUrls
+        compile $ makeItem $ Redirect "index.html"
+        -- compile $ do
+        --     firstWorkshop <- fmap (take 1) . chronological =<< loadAll "workshops/tdl/*"
+        --     let ctx = braneContext
+        --                 <> listField "techWorkshops" workshopContext (chronological =<< loadAll "workshops/tdl/**")
+        --                 <> listField "firstWorkshop" workshopContext (return firstWorkshop)
+        --     getResourceBody
+        --         >>= applyAsTemplate ctx
+        --         >>= loadAndApplyTemplate "templates/default.html" ctx
+        --         >>= lqipImages imageMetaData
+        --         >>= relativizeUrls
 
 
     match (fromList ["showreel.html"]) $ do
@@ -311,11 +296,10 @@ main = do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- fmap (take 4) . recentFirst =<< loadAll "posts/*"
-            tags  <- buildTags "posts/*" (fromCapture "tags/*.html")
+            closingPost <- (\a -> [a]) <$> loadSnapshot (fromFilePath "posts/Braneshop-Closed.md") "postContent"
 
             let ctx =
-                    listField "posts" (postCtxWithTags tags) (return posts)
+                    listField "closingPost" braneContext (return closingPost)
                     <> braneContext
 
             getResourceBody

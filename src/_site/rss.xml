@@ -7,8 +7,21 @@
         <description><![CDATA[The blog of the Braneshop team.]]></description>
         <atom:link href="https://braneshop.com.au/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Thu, 09 Apr 2020 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Aug 2020 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Branefreeze! - Braneshop is closing down ...</title>
+    <link>https://braneshop.com.au/posts/Braneshop-Closed.html</link>
+    <description><![CDATA[
+
+
+<p>Well! It’s with some sadness that I officially announce a <em>Branefreeze</em><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>: Braneshop is closing down, for now.</p>
+<p>In no small part it’s due to covid: Like everyone, we’ve found it hard to do business in this time; and in particular in the high-tech skills education space — peoples focus now is on their health, mental health and ability to function in their job and life. Paying for an online course to learn new skills is a big ask, and something that I don’t feel comfortable (or able!) to continue to pursue at this point.</p>
+]]></description>
+    <pubDate>Wed, 26 Aug 2020 00:00:00 UT</pubDate>
+    <guid>https://braneshop.com.au/posts/Braneshop-Closed.html</guid>
+    <dc:creator>Braneshop Team</dc:creator>
+</item>
+<item>
     <title>We're back, with a new plan for our workshops ...</title>
     <link>https://braneshop.com.au/posts/We-are-Back-With-a-New-Plan.html</link>
     <description><![CDATA[
@@ -169,34 +182,6 @@
 ]]></description>
     <pubDate>Wed, 13 Nov 2019 00:00:00 UT</pubDate>
     <guid>https://braneshop.com.au/posts/Broadside-Debrief.html</guid>
-    <dc:creator>Braneshop Team</dc:creator>
-</item>
-<item>
-    <title>Braneshop &mdash; "A Living Business" - Part 3 of 3</title>
-    <link>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-3.html</link>
-    <description><![CDATA[
-
-
-  <center> <p> <img src="https://braneshop.com.au/images/blog/living-business/patterns.png" width="100%" /> 
-  <br /><small>Rough grouping of <i>Patterns</i> for Braneshop.</small></p> </center>
-
-<ul class="normal">
-<li>
-<a href="/posts/Braneshop-A-Living-Business-Part-1.html">Part 1 of 3 - Inspiration</a>
-</li>
-<li>
-<a href="/posts/Braneshop-A-Living-Business-Part-2.html">Part 2 of 3 - The Idea: A Living Business</a>
-</li>
-<li>
-<a href="/posts/Braneshop-A-Living-Business-Part-3.html">Part 3 of 3 - Patterns for Braneshop</a> (this page)
-</li>
-</ul>
-<p>In the final installment of this series, we look at a few of the “patterns” that will help us understand where we’re at as a business.</p>
-<p>The main point here will be to list those patterns — the patterns of behaviour, attitudes, business processes — that we’d like to have at Braneshop.</p>
-<p>The patterns should be <strong>measurable</strong> insofar as we ourselves will need to ask ourselves how well we’re doing when measuring ourselves on them. And we won’t be doing perfectly on each of them, and over the years we can expect our success across any given one to fluctuate. But that’s okay. The <i>process</i> is what is important.</p>
-]]></description>
-    <pubDate>Thu, 07 Nov 2019 00:00:00 UT</pubDate>
-    <guid>https://braneshop.com.au/posts/Braneshop-A-Living-Business-Part-3.html</guid>
     <dc:creator>Braneshop Team</dc:creator>
 </item>
 

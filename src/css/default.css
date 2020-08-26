@@ -1397,3 +1397,16 @@ div.experience h3 {
 div.i img {
   width: 200px;
 }
+
+div.big a {
+  color: white;
+}
+
+
+div.big a:hover {
+  background: mediumslateblue;
+}
+
+div.bio-list.small img {
+  height: 170px;
+}
