@@ -94,7 +94,7 @@ Thanks :)
 For me personally, I'm moving on to another very exciting job (and actually
 I'm incredibly privileged to have gotten <i>any</i> job in this time!), so
 feel free to connect or catch up with [me on LinkedIn](https://www.linkedin.com/in/noonsilk/),
-or just send me an [email](noonsilk@gmail.com), if you're interested in staying in contact :)
+or just send me an [email](mailto:noonsilk@gmail.com), if you're interested in staying in contact :)
 
 
 [^1]: Thanks to [Chuan](https://www.linkedin.com/in/chuan-lim-86581615) for
