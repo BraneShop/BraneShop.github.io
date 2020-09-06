@@ -8,7 +8,7 @@ tags: thoughts, announcements
 ---
 
 Well! It's with some sadness that I officially announce a _Branefreeze_[^1]:
-Braneshop is closing down, for now.
+Braneshop is closing down.
 
 In no small part it's due to covid: Like everyone, we've found it hard to do
 business in this time; and in particular in the high-tech skills education
