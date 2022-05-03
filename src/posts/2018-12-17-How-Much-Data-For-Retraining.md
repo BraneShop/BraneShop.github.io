@@ -173,8 +173,7 @@ Observations:
   the val loss immediately high. This was my expectation.
 </li>
 <li> If we compare, say, the 100-image case and the 100 with 10x augmentation,
-	the augmented version is worse in train and validation. This was surprising
-  to me.
+	the augmented version is worse in train and validation. This was surprising.
 </li>
 <li> There's not a significant difference in the curves between say the 100%
   case and the 50% case. This, again, was surprising to me.
