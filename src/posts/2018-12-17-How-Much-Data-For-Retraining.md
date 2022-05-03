@@ -112,10 +112,10 @@ this graph.
 
 <style type="text/css"> div.vega-actions { display: none; } </style>
 <script type="text/javascript">
-	var spec = { 
+	var spec = {
 		"$schema": "https://vega.github.io/schema/vega-lite/v3.json",
 		"data": {"url": "/data/train-val-curves-1.json" },
-		"hconcat": [ 
+		"hconcat": [
 			{ "title": "Train (solid) / Validation (dashed) Curves For Experiments",
 				"width": 700, "height": 400,
 				"layer":
@@ -142,20 +142,20 @@ this graph.
 				},
 				// Legend
 				{ "mark": { "type": "circle", "size": 200, "cursor": "pointer"},
-					"encoding": { 
-						"y": {"type": "nominal", "field": "Experiment", "title": "Experiments"}, 
-						"color": { 
-							"condition": { "type": "nominal", "field": "Experiment", "legend": null, "selection": "legend" }, 
-							"value": "lightgray" 
+					"encoding": {
+						"y": {"type": "nominal", "field": "Experiment", "title": "Experiments"},
+						"color": {
+							"condition": { "type": "nominal", "field": "Experiment", "legend": null, "selection": "legend" },
+							"value": "lightgray"
 						}
-					}, 
-					"selection": { 
-						"legend": { 
-							"type": "multi", 
-							"encodings": ["color"], 
-							"on": "click", 
-							"toggle": "event.shiftKey", 
-							"resolve": "global", 
+					},
+					"selection": {
+						"legend": {
+							"type": "multi",
+							"encodings": ["color"],
+							"on": "click",
+							"toggle": "event.shiftKey",
+							"resolve": "global",
 							"empty": "all"
 							}
 						}
@@ -172,19 +172,19 @@ Observations:
 <li> When we have tiny data (the 5% case) the train loss is immediately tiny; and
   the val loss immediately high. This was my expectation.
 </li>
-<li> If we compare, say, the 100-image case and the 100 with 10x augmentation, 
-	the augmented version is worth in train and validation. This was surprising
+<li> If we compare, say, the 100-image case and the 100 with 10x augmentation,
+	the augmented version is worse in train and validation. This was surprising
   to me.
 </li>
-<li> There's not a significant different in the curves between say the 100%
+<li> There's not a significant difference in the curves between say the 100%
   case and the 50% case. This, again, was surprising to me.
 </li>
 <li> Augmentation always made both curves worse. I wasn't expecting this, and
-  am not yet cetrain why it's the case. I have two main ideas: I used a very
+  am not yet certain why it's the case. I have two main ideas: I used a very
 	elaborate augmentation (the complicated one from the readme on the
   [imgaug](https://github.com/aleju/imgaug) repo), maybe that was a mistake.
   I think ultimately, the augmented images don't look much like the testing
-  images, so they encouraged they network to do worse.
+  images, so they encouraged the network to do worse.
 </li>
 </ul>
 
@@ -196,19 +196,19 @@ value** of all the resulting class predictions.
 
 <div id="holdout-accuracy"></div>
 <script type="text/javascript">
-	var spec 
+	var spec
 		= { "$schema": "https://vega.github.io/schema/vega-lite/v3.json", "width": 700, "height": 400,
-			  "mark": { "type": "bar", "interpolate": "basis" }, 
+			  "mark": { "type": "bar", "interpolate": "basis" },
 				"data": {"url": "/data/holdout-accuracies.json" },
-				"encoding": { 
-					"y": {"field": "Experiment", 
-								"type": "nominal", 
+				"encoding": {
+					"y": {"field": "Experiment",
+								"type": "nominal",
 								"sort": {"field": "Accuracy", "op": "average", "order": "ascending"}
 							 },
-				 "x": {"field": "Accuracy", 
-							 "type": "quantitative", 
-							 "axis": { "grid": true }, 
-							 "scale": { "domain": [0,1] } 
+				 "x": {"field": "Accuracy",
+							 "type": "quantitative",
+							 "axis": { "grid": true },
+							 "scale": { "domain": [0,1] }
 							},
 				 "tooltip": {"field": "Accuracy", "type": "quantitative"}
 				 }
@@ -266,7 +266,7 @@ much juice can be squeezed out of this particular network + a handful of
 images is amazing.
 
 The main thing this highlights to me is the power of [semi-supervised
-learning](https://en.wikipedia.org/wiki/Semi-supervised_learning), 
+learning](https://en.wikipedia.org/wiki/Semi-supervised_learning),
 [active learning](https://en.wikipedia.org/wiki/Active_learning_(machine_learning)),
 and [One-shot learning](https://en.wikipedia.org/wiki/One-shot_learning).
 
@@ -280,7 +280,7 @@ Overall, the idea of incorporating data into a model as-it-infers isn't
 new, but to me, again, what is surprising is just how little data you need
 to get started; at least in this specific case!
 
-To reiterate differently: If you're a business wondering how to adopt AI, 
+To reiterate differently: If you're a business wondering how to adopt AI,
 one plan would be to build this kind of human-in-the-loop system, where
 any prediction that is, say, better than 50% chance of being right will be
 useful to humans. Then, have the humans feed this system as they use it, and
@@ -288,7 +288,7 @@ it will radically improve with just a small number of confirmed answers!
 
 So, to answer the question from the title, we might say "less than you think!",
 if you have the right setup to incorporate new data into your system, as you
-go. 
+go.
 
 
 
